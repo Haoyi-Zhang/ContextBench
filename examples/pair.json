@@ -1,0 +1,217 @@
+{
+  "vulnerable": {
+    "schema": "rcsc-program",
+    "program_id": "example-vulnerable",
+    "profile": "c",
+    "family": "bounds_write",
+    "label": "vulnerable",
+    "parameters": {
+      "length": 2,
+      "element_domain": [
+        0,
+        1
+      ]
+    },
+    "input_domains": {
+      "idx": [
+        -1,
+        0,
+        1,
+        2
+      ],
+      "value": [
+        0,
+        1
+      ]
+    },
+    "context": {
+      "scenario": "indexed buffer update",
+      "shape": 0,
+      "provenance": null
+    },
+    "initial_public_state": {
+      "buffer": [
+        0,
+        0
+      ],
+      "audit": 0
+    },
+    "public_projection": [
+      "buffer",
+      "audit"
+    ],
+    "instructions": [
+      {
+        "op": "assign",
+        "dst": "aux",
+        "expr": {
+          "op": "add",
+          "left": {
+            "const": 0
+          },
+          "right": {
+            "const": 1
+          }
+        },
+        "role": "context"
+      },
+      {
+        "op": "nop",
+        "tag": "shape-0",
+        "role": "context"
+      },
+      {
+        "op": "buf_write",
+        "buffer": "buffer",
+        "index": {
+          "var": "idx"
+        },
+        "value": {
+          "var": "value"
+        },
+        "role": "root"
+      },
+      {
+        "op": "emit",
+        "name": "write",
+        "value": {
+          "public": "buffer"
+        },
+        "role": "context"
+      },
+      {
+        "op": "return",
+        "value": {
+          "public": "buffer"
+        },
+        "role": "context"
+      }
+    ]
+  },
+  "patched": {
+    "schema": "rcsc-program",
+    "program_id": "example-patched",
+    "profile": "c",
+    "family": "bounds_write",
+    "label": "patched",
+    "parameters": {
+      "length": 2,
+      "element_domain": [
+        0,
+        1
+      ]
+    },
+    "input_domains": {
+      "idx": [
+        -1,
+        0,
+        1,
+        2
+      ],
+      "value": [
+        0,
+        1
+      ]
+    },
+    "context": {
+      "scenario": "indexed buffer update",
+      "shape": 0,
+      "provenance": null
+    },
+    "initial_public_state": {
+      "buffer": [
+        0,
+        0
+      ],
+      "audit": 0
+    },
+    "public_projection": [
+      "buffer",
+      "audit"
+    ],
+    "instructions": [
+      {
+        "op": "assign",
+        "dst": "aux",
+        "expr": {
+          "op": "add",
+          "left": {
+            "const": 0
+          },
+          "right": {
+            "const": 1
+          }
+        },
+        "role": "context"
+      },
+      {
+        "op": "nop",
+        "tag": "shape-0",
+        "role": "context"
+      },
+      {
+        "op": "guard",
+        "pred": {
+          "op": "and",
+          "left": {
+            "op": "ge",
+            "left": {
+              "var": "idx"
+            },
+            "right": {
+              "const": 0
+            }
+          },
+          "right": {
+            "op": "lt",
+            "left": {
+              "var": "idx"
+            },
+            "right": {
+              "const": 2
+            }
+          }
+        },
+        "role": "root"
+      },
+      {
+        "op": "buf_write",
+        "buffer": "buffer",
+        "index": {
+          "var": "idx"
+        },
+        "value": {
+          "var": "value"
+        },
+        "role": "root"
+      },
+      {
+        "op": "emit",
+        "name": "write",
+        "value": {
+          "public": "buffer"
+        },
+        "role": "context"
+      },
+      {
+        "op": "return",
+        "value": {
+          "public": "buffer"
+        },
+        "role": "context"
+      }
+    ]
+  },
+  "certificate": {
+    "schema": "rcsc-pair-certificate",
+    "pair_id": "example",
+    "vulnerable_id": "example-vulnerable",
+    "patched_id": "example-patched",
+    "declared_family": "bounds_write",
+    "witness_input": {
+      "idx": -1,
+      "value": 0
+    },
+    "declared_repair": "insert-root-guard"
+  }
+}

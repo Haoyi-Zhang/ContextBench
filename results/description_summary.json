@@ -1,0 +1,12 @@
+{
+  "descriptions": 12,
+  "mapped_pairs": 10,
+  "excluded_descriptions": 2,
+  "accepted_pairs": 10,
+  "semantic_comparisons": 184,
+  "semantic_mismatches": 0,
+  "repair_removal_controls": 10,
+  "detected_controls": 10,
+  "source_equivalent_programs": 0,
+  "scope": "declared predicate abstraction of public descriptions"
+}

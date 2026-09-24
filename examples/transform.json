@@ -1,0 +1,193 @@
+{
+  "source": {
+    "schema": "rcsc-program",
+    "program_id": "example-vulnerable",
+    "profile": "c",
+    "family": "bounds_write",
+    "label": "vulnerable",
+    "parameters": {
+      "length": 2,
+      "element_domain": [
+        0,
+        1
+      ]
+    },
+    "input_domains": {
+      "idx": [
+        -1,
+        0,
+        1,
+        2
+      ],
+      "value": [
+        0,
+        1
+      ]
+    },
+    "context": {
+      "scenario": "indexed buffer update",
+      "shape": 0,
+      "provenance": null
+    },
+    "initial_public_state": {
+      "buffer": [
+        0,
+        0
+      ],
+      "audit": 0
+    },
+    "public_projection": [
+      "buffer",
+      "audit"
+    ],
+    "instructions": [
+      {
+        "op": "assign",
+        "dst": "aux",
+        "expr": {
+          "op": "add",
+          "left": {
+            "const": 0
+          },
+          "right": {
+            "const": 1
+          }
+        },
+        "role": "context"
+      },
+      {
+        "op": "nop",
+        "tag": "shape-0",
+        "role": "context"
+      },
+      {
+        "op": "buf_write",
+        "buffer": "buffer",
+        "index": {
+          "var": "idx"
+        },
+        "value": {
+          "var": "value"
+        },
+        "role": "root"
+      },
+      {
+        "op": "emit",
+        "name": "write",
+        "value": {
+          "public": "buffer"
+        },
+        "role": "context"
+      },
+      {
+        "op": "return",
+        "value": {
+          "public": "buffer"
+        },
+        "role": "context"
+      }
+    ]
+  },
+  "target": {
+    "schema": "rcsc-program",
+    "program_id": "example-vulnerable-root-stutter",
+    "profile": "c",
+    "family": "bounds_write",
+    "label": "vulnerable",
+    "parameters": {
+      "length": 2,
+      "element_domain": [
+        0,
+        1
+      ]
+    },
+    "input_domains": {
+      "idx": [
+        -1,
+        0,
+        1,
+        2
+      ],
+      "value": [
+        0,
+        1
+      ]
+    },
+    "context": {
+      "scenario": "indexed buffer update",
+      "shape": 0,
+      "provenance": null
+    },
+    "initial_public_state": {
+      "buffer": [
+        0,
+        0
+      ],
+      "audit": 0
+    },
+    "public_projection": [
+      "buffer",
+      "audit"
+    ],
+    "instructions": [
+      {
+        "op": "assign",
+        "dst": "aux",
+        "expr": {
+          "op": "add",
+          "left": {
+            "const": 0
+          },
+          "right": {
+            "const": 1
+          }
+        },
+        "role": "context"
+      },
+      {
+        "op": "nop",
+        "tag": "shape-0",
+        "role": "context"
+      },
+      {
+        "op": "nop",
+        "tag": "certified-root-stutter",
+        "role": "root"
+      },
+      {
+        "op": "buf_write",
+        "buffer": "buffer",
+        "index": {
+          "var": "idx"
+        },
+        "value": {
+          "var": "value"
+        },
+        "role": "root"
+      },
+      {
+        "op": "emit",
+        "name": "write",
+        "value": {
+          "public": "buffer"
+        },
+        "role": "context"
+      },
+      {
+        "op": "return",
+        "value": {
+          "public": "buffer"
+        },
+        "role": "context"
+      }
+    ]
+  },
+  "certificate": {
+    "schema": "rcsc-transform-certificate",
+    "class": "root-preserving",
+    "transform": "root-stutter",
+    "source_id": "example-vulnerable",
+    "target_id": "example-vulnerable-root-stutter",
+    "site": 2
+  }
+}

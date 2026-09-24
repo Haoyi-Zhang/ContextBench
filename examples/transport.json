@@ -1,0 +1,983 @@
+{
+  "certificate": {
+    "declared_family": "bounds_write",
+    "declared_repair": "insert-root-guard",
+    "pair_id": "transport-bounds_write-0-4-0",
+    "patched_id": "transport-bounds_write-0-4-0-patched",
+    "schema": "rcsc-pair-certificate",
+    "vulnerable_id": "transport-bounds_write-0-4-0-vulnerable",
+    "witness_input": {
+      "idx": -1,
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 0,
+      "value": 0
+    }
+  },
+  "context_domains": {
+    "noise_0": [
+      0,
+      1
+    ],
+    "noise_1": [
+      0,
+      1
+    ],
+    "noise_2": [
+      0,
+      1
+    ],
+    "noise_3": [
+      0,
+      1
+    ]
+  },
+  "patched": {
+    "context": {
+      "provenance": null,
+      "scenario": "indexed buffer update",
+      "shape": 0
+    },
+    "family": "bounds_write",
+    "initial_public_state": {
+      "audit": 0,
+      "buffer": [
+        0,
+        0
+      ]
+    },
+    "input_domains": {
+      "idx": [
+        -1,
+        0,
+        1,
+        2
+      ],
+      "noise_0": [
+        0
+      ],
+      "noise_1": [
+        0
+      ],
+      "noise_2": [
+        0
+      ],
+      "noise_3": [
+        0
+      ],
+      "value": [
+        0,
+        1
+      ]
+    },
+    "instructions": [
+      {
+        "dst": "context_0",
+        "expr": {
+          "var": "noise_0"
+        },
+        "op": "assign",
+        "role": "context"
+      },
+      {
+        "name": "pre-0",
+        "op": "emit",
+        "role": "context",
+        "value": {
+          "var": "context_0"
+        }
+      },
+      {
+        "dst": "context_1",
+        "expr": {
+          "var": "noise_1"
+        },
+        "op": "assign",
+        "role": "context"
+      },
+      {
+        "name": "pre-1",
+        "op": "emit",
+        "role": "context",
+        "value": {
+          "var": "context_1"
+        }
+      },
+      {
+        "dst": "context_2",
+        "expr": {
+          "var": "noise_2"
+        },
+        "op": "assign",
+        "role": "context"
+      },
+      {
+        "name": "pre-2",
+        "op": "emit",
+        "role": "context",
+        "value": {
+          "var": "context_2"
+        }
+      },
+      {
+        "dst": "context_3",
+        "expr": {
+          "var": "noise_3"
+        },
+        "op": "assign",
+        "role": "context"
+      },
+      {
+        "name": "pre-3",
+        "op": "emit",
+        "role": "context",
+        "value": {
+          "var": "context_3"
+        }
+      },
+      {
+        "dst": "aux",
+        "expr": {
+          "left": {
+            "const": 0
+          },
+          "op": "add",
+          "right": {
+            "const": 1
+          }
+        },
+        "op": "assign",
+        "role": "context"
+      },
+      {
+        "op": "nop",
+        "role": "context",
+        "tag": "shape-0"
+      },
+      {
+        "op": "guard",
+        "pred": {
+          "left": {
+            "left": {
+              "var": "idx"
+            },
+            "op": "ge",
+            "right": {
+              "const": 0
+            }
+          },
+          "op": "and",
+          "right": {
+            "left": {
+              "var": "idx"
+            },
+            "op": "lt",
+            "right": {
+              "const": 2
+            }
+          }
+        },
+        "role": "root"
+      },
+      {
+        "buffer": "buffer",
+        "index": {
+          "var": "idx"
+        },
+        "op": "buf_write",
+        "role": "root",
+        "value": {
+          "var": "value"
+        }
+      },
+      {
+        "name": "write",
+        "op": "emit",
+        "role": "context",
+        "value": {
+          "public": "buffer"
+        }
+      },
+      {
+        "op": "return",
+        "role": "context",
+        "value": {
+          "public": "buffer"
+        }
+      }
+    ],
+    "label": "patched",
+    "parameters": {
+      "element_domain": [
+        0,
+        1
+      ],
+      "length": 2
+    },
+    "profile": "c",
+    "program_id": "transport-bounds_write-0-4-0-patched",
+    "public_projection": [
+      "buffer",
+      "audit"
+    ],
+    "schema": "rcsc-program"
+  },
+  "transport_certificate": {
+    "core_binding": {
+      "family": "bounds_write",
+      "initial_public_state": {
+        "audit": 0,
+        "buffer": [
+          0,
+          0
+        ]
+      },
+      "patched_core": [
+        {
+          "op": "guard",
+          "pred": {
+            "left": {
+              "left": {
+                "var": "idx"
+              },
+              "op": "ge",
+              "right": {
+                "const": 0
+              }
+            },
+            "op": "and",
+            "right": {
+              "left": {
+                "var": "idx"
+              },
+              "op": "lt",
+              "right": {
+                "const": 2
+              }
+            }
+          },
+          "role": "root"
+        },
+        {
+          "buffer": "buffer",
+          "index": {
+            "var": "idx"
+          },
+          "op": "buf_write",
+          "role": "root",
+          "value": {
+            "var": "value"
+          }
+        }
+      ],
+      "profile": "c",
+      "read_variables": [
+        "idx",
+        "value"
+      ],
+      "root_domains": {
+        "idx": [
+          -1,
+          0,
+          1,
+          2
+        ],
+        "value": [
+          0,
+          1
+        ]
+      },
+      "vulnerable_core": [
+        {
+          "buffer": "buffer",
+          "index": {
+            "var": "idx"
+          },
+          "op": "buf_write",
+          "role": "root",
+          "value": {
+            "var": "value"
+          }
+        }
+      ],
+      "write_variables": []
+    },
+    "rows": [
+      {
+        "input": {
+          "idx": -1,
+          "value": 0
+        },
+        "patched": {
+          "aborted": true,
+          "events": [],
+          "public_state": [
+            [
+              "audit",
+              0
+            ],
+            [
+              "buffer",
+              [
+                0,
+                0
+              ]
+            ]
+          ],
+          "returned": null,
+          "steps": 1,
+          "trace": [
+            "0:guard"
+          ],
+          "violation": null
+        },
+        "vulnerable": {
+          "aborted": false,
+          "events": [],
+          "public_state": [
+            [
+              "audit",
+              0
+            ],
+            [
+              "buffer",
+              [
+                0,
+                0
+              ]
+            ]
+          ],
+          "returned": null,
+          "steps": 1,
+          "trace": [
+            "0:buf_write"
+          ],
+          "violation": "OOB_WRITE"
+        }
+      },
+      {
+        "input": {
+          "idx": -1,
+          "value": 1
+        },
+        "patched": {
+          "aborted": true,
+          "events": [],
+          "public_state": [
+            [
+              "audit",
+              0
+            ],
+            [
+              "buffer",
+              [
+                0,
+                0
+              ]
+            ]
+          ],
+          "returned": null,
+          "steps": 1,
+          "trace": [
+            "0:guard"
+          ],
+          "violation": null
+        },
+        "vulnerable": {
+          "aborted": false,
+          "events": [],
+          "public_state": [
+            [
+              "audit",
+              0
+            ],
+            [
+              "buffer",
+              [
+                0,
+                0
+              ]
+            ]
+          ],
+          "returned": null,
+          "steps": 1,
+          "trace": [
+            "0:buf_write"
+          ],
+          "violation": "OOB_WRITE"
+        }
+      },
+      {
+        "input": {
+          "idx": 0,
+          "value": 0
+        },
+        "patched": {
+          "aborted": false,
+          "events": [
+            [
+              "local:idx",
+              0
+            ],
+            [
+              "local:value",
+              0
+            ]
+          ],
+          "public_state": [
+            [
+              "audit",
+              0
+            ],
+            [
+              "buffer",
+              [
+                0,
+                0
+              ]
+            ]
+          ],
+          "returned": null,
+          "steps": 4,
+          "trace": [
+            "0:guard",
+            "1:buf_write",
+            "2:emit",
+            "3:emit"
+          ],
+          "violation": null
+        },
+        "vulnerable": {
+          "aborted": false,
+          "events": [
+            [
+              "local:idx",
+              0
+            ],
+            [
+              "local:value",
+              0
+            ]
+          ],
+          "public_state": [
+            [
+              "audit",
+              0
+            ],
+            [
+              "buffer",
+              [
+                0,
+                0
+              ]
+            ]
+          ],
+          "returned": null,
+          "steps": 3,
+          "trace": [
+            "0:buf_write",
+            "1:emit",
+            "2:emit"
+          ],
+          "violation": null
+        }
+      },
+      {
+        "input": {
+          "idx": 0,
+          "value": 1
+        },
+        "patched": {
+          "aborted": false,
+          "events": [
+            [
+              "local:idx",
+              0
+            ],
+            [
+              "local:value",
+              1
+            ]
+          ],
+          "public_state": [
+            [
+              "audit",
+              0
+            ],
+            [
+              "buffer",
+              [
+                1,
+                0
+              ]
+            ]
+          ],
+          "returned": null,
+          "steps": 4,
+          "trace": [
+            "0:guard",
+            "1:buf_write",
+            "2:emit",
+            "3:emit"
+          ],
+          "violation": null
+        },
+        "vulnerable": {
+          "aborted": false,
+          "events": [
+            [
+              "local:idx",
+              0
+            ],
+            [
+              "local:value",
+              1
+            ]
+          ],
+          "public_state": [
+            [
+              "audit",
+              0
+            ],
+            [
+              "buffer",
+              [
+                1,
+                0
+              ]
+            ]
+          ],
+          "returned": null,
+          "steps": 3,
+          "trace": [
+            "0:buf_write",
+            "1:emit",
+            "2:emit"
+          ],
+          "violation": null
+        }
+      },
+      {
+        "input": {
+          "idx": 1,
+          "value": 0
+        },
+        "patched": {
+          "aborted": false,
+          "events": [
+            [
+              "local:idx",
+              1
+            ],
+            [
+              "local:value",
+              0
+            ]
+          ],
+          "public_state": [
+            [
+              "audit",
+              0
+            ],
+            [
+              "buffer",
+              [
+                0,
+                0
+              ]
+            ]
+          ],
+          "returned": null,
+          "steps": 4,
+          "trace": [
+            "0:guard",
+            "1:buf_write",
+            "2:emit",
+            "3:emit"
+          ],
+          "violation": null
+        },
+        "vulnerable": {
+          "aborted": false,
+          "events": [
+            [
+              "local:idx",
+              1
+            ],
+            [
+              "local:value",
+              0
+            ]
+          ],
+          "public_state": [
+            [
+              "audit",
+              0
+            ],
+            [
+              "buffer",
+              [
+                0,
+                0
+              ]
+            ]
+          ],
+          "returned": null,
+          "steps": 3,
+          "trace": [
+            "0:buf_write",
+            "1:emit",
+            "2:emit"
+          ],
+          "violation": null
+        }
+      },
+      {
+        "input": {
+          "idx": 1,
+          "value": 1
+        },
+        "patched": {
+          "aborted": false,
+          "events": [
+            [
+              "local:idx",
+              1
+            ],
+            [
+              "local:value",
+              1
+            ]
+          ],
+          "public_state": [
+            [
+              "audit",
+              0
+            ],
+            [
+              "buffer",
+              [
+                0,
+                1
+              ]
+            ]
+          ],
+          "returned": null,
+          "steps": 4,
+          "trace": [
+            "0:guard",
+            "1:buf_write",
+            "2:emit",
+            "3:emit"
+          ],
+          "violation": null
+        },
+        "vulnerable": {
+          "aborted": false,
+          "events": [
+            [
+              "local:idx",
+              1
+            ],
+            [
+              "local:value",
+              1
+            ]
+          ],
+          "public_state": [
+            [
+              "audit",
+              0
+            ],
+            [
+              "buffer",
+              [
+                0,
+                1
+              ]
+            ]
+          ],
+          "returned": null,
+          "steps": 3,
+          "trace": [
+            "0:buf_write",
+            "1:emit",
+            "2:emit"
+          ],
+          "violation": null
+        }
+      },
+      {
+        "input": {
+          "idx": 2,
+          "value": 0
+        },
+        "patched": {
+          "aborted": true,
+          "events": [],
+          "public_state": [
+            [
+              "audit",
+              0
+            ],
+            [
+              "buffer",
+              [
+                0,
+                0
+              ]
+            ]
+          ],
+          "returned": null,
+          "steps": 1,
+          "trace": [
+            "0:guard"
+          ],
+          "violation": null
+        },
+        "vulnerable": {
+          "aborted": false,
+          "events": [],
+          "public_state": [
+            [
+              "audit",
+              0
+            ],
+            [
+              "buffer",
+              [
+                0,
+                0
+              ]
+            ]
+          ],
+          "returned": null,
+          "steps": 1,
+          "trace": [
+            "0:buf_write"
+          ],
+          "violation": "OOB_WRITE"
+        }
+      },
+      {
+        "input": {
+          "idx": 2,
+          "value": 1
+        },
+        "patched": {
+          "aborted": true,
+          "events": [],
+          "public_state": [
+            [
+              "audit",
+              0
+            ],
+            [
+              "buffer",
+              [
+                0,
+                0
+              ]
+            ]
+          ],
+          "returned": null,
+          "steps": 1,
+          "trace": [
+            "0:guard"
+          ],
+          "violation": null
+        },
+        "vulnerable": {
+          "aborted": false,
+          "events": [],
+          "public_state": [
+            [
+              "audit",
+              0
+            ],
+            [
+              "buffer",
+              [
+                0,
+                0
+              ]
+            ]
+          ],
+          "returned": null,
+          "steps": 1,
+          "trace": [
+            "0:buf_write"
+          ],
+          "violation": "OOB_WRITE"
+        }
+      }
+    ],
+    "schema": "rcsc-context-transport"
+  },
+  "vulnerable": {
+    "context": {
+      "provenance": null,
+      "scenario": "indexed buffer update",
+      "shape": 0
+    },
+    "family": "bounds_write",
+    "initial_public_state": {
+      "audit": 0,
+      "buffer": [
+        0,
+        0
+      ]
+    },
+    "input_domains": {
+      "idx": [
+        -1,
+        0,
+        1,
+        2
+      ],
+      "noise_0": [
+        0
+      ],
+      "noise_1": [
+        0
+      ],
+      "noise_2": [
+        0
+      ],
+      "noise_3": [
+        0
+      ],
+      "value": [
+        0,
+        1
+      ]
+    },
+    "instructions": [
+      {
+        "dst": "context_0",
+        "expr": {
+          "var": "noise_0"
+        },
+        "op": "assign",
+        "role": "context"
+      },
+      {
+        "name": "pre-0",
+        "op": "emit",
+        "role": "context",
+        "value": {
+          "var": "context_0"
+        }
+      },
+      {
+        "dst": "context_1",
+        "expr": {
+          "var": "noise_1"
+        },
+        "op": "assign",
+        "role": "context"
+      },
+      {
+        "name": "pre-1",
+        "op": "emit",
+        "role": "context",
+        "value": {
+          "var": "context_1"
+        }
+      },
+      {
+        "dst": "context_2",
+        "expr": {
+          "var": "noise_2"
+        },
+        "op": "assign",
+        "role": "context"
+      },
+      {
+        "name": "pre-2",
+        "op": "emit",
+        "role": "context",
+        "value": {
+          "var": "context_2"
+        }
+      },
+      {
+        "dst": "context_3",
+        "expr": {
+          "var": "noise_3"
+        },
+        "op": "assign",
+        "role": "context"
+      },
+      {
+        "name": "pre-3",
+        "op": "emit",
+        "role": "context",
+        "value": {
+          "var": "context_3"
+        }
+      },
+      {
+        "dst": "aux",
+        "expr": {
+          "left": {
+            "const": 0
+          },
+          "op": "add",
+          "right": {
+            "const": 1
+          }
+        },
+        "op": "assign",
+        "role": "context"
+      },
+      {
+        "op": "nop",
+        "role": "context",
+        "tag": "shape-0"
+      },
+      {
+        "buffer": "buffer",
+        "index": {
+          "var": "idx"
+        },
+        "op": "buf_write",
+        "role": "root",
+        "value": {
+          "var": "value"
+        }
+      },
+      {
+        "name": "write",
+        "op": "emit",
+        "role": "context",
+        "value": {
+          "public": "buffer"
+        }
+      },
+      {
+        "op": "return",
+        "role": "context",
+        "value": {
+          "public": "buffer"
+        }
+      }
+    ],
+    "label": "vulnerable",
+    "parameters": {
+      "element_domain": [
+        0,
+        1
+      ],
+      "length": 2
+    },
+    "profile": "c",
+    "program_id": "transport-bounds_write-0-4-0-vulnerable",
+    "public_projection": [
+      "buffer",
+      "audit"
+    ],
+    "schema": "rcsc-program"
+  }
+}

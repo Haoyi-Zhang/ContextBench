@@ -1,0 +1,13 @@
+record,mapped,reason
+NIST-SARD-62684,True,selected-predicate-abstraction
+NIST-SARD-62695,True,selected-predicate-abstraction
+NIST-SARD-67603,True,selected-predicate-abstraction
+NIST-SARD-95487,True,selected-predicate-abstraction
+NIST-SARD-95045,False,unsupported-operator
+NIST-SARD-236684,True,selected-predicate-abstraction
+NIST-SARD-236942,True,selected-predicate-abstraction
+NIST-SARD-83596,True,selected-predicate-abstraction
+NIST-SARD-suite-112,False,suite-not-instance
+SWC-105,True,selected-predicate-abstraction
+SWC-107,True,selected-predicate-abstraction
+SWC-104,True,selected-predicate-abstraction

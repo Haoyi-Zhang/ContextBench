@@ -1,0 +1,72 @@
+{
+  "endpoint_valuations": 21002,
+  "expression_forms": [
+    "const",
+    "literal",
+    "public",
+    "var"
+  ],
+  "expression_operations": [
+    "add",
+    "and",
+    "eq",
+    "ge",
+    "gt",
+    "le",
+    "lt",
+    "mul",
+    "ne",
+    "not",
+    "or",
+    "sub"
+  ],
+  "instruction_operations": [
+    "add_fixed",
+    "assign",
+    "branch_abort",
+    "buf_write",
+    "check_call",
+    "commit_after_call",
+    "divide",
+    "emit",
+    "external_call",
+    "guard",
+    "low_call",
+    "nop",
+    "protected_store",
+    "return",
+    "update_balance"
+  ],
+  "interpreter_comparisons": 42004,
+  "operational_mismatches": 0,
+  "programs": 2834,
+  "scope": "already-admitted finite IR; independent immutable execution, not schema or resource-bound verification",
+  "semantic_mismatches": 0,
+  "strata": {
+    "constructor-endpoint": {
+      "interpreter_comparisons": 7396,
+      "programs": 516,
+      "valuations": 3698
+    },
+    "description-endpoint": {
+      "interpreter_comparisons": 184,
+      "programs": 20,
+      "valuations": 92
+    },
+    "grammar-coverage": {
+      "interpreter_comparisons": 10,
+      "programs": 2,
+      "valuations": 5
+    },
+    "observation-endpoint": {
+      "interpreter_comparisons": 9216,
+      "programs": 576,
+      "valuations": 4608
+    },
+    "preserving-target": {
+      "interpreter_comparisons": 25198,
+      "programs": 1720,
+      "valuations": 12599
+    }
+  }
+}

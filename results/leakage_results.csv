@@ -1,0 +1,6 @@
+scenario,pairs,minimal_witness_size,minimal_witness_features,subsets_examined,feature_universe_size,search_limit,search_complete,best_single_accuracy,best_single_feature,best_pair_accuracy,best_pair_features,certificate_rejections
+none,258,0,none,16383,14,14,True,0.5,source_partition,0.5,source_kind+source_partition,0
+label-token,258,1,label_hint,6,14,14,True,1.0,label_hint,1.0,source_kind+label_hint,258
+context-length,258,1,context_count,1,14,14,True,1.0,context_tags,1.0,source_kind+context_tags,258
+partition-skew,258,1,source_partition,14,14,14,True,1.0,source_partition,1.0,source_kind+source_partition,258
+mixed-two-feature,258,2,label_hint+source_partition,77,14,14,True,0.5,source_kind,1.0,label_hint+source_partition,258

@@ -1,0 +1,1045 @@
+[
+  {
+    "control": "pre-root-abort",
+    "family": "bounds_write",
+    "input": {
+      "idx": -1,
+      "noise_0": 1,
+      "noise_1": 0,
+      "value": 0
+    },
+    "patched": {
+      "aborted": true,
+      "events": [],
+      "public_state": [
+        [
+          "buffer",
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": null,
+      "steps": 1,
+      "trace": [
+        "0:branch_abort"
+      ],
+      "violation": null
+    },
+    "vulnerable": {
+      "aborted": true,
+      "events": [],
+      "public_state": [
+        [
+          "buffer",
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": null,
+      "steps": 1,
+      "trace": [
+        "0:branch_abort"
+      ],
+      "violation": null
+    }
+  },
+  {
+    "control": "unseen-context-type",
+    "error": "TypeError",
+    "family": "bounds_write",
+    "input": {
+      "idx": -1,
+      "noise_0": true,
+      "noise_1": 0,
+      "value": 0
+    }
+  },
+  {
+    "control": "unseen-integer-growth",
+    "error": "EvaluationLimit",
+    "family": "bounds_write",
+    "input": {
+      "idx": -1,
+      "noise_0": 1,
+      "noise_1": 0,
+      "value": 0
+    }
+  },
+  {
+    "control": "nuisance-guard-conjunct",
+    "family": "bounds_write",
+    "input": {
+      "idx": 0,
+      "noise_0": 1,
+      "noise_1": 0,
+      "value": 0
+    },
+    "patched": {
+      "aborted": true,
+      "events": [
+        [
+          "pre-0",
+          1
+        ],
+        [
+          "pre-1",
+          0
+        ]
+      ],
+      "public_state": [
+        [
+          "buffer",
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": null,
+      "steps": 7,
+      "trace": [
+        "0:assign",
+        "1:emit",
+        "2:assign",
+        "3:emit",
+        "4:assign",
+        "5:nop",
+        "6:guard"
+      ],
+      "violation": null
+    },
+    "vulnerable": {
+      "aborted": false,
+      "events": [
+        [
+          "pre-0",
+          1
+        ],
+        [
+          "pre-1",
+          0
+        ],
+        [
+          "write",
+          [
+            0,
+            0
+          ]
+        ]
+      ],
+      "public_state": [
+        [
+          "buffer",
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": [
+        0,
+        0
+      ],
+      "steps": 9,
+      "trace": [
+        "0:assign",
+        "1:emit",
+        "2:assign",
+        "3:emit",
+        "4:assign",
+        "5:nop",
+        "6:buf_write",
+        "7:emit",
+        "8:return"
+      ],
+      "violation": null
+    }
+  },
+  {
+    "control": "pre-root-abort",
+    "family": "divide_zero",
+    "input": {
+      "denominator": -1,
+      "noise_0": 1,
+      "noise_1": 0,
+      "numerator": -2
+    },
+    "patched": {
+      "aborted": true,
+      "events": [],
+      "public_state": [
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": null,
+      "steps": 1,
+      "trace": [
+        "0:branch_abort"
+      ],
+      "violation": null
+    },
+    "vulnerable": {
+      "aborted": true,
+      "events": [],
+      "public_state": [
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": null,
+      "steps": 1,
+      "trace": [
+        "0:branch_abort"
+      ],
+      "violation": null
+    }
+  },
+  {
+    "control": "root-input-overwrite",
+    "family": "divide_zero",
+    "input": {
+      "denominator": -1,
+      "noise_0": 1,
+      "noise_1": 0,
+      "numerator": -2
+    },
+    "patched": {
+      "aborted": false,
+      "events": [
+        [
+          "pre-0",
+          1
+        ],
+        [
+          "pre-1",
+          0
+        ],
+        [
+          "quotient",
+          -2
+        ]
+      ],
+      "public_state": [
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": -2,
+      "steps": 11,
+      "trace": [
+        "0:assign",
+        "1:assign",
+        "2:emit",
+        "3:assign",
+        "4:emit",
+        "5:assign",
+        "6:nop",
+        "7:guard",
+        "8:divide",
+        "9:emit",
+        "10:return"
+      ],
+      "violation": null
+    },
+    "vulnerable": {
+      "aborted": false,
+      "events": [
+        [
+          "pre-0",
+          1
+        ],
+        [
+          "pre-1",
+          0
+        ],
+        [
+          "quotient",
+          -2
+        ]
+      ],
+      "public_state": [
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": -2,
+      "steps": 10,
+      "trace": [
+        "0:assign",
+        "1:assign",
+        "2:emit",
+        "3:assign",
+        "4:emit",
+        "5:assign",
+        "6:nop",
+        "7:divide",
+        "8:emit",
+        "9:return"
+      ],
+      "violation": null
+    }
+  },
+  {
+    "control": "unseen-context-type",
+    "error": "TypeError",
+    "family": "divide_zero",
+    "input": {
+      "denominator": -1,
+      "noise_0": true,
+      "noise_1": 0,
+      "numerator": -2
+    }
+  },
+  {
+    "control": "unseen-integer-growth",
+    "error": "EvaluationLimit",
+    "family": "divide_zero",
+    "input": {
+      "denominator": -1,
+      "noise_0": 1,
+      "noise_1": 0,
+      "numerator": -2
+    }
+  },
+  {
+    "control": "nuisance-guard-conjunct",
+    "family": "divide_zero",
+    "input": {
+      "denominator": -1,
+      "noise_0": 1,
+      "noise_1": 0,
+      "numerator": -2
+    },
+    "patched": {
+      "aborted": true,
+      "events": [
+        [
+          "pre-0",
+          1
+        ],
+        [
+          "pre-1",
+          0
+        ]
+      ],
+      "public_state": [
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": null,
+      "steps": 7,
+      "trace": [
+        "0:assign",
+        "1:emit",
+        "2:assign",
+        "3:emit",
+        "4:assign",
+        "5:nop",
+        "6:guard"
+      ],
+      "violation": null
+    },
+    "vulnerable": {
+      "aborted": false,
+      "events": [
+        [
+          "pre-0",
+          1
+        ],
+        [
+          "pre-1",
+          0
+        ],
+        [
+          "quotient",
+          2
+        ]
+      ],
+      "public_state": [
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": 2,
+      "steps": 9,
+      "trace": [
+        "0:assign",
+        "1:emit",
+        "2:assign",
+        "3:emit",
+        "4:assign",
+        "5:nop",
+        "6:divide",
+        "7:emit",
+        "8:return"
+      ],
+      "violation": null
+    }
+  },
+  {
+    "control": "pre-root-abort",
+    "family": "fixed_overflow",
+    "input": {
+      "delta": 0,
+      "noise_0": 1,
+      "noise_1": 0,
+      "x": 0
+    },
+    "patched": {
+      "aborted": true,
+      "events": [],
+      "public_state": [
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": null,
+      "steps": 1,
+      "trace": [
+        "0:branch_abort"
+      ],
+      "violation": null
+    },
+    "vulnerable": {
+      "aborted": true,
+      "events": [],
+      "public_state": [
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": null,
+      "steps": 1,
+      "trace": [
+        "0:branch_abort"
+      ],
+      "violation": null
+    }
+  },
+  {
+    "control": "root-input-overwrite",
+    "family": "fixed_overflow",
+    "input": {
+      "delta": 0,
+      "noise_0": 1,
+      "noise_1": 0,
+      "x": 7
+    },
+    "patched": {
+      "aborted": true,
+      "events": [
+        [
+          "pre-0",
+          1
+        ],
+        [
+          "pre-1",
+          0
+        ]
+      ],
+      "public_state": [
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": null,
+      "steps": 8,
+      "trace": [
+        "0:assign",
+        "1:assign",
+        "2:emit",
+        "3:assign",
+        "4:emit",
+        "5:assign",
+        "6:nop",
+        "7:guard"
+      ],
+      "violation": null
+    },
+    "vulnerable": {
+      "aborted": false,
+      "events": [
+        [
+          "pre-0",
+          1
+        ],
+        [
+          "pre-1",
+          0
+        ]
+      ],
+      "public_state": [
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": null,
+      "steps": 8,
+      "trace": [
+        "0:assign",
+        "1:assign",
+        "2:emit",
+        "3:assign",
+        "4:emit",
+        "5:assign",
+        "6:nop",
+        "7:add_fixed"
+      ],
+      "violation": "INTEGER_OVERFLOW"
+    }
+  },
+  {
+    "control": "unseen-context-type",
+    "error": "TypeError",
+    "family": "fixed_overflow",
+    "input": {
+      "delta": 0,
+      "noise_0": true,
+      "noise_1": 0,
+      "x": 0
+    }
+  },
+  {
+    "control": "unseen-integer-growth",
+    "error": "EvaluationLimit",
+    "family": "fixed_overflow",
+    "input": {
+      "delta": 0,
+      "noise_0": 1,
+      "noise_1": 0,
+      "x": 0
+    }
+  },
+  {
+    "control": "nuisance-guard-conjunct",
+    "family": "fixed_overflow",
+    "input": {
+      "delta": 0,
+      "noise_0": 1,
+      "noise_1": 0,
+      "x": 0
+    },
+    "patched": {
+      "aborted": true,
+      "events": [
+        [
+          "pre-0",
+          1
+        ],
+        [
+          "pre-1",
+          0
+        ]
+      ],
+      "public_state": [
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": null,
+      "steps": 7,
+      "trace": [
+        "0:assign",
+        "1:emit",
+        "2:assign",
+        "3:emit",
+        "4:assign",
+        "5:nop",
+        "6:guard"
+      ],
+      "violation": null
+    },
+    "vulnerable": {
+      "aborted": false,
+      "events": [
+        [
+          "pre-0",
+          1
+        ],
+        [
+          "pre-1",
+          0
+        ],
+        [
+          "sum",
+          0
+        ]
+      ],
+      "public_state": [
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": 0,
+      "steps": 9,
+      "trace": [
+        "0:assign",
+        "1:emit",
+        "2:assign",
+        "3:emit",
+        "4:assign",
+        "5:nop",
+        "6:add_fixed",
+        "7:emit",
+        "8:return"
+      ],
+      "violation": null
+    }
+  },
+  {
+    "control": "pre-root-abort",
+    "family": "access_control",
+    "input": {
+      "noise_0": 1,
+      "noise_1": 0,
+      "sender": "attacker",
+      "value": 0
+    },
+    "patched": {
+      "aborted": true,
+      "events": [],
+      "public_state": [
+        [
+          "owner",
+          "owner0"
+        ],
+        [
+          "setting",
+          0
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": null,
+      "steps": 1,
+      "trace": [
+        "0:branch_abort"
+      ],
+      "violation": null
+    },
+    "vulnerable": {
+      "aborted": true,
+      "events": [],
+      "public_state": [
+        [
+          "owner",
+          "owner0"
+        ],
+        [
+          "setting",
+          0
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": null,
+      "steps": 1,
+      "trace": [
+        "0:branch_abort"
+      ],
+      "violation": null
+    }
+  },
+  {
+    "control": "unseen-context-type",
+    "error": "TypeError",
+    "family": "access_control",
+    "input": {
+      "noise_0": true,
+      "noise_1": 0,
+      "sender": "attacker",
+      "value": 0
+    }
+  },
+  {
+    "control": "unseen-integer-growth",
+    "error": "EvaluationLimit",
+    "family": "access_control",
+    "input": {
+      "noise_0": 1,
+      "noise_1": 0,
+      "sender": "attacker",
+      "value": 0
+    }
+  },
+  {
+    "control": "nuisance-guard-conjunct",
+    "family": "access_control",
+    "input": {
+      "noise_0": 1,
+      "noise_1": 0,
+      "sender": "owner0",
+      "value": 0
+    },
+    "patched": {
+      "aborted": true,
+      "events": [
+        [
+          "pre-0",
+          1
+        ],
+        [
+          "pre-1",
+          0
+        ]
+      ],
+      "public_state": [
+        [
+          "owner",
+          "owner0"
+        ],
+        [
+          "setting",
+          0
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": null,
+      "steps": 7,
+      "trace": [
+        "0:assign",
+        "1:emit",
+        "2:assign",
+        "3:emit",
+        "4:assign",
+        "5:nop",
+        "6:guard"
+      ],
+      "violation": null
+    },
+    "vulnerable": {
+      "aborted": false,
+      "events": [
+        [
+          "pre-0",
+          1
+        ],
+        [
+          "pre-1",
+          0
+        ],
+        [
+          "setting",
+          0
+        ]
+      ],
+      "public_state": [
+        [
+          "owner",
+          "owner0"
+        ],
+        [
+          "setting",
+          0
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": 0,
+      "steps": 9,
+      "trace": [
+        "0:assign",
+        "1:emit",
+        "2:assign",
+        "3:emit",
+        "4:assign",
+        "5:nop",
+        "6:protected_store",
+        "7:emit",
+        "8:return"
+      ],
+      "violation": null
+    }
+  },
+  {
+    "control": "pre-root-abort",
+    "family": "reentrancy",
+    "input": {
+      "amount": 1,
+      "noise_0": 1,
+      "noise_1": 0,
+      "reenter": false,
+      "sender": "user"
+    },
+    "patched": {
+      "aborted": true,
+      "events": [],
+      "public_state": [
+        [
+          "balances",
+          {
+            "user": 2
+          }
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": null,
+      "steps": 1,
+      "trace": [
+        "0:branch_abort"
+      ],
+      "violation": null
+    },
+    "vulnerable": {
+      "aborted": true,
+      "events": [],
+      "public_state": [
+        [
+          "balances",
+          {
+            "user": 2
+          }
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": null,
+      "steps": 1,
+      "trace": [
+        "0:branch_abort"
+      ],
+      "violation": null
+    }
+  },
+  {
+    "control": "unseen-context-type",
+    "error": "TypeError",
+    "family": "reentrancy",
+    "input": {
+      "amount": 1,
+      "noise_0": true,
+      "noise_1": 0,
+      "reenter": false,
+      "sender": "user"
+    }
+  },
+  {
+    "control": "unseen-integer-growth",
+    "error": "EvaluationLimit",
+    "family": "reentrancy",
+    "input": {
+      "amount": 1,
+      "noise_0": 1,
+      "noise_1": 0,
+      "reenter": false,
+      "sender": "user"
+    }
+  },
+  {
+    "control": "pre-root-abort",
+    "family": "unchecked_call",
+    "input": {
+      "call_ok": false,
+      "noise_0": 1,
+      "noise_1": 0,
+      "value": 0
+    },
+    "patched": {
+      "aborted": true,
+      "events": [],
+      "public_state": [
+        [
+          "committed",
+          0
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": null,
+      "steps": 1,
+      "trace": [
+        "0:branch_abort"
+      ],
+      "violation": null
+    },
+    "vulnerable": {
+      "aborted": true,
+      "events": [],
+      "public_state": [
+        [
+          "committed",
+          0
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": null,
+      "steps": 1,
+      "trace": [
+        "0:branch_abort"
+      ],
+      "violation": null
+    }
+  },
+  {
+    "control": "root-input-overwrite",
+    "family": "unchecked_call",
+    "input": {
+      "call_ok": false,
+      "noise_0": 1,
+      "noise_1": 0,
+      "value": 0
+    },
+    "patched": {
+      "aborted": false,
+      "events": [
+        [
+          "pre-0",
+          1
+        ],
+        [
+          "pre-1",
+          0
+        ],
+        [
+          "commit",
+          0
+        ]
+      ],
+      "public_state": [
+        [
+          "committed",
+          0
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": 0,
+      "steps": 12,
+      "trace": [
+        "0:assign",
+        "1:assign",
+        "2:emit",
+        "3:assign",
+        "4:emit",
+        "5:assign",
+        "6:nop",
+        "7:low_call",
+        "8:check_call",
+        "9:commit_after_call",
+        "10:emit",
+        "11:return"
+      ],
+      "violation": null
+    },
+    "vulnerable": {
+      "aborted": false,
+      "events": [
+        [
+          "pre-0",
+          1
+        ],
+        [
+          "pre-1",
+          0
+        ],
+        [
+          "commit",
+          0
+        ]
+      ],
+      "public_state": [
+        [
+          "committed",
+          0
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": 0,
+      "steps": 11,
+      "trace": [
+        "0:assign",
+        "1:assign",
+        "2:emit",
+        "3:assign",
+        "4:emit",
+        "5:assign",
+        "6:nop",
+        "7:low_call",
+        "8:commit_after_call",
+        "9:emit",
+        "10:return"
+      ],
+      "violation": null
+    }
+  },
+  {
+    "control": "unseen-context-type",
+    "error": "TypeError",
+    "family": "unchecked_call",
+    "input": {
+      "call_ok": false,
+      "noise_0": true,
+      "noise_1": 0,
+      "value": 0
+    }
+  },
+  {
+    "control": "unseen-integer-growth",
+    "error": "EvaluationLimit",
+    "family": "unchecked_call",
+    "input": {
+      "call_ok": false,
+      "noise_0": 1,
+      "noise_1": 0,
+      "value": 0
+    }
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "controls": 46,
+  "matched_expectation": 46,
+  "valid_accepted": 16,
+  "invalid_rejected": 30,
+  "root_preserving_controls": 16,
+  "root_preserving_valid_accepted": 4,
+  "root_preserving_invalid_rejected": 12,
+  "root_flipping_controls": 30,
+  "root_flipping_valid_accepted": 12,
+  "root_flipping_invalid_rejected": 18,
+  "obligations": 420
+}

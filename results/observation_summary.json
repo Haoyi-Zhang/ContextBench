@@ -1,0 +1,17 @@
+{
+  "pairs": 288,
+  "oracle_accepted": 20,
+  "oracle_rejected": 268,
+  "checker_disagreements": 0,
+  "endpoint_valuations": 4608,
+  "interpreter_comparisons": 9216,
+  "interpreter_mismatches": 0,
+  "pair_check_obligations": 6356,
+  "false_acceptances": {
+    "alias": 16,
+    "untyped": 20,
+    "combined": 52
+  },
+  "cpu_seconds": 1.2873164250000002,
+  "wall_seconds": 1.2873959369999284
+}

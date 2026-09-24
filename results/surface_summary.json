@@ -1,0 +1,14 @@
+{
+  "pairs": 268,
+  "endpoints": 536,
+  "surface_cells": 268,
+  "balanced_cells": 268,
+  "all_cells_balanced": true,
+  "optimal_deterministic_surface_only_correct": 268,
+  "optimal_deterministic_surface_only_accuracy": 0.5,
+  "declared_root_polarity_correct": 536,
+  "declared_root_polarity_accuracy": 1.0,
+  "normalization_scope": "pair-conditioned quotient after validated repair erasure",
+  "normalization_is_endpoint_local": false,
+  "polarity_channel": "validated pair side / designated repair derivation"
+}

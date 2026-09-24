@@ -1,0 +1,11 @@
+record,accepted,reason,obligations
+NIST-SARD-62684,True,accepted,24
+NIST-SARD-62695,True,accepted,24
+NIST-SARD-67603,True,accepted,24
+NIST-SARD-95487,True,accepted,15
+NIST-SARD-236684,True,accepted,15
+NIST-SARD-236942,True,accepted,15
+NIST-SARD-83596,True,accepted,15
+SWC-105,True,accepted,9
+SWC-107,True,accepted,9
+SWC-104,True,accepted,9

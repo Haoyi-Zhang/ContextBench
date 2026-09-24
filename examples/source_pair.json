@@ -1,0 +1,386 @@
+{
+  "certificate": {
+    "declared_family": "bounds_write",
+    "declared_repair": "insert-root-guard",
+    "pair_id": "source-bounds_write-00",
+    "patched_id": "source-bounds_write-00-patched",
+    "schema": "rcsc-pair-certificate",
+    "vulnerable_id": "source-bounds_write-00-vulnerable",
+    "witness_input": {
+      "idx": -1,
+      "value": 0
+    }
+  },
+  "patched": {
+    "context": {
+      "origin": "owned-concrete-source-capsule",
+      "scenario": "bounds write",
+      "shape": 1
+    },
+    "family": "bounds_write",
+    "initial_public_state": {
+      "audit": 1,
+      "buffer": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "input_domains": {
+      "idx": [
+        -1,
+        0,
+        4,
+        5
+      ],
+      "value": [
+        0,
+        3
+      ]
+    },
+    "instructions": [
+      {
+        "dst": "aux",
+        "expr": {
+          "left": {
+            "const": 1
+          },
+          "op": "add",
+          "right": {
+            "const": 0
+          }
+        },
+        "op": "assign",
+        "role": "context"
+      },
+      {
+        "dst": "product_probe",
+        "expr": {
+          "left": {
+            "const": 3
+          },
+          "op": "mul",
+          "right": {
+            "const": 5
+          }
+        },
+        "op": "assign",
+        "role": "context"
+      },
+      {
+        "dst": "difference_probe",
+        "expr": {
+          "left": {
+            "var": "product_probe"
+          },
+          "op": "sub",
+          "right": {
+            "var": "aux"
+          }
+        },
+        "op": "assign",
+        "role": "context"
+      },
+      {
+        "dst": "order_probe",
+        "expr": {
+          "left": {
+            "arg": {
+              "left": {
+                "const": 1
+              },
+              "op": "gt",
+              "right": {
+                "const": 2
+              }
+            },
+            "op": "not"
+          },
+          "op": "or",
+          "right": {
+            "left": {
+              "left": {
+                "const": 1
+              },
+              "op": "lt",
+              "right": {
+                "const": 2
+              }
+            },
+            "op": "and",
+            "right": {
+              "left": {
+                "const": 2
+              },
+              "op": "ge",
+              "right": {
+                "const": 2
+              }
+            }
+          }
+        },
+        "op": "assign",
+        "role": "context"
+      },
+      {
+        "op": "branch_abort",
+        "pred": {
+          "const": false
+        },
+        "role": "context"
+      },
+      {
+        "op": "nop",
+        "role": "context",
+        "tag": "shape-3"
+      },
+      {
+        "op": "guard",
+        "pred": {
+          "left": {
+            "left": {
+              "const": 0
+            },
+            "op": "le",
+            "right": {
+              "var": "idx"
+            }
+          },
+          "op": "and",
+          "right": {
+            "left": {
+              "const": 5
+            },
+            "op": "gt",
+            "right": {
+              "var": "idx"
+            }
+          }
+        },
+        "role": "root"
+      },
+      {
+        "buffer": "buffer",
+        "index": {
+          "var": "idx"
+        },
+        "op": "buf_write",
+        "role": "root",
+        "value": {
+          "var": "value"
+        }
+      },
+      {
+        "name": "write",
+        "op": "emit",
+        "role": "context",
+        "value": {
+          "public": "buffer"
+        }
+      },
+      {
+        "op": "return",
+        "role": "context",
+        "value": {
+          "public": "buffer"
+        }
+      }
+    ],
+    "label": "patched",
+    "parameters": {
+      "element_domain": [
+        0,
+        3
+      ],
+      "length": 5
+    },
+    "profile": "c",
+    "program_id": "source-bounds_write-00-patched",
+    "public_projection": [
+      "buffer",
+      "audit"
+    ],
+    "schema": "rcsc-program"
+  },
+  "patched_source": "rcsc-source 1;\nprogram source-bounds_write-00-patched;\nprofile c;\nfamily bounds_write;\nlabel patched;\nparameter length = 5;\nparameter element_domain = [0,3];\ninput idx = [-1,0,4,5];\ninput value = [0,3];\ncontext origin = \"owned-concrete-source-capsule\";\ncontext scenario = \"bounds write\";\ncontext shape = 1;\nstate buffer = [2,2,2,2,2];\nstate audit = 1;\nproject buffer;\nproject audit;\n\ncontext: let aux = 1 + 0;\ncontext: let product_probe = 3 * 5;\ncontext: let difference_probe = product_probe - aux;\ncontext: let order_probe = !(1 > 2) || (1 < 2 && 2 >= 2);\ncontext: abort_if(false);\ncontext: nop \"shape-3\";\nroot: require(0 <= idx && 5 > idx);\nroot: buffer[idx] = value;\ncontext: emit(\"write\", state.buffer);\ncontext: return state.buffer;\n",
+  "source_certificate": {
+    "declared_family": "bounds_write",
+    "declared_profile": "c",
+    "pair_id": "source-bounds_write-00",
+    "patched_program_id": "source-bounds_write-00-patched",
+    "schema": "rcsc-source-pair-certificate",
+    "source_language": "rcsc-source-1",
+    "vulnerable_program_id": "source-bounds_write-00-vulnerable"
+  },
+  "vulnerable": {
+    "context": {
+      "origin": "owned-concrete-source-capsule",
+      "scenario": "bounds write",
+      "shape": 1
+    },
+    "family": "bounds_write",
+    "initial_public_state": {
+      "audit": 1,
+      "buffer": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "input_domains": {
+      "idx": [
+        -1,
+        0,
+        4,
+        5
+      ],
+      "value": [
+        0,
+        3
+      ]
+    },
+    "instructions": [
+      {
+        "dst": "aux",
+        "expr": {
+          "left": {
+            "const": 1
+          },
+          "op": "add",
+          "right": {
+            "const": 0
+          }
+        },
+        "op": "assign",
+        "role": "context"
+      },
+      {
+        "dst": "product_probe",
+        "expr": {
+          "left": {
+            "const": 3
+          },
+          "op": "mul",
+          "right": {
+            "const": 5
+          }
+        },
+        "op": "assign",
+        "role": "context"
+      },
+      {
+        "dst": "difference_probe",
+        "expr": {
+          "left": {
+            "var": "product_probe"
+          },
+          "op": "sub",
+          "right": {
+            "var": "aux"
+          }
+        },
+        "op": "assign",
+        "role": "context"
+      },
+      {
+        "dst": "order_probe",
+        "expr": {
+          "left": {
+            "arg": {
+              "left": {
+                "const": 1
+              },
+              "op": "gt",
+              "right": {
+                "const": 2
+              }
+            },
+            "op": "not"
+          },
+          "op": "or",
+          "right": {
+            "left": {
+              "left": {
+                "const": 1
+              },
+              "op": "lt",
+              "right": {
+                "const": 2
+              }
+            },
+            "op": "and",
+            "right": {
+              "left": {
+                "const": 2
+              },
+              "op": "ge",
+              "right": {
+                "const": 2
+              }
+            }
+          }
+        },
+        "op": "assign",
+        "role": "context"
+      },
+      {
+        "op": "branch_abort",
+        "pred": {
+          "const": false
+        },
+        "role": "context"
+      },
+      {
+        "op": "nop",
+        "role": "context",
+        "tag": "shape-3"
+      },
+      {
+        "buffer": "buffer",
+        "index": {
+          "var": "idx"
+        },
+        "op": "buf_write",
+        "role": "root",
+        "value": {
+          "var": "value"
+        }
+      },
+      {
+        "name": "write",
+        "op": "emit",
+        "role": "context",
+        "value": {
+          "public": "buffer"
+        }
+      },
+      {
+        "op": "return",
+        "role": "context",
+        "value": {
+          "public": "buffer"
+        }
+      }
+    ],
+    "label": "vulnerable",
+    "parameters": {
+      "element_domain": [
+        0,
+        3
+      ],
+      "length": 5
+    },
+    "profile": "c",
+    "program_id": "source-bounds_write-00-vulnerable",
+    "public_projection": [
+      "buffer",
+      "audit"
+    ],
+    "schema": "rcsc-program"
+  },
+  "vulnerable_source": "rcsc-source 1;\nprogram source-bounds_write-00-vulnerable;\nprofile c;\nfamily bounds_write;\nlabel vulnerable;\nparameter length = 5;\nparameter element_domain = [0,3];\ninput idx = [-1,0,4,5];\ninput value = [0,3];\ncontext origin = \"owned-concrete-source-capsule\";\ncontext scenario = \"bounds write\";\ncontext shape = 1;\nstate buffer = [2,2,2,2,2];\nstate audit = 1;\nproject buffer;\nproject audit;\n\ncontext: let aux = 1 + 0;\ncontext: let product_probe = 3 * 5;\ncontext: let difference_probe = product_probe - aux;\ncontext: let order_probe = !(1 > 2) || (1 < 2 && 2 >= 2);\ncontext: abort_if(false);\ncontext: nop \"shape-3\";\nroot: buffer[idx] = value;\ncontext: emit(\"write\", state.buffer);\ncontext: return state.buffer;\n"
+}

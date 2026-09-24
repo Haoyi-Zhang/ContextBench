@@ -1,0 +1,11 @@
+record,accepted,reason,detected
+NIST-SARD-62684,False,root-repair-mismatch,True
+NIST-SARD-62695,False,root-repair-mismatch,True
+NIST-SARD-67603,False,root-repair-mismatch,True
+NIST-SARD-95487,False,root-repair-mismatch,True
+NIST-SARD-236684,False,root-repair-mismatch,True
+NIST-SARD-236942,False,root-repair-mismatch,True
+NIST-SARD-83596,False,root-repair-mismatch,True
+SWC-105,False,root-repair-mismatch,True
+SWC-107,False,root-repair-mismatch,True
+SWC-104,False,root-repair-mismatch,True
