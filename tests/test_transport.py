@@ -178,6 +178,14 @@ class ContextTransportTests(unittest.TestCase):
             if isinstance(node,ast.ImportFrom):
                 self.assertNotIn(node.module,('generate','transport_cases','transport_producer','reference_semantics'))
 
+    def test_cartesian_semantic_oracle_does_not_import_factorization_or_repair(self):
+        module=Path(__file__).resolve().parents[1]/'rcsc'/'transport_oracle.py'
+        forbidden=('transport','transport_cases','transport_producer','transport_contract_gate','repair')
+        for node in ast.walk(ast.parse(module.read_text())):
+            if isinstance(node,ast.ImportFrom):
+                imported=(node.module or '').split('.')[-1]
+                self.assertNotIn(imported,forbidden)
+
     def test_cli_dispatch(self):
         self.assertTrue(verify_packet('transport', make_case('divide_zero')).accepted)
 
@@ -210,7 +218,8 @@ class ConservativeCoverageTests(unittest.TestCase):
         packet=next(p for name,kind,p in controls(make_case('reentrancy',dimensions=2))
                     if name=='root-input-overwrite')
         oracle=direct_oracle(packet)
-        self.assertTrue(oracle['relation'])
+        self.assertTrue(oracle['semantic_relation'])
+        self.assertTrue(oracle['monitor_consistent'])
         self.assertTrue(oracle['security_invariant'])
         self.assertEqual(check_transport(packet).reason,'transport-prefix-root-write')
 
@@ -237,6 +246,33 @@ class MovingWitnessTest(unittest.TestCase):
             cert['witness_input']['denominator'] = n
             self.assertTrue(check_pair(v, p, cert).accepted)
         result = direct_oracle(packet)
-        self.assertTrue(result['relation'])
+        self.assertTrue(result['semantic_relation'])
+        self.assertTrue(result['monitor_consistent'])
         self.assertFalse(result['security_invariant'])
         self.assertEqual(check_transport(packet).reason, 'transport-nuisance-root-flow')
+
+
+class CartesianOracleScopeTests(unittest.TestCase):
+    def test_trailing_root_nop_is_semantically_inert_but_not_the_named_repair(self):
+        from rcsc.transport_experiment import oracle_scope_controls
+        row=next(item for item in oracle_scope_controls()
+                 if item['control']=='patched-root-trailing-nop')
+        self.assertTrue(row['semantic_relation'])
+        self.assertTrue(row['security_invariant'])
+        self.assertTrue(row['monitor_consistent'])
+        self.assertFalse(row['repair_membership_precondition'])
+        self.assertFalse(row['contract_classification'])
+        self.assertFalse(row['production_accepted'])
+        self.assertEqual(row['production_reason'],'root-repair-mismatch')
+
+    def test_wrong_family_declaration_fails_monitor_and_repair_components(self):
+        from rcsc.transport_experiment import oracle_scope_controls
+        row=next(item for item in oracle_scope_controls()
+                 if item['control']=='divide-pair-declared-fixed-overflow')
+        self.assertFalse(row['semantic_relation'])
+        self.assertTrue(row['security_invariant'])
+        self.assertFalse(row['monitor_consistent'])
+        self.assertFalse(row['repair_membership_precondition'])
+        self.assertFalse(row['contract_classification'])
+        self.assertFalse(row['production_accepted'])
+        self.assertEqual(row['production_reason'],'root-repair-mismatch')

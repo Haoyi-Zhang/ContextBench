@@ -7,6 +7,17 @@ ordinary input domain; it does not authorize a larger context family. Transport
 adds separately checked effects, complete root-exit stores, uniform witnesses,
 and context totality. The pair-conditioned quotient below is auxiliary only.
 
+For transport evaluation, the full Cartesian oracle is a semantic oracle rather
+than an independent implementation of Definition 1. It checks execution
+definedness, the declared family monitor, patched closure, typed observations,
+uniform security/abort profiles, and vulnerable/productive-safe support over every
+root/context point. Program/declaration equality, expanded-domain admission, and
+exact repair membership are checked and recorded separately for each replayed
+packet. Exact repair membership reuses the production repair routine and is
+therefore explicitly non-independent. Neither transport footprints, abstract
+context interpretation, nor root-table verification is used to obtain the
+Cartesian semantic verdict.
+
 
 ## 1. Values, packets and admission
 

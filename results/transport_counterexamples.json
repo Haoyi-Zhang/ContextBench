@@ -1,5 +1,6 @@
 [
   {
+    "component": "security-profile-invariance",
     "control": "pre-root-abort",
     "family": "bounds_write",
     "input": {
@@ -56,6 +57,17 @@
     }
   },
   {
+    "component": "vulnerable-support",
+    "context_input": {
+      "noise_0": 0,
+      "noise_1": 0
+    },
+    "control": "root-input-overwrite",
+    "expected_monitor": "OOB_WRITE",
+    "family": "bounds_write"
+  },
+  {
+    "component": "defined-execution",
     "control": "unseen-context-type",
     "error": "TypeError",
     "family": "bounds_write",
@@ -67,6 +79,7 @@
     }
   },
   {
+    "component": "defined-execution",
     "control": "unseen-integer-growth",
     "error": "EvaluationLimit",
     "family": "bounds_write",
@@ -78,6 +91,7 @@
     }
   },
   {
+    "component": "safe-observation-equality",
     "control": "nuisance-guard-conjunct",
     "family": "bounds_write",
     "input": {
@@ -176,6 +190,7 @@
     }
   },
   {
+    "component": "security-profile-invariance",
     "control": "pre-root-abort",
     "family": "divide_zero",
     "input": {
@@ -218,93 +233,16 @@
     }
   },
   {
+    "component": "productive-safe-support",
+    "context_input": {
+      "noise_0": 0,
+      "noise_1": 0
+    },
     "control": "root-input-overwrite",
-    "family": "divide_zero",
-    "input": {
-      "denominator": -1,
-      "noise_0": 1,
-      "noise_1": 0,
-      "numerator": -2
-    },
-    "patched": {
-      "aborted": false,
-      "events": [
-        [
-          "pre-0",
-          1
-        ],
-        [
-          "pre-1",
-          0
-        ],
-        [
-          "quotient",
-          -2
-        ]
-      ],
-      "public_state": [
-        [
-          "audit",
-          0
-        ]
-      ],
-      "returned": -2,
-      "steps": 11,
-      "trace": [
-        "0:assign",
-        "1:assign",
-        "2:emit",
-        "3:assign",
-        "4:emit",
-        "5:assign",
-        "6:nop",
-        "7:guard",
-        "8:divide",
-        "9:emit",
-        "10:return"
-      ],
-      "violation": null
-    },
-    "vulnerable": {
-      "aborted": false,
-      "events": [
-        [
-          "pre-0",
-          1
-        ],
-        [
-          "pre-1",
-          0
-        ],
-        [
-          "quotient",
-          -2
-        ]
-      ],
-      "public_state": [
-        [
-          "audit",
-          0
-        ]
-      ],
-      "returned": -2,
-      "steps": 10,
-      "trace": [
-        "0:assign",
-        "1:assign",
-        "2:emit",
-        "3:assign",
-        "4:emit",
-        "5:assign",
-        "6:nop",
-        "7:divide",
-        "8:emit",
-        "9:return"
-      ],
-      "violation": null
-    }
+    "family": "divide_zero"
   },
   {
+    "component": "defined-execution",
     "control": "unseen-context-type",
     "error": "TypeError",
     "family": "divide_zero",
@@ -316,6 +254,7 @@
     }
   },
   {
+    "component": "defined-execution",
     "control": "unseen-integer-growth",
     "error": "EvaluationLimit",
     "family": "divide_zero",
@@ -327,6 +266,7 @@
     }
   },
   {
+    "component": "safe-observation-equality",
     "control": "nuisance-guard-conjunct",
     "family": "divide_zero",
     "input": {
@@ -405,6 +345,7 @@
     }
   },
   {
+    "component": "security-profile-invariance",
     "control": "pre-root-abort",
     "family": "fixed_overflow",
     "input": {
@@ -447,80 +388,17 @@
     }
   },
   {
+    "component": "vulnerable-support",
+    "context_input": {
+      "noise_0": 0,
+      "noise_1": 0
+    },
     "control": "root-input-overwrite",
-    "family": "fixed_overflow",
-    "input": {
-      "delta": 0,
-      "noise_0": 1,
-      "noise_1": 0,
-      "x": 7
-    },
-    "patched": {
-      "aborted": true,
-      "events": [
-        [
-          "pre-0",
-          1
-        ],
-        [
-          "pre-1",
-          0
-        ]
-      ],
-      "public_state": [
-        [
-          "audit",
-          0
-        ]
-      ],
-      "returned": null,
-      "steps": 8,
-      "trace": [
-        "0:assign",
-        "1:assign",
-        "2:emit",
-        "3:assign",
-        "4:emit",
-        "5:assign",
-        "6:nop",
-        "7:guard"
-      ],
-      "violation": null
-    },
-    "vulnerable": {
-      "aborted": false,
-      "events": [
-        [
-          "pre-0",
-          1
-        ],
-        [
-          "pre-1",
-          0
-        ]
-      ],
-      "public_state": [
-        [
-          "audit",
-          0
-        ]
-      ],
-      "returned": null,
-      "steps": 8,
-      "trace": [
-        "0:assign",
-        "1:assign",
-        "2:emit",
-        "3:assign",
-        "4:emit",
-        "5:assign",
-        "6:nop",
-        "7:add_fixed"
-      ],
-      "violation": "INTEGER_OVERFLOW"
-    }
+    "expected_monitor": "INTEGER_OVERFLOW",
+    "family": "fixed_overflow"
   },
   {
+    "component": "defined-execution",
     "control": "unseen-context-type",
     "error": "TypeError",
     "family": "fixed_overflow",
@@ -532,6 +410,7 @@
     }
   },
   {
+    "component": "defined-execution",
     "control": "unseen-integer-growth",
     "error": "EvaluationLimit",
     "family": "fixed_overflow",
@@ -543,6 +422,7 @@
     }
   },
   {
+    "component": "safe-observation-equality",
     "control": "nuisance-guard-conjunct",
     "family": "fixed_overflow",
     "input": {
@@ -621,6 +501,7 @@
     }
   },
   {
+    "component": "security-profile-invariance",
     "control": "pre-root-abort",
     "family": "access_control",
     "input": {
@@ -679,6 +560,16 @@
     }
   },
   {
+    "component": "productive-safe-support",
+    "context_input": {
+      "noise_0": 0,
+      "noise_1": 0
+    },
+    "control": "root-input-overwrite",
+    "family": "access_control"
+  },
+  {
+    "component": "defined-execution",
     "control": "unseen-context-type",
     "error": "TypeError",
     "family": "access_control",
@@ -690,6 +581,7 @@
     }
   },
   {
+    "component": "defined-execution",
     "control": "unseen-integer-growth",
     "error": "EvaluationLimit",
     "family": "access_control",
@@ -701,6 +593,7 @@
     }
   },
   {
+    "component": "safe-observation-equality",
     "control": "nuisance-guard-conjunct",
     "family": "access_control",
     "input": {
@@ -795,6 +688,7 @@
     }
   },
   {
+    "component": "security-profile-invariance",
     "control": "pre-root-abort",
     "family": "reentrancy",
     "input": {
@@ -850,6 +744,7 @@
     }
   },
   {
+    "component": "defined-execution",
     "control": "unseen-context-type",
     "error": "TypeError",
     "family": "reentrancy",
@@ -862,6 +757,7 @@
     }
   },
   {
+    "component": "defined-execution",
     "control": "unseen-integer-growth",
     "error": "EvaluationLimit",
     "family": "reentrancy",
@@ -874,6 +770,7 @@
     }
   },
   {
+    "component": "security-profile-invariance",
     "control": "pre-root-abort",
     "family": "unchecked_call",
     "input": {
@@ -924,103 +821,16 @@
     }
   },
   {
+    "component": "productive-safe-support",
+    "context_input": {
+      "noise_0": 0,
+      "noise_1": 0
+    },
     "control": "root-input-overwrite",
-    "family": "unchecked_call",
-    "input": {
-      "call_ok": false,
-      "noise_0": 1,
-      "noise_1": 0,
-      "value": 0
-    },
-    "patched": {
-      "aborted": false,
-      "events": [
-        [
-          "pre-0",
-          1
-        ],
-        [
-          "pre-1",
-          0
-        ],
-        [
-          "commit",
-          0
-        ]
-      ],
-      "public_state": [
-        [
-          "committed",
-          0
-        ],
-        [
-          "audit",
-          0
-        ]
-      ],
-      "returned": 0,
-      "steps": 12,
-      "trace": [
-        "0:assign",
-        "1:assign",
-        "2:emit",
-        "3:assign",
-        "4:emit",
-        "5:assign",
-        "6:nop",
-        "7:low_call",
-        "8:check_call",
-        "9:commit_after_call",
-        "10:emit",
-        "11:return"
-      ],
-      "violation": null
-    },
-    "vulnerable": {
-      "aborted": false,
-      "events": [
-        [
-          "pre-0",
-          1
-        ],
-        [
-          "pre-1",
-          0
-        ],
-        [
-          "commit",
-          0
-        ]
-      ],
-      "public_state": [
-        [
-          "committed",
-          0
-        ],
-        [
-          "audit",
-          0
-        ]
-      ],
-      "returned": 0,
-      "steps": 11,
-      "trace": [
-        "0:assign",
-        "1:assign",
-        "2:emit",
-        "3:assign",
-        "4:emit",
-        "5:assign",
-        "6:nop",
-        "7:low_call",
-        "8:commit_after_call",
-        "9:emit",
-        "10:return"
-      ],
-      "violation": null
-    }
+    "family": "unchecked_call"
   },
   {
+    "component": "defined-execution",
     "control": "unseen-context-type",
     "error": "TypeError",
     "family": "unchecked_call",
@@ -1032,6 +842,7 @@
     }
   },
   {
+    "component": "defined-execution",
     "control": "unseen-integer-growth",
     "error": "EvaluationLimit",
     "family": "unchecked_call",

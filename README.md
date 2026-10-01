@@ -35,14 +35,18 @@ PYTHONDONTWRITEBYTECODE=1 python export_paper_data.py --results results --output
 PYTHONDONTWRITEBYTECODE=1 python export_transport_data.py --results results --output paper-data
 ```
 
-The first command runs all 124 regression tests and records their identifiers
+The first command runs all 129 regression tests and records their identifiers
 and outcomes without timing-dependent text in `results/test_summary.json`.
 The two campaigns use one worker. The base campaign reconstructs the finite
 execution substrate. The transport campaign generates its own 36 primary pairs,
 76 controls, and 42 scaling points; its compatibility audit reads the three
 finite corpora in `results/` produced by the base campaign. A custom transport
 output directory does not change that input location. The two result checkers
-reconcile 24 base CSV tables and five transport CSV tables, respectively.
+reconcile 24 base CSV tables and six transport CSV tables, respectively.
+Each scaling row retains three raw transport-check times, and the coordinator
+recomputes the median. `transport_summary.json` records the CPU model, visible
+logical CPU count, OS/release/architecture, Python implementation/version, and
+the CPU, wall-clock, and RSS measurement definitions for the retained rerun.
 Timing fields vary with the host; logical selections and classifications do not.
 
 The JSON command-line verifier accepts packets up to 2 MiB and installs a
@@ -94,6 +98,7 @@ mechanized proof of the Python implementation.
 | Root-table reuse | Six distinct tables across the 36 pairs |
 | Root/full execution agreement | 516 root runs versus 8,256 full endpoint runs |
 | Independent immutable comparisons | 8,256 comparisons, zero differences |
+| Oracle-scope mutations | Two: one semantic-only pass rejected by repair membership; one monitor/declaration mismatch |
 | Nontrivial functionality | All 36 pairs have observed context-dependent output |
 | Controls | 76 rejections with explicitly different meanings |
 | Invalid expanded semantic relations | 27, including 22 accepted at the anchor |
@@ -119,14 +124,19 @@ amount overwrite that is harmless over its declared finite domain. Rejection by
 a sufficient frame or abstract bound is not itself a semantic counterexample.
 
 `transport_packets.json` and `transport_control_packets.json` retain exact inputs;
-`transport_oracle.csv` records exhaustive primary evaluations;
-`transport_counterexamples.json` retains off-anchor failures;
-`transport_functional_variation.json` retains observable-variation witnesses.
-The production checker does not import the generator. The Cartesian oracle does
-not use the transport footprint, probe, or abstract-analysis implementation.
-It does share the declared monitor semantics; no independent model adequacy claim
-is made. Certificate-free factored agreement is explicitly not counted as an
-independent soundness check.
+`transport_oracle.csv` records exhaustive primary semantic evaluations;
+`transport_oracle_scope_controls.csv` records the trailing-root-no-op and wrong-
+family mutations; `transport_counterexamples.json` retains off-anchor failures;
+and `transport_functional_variation.json` retains observable-variation witnesses.
+The production checker does not import the generator. `rcsc/transport_oracle.py`
+does not import the transport footprint, probe, abstract interpreter, root table,
+or repair checker. It checks defined execution, declared-monitor consistency,
+patch closure, observations, support, and security-profile invariance over the full
+small Cartesian product. Declaration/domain premises and exact repair membership
+are recorded separately by `transport_contract_gate.py`. The repair gate reuses the
+production repair implementation and is therefore not independent validation.
+Certificate-free factored agreement is likewise not counted as an independent
+soundness check.
 
 ## Supporting finite execution evidence
 
@@ -176,8 +186,10 @@ to actual sources by supplying `--tex ../paper/main.tex --bib
 
 `TRANSPORT_PROOFS.md` defines the principal result; `SPECIFICATION.md` and
 `PROOFS.md` define its finite execution and repair substrate. `rcsc/transport.py`
-is the consumer, `rcsc/transport_producer.py` the untrusted table builder, and
-`rcsc/transport_experiment.py` the bounded experiment and Cartesian oracle.
+is the consumer, `rcsc/transport_producer.py` the untrusted table builder,
+`rcsc/transport_oracle.py` the factorization-independent Cartesian semantic path,
+`rcsc/transport_contract_gate.py` the explicitly shared structural-premise gate,
+and `rcsc/transport_experiment.py` the bounded experiment coordinator.
 `tests/`, `examples/`, `results/`, and `paper-data/` hold executable checks, packets,
 raw evidence, and data exports. `claim_evidence_ledger.csv` maps the current
 manuscript's claims to exact proof, code, test, and result paths. Source rights

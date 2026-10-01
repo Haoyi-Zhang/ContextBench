@@ -97,8 +97,11 @@
     "test_source_bridge.SourceBridgeTests.test_source_statement_and_expression_coverage",
     "test_source_bridge.SourceBridgeTests.test_supplied_ir_admission_rejects_malformed_cycle_and_excess_depth",
     "test_source_bridge.SourceBridgeTests.test_supplied_ir_must_equal_fresh_translation",
+    "test_transport.CartesianOracleScopeTests.test_trailing_root_nop_is_semantically_inert_but_not_the_named_repair",
+    "test_transport.CartesianOracleScopeTests.test_wrong_family_declaration_fails_monitor_and_repair_components",
     "test_transport.ConservativeCoverageTests.test_overwrite_can_be_semantically_harmless",
     "test_transport.ContextTransportTests.test_all_families_match_full_small_product",
+    "test_transport.ContextTransportTests.test_cartesian_semantic_oracle_does_not_import_factorization_or_repair",
     "test_transport.ContextTransportTests.test_certificate_row_coverage",
     "test_transport.ContextTransportTests.test_cli_dispatch",
     "test_transport.ContextTransportTests.test_constant_true_context_guard_is_outside_fragment",
@@ -127,9 +130,11 @@
     "test_transport.TransportAuditTests.test_audit_still_checks_frame_and_closure",
     "test_transport.TransportAuditTests.test_factored_relation_does_not_need_incoming_proof",
     "test_transport_results.ResultClosureTests.test_large_product_cannot_be_counted_as_executed",
+    "test_transport_results.ResultClosureTests.test_retained_median_must_come_from_three_raw_trials",
     "test_transport_results.ResultClosureTests.test_retained_transport_evidence",
+    "test_transport_results.ResultClosureTests.test_scope_control_cannot_be_promoted_to_independent_contract_evidence",
     "test_transport_results.ResultClosureTests.test_valid_exclusion_count_cannot_be_relabelled_attack"
   ],
-  "tests_run": 124,
+  "tests_run": 129,
   "unexpected_successes": []
 }

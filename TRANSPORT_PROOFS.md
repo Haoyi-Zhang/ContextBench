@@ -114,8 +114,17 @@ not violate. Execution errors fail closed.
 The producer uses the immutable reference evaluator to generate rows. The consumer
 uses the production consumer evaluator. Probe construction is shared protocol
 infrastructure, not an independently implemented parser or whole-system proof.
-A separate full-program Cartesian oracle avoids the footprint and abstraction
-routines and checks both production execution and the immutable reference.
+A separate full-program Cartesian semantic oracle avoids the footprint,
+context abstraction, and root-table routines. It executes every root/context
+point, checks definedness, declared-monitor consistency, patched closure,
+within-context observations, uniform security/abort profiles, and both support
+conditions, and compares retained primary executions with the immutable reference.
+It deliberately does not decide exact repair membership, declaration equality,
+or certificate claims. Each packet therefore carries a separately recorded
+structural-precondition result. That gate invokes the production exact-repair
+routine, so its repair result is shared-code evidence rather than an independent
+second validator. A full contract classification is the conjunction of those
+explicit structural premises and the Cartesian semantic result.
 
 ## 4. Totality and allocation lemmas
 
@@ -308,17 +317,28 @@ a type error. Repeated squaring can exceed the bounded integer semantics. None c
 be dismissed by shared-context equality; the transport frame/totality checks
 reject them. Raw witnesses are retained with full context/root valuations.
 
+Two additional scope mutations separate that semantic evidence from the relation
+entry conditions. Appending one root-role `nop` to the patched division root leaves
+all finite executions, observations, monitor outcomes, and profiles unchanged, so
+the Cartesian semantic oracle accepts; exact repair membership and the production
+entry reject `root-repair-mismatch`. Relabeling the same C-profile division pair as
+`fixed_overflow` preserves its per-root profile constancy but makes the observed
+`divide-by-zero` violation inconsistent with the declared monitor and also fails
+the named repair. These two cases are recorded separately from the 76 transport
+controls because they test oracle scope, not additional contextual attacks.
+
 Conversely `denominator := denominator` before the root and a constant-true shared
 prefix guard are valid for all inputs but rejected by the syntactic fragment.
 The controlled experiment predeclares twelve such cases, two in each family.
-The independent oracle additionally finds a semantically valid amount overwrite
-in the callback family: both assigned amounts remain below the positive balance,
-so the security profile and the paired observations are unchanged. The report
-therefore counts thirteen valid-but-rejected controls, not twelve, and does not
-count that frame rejection as attack detection. The
-applicability audit also retains the six valid preexisting observer cases excluded
-by root-emission/placement restrictions. No rejection is called a semantic defect
-without the independent Cartesian evidence. These are not completeness claims.
+The Cartesian semantic oracle, after separately confirming declaration/domain and
+repair premises, additionally finds a semantically valid amount overwrite in the
+callback family: both assigned amounts remain below the positive balance, so the
+security profile and the paired observations are unchanged. The report therefore
+counts thirteen valid-but-rejected controls, not twelve, and does not count that
+frame rejection as attack detection. The applicability audit also retains the six
+valid preexisting observer cases excluded by root-emission/placement restrictions.
+No rejection is called a semantic defect without full Cartesian semantic replay
+under recorded structural premises. These are not completeness claims.
 
 ## 8. Relation to earlier finite evidence
 
