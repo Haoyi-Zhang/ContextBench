@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import argparse
+import copy
 import csv
 import json
 import math
@@ -9,15 +10,17 @@ import statistics
 from collections import Counter
 from pathlib import Path
 
-from rcsc.transport import cardinality, stable_json
+from rcsc.checker import execute
+from rcsc.model import is_productive_root_safe, validate_program, value_key, VIOLATION_FOR_FAMILY
+from rcsc.transport import cardinality, check_transport, stable_json, valuations
 
 
 def check(root: Path) -> dict:
     def load(name):
-        return json.loads((root / name).read_text())
+        return json.loads((root / name).read_text(encoding="utf-8"))
 
     def rows(name):
-        with (root / name).open(newline="") as stream:
+        with (root / name).open(newline="", encoding="utf-8") as stream:
             return list(csv.DictReader(stream))
 
     def require(ok, message):
@@ -42,15 +45,27 @@ def check(root: Path) -> dict:
     scope = rows("transport_oracle_scope_controls.csv")
     packets = load("transport_packets.json")
     control_packets = load("transport_control_packets.json")
+    variation = load("transport_functional_variation.json")
 
     require(len(primary) == len(packets) == summary["primary_pairs"] == 36, "primary count")
     require(len({row["case"] for row in primary}) == 36, "primary identities")
     require(len({row["family"] for row in primary}) == summary["families"] == 6, "family count")
     require(len({row["wrapper"] for row in primary}) == summary["wrapper_templates"] == 6, "wrapper count")
+    require(len({(row["family"], row["wrapper"]) for row in primary}) == 36, "family/wrapper coverage")
+    require(
+        len(variation) == len({item["case"] for item in variation}) == 36
+        and {item["case"] for item in variation} == {row["case"] for row in primary},
+        "functional variation witness coverage",
+    )
+    variation_by_case = {item["case"]: item for item in variation}
+    require({item["case"] for item in oracle} == {row["case"] for row in primary}, "oracle case coverage")
     certificates = []
     for row, packet_record in zip(primary, packets):
         packet = packet_record.get("packet", packet_record)
+        require(packet_record.get("case") == row["case"], "primary packet identity")
         require(row["family"] == packet["vulnerable"]["family"], "primary packet family")
+        actual = check_transport(packet)
+        require(actual.accepted, "primary packet no longer accepted")
         require(
             yes(row["accepted"])
             and yes(row["oracle_semantic_relation"])
@@ -91,11 +106,11 @@ def check(root: Path) -> dict:
         certificates.append(certificate)
         selected = [item for item in oracle if item["case"] == row["case"]]
         require(len(selected) == root_count * context_count, "oracle row coverage")
-        require(
-            len({(item["root_input"], item["context_input"]) for item in selected})
-            == root_count * context_count,
-            "duplicate oracle row",
-        )
+        expected_points = {(stable_json(r), stable_json(n))
+                           for r in valuations(roots) for n in valuations(packet["context_domains"])}
+        observed_points = {(item["root_input"], item["context_input"]) for item in selected}
+        require(observed_points == expected_points, "oracle input/domain coverage")
+        require(len(observed_points) == len(selected), "duplicate oracle row")
         require(
             all(
                 yes(item["defined"])
@@ -108,6 +123,34 @@ def check(root: Path) -> dict:
             ),
             "oracle failure",
         )
+        monitor = VIOLATION_FOR_FAMILY[row["family"]]
+        require(all(item["declared_monitor"] == monitor
+                    and item["v_violation"] in ("", monitor)
+                    and item["p_violation"] == "" for item in selected), "oracle monitor record")
+        require(all(int(item["reference_comparisons"]) == 2 for item in selected)
+                and sum(int(item["reference_comparisons"]) for item in selected)
+                    == int(row["reference_comparisons"]), "oracle reference comparison count")
+        require(int(row["reference_mismatches"]) == 0, "primary reference mismatch count")
+
+        # These are two explicit witnesses, not evidence for all Cartesian points.
+        witness = variation_by_case[row["case"]]
+        root_input = witness["root_input"]
+        require(stable_json(root_input) in {stable_json(r) for r in valuations(roots)},
+                "functional variation root domain")
+        results = []
+        for position in ("first", "second"):
+            context = witness[position + "_context"]
+            require(stable_json(context) in {stable_json(n) for n in valuations(packet["context_domains"])},
+                    "functional variation context domain")
+            point = copy.deepcopy(packet["vulnerable"])
+            point["input_domains"].update({name: [value] for name, value in context.items()})
+            result = execute(point, dict(root_input, **context))
+            require(is_productive_root_safe(point, result), "functional variation productive root")
+            stored = json.loads(json.dumps(result.to_json()))
+            require(value_key(stored) == value_key(witness[position + "_result"]),
+                    "functional variation result binding")
+            results.append(result)
+        require(results[0].observation() != results[1].observation(), "functional variation absent")
     require(len(set(certificates)) == summary["core_certificates"] == 6, "reused root certificates")
     require(summary["primary_relation_precondition_passes"] == 36, "primary precondition summary")
     require(summary["primary_full_contract_classifications"] == 36, "primary contract summary")
@@ -202,6 +245,20 @@ def check(root: Path) -> dict:
     )
 
     require(len(controls) == len(control_packets) == summary["controls"] == 76, "control count")
+    require(len({(item["family"], item["control"]) for item in controls}) == 76,
+            "duplicate control identity")
+    for row, record in zip(controls, control_packets):
+        require(all(record.get(key) == row[key] for key in ("family", "control", "kind")),
+                "control packet identity")
+        packet = record.get("packet")
+        require(type(packet) is dict and set(packet) == {"vulnerable", "patched", "certificate",
+                "context_domains", "transport_certificate"}, "control packet schema")
+        validate_program(packet["vulnerable"])
+        validate_program(packet["patched"])
+        require(packet["vulnerable"]["family"] == row["family"], "control packet family")
+        actual = check_transport(packet)
+        require(actual.accepted == yes(row["transport_accepted"])
+                and actual.reason == row["transport_reason"], "control packet result binding")
     require(all(not yes(item["transport_accepted"]) for item in controls), "control accepted")
     classes = Counter(item["oracle_class"] for item in controls)
     require(

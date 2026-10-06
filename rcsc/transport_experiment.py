@@ -6,7 +6,6 @@ import csv
 import json
 import os
 import platform
-import resource
 import statistics
 import time
 from pathlib import Path
@@ -56,6 +55,9 @@ def measurement_environment() -> dict:
 
 
 def max_rss_mib() -> float:
+    # Keep owned fixture/oracle helpers importable where POSIX RSS is unavailable.
+    # The measured campaign still requires this genuine resource measurement.
+    import resource
     raw = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
     # Linux reports KiB; macOS reports bytes.  The retained run records the OS.
     return raw / (1024 * 1024) if platform.system() == "Darwin" else raw / 1024
@@ -206,6 +208,8 @@ def oracle_scope_controls() -> list[dict]:
 
 
 def run_transport(output, base_results=None):
+    # Fail before doing campaign work on an unsupported measurement platform.
+    max_rss_mib()
     output.mkdir(parents=True, exist_ok=True)
     environment = measurement_environment()
     cpu_started = time.process_time()

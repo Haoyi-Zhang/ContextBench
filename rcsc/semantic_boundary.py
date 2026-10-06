@@ -121,7 +121,8 @@ def expression_matrix() -> tuple[list[dict[str, Any]], list[dict[str, Any]], dic
             "case_index": case_index,
             "operator": op,
             "left": _json(left),
-            "right": "" if right is None else _json(right),
+            # Null is a real binary operand; only unary not has no right operand.
+            "right": "" if op == "not" else _json(right),
             "producer_status": outcomes["producer"]["status"],
             "checker_status": outcomes["checker"]["status"],
             "reference_status": outcomes["reference"]["status"],

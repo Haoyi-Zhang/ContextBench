@@ -1,5 +1,5 @@
 case_index,operator,left,right,producer_status,checker_status,reference_status,producer_value,checker_value,reference_value,producer_error_type,checker_error_type,reference_error_type,definedness_match,value_match_when_defined,matched
-0,add,null,,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+0,add,null,null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1,add,null,false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 2,add,null,true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 3,add,null,-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -11,7 +11,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 9,add,null,[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 10,add,null,{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 11,add,null,"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-12,add,false,,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+12,add,false,null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 13,add,false,false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 14,add,false,true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 15,add,false,-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -23,7 +23,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 21,add,false,[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 22,add,false,{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 23,add,false,"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-24,add,true,,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+24,add,true,null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 25,add,true,false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 26,add,true,true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 27,add,true,-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -35,7 +35,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 33,add,true,[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 34,add,true,{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 35,add,true,"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-36,add,-1,,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+36,add,-1,null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 37,add,-1,false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 38,add,-1,true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 39,add,-1,-1,defined,defined,defined,"[""int"",-2]","[""int"",-2]","[""int"",-2]",,,,True,True,True
@@ -47,7 +47,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 45,add,-1,[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 46,add,-1,{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 47,add,-1,"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-48,add,0,,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+48,add,0,null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 49,add,0,false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 50,add,0,true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 51,add,0,-1,defined,defined,defined,"[""int"",-1]","[""int"",-1]","[""int"",-1]",,,,True,True,True
@@ -59,7 +59,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 57,add,0,[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 58,add,0,{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 59,add,0,"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-60,add,1,,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+60,add,1,null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 61,add,1,false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 62,add,1,true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 63,add,1,-1,defined,defined,defined,"[""int"",0]","[""int"",0]","[""int"",0]",,,,True,True,True
@@ -71,7 +71,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 69,add,1,[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 70,add,1,{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 71,add,1,"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-72,add,"""""",,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+72,add,"""""",null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 73,add,"""""",false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 74,add,"""""",true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 75,add,"""""",-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -83,7 +83,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 81,add,"""""",[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 82,add,"""""",{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 83,add,"""""","{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-84,add,"""x""",,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+84,add,"""x""",null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 85,add,"""x""",false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 86,add,"""x""",true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 87,add,"""x""",-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -95,7 +95,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 93,add,"""x""",[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 94,add,"""x""",{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 95,add,"""x""","{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-96,add,[],,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+96,add,[],null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 97,add,[],false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 98,add,[],true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 99,add,[],-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -107,7 +107,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 105,add,[],[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 106,add,[],{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 107,add,[],"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-108,add,[1],,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+108,add,[1],null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 109,add,[1],false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 110,add,[1],true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 111,add,[1],-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -119,7 +119,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 117,add,[1],[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 118,add,[1],{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 119,add,[1],"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-120,add,{},,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+120,add,{},null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 121,add,{},false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 122,add,{},true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 123,add,{},-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -131,7 +131,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 129,add,{},[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 130,add,{},{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 131,add,{},"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-132,add,"{""a"":1}",,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+132,add,"{""a"":1}",null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 133,add,"{""a"":1}",false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 134,add,"{""a"":1}",true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 135,add,"{""a"":1}",-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -143,7 +143,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 141,add,"{""a"":1}",[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 142,add,"{""a"":1}",{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 143,add,"{""a"":1}","{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-144,sub,null,,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+144,sub,null,null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 145,sub,null,false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 146,sub,null,true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 147,sub,null,-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -155,7 +155,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 153,sub,null,[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 154,sub,null,{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 155,sub,null,"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-156,sub,false,,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+156,sub,false,null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 157,sub,false,false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 158,sub,false,true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 159,sub,false,-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -167,7 +167,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 165,sub,false,[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 166,sub,false,{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 167,sub,false,"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-168,sub,true,,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+168,sub,true,null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 169,sub,true,false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 170,sub,true,true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 171,sub,true,-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -179,7 +179,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 177,sub,true,[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 178,sub,true,{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 179,sub,true,"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-180,sub,-1,,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+180,sub,-1,null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 181,sub,-1,false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 182,sub,-1,true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 183,sub,-1,-1,defined,defined,defined,"[""int"",0]","[""int"",0]","[""int"",0]",,,,True,True,True
@@ -191,7 +191,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 189,sub,-1,[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 190,sub,-1,{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 191,sub,-1,"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-192,sub,0,,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+192,sub,0,null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 193,sub,0,false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 194,sub,0,true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 195,sub,0,-1,defined,defined,defined,"[""int"",1]","[""int"",1]","[""int"",1]",,,,True,True,True
@@ -203,7 +203,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 201,sub,0,[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 202,sub,0,{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 203,sub,0,"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-204,sub,1,,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+204,sub,1,null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 205,sub,1,false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 206,sub,1,true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 207,sub,1,-1,defined,defined,defined,"[""int"",2]","[""int"",2]","[""int"",2]",,,,True,True,True
@@ -215,7 +215,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 213,sub,1,[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 214,sub,1,{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 215,sub,1,"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-216,sub,"""""",,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+216,sub,"""""",null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 217,sub,"""""",false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 218,sub,"""""",true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 219,sub,"""""",-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -227,7 +227,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 225,sub,"""""",[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 226,sub,"""""",{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 227,sub,"""""","{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-228,sub,"""x""",,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+228,sub,"""x""",null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 229,sub,"""x""",false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 230,sub,"""x""",true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 231,sub,"""x""",-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -239,7 +239,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 237,sub,"""x""",[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 238,sub,"""x""",{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 239,sub,"""x""","{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-240,sub,[],,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+240,sub,[],null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 241,sub,[],false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 242,sub,[],true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 243,sub,[],-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -251,7 +251,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 249,sub,[],[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 250,sub,[],{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 251,sub,[],"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-252,sub,[1],,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+252,sub,[1],null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 253,sub,[1],false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 254,sub,[1],true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 255,sub,[1],-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -263,7 +263,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 261,sub,[1],[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 262,sub,[1],{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 263,sub,[1],"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-264,sub,{},,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+264,sub,{},null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 265,sub,{},false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 266,sub,{},true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 267,sub,{},-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -275,7 +275,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 273,sub,{},[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 274,sub,{},{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 275,sub,{},"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-276,sub,"{""a"":1}",,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+276,sub,"{""a"":1}",null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 277,sub,"{""a"":1}",false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 278,sub,"{""a"":1}",true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 279,sub,"{""a"":1}",-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -287,7 +287,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 285,sub,"{""a"":1}",[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 286,sub,"{""a"":1}",{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 287,sub,"{""a"":1}","{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-288,mul,null,,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+288,mul,null,null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 289,mul,null,false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 290,mul,null,true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 291,mul,null,-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -299,7 +299,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 297,mul,null,[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 298,mul,null,{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 299,mul,null,"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-300,mul,false,,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+300,mul,false,null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 301,mul,false,false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 302,mul,false,true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 303,mul,false,-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -311,7 +311,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 309,mul,false,[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 310,mul,false,{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 311,mul,false,"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-312,mul,true,,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+312,mul,true,null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 313,mul,true,false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 314,mul,true,true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 315,mul,true,-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -323,7 +323,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 321,mul,true,[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 322,mul,true,{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 323,mul,true,"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-324,mul,-1,,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+324,mul,-1,null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 325,mul,-1,false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 326,mul,-1,true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 327,mul,-1,-1,defined,defined,defined,"[""int"",1]","[""int"",1]","[""int"",1]",,,,True,True,True
@@ -335,7 +335,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 333,mul,-1,[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 334,mul,-1,{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 335,mul,-1,"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-336,mul,0,,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+336,mul,0,null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 337,mul,0,false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 338,mul,0,true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 339,mul,0,-1,defined,defined,defined,"[""int"",0]","[""int"",0]","[""int"",0]",,,,True,True,True
@@ -347,7 +347,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 345,mul,0,[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 346,mul,0,{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 347,mul,0,"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-348,mul,1,,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+348,mul,1,null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 349,mul,1,false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 350,mul,1,true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 351,mul,1,-1,defined,defined,defined,"[""int"",-1]","[""int"",-1]","[""int"",-1]",,,,True,True,True
@@ -359,7 +359,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 357,mul,1,[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 358,mul,1,{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 359,mul,1,"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-360,mul,"""""",,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+360,mul,"""""",null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 361,mul,"""""",false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 362,mul,"""""",true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 363,mul,"""""",-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -371,7 +371,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 369,mul,"""""",[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 370,mul,"""""",{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 371,mul,"""""","{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-372,mul,"""x""",,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+372,mul,"""x""",null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 373,mul,"""x""",false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 374,mul,"""x""",true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 375,mul,"""x""",-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -383,7 +383,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 381,mul,"""x""",[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 382,mul,"""x""",{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 383,mul,"""x""","{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-384,mul,[],,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+384,mul,[],null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 385,mul,[],false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 386,mul,[],true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 387,mul,[],-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -395,7 +395,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 393,mul,[],[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 394,mul,[],{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 395,mul,[],"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-396,mul,[1],,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+396,mul,[1],null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 397,mul,[1],false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 398,mul,[1],true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 399,mul,[1],-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -407,7 +407,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 405,mul,[1],[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 406,mul,[1],{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 407,mul,[1],"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-408,mul,{},,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+408,mul,{},null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 409,mul,{},false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 410,mul,{},true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 411,mul,{},-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -419,7 +419,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 417,mul,{},[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 418,mul,{},{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 419,mul,{},"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-420,mul,"{""a"":1}",,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+420,mul,"{""a"":1}",null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 421,mul,"{""a"":1}",false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 422,mul,"{""a"":1}",true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 423,mul,"{""a"":1}",-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -431,7 +431,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 429,mul,"{""a"":1}",[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 430,mul,"{""a"":1}",{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 431,mul,"{""a"":1}","{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-432,eq,null,,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
+432,eq,null,null,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 433,eq,null,false,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 434,eq,null,true,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 435,eq,null,-1,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
@@ -443,7 +443,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 441,eq,null,[1],defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 442,eq,null,{},defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 443,eq,null,"{""a"":1}",defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
-444,eq,false,,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
+444,eq,false,null,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 445,eq,false,false,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 446,eq,false,true,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 447,eq,false,-1,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
@@ -455,7 +455,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 453,eq,false,[1],defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 454,eq,false,{},defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 455,eq,false,"{""a"":1}",defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
-456,eq,true,,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
+456,eq,true,null,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 457,eq,true,false,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 458,eq,true,true,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 459,eq,true,-1,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
@@ -467,7 +467,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 465,eq,true,[1],defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 466,eq,true,{},defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 467,eq,true,"{""a"":1}",defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
-468,eq,-1,,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
+468,eq,-1,null,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 469,eq,-1,false,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 470,eq,-1,true,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 471,eq,-1,-1,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
@@ -479,7 +479,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 477,eq,-1,[1],defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 478,eq,-1,{},defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 479,eq,-1,"{""a"":1}",defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
-480,eq,0,,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
+480,eq,0,null,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 481,eq,0,false,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 482,eq,0,true,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 483,eq,0,-1,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
@@ -491,7 +491,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 489,eq,0,[1],defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 490,eq,0,{},defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 491,eq,0,"{""a"":1}",defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
-492,eq,1,,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
+492,eq,1,null,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 493,eq,1,false,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 494,eq,1,true,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 495,eq,1,-1,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
@@ -503,7 +503,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 501,eq,1,[1],defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 502,eq,1,{},defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 503,eq,1,"{""a"":1}",defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
-504,eq,"""""",,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
+504,eq,"""""",null,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 505,eq,"""""",false,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 506,eq,"""""",true,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 507,eq,"""""",-1,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
@@ -515,7 +515,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 513,eq,"""""",[1],defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 514,eq,"""""",{},defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 515,eq,"""""","{""a"":1}",defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
-516,eq,"""x""",,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
+516,eq,"""x""",null,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 517,eq,"""x""",false,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 518,eq,"""x""",true,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 519,eq,"""x""",-1,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
@@ -527,7 +527,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 525,eq,"""x""",[1],defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 526,eq,"""x""",{},defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 527,eq,"""x""","{""a"":1}",defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
-528,eq,[],,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
+528,eq,[],null,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 529,eq,[],false,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 530,eq,[],true,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 531,eq,[],-1,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
@@ -539,7 +539,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 537,eq,[],[1],defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 538,eq,[],{},defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 539,eq,[],"{""a"":1}",defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
-540,eq,[1],,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
+540,eq,[1],null,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 541,eq,[1],false,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 542,eq,[1],true,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 543,eq,[1],-1,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
@@ -551,7 +551,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 549,eq,[1],[1],defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 550,eq,[1],{},defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 551,eq,[1],"{""a"":1}",defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
-552,eq,{},,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
+552,eq,{},null,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 553,eq,{},false,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 554,eq,{},true,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 555,eq,{},-1,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
@@ -563,7 +563,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 561,eq,{},[1],defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 562,eq,{},{},defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 563,eq,{},"{""a"":1}",defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
-564,eq,"{""a"":1}",,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
+564,eq,"{""a"":1}",null,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 565,eq,"{""a"":1}",false,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 566,eq,"{""a"":1}",true,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 567,eq,"{""a"":1}",-1,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
@@ -575,7 +575,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 573,eq,"{""a"":1}",[1],defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 574,eq,"{""a"":1}",{},defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 575,eq,"{""a"":1}","{""a"":1}",defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
-576,ne,null,,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
+576,ne,null,null,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 577,ne,null,false,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 578,ne,null,true,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 579,ne,null,-1,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
@@ -587,7 +587,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 585,ne,null,[1],defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 586,ne,null,{},defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 587,ne,null,"{""a"":1}",defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
-588,ne,false,,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
+588,ne,false,null,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 589,ne,false,false,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 590,ne,false,true,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 591,ne,false,-1,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
@@ -599,7 +599,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 597,ne,false,[1],defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 598,ne,false,{},defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 599,ne,false,"{""a"":1}",defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
-600,ne,true,,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
+600,ne,true,null,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 601,ne,true,false,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 602,ne,true,true,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 603,ne,true,-1,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
@@ -611,7 +611,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 609,ne,true,[1],defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 610,ne,true,{},defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 611,ne,true,"{""a"":1}",defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
-612,ne,-1,,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
+612,ne,-1,null,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 613,ne,-1,false,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 614,ne,-1,true,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 615,ne,-1,-1,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
@@ -623,7 +623,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 621,ne,-1,[1],defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 622,ne,-1,{},defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 623,ne,-1,"{""a"":1}",defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
-624,ne,0,,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
+624,ne,0,null,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 625,ne,0,false,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 626,ne,0,true,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 627,ne,0,-1,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
@@ -635,7 +635,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 633,ne,0,[1],defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 634,ne,0,{},defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 635,ne,0,"{""a"":1}",defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
-636,ne,1,,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
+636,ne,1,null,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 637,ne,1,false,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 638,ne,1,true,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 639,ne,1,-1,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
@@ -647,7 +647,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 645,ne,1,[1],defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 646,ne,1,{},defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 647,ne,1,"{""a"":1}",defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
-648,ne,"""""",,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
+648,ne,"""""",null,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 649,ne,"""""",false,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 650,ne,"""""",true,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 651,ne,"""""",-1,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
@@ -659,7 +659,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 657,ne,"""""",[1],defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 658,ne,"""""",{},defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 659,ne,"""""","{""a"":1}",defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
-660,ne,"""x""",,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
+660,ne,"""x""",null,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 661,ne,"""x""",false,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 662,ne,"""x""",true,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 663,ne,"""x""",-1,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
@@ -671,7 +671,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 669,ne,"""x""",[1],defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 670,ne,"""x""",{},defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 671,ne,"""x""","{""a"":1}",defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
-672,ne,[],,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
+672,ne,[],null,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 673,ne,[],false,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 674,ne,[],true,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 675,ne,[],-1,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
@@ -683,7 +683,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 681,ne,[],[1],defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 682,ne,[],{},defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 683,ne,[],"{""a"":1}",defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
-684,ne,[1],,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
+684,ne,[1],null,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 685,ne,[1],false,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 686,ne,[1],true,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 687,ne,[1],-1,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
@@ -695,7 +695,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 693,ne,[1],[1],defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 694,ne,[1],{},defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 695,ne,[1],"{""a"":1}",defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
-696,ne,{},,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
+696,ne,{},null,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 697,ne,{},false,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 698,ne,{},true,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 699,ne,{},-1,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
@@ -707,7 +707,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 705,ne,{},[1],defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 706,ne,{},{},defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 707,ne,{},"{""a"":1}",defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
-708,ne,"{""a"":1}",,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
+708,ne,"{""a"":1}",null,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 709,ne,"{""a"":1}",false,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 710,ne,"{""a"":1}",true,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 711,ne,"{""a"":1}",-1,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
@@ -719,7 +719,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 717,ne,"{""a"":1}",[1],defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 718,ne,"{""a"":1}",{},defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 719,ne,"{""a"":1}","{""a"":1}",defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
-720,lt,null,,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+720,lt,null,null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 721,lt,null,false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 722,lt,null,true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 723,lt,null,-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -731,7 +731,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 729,lt,null,[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 730,lt,null,{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 731,lt,null,"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-732,lt,false,,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+732,lt,false,null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 733,lt,false,false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 734,lt,false,true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 735,lt,false,-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -743,7 +743,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 741,lt,false,[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 742,lt,false,{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 743,lt,false,"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-744,lt,true,,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+744,lt,true,null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 745,lt,true,false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 746,lt,true,true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 747,lt,true,-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -755,7 +755,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 753,lt,true,[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 754,lt,true,{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 755,lt,true,"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-756,lt,-1,,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+756,lt,-1,null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 757,lt,-1,false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 758,lt,-1,true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 759,lt,-1,-1,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
@@ -767,7 +767,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 765,lt,-1,[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 766,lt,-1,{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 767,lt,-1,"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-768,lt,0,,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+768,lt,0,null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 769,lt,0,false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 770,lt,0,true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 771,lt,0,-1,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
@@ -779,7 +779,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 777,lt,0,[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 778,lt,0,{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 779,lt,0,"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-780,lt,1,,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+780,lt,1,null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 781,lt,1,false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 782,lt,1,true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 783,lt,1,-1,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
@@ -791,7 +791,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 789,lt,1,[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 790,lt,1,{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 791,lt,1,"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-792,lt,"""""",,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+792,lt,"""""",null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 793,lt,"""""",false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 794,lt,"""""",true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 795,lt,"""""",-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -803,7 +803,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 801,lt,"""""",[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 802,lt,"""""",{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 803,lt,"""""","{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-804,lt,"""x""",,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+804,lt,"""x""",null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 805,lt,"""x""",false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 806,lt,"""x""",true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 807,lt,"""x""",-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -815,7 +815,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 813,lt,"""x""",[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 814,lt,"""x""",{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 815,lt,"""x""","{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-816,lt,[],,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+816,lt,[],null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 817,lt,[],false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 818,lt,[],true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 819,lt,[],-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -827,7 +827,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 825,lt,[],[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 826,lt,[],{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 827,lt,[],"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-828,lt,[1],,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+828,lt,[1],null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 829,lt,[1],false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 830,lt,[1],true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 831,lt,[1],-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -839,7 +839,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 837,lt,[1],[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 838,lt,[1],{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 839,lt,[1],"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-840,lt,{},,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+840,lt,{},null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 841,lt,{},false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 842,lt,{},true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 843,lt,{},-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -851,7 +851,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 849,lt,{},[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 850,lt,{},{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 851,lt,{},"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-852,lt,"{""a"":1}",,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+852,lt,"{""a"":1}",null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 853,lt,"{""a"":1}",false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 854,lt,"{""a"":1}",true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 855,lt,"{""a"":1}",-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -863,7 +863,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 861,lt,"{""a"":1}",[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 862,lt,"{""a"":1}",{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 863,lt,"{""a"":1}","{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-864,le,null,,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+864,le,null,null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 865,le,null,false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 866,le,null,true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 867,le,null,-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -875,7 +875,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 873,le,null,[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 874,le,null,{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 875,le,null,"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-876,le,false,,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+876,le,false,null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 877,le,false,false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 878,le,false,true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 879,le,false,-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -887,7 +887,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 885,le,false,[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 886,le,false,{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 887,le,false,"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-888,le,true,,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+888,le,true,null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 889,le,true,false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 890,le,true,true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 891,le,true,-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -899,7 +899,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 897,le,true,[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 898,le,true,{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 899,le,true,"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-900,le,-1,,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+900,le,-1,null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 901,le,-1,false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 902,le,-1,true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 903,le,-1,-1,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
@@ -911,7 +911,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 909,le,-1,[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 910,le,-1,{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 911,le,-1,"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-912,le,0,,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+912,le,0,null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 913,le,0,false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 914,le,0,true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 915,le,0,-1,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
@@ -923,7 +923,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 921,le,0,[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 922,le,0,{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 923,le,0,"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-924,le,1,,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+924,le,1,null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 925,le,1,false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 926,le,1,true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 927,le,1,-1,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
@@ -935,7 +935,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 933,le,1,[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 934,le,1,{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 935,le,1,"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-936,le,"""""",,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+936,le,"""""",null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 937,le,"""""",false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 938,le,"""""",true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 939,le,"""""",-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -947,7 +947,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 945,le,"""""",[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 946,le,"""""",{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 947,le,"""""","{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-948,le,"""x""",,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+948,le,"""x""",null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 949,le,"""x""",false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 950,le,"""x""",true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 951,le,"""x""",-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -959,7 +959,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 957,le,"""x""",[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 958,le,"""x""",{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 959,le,"""x""","{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-960,le,[],,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+960,le,[],null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 961,le,[],false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 962,le,[],true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 963,le,[],-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -971,7 +971,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 969,le,[],[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 970,le,[],{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 971,le,[],"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-972,le,[1],,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+972,le,[1],null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 973,le,[1],false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 974,le,[1],true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 975,le,[1],-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -983,7 +983,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 981,le,[1],[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 982,le,[1],{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 983,le,[1],"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-984,le,{},,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+984,le,{},null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 985,le,{},false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 986,le,{},true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 987,le,{},-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -995,7 +995,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 993,le,{},[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 994,le,{},{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 995,le,{},"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-996,le,"{""a"":1}",,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+996,le,"{""a"":1}",null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 997,le,"{""a"":1}",false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 998,le,"{""a"":1}",true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 999,le,"{""a"":1}",-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -1007,7 +1007,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 1005,le,"{""a"":1}",[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1006,le,"{""a"":1}",{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1007,le,"{""a"":1}","{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-1008,gt,null,,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+1008,gt,null,null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1009,gt,null,false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1010,gt,null,true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1011,gt,null,-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -1019,7 +1019,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 1017,gt,null,[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1018,gt,null,{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1019,gt,null,"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-1020,gt,false,,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+1020,gt,false,null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1021,gt,false,false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1022,gt,false,true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1023,gt,false,-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -1031,7 +1031,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 1029,gt,false,[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1030,gt,false,{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1031,gt,false,"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-1032,gt,true,,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+1032,gt,true,null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1033,gt,true,false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1034,gt,true,true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1035,gt,true,-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -1043,7 +1043,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 1041,gt,true,[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1042,gt,true,{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1043,gt,true,"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-1044,gt,-1,,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+1044,gt,-1,null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1045,gt,-1,false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1046,gt,-1,true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1047,gt,-1,-1,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
@@ -1055,7 +1055,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 1053,gt,-1,[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1054,gt,-1,{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1055,gt,-1,"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-1056,gt,0,,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+1056,gt,0,null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1057,gt,0,false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1058,gt,0,true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1059,gt,0,-1,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
@@ -1067,7 +1067,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 1065,gt,0,[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1066,gt,0,{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1067,gt,0,"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-1068,gt,1,,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+1068,gt,1,null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1069,gt,1,false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1070,gt,1,true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1071,gt,1,-1,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
@@ -1079,7 +1079,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 1077,gt,1,[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1078,gt,1,{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1079,gt,1,"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-1080,gt,"""""",,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+1080,gt,"""""",null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1081,gt,"""""",false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1082,gt,"""""",true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1083,gt,"""""",-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -1091,7 +1091,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 1089,gt,"""""",[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1090,gt,"""""",{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1091,gt,"""""","{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-1092,gt,"""x""",,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+1092,gt,"""x""",null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1093,gt,"""x""",false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1094,gt,"""x""",true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1095,gt,"""x""",-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -1103,7 +1103,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 1101,gt,"""x""",[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1102,gt,"""x""",{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1103,gt,"""x""","{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-1104,gt,[],,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+1104,gt,[],null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1105,gt,[],false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1106,gt,[],true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1107,gt,[],-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -1115,7 +1115,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 1113,gt,[],[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1114,gt,[],{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1115,gt,[],"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-1116,gt,[1],,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+1116,gt,[1],null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1117,gt,[1],false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1118,gt,[1],true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1119,gt,[1],-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -1127,7 +1127,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 1125,gt,[1],[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1126,gt,[1],{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1127,gt,[1],"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-1128,gt,{},,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+1128,gt,{},null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1129,gt,{},false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1130,gt,{},true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1131,gt,{},-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -1139,7 +1139,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 1137,gt,{},[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1138,gt,{},{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1139,gt,{},"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-1140,gt,"{""a"":1}",,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+1140,gt,"{""a"":1}",null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1141,gt,"{""a"":1}",false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1142,gt,"{""a"":1}",true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1143,gt,"{""a"":1}",-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -1151,7 +1151,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 1149,gt,"{""a"":1}",[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1150,gt,"{""a"":1}",{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1151,gt,"{""a"":1}","{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-1152,ge,null,,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+1152,ge,null,null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1153,ge,null,false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1154,ge,null,true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1155,ge,null,-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -1163,7 +1163,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 1161,ge,null,[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1162,ge,null,{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1163,ge,null,"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-1164,ge,false,,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+1164,ge,false,null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1165,ge,false,false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1166,ge,false,true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1167,ge,false,-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -1175,7 +1175,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 1173,ge,false,[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1174,ge,false,{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1175,ge,false,"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-1176,ge,true,,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+1176,ge,true,null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1177,ge,true,false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1178,ge,true,true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1179,ge,true,-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -1187,7 +1187,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 1185,ge,true,[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1186,ge,true,{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1187,ge,true,"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-1188,ge,-1,,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+1188,ge,-1,null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1189,ge,-1,false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1190,ge,-1,true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1191,ge,-1,-1,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
@@ -1199,7 +1199,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 1197,ge,-1,[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1198,ge,-1,{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1199,ge,-1,"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-1200,ge,0,,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+1200,ge,0,null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1201,ge,0,false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1202,ge,0,true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1203,ge,0,-1,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
@@ -1211,7 +1211,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 1209,ge,0,[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1210,ge,0,{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1211,ge,0,"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-1212,ge,1,,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+1212,ge,1,null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1213,ge,1,false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1214,ge,1,true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1215,ge,1,-1,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
@@ -1223,7 +1223,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 1221,ge,1,[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1222,ge,1,{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1223,ge,1,"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-1224,ge,"""""",,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+1224,ge,"""""",null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1225,ge,"""""",false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1226,ge,"""""",true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1227,ge,"""""",-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -1235,7 +1235,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 1233,ge,"""""",[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1234,ge,"""""",{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1235,ge,"""""","{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-1236,ge,"""x""",,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+1236,ge,"""x""",null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1237,ge,"""x""",false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1238,ge,"""x""",true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1239,ge,"""x""",-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -1247,7 +1247,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 1245,ge,"""x""",[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1246,ge,"""x""",{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1247,ge,"""x""","{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-1248,ge,[],,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+1248,ge,[],null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1249,ge,[],false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1250,ge,[],true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1251,ge,[],-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -1259,7 +1259,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 1257,ge,[],[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1258,ge,[],{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1259,ge,[],"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-1260,ge,[1],,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+1260,ge,[1],null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1261,ge,[1],false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1262,ge,[1],true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1263,ge,[1],-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -1271,7 +1271,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 1269,ge,[1],[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1270,ge,[1],{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1271,ge,[1],"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-1272,ge,{},,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+1272,ge,{},null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1273,ge,{},false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1274,ge,{},true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1275,ge,{},-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -1283,7 +1283,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 1281,ge,{},[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1282,ge,{},{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1283,ge,{},"{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-1284,ge,"{""a"":1}",,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
+1284,ge,"{""a"":1}",null,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1285,ge,"{""a"":1}",false,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1286,ge,"{""a"":1}",true,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1287,ge,"{""a"":1}",-1,error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
@@ -1295,7 +1295,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 1293,ge,"{""a"":1}",[1],error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1294,ge,"{""a"":1}",{},error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
 1295,ge,"{""a"":1}","{""a"":1}",error,error,error,null,null,null,TypeError,TypeError,ReferenceExecutionError,True,True,True
-1296,and,null,,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
+1296,and,null,null,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1297,and,null,false,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1298,and,null,true,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1299,and,null,-1,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
@@ -1307,7 +1307,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 1305,and,null,[1],defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1306,and,null,{},defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1307,and,null,"{""a"":1}",defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
-1308,and,false,,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
+1308,and,false,null,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1309,and,false,false,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1310,and,false,true,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1311,and,false,-1,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
@@ -1319,7 +1319,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 1317,and,false,[1],defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1318,and,false,{},defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1319,and,false,"{""a"":1}",defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
-1320,and,true,,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
+1320,and,true,null,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1321,and,true,false,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1322,and,true,true,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 1323,and,true,-1,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
@@ -1331,7 +1331,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 1329,and,true,[1],defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 1330,and,true,{},defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1331,and,true,"{""a"":1}",defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
-1332,and,-1,,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
+1332,and,-1,null,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1333,and,-1,false,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1334,and,-1,true,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 1335,and,-1,-1,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
@@ -1343,7 +1343,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 1341,and,-1,[1],defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 1342,and,-1,{},defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1343,and,-1,"{""a"":1}",defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
-1344,and,0,,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
+1344,and,0,null,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1345,and,0,false,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1346,and,0,true,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1347,and,0,-1,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
@@ -1355,7 +1355,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 1353,and,0,[1],defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1354,and,0,{},defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1355,and,0,"{""a"":1}",defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
-1356,and,1,,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
+1356,and,1,null,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1357,and,1,false,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1358,and,1,true,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 1359,and,1,-1,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
@@ -1367,7 +1367,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 1365,and,1,[1],defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 1366,and,1,{},defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1367,and,1,"{""a"":1}",defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
-1368,and,"""""",,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
+1368,and,"""""",null,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1369,and,"""""",false,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1370,and,"""""",true,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1371,and,"""""",-1,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
@@ -1379,7 +1379,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 1377,and,"""""",[1],defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1378,and,"""""",{},defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1379,and,"""""","{""a"":1}",defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
-1380,and,"""x""",,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
+1380,and,"""x""",null,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1381,and,"""x""",false,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1382,and,"""x""",true,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 1383,and,"""x""",-1,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
@@ -1391,7 +1391,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 1389,and,"""x""",[1],defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 1390,and,"""x""",{},defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1391,and,"""x""","{""a"":1}",defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
-1392,and,[],,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
+1392,and,[],null,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1393,and,[],false,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1394,and,[],true,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1395,and,[],-1,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
@@ -1403,7 +1403,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 1401,and,[],[1],defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1402,and,[],{},defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1403,and,[],"{""a"":1}",defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
-1404,and,[1],,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
+1404,and,[1],null,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1405,and,[1],false,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1406,and,[1],true,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 1407,and,[1],-1,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
@@ -1415,7 +1415,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 1413,and,[1],[1],defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 1414,and,[1],{},defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1415,and,[1],"{""a"":1}",defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
-1416,and,{},,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
+1416,and,{},null,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1417,and,{},false,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1418,and,{},true,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1419,and,{},-1,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
@@ -1427,7 +1427,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 1425,and,{},[1],defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1426,and,{},{},defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1427,and,{},"{""a"":1}",defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
-1428,and,"{""a"":1}",,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
+1428,and,"{""a"":1}",null,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1429,and,"{""a"":1}",false,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1430,and,"{""a"":1}",true,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 1431,and,"{""a"":1}",-1,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
@@ -1439,7 +1439,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 1437,and,"{""a"":1}",[1],defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 1438,and,"{""a"":1}",{},defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1439,and,"{""a"":1}","{""a"":1}",defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
-1440,or,null,,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
+1440,or,null,null,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1441,or,null,false,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1442,or,null,true,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 1443,or,null,-1,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
@@ -1451,7 +1451,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 1449,or,null,[1],defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 1450,or,null,{},defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1451,or,null,"{""a"":1}",defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
-1452,or,false,,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
+1452,or,false,null,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1453,or,false,false,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1454,or,false,true,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 1455,or,false,-1,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
@@ -1463,7 +1463,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 1461,or,false,[1],defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 1462,or,false,{},defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1463,or,false,"{""a"":1}",defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
-1464,or,true,,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
+1464,or,true,null,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 1465,or,true,false,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 1466,or,true,true,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 1467,or,true,-1,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
@@ -1475,7 +1475,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 1473,or,true,[1],defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 1474,or,true,{},defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 1475,or,true,"{""a"":1}",defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
-1476,or,-1,,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
+1476,or,-1,null,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 1477,or,-1,false,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 1478,or,-1,true,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 1479,or,-1,-1,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
@@ -1487,7 +1487,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 1485,or,-1,[1],defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 1486,or,-1,{},defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 1487,or,-1,"{""a"":1}",defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
-1488,or,0,,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
+1488,or,0,null,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1489,or,0,false,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1490,or,0,true,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 1491,or,0,-1,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
@@ -1499,7 +1499,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 1497,or,0,[1],defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 1498,or,0,{},defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1499,or,0,"{""a"":1}",defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
-1500,or,1,,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
+1500,or,1,null,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 1501,or,1,false,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 1502,or,1,true,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 1503,or,1,-1,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
@@ -1511,7 +1511,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 1509,or,1,[1],defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 1510,or,1,{},defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 1511,or,1,"{""a"":1}",defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
-1512,or,"""""",,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
+1512,or,"""""",null,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1513,or,"""""",false,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1514,or,"""""",true,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 1515,or,"""""",-1,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
@@ -1523,7 +1523,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 1521,or,"""""",[1],defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 1522,or,"""""",{},defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1523,or,"""""","{""a"":1}",defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
-1524,or,"""x""",,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
+1524,or,"""x""",null,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 1525,or,"""x""",false,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 1526,or,"""x""",true,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 1527,or,"""x""",-1,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
@@ -1535,7 +1535,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 1533,or,"""x""",[1],defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 1534,or,"""x""",{},defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 1535,or,"""x""","{""a"":1}",defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
-1536,or,[],,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
+1536,or,[],null,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1537,or,[],false,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1538,or,[],true,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 1539,or,[],-1,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
@@ -1547,7 +1547,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 1545,or,[],[1],defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 1546,or,[],{},defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1547,or,[],"{""a"":1}",defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
-1548,or,[1],,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
+1548,or,[1],null,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 1549,or,[1],false,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 1550,or,[1],true,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 1551,or,[1],-1,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
@@ -1559,7 +1559,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 1557,or,[1],[1],defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 1558,or,[1],{},defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 1559,or,[1],"{""a"":1}",defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
-1560,or,{},,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
+1560,or,{},null,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1561,or,{},false,defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1562,or,{},true,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 1563,or,{},-1,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
@@ -1571,7 +1571,7 @@ case_index,operator,left,right,producer_status,checker_status,reference_status,p
 1569,or,{},[1],defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 1570,or,{},{},defined,defined,defined,"[""bool"",false]","[""bool"",false]","[""bool"",false]",,,,True,True,True
 1571,or,{},"{""a"":1}",defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
-1572,or,"{""a"":1}",,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
+1572,or,"{""a"":1}",null,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 1573,or,"{""a"":1}",false,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 1574,or,"{""a"":1}",true,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True
 1575,or,"{""a"":1}",-1,defined,defined,defined,"[""bool"",true]","[""bool"",true]","[""bool"",true]",,,,True,True,True

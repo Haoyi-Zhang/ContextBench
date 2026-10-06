@@ -268,6 +268,10 @@ def check_results(root: Path) -> dict:
 
     expression_matrix = rows("semantic_expression_matrix.csv")
     require(len(expression_matrix) == 1596, "expression semantic boundary count")
+    require(all((row["right"] == "") == (row["operator"] == "not") for row in expression_matrix),
+            "binary operand omitted or unary arity misrecorded")
+    require(sum(row["right"] == "null" for row in expression_matrix if row["operator"] != "not") == 132,
+            "binary null operand coverage")
     require(all(truth(row["matched"]) for row in expression_matrix), "expression semantic boundary mismatch")
     expression_defined = sum(row["reference_status"] == "defined" for row in expression_matrix)
     expression_errors = sum(row["reference_status"] == "error" for row in expression_matrix)

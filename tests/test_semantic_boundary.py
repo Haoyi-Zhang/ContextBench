@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import csv
+import json
 import tempfile
 import unittest
 from pathlib import Path
@@ -44,6 +46,17 @@ class SemanticBoundaryMatrixTests(unittest.TestCase):
         self.assertEqual(self.summary["total_cases"], 2609)
         self.assertEqual(self.summary["total_interpreter_evaluations"], 7827)
         self.assertEqual(self.summary["mismatches"], 0)
+
+    def test_binary_null_operand_is_not_erased_as_unary_absence(self) -> None:
+        paths = (Path(self._temporary.name) / "semantic_expression_matrix.csv",
+                 Path(__file__).resolve().parents[1] / "results/semantic_expression_matrix.csv")
+        for path in paths:
+            with path.open(newline="", encoding="utf-8") as stream:
+                rows = list(csv.DictReader(stream))
+            binary = [row for row in rows if row["operator"] != "not"]
+            self.assertTrue(all(row["right"] != "" for row in binary))
+            self.assertEqual(sum(json.loads(row["right"]) is None for row in binary), 132)
+            self.assertTrue(all(row["right"] == "" for row in rows if row["operator"] == "not"))
 
 
 if __name__ == "__main__":

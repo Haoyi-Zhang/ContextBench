@@ -35,7 +35,7 @@ PYTHONDONTWRITEBYTECODE=1 python export_paper_data.py --results results --output
 PYTHONDONTWRITEBYTECODE=1 python export_transport_data.py --results results --output paper-data
 ```
 
-The first command runs all 129 regression tests and records their identifiers
+The first command runs all 136 regression tests and records their identifiers
 and outcomes without timing-dependent text in `results/test_summary.json`.
 The two campaigns use one worker. The base campaign reconstructs the finite
 execution substrate. The transport campaign generates its own 36 primary pairs,
@@ -48,6 +48,17 @@ recomputes the median. `transport_summary.json` records the CPU model, visible
 logical CPU count, OS/release/architecture, Python implementation/version, and
 the CPU, wall-clock, and RSS measurement definitions for the retained rerun.
 Timing fields vary with the host; logical selections and classifications do not.
+
+The transport result checker binds oracle rows to the actual root/context product,
+reconciles per-row reference-comparison counts, replays the two functional-variation
+witnesses for each primary pair, and checks control-packet identities and production
+outcomes. Binary null operands remain explicit JSON `null` in the typed boundary
+matrix; an empty right-operand cell denotes only unary `not`.
+
+The Linux workflow `bounded-reproduction.yml` runs the owned regression suite and
+transport campaign under per-command deadlines, using the retained finite corpora
+for applicability. It retains logs and generated results. Fixture and oracle helpers can be imported
+on Windows, but campaign RSS measurement and the CLI deadline still require POSIX.
 
 The JSON command-line verifier accepts packets up to 2 MiB and installs a
 15-second POSIX deadline. Exit zero means accepted, one means a checked rejection,
