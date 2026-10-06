@@ -1,0 +1,101 @@
+{
+  "accepted_pairs": 60,
+  "control_families": {
+    "compiled-ir-substitution": 6,
+    "duplicate-source-declaration": 6,
+    "extra-root-source-edit": 6,
+    "pair-witness-substitution": 6,
+    "pre-root-abort-only-safe-partition": 1,
+    "source-endpoint-substitution": 6,
+    "source-execution-type-error": 6,
+    "wrong-source-family": 6,
+    "wrong-source-language": 6,
+    "wrong-source-profile": 6
+  },
+  "controls": 55,
+  "controls_detected": 55,
+  "endpoint_valuations": 860,
+  "expression_forms": [
+    "const",
+    "public",
+    "var"
+  ],
+  "expression_operations": [
+    "add",
+    "and",
+    "eq",
+    "ge",
+    "gt",
+    "le",
+    "lt",
+    "mul",
+    "ne",
+    "not",
+    "or",
+    "sub"
+  ],
+  "families": [
+    "access_control",
+    "bounds_write",
+    "divide_zero",
+    "fixed_overflow",
+    "reentrancy",
+    "unchecked_call"
+  ],
+  "instruction_operations": [
+    "add_fixed",
+    "assign",
+    "branch_abort",
+    "buf_write",
+    "check_call",
+    "commit_after_call",
+    "divide",
+    "emit",
+    "external_call",
+    "guard",
+    "low_call",
+    "nop",
+    "protected_store",
+    "return",
+    "update_balance"
+  ],
+  "interpreter_comparisons": 2580,
+  "native_language_claim": false,
+  "operational_mismatches": 0,
+  "pairs": 60,
+  "profiles": [
+    "c",
+    "solidity"
+  ],
+  "programs": 120,
+  "semantic_mismatches": 0,
+  "source_expression_forms": [
+    "binary",
+    "literal",
+    "state",
+    "unary",
+    "variable"
+  ],
+  "source_expression_operations": [
+    "add",
+    "and",
+    "eq",
+    "ge",
+    "gt",
+    "le",
+    "lt",
+    "mul",
+    "ne",
+    "neg",
+    "not",
+    "or",
+    "sub"
+  ],
+  "source_language": "rcsc-source-1",
+  "source_literal_types": [
+    "bool",
+    "int",
+    "null",
+    "str"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "logical_results": "consistent",
+  "primary_pairs": 556,
+  "accepted_primary_pairs": 274,
+  "rejected_primary_pairs": 282,
+  "balanced_pair_conditioned_quotient_cells": 268,
+  "checked_raw_tables": 24,
+  "scope": "published default finite experiment plus whole-IR, typed semantic-boundary, and bounded source-capsule cross-checks"
+}

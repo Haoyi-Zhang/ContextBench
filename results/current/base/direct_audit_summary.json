@@ -1,0 +1,10 @@
+{
+  "pairs": 556,
+  "direct_accepted": 274,
+  "certificate_accepted": 274,
+  "decision_disagreements": 0,
+  "certificate_only_controls": 36,
+  "valid_pairs_with_rejected_claims": 36,
+  "cpu_seconds": 0.8155811680000014,
+  "independent_semantic_oracle": false
+}

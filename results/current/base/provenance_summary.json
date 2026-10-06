@@ -1,0 +1,12 @@
+{
+  "reference_tagged_pairs": 18,
+  "distinct_reference_anchors": 12,
+  "individual_case_descriptions": 8,
+  "category_descriptions": 3,
+  "suite_descriptions": 1,
+  "pattern_reference_rows": 16,
+  "unsupported_operator_rows": 1,
+  "suite_not_instance_rows": 1,
+  "source_equivalent_pairs": 0,
+  "limitation": "Descriptions support pattern attribution only; generated programs remain synthetic."
+}

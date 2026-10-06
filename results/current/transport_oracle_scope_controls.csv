@@ -1,0 +1,3 @@
+control,semantic_relation,security_invariant,monitor_consistent,defined,admission_precondition,declaration_precondition,context_domain_precondition,repair_membership_precondition,all_relation_preconditions,contract_classification,repair_check_independent,repair_reason,production_accepted,production_reason
+patched-root-trailing-nop,True,True,True,True,True,True,True,False,False,False,False,root-repair-mismatch,False,root-repair-mismatch
+divide-pair-declared-fixed-overflow,False,True,False,True,True,True,True,False,False,False,False,root-repair-mismatch,False,root-repair-mismatch

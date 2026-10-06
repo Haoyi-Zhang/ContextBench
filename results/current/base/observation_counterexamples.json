@@ -1,0 +1,200 @@
+{
+  "alias-only": {
+    "case_id": "observation-003",
+    "witness": {
+      "input": {
+        "idx": 0,
+        "value": 1
+      },
+      "clause": "safe-observation",
+      "vulnerable": {
+        "violation": null,
+        "aborted": false,
+        "returned": 0,
+        "events": [
+          [
+            "snapshot",
+            [
+              1,
+              0
+            ]
+          ],
+          [
+            "tag",
+            1
+          ]
+        ],
+        "public_state": [
+          [
+            "buffer",
+            [
+              1,
+              0
+            ]
+          ]
+        ]
+      },
+      "patched": {
+        "violation": null,
+        "aborted": false,
+        "returned": 0,
+        "events": [
+          [
+            "snapshot",
+            [
+              0,
+              0
+            ]
+          ],
+          [
+            "tag",
+            1
+          ]
+        ],
+        "public_state": [
+          [
+            "buffer",
+            [
+              1,
+              0
+            ]
+          ]
+        ]
+      }
+    },
+    "faulty_accepted": true,
+    "expected_accepted": false
+  },
+  "combined": {
+    "case_id": "observation-003",
+    "witness": {
+      "input": {
+        "idx": 0,
+        "value": 1
+      },
+      "clause": "safe-observation",
+      "vulnerable": {
+        "violation": null,
+        "aborted": false,
+        "returned": 0,
+        "events": [
+          [
+            "snapshot",
+            [
+              1,
+              0
+            ]
+          ],
+          [
+            "tag",
+            1
+          ]
+        ],
+        "public_state": [
+          [
+            "buffer",
+            [
+              1,
+              0
+            ]
+          ]
+        ]
+      },
+      "patched": {
+        "violation": null,
+        "aborted": false,
+        "returned": 0,
+        "events": [
+          [
+            "snapshot",
+            [
+              0,
+              0
+            ]
+          ],
+          [
+            "tag",
+            1
+          ]
+        ],
+        "public_state": [
+          [
+            "buffer",
+            [
+              1,
+              0
+            ]
+          ]
+        ]
+      }
+    },
+    "faulty_accepted": true,
+    "expected_accepted": false
+  },
+  "untyped-only": {
+    "case_id": "observation-145",
+    "witness": {
+      "input": {
+        "idx": 0,
+        "value": 0
+      },
+      "clause": "safe-observation",
+      "vulnerable": {
+        "violation": null,
+        "aborted": false,
+        "returned": 0,
+        "events": [
+          [
+            "snapshot",
+            [
+              0,
+              0
+            ]
+          ],
+          [
+            "tag",
+            1
+          ]
+        ],
+        "public_state": [
+          [
+            "buffer",
+            [
+              0,
+              0
+            ]
+          ]
+        ]
+      },
+      "patched": {
+        "violation": null,
+        "aborted": false,
+        "returned": 0,
+        "events": [
+          [
+            "snapshot",
+            [
+              0,
+              0
+            ]
+          ],
+          [
+            "tag",
+            true
+          ]
+        ],
+        "public_state": [
+          [
+            "buffer",
+            [
+              0,
+              0
+            ]
+          ]
+        ]
+      }
+    },
+    "faulty_accepted": true,
+    "expected_accepted": false
+  }
+}

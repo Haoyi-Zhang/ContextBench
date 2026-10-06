@@ -1,0 +1,1 @@
+{"accepted": true, "allocation_upper_bound": 90156, "certificate_bytes": 3822, "context_valuations": 16, "core_executions": 16, "core_valuations": 8, "detail": null, "elapsed_ms": 5.979577000005065, "productive_safe_roots": 4, "reason": "accepted", "represented_endpoint_executions": 256, "vulnerable_roots": 4}

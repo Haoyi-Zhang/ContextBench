@@ -1,0 +1,12 @@
+mutant,scope,tests,rejected,killed,reason_counts
+bounds_inclusive,bounds_write,43,43,True,"{""safe-observation-mismatch"": 43}"
+zero_over_zero_safe,divide_zero,43,43,True,"{""safe-observation-mismatch"": 43}"
+wrap_without_event,fixed_overflow,43,43,True,"{""safe-observation-mismatch"": 43}"
+friend_is_owner,access_control,43,43,True,"{""safe-observation-mismatch"": 43}"
+ignore_callback,reentrancy,43,43,True,"{""missing-root-witness"": 43}"
+force_call_success,unchecked_call,43,43,True,"{""missing-root-witness"": 43}"
+skip-context-obligation,pair-checker,6,0,True,"{""wrongly_accepted"": 6}"
+skip-safe-observation-obligation,pair-checker,4,0,True,"{""wrongly_accepted"": 4}"
+skip-exact-repair-obligation,pair-checker,6,0,True,"{""wrongly_accepted"": 6}"
+skip-safe-nonvacuity-obligation,pair-checker,1,0,True,"{""wrongly_accepted"": 1}"
+skip-productive-safe-obligation,pair-checker,1,0,True,"{""wrongly_accepted"": 1}"

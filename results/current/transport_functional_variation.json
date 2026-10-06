@@ -1,0 +1,4664 @@
+[
+  {
+    "case": "bounds_write-wrapper-0",
+    "first_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 0
+    },
+    "first_result": {
+      "aborted": false,
+      "events": [
+        [
+          "pre-0",
+          0
+        ],
+        [
+          "pre-1",
+          0
+        ],
+        [
+          "pre-2",
+          0
+        ],
+        [
+          "pre-3",
+          0
+        ],
+        [
+          "write",
+          [
+            0,
+            0
+          ]
+        ]
+      ],
+      "public_state": [
+        [
+          "buffer",
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": [
+        0,
+        0
+      ],
+      "steps": 13,
+      "trace": [
+        "0:assign",
+        "1:emit",
+        "2:assign",
+        "3:emit",
+        "4:assign",
+        "5:emit",
+        "6:assign",
+        "7:emit",
+        "8:assign",
+        "9:nop",
+        "10:buf_write",
+        "11:emit",
+        "12:return"
+      ],
+      "violation": null
+    },
+    "root_input": {
+      "idx": 0,
+      "value": 0
+    },
+    "second_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 1
+    },
+    "second_result": {
+      "aborted": false,
+      "events": [
+        [
+          "pre-0",
+          0
+        ],
+        [
+          "pre-1",
+          0
+        ],
+        [
+          "pre-2",
+          0
+        ],
+        [
+          "pre-3",
+          1
+        ],
+        [
+          "write",
+          [
+            0,
+            0
+          ]
+        ]
+      ],
+      "public_state": [
+        [
+          "buffer",
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": [
+        0,
+        0
+      ],
+      "steps": 13,
+      "trace": [
+        "0:assign",
+        "1:emit",
+        "2:assign",
+        "3:emit",
+        "4:assign",
+        "5:emit",
+        "6:assign",
+        "7:emit",
+        "8:assign",
+        "9:nop",
+        "10:buf_write",
+        "11:emit",
+        "12:return"
+      ],
+      "violation": null
+    }
+  },
+  {
+    "case": "bounds_write-wrapper-1",
+    "first_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 0
+    },
+    "first_result": {
+      "aborted": false,
+      "events": [
+        [
+          "write",
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          "post-0",
+          2
+        ],
+        [
+          "post-1",
+          4
+        ],
+        [
+          "post-2",
+          6
+        ],
+        [
+          "post-3",
+          8
+        ]
+      ],
+      "public_state": [
+        [
+          "buffer",
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": [
+        0,
+        0
+      ],
+      "steps": 13,
+      "trace": [
+        "0:assign",
+        "1:assign",
+        "2:assign",
+        "3:assign",
+        "4:assign",
+        "5:nop",
+        "6:buf_write",
+        "7:emit",
+        "8:emit",
+        "9:emit",
+        "10:emit",
+        "11:emit",
+        "12:return"
+      ],
+      "violation": null
+    },
+    "root_input": {
+      "idx": 0,
+      "value": 0
+    },
+    "second_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 1
+    },
+    "second_result": {
+      "aborted": false,
+      "events": [
+        [
+          "write",
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          "post-0",
+          2
+        ],
+        [
+          "post-1",
+          4
+        ],
+        [
+          "post-2",
+          6
+        ],
+        [
+          "post-3",
+          10
+        ]
+      ],
+      "public_state": [
+        [
+          "buffer",
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": [
+        0,
+        0
+      ],
+      "steps": 13,
+      "trace": [
+        "0:assign",
+        "1:assign",
+        "2:assign",
+        "3:assign",
+        "4:assign",
+        "5:nop",
+        "6:buf_write",
+        "7:emit",
+        "8:emit",
+        "9:emit",
+        "10:emit",
+        "11:emit",
+        "12:return"
+      ],
+      "violation": null
+    }
+  },
+  {
+    "case": "bounds_write-wrapper-2",
+    "first_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 0
+    },
+    "first_result": {
+      "aborted": false,
+      "events": [
+        [
+          "pre-0",
+          true
+        ],
+        [
+          "pre-1",
+          true
+        ],
+        [
+          "pre-2",
+          true
+        ],
+        [
+          "pre-3",
+          true
+        ],
+        [
+          "write",
+          [
+            0,
+            0
+          ]
+        ]
+      ],
+      "public_state": [
+        [
+          "buffer",
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": [
+        0,
+        0
+      ],
+      "steps": 13,
+      "trace": [
+        "0:assign",
+        "1:emit",
+        "2:assign",
+        "3:emit",
+        "4:assign",
+        "5:emit",
+        "6:assign",
+        "7:emit",
+        "8:assign",
+        "9:nop",
+        "10:buf_write",
+        "11:emit",
+        "12:return"
+      ],
+      "violation": null
+    },
+    "root_input": {
+      "idx": 0,
+      "value": 0
+    },
+    "second_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 1
+    },
+    "second_result": {
+      "aborted": false,
+      "events": [
+        [
+          "pre-0",
+          true
+        ],
+        [
+          "pre-1",
+          true
+        ],
+        [
+          "pre-2",
+          true
+        ],
+        [
+          "pre-3",
+          false
+        ],
+        [
+          "write",
+          [
+            0,
+            0
+          ]
+        ]
+      ],
+      "public_state": [
+        [
+          "buffer",
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": [
+        0,
+        0
+      ],
+      "steps": 13,
+      "trace": [
+        "0:assign",
+        "1:emit",
+        "2:assign",
+        "3:emit",
+        "4:assign",
+        "5:emit",
+        "6:assign",
+        "7:emit",
+        "8:assign",
+        "9:nop",
+        "10:buf_write",
+        "11:emit",
+        "12:return"
+      ],
+      "violation": null
+    }
+  },
+  {
+    "case": "bounds_write-wrapper-3",
+    "first_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 0
+    },
+    "first_result": {
+      "aborted": false,
+      "events": [
+        [
+          "write",
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          "post-0",
+          0
+        ],
+        [
+          "post-1",
+          0
+        ],
+        [
+          "post-2",
+          0
+        ],
+        [
+          "post-3",
+          0
+        ]
+      ],
+      "public_state": [
+        [
+          "buffer",
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": [
+        0,
+        0
+      ],
+      "steps": 13,
+      "trace": [
+        "0:assign",
+        "1:assign",
+        "2:assign",
+        "3:assign",
+        "4:assign",
+        "5:nop",
+        "6:buf_write",
+        "7:emit",
+        "8:emit",
+        "9:emit",
+        "10:emit",
+        "11:emit",
+        "12:return"
+      ],
+      "violation": null
+    },
+    "root_input": {
+      "idx": 0,
+      "value": 0
+    },
+    "second_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 1
+    },
+    "second_result": {
+      "aborted": false,
+      "events": [
+        [
+          "write",
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          "post-0",
+          0
+        ],
+        [
+          "post-1",
+          0
+        ],
+        [
+          "post-2",
+          0
+        ],
+        [
+          "post-3",
+          1
+        ]
+      ],
+      "public_state": [
+        [
+          "buffer",
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": [
+        0,
+        0
+      ],
+      "steps": 13,
+      "trace": [
+        "0:assign",
+        "1:assign",
+        "2:assign",
+        "3:assign",
+        "4:assign",
+        "5:nop",
+        "6:buf_write",
+        "7:emit",
+        "8:emit",
+        "9:emit",
+        "10:emit",
+        "11:emit",
+        "12:return"
+      ],
+      "violation": null
+    }
+  },
+  {
+    "case": "bounds_write-wrapper-4",
+    "first_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 0
+    },
+    "first_result": {
+      "aborted": false,
+      "events": [
+        [
+          "pre-0",
+          2
+        ],
+        [
+          "pre-1",
+          4
+        ],
+        [
+          "pre-2",
+          6
+        ],
+        [
+          "pre-3",
+          8
+        ],
+        [
+          "write",
+          [
+            0,
+            0
+          ]
+        ]
+      ],
+      "public_state": [
+        [
+          "buffer",
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": [
+        0,
+        0
+      ],
+      "steps": 13,
+      "trace": [
+        "0:assign",
+        "1:emit",
+        "2:assign",
+        "3:emit",
+        "4:assign",
+        "5:emit",
+        "6:assign",
+        "7:emit",
+        "8:assign",
+        "9:nop",
+        "10:buf_write",
+        "11:emit",
+        "12:return"
+      ],
+      "violation": null
+    },
+    "root_input": {
+      "idx": 0,
+      "value": 0
+    },
+    "second_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 1
+    },
+    "second_result": {
+      "aborted": false,
+      "events": [
+        [
+          "pre-0",
+          2
+        ],
+        [
+          "pre-1",
+          4
+        ],
+        [
+          "pre-2",
+          6
+        ],
+        [
+          "pre-3",
+          10
+        ],
+        [
+          "write",
+          [
+            0,
+            0
+          ]
+        ]
+      ],
+      "public_state": [
+        [
+          "buffer",
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": [
+        0,
+        0
+      ],
+      "steps": 13,
+      "trace": [
+        "0:assign",
+        "1:emit",
+        "2:assign",
+        "3:emit",
+        "4:assign",
+        "5:emit",
+        "6:assign",
+        "7:emit",
+        "8:assign",
+        "9:nop",
+        "10:buf_write",
+        "11:emit",
+        "12:return"
+      ],
+      "violation": null
+    }
+  },
+  {
+    "case": "bounds_write-wrapper-5",
+    "first_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 0
+    },
+    "first_result": {
+      "aborted": false,
+      "events": [
+        [
+          "write",
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          "post-0",
+          true
+        ],
+        [
+          "post-1",
+          true
+        ],
+        [
+          "post-2",
+          true
+        ],
+        [
+          "post-3",
+          true
+        ]
+      ],
+      "public_state": [
+        [
+          "buffer",
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": [
+        0,
+        0
+      ],
+      "steps": 13,
+      "trace": [
+        "0:assign",
+        "1:assign",
+        "2:assign",
+        "3:assign",
+        "4:assign",
+        "5:nop",
+        "6:buf_write",
+        "7:emit",
+        "8:emit",
+        "9:emit",
+        "10:emit",
+        "11:emit",
+        "12:return"
+      ],
+      "violation": null
+    },
+    "root_input": {
+      "idx": 0,
+      "value": 0
+    },
+    "second_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 1
+    },
+    "second_result": {
+      "aborted": false,
+      "events": [
+        [
+          "write",
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          "post-0",
+          true
+        ],
+        [
+          "post-1",
+          true
+        ],
+        [
+          "post-2",
+          true
+        ],
+        [
+          "post-3",
+          false
+        ]
+      ],
+      "public_state": [
+        [
+          "buffer",
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": [
+        0,
+        0
+      ],
+      "steps": 13,
+      "trace": [
+        "0:assign",
+        "1:assign",
+        "2:assign",
+        "3:assign",
+        "4:assign",
+        "5:nop",
+        "6:buf_write",
+        "7:emit",
+        "8:emit",
+        "9:emit",
+        "10:emit",
+        "11:emit",
+        "12:return"
+      ],
+      "violation": null
+    }
+  },
+  {
+    "case": "divide_zero-wrapper-0",
+    "first_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 0
+    },
+    "first_result": {
+      "aborted": false,
+      "events": [
+        [
+          "pre-0",
+          0
+        ],
+        [
+          "pre-1",
+          0
+        ],
+        [
+          "pre-2",
+          0
+        ],
+        [
+          "pre-3",
+          0
+        ],
+        [
+          "quotient",
+          2
+        ]
+      ],
+      "public_state": [
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": 2,
+      "steps": 13,
+      "trace": [
+        "0:assign",
+        "1:emit",
+        "2:assign",
+        "3:emit",
+        "4:assign",
+        "5:emit",
+        "6:assign",
+        "7:emit",
+        "8:assign",
+        "9:nop",
+        "10:divide",
+        "11:emit",
+        "12:return"
+      ],
+      "violation": null
+    },
+    "root_input": {
+      "denominator": -1,
+      "numerator": -2
+    },
+    "second_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 1
+    },
+    "second_result": {
+      "aborted": false,
+      "events": [
+        [
+          "pre-0",
+          0
+        ],
+        [
+          "pre-1",
+          0
+        ],
+        [
+          "pre-2",
+          0
+        ],
+        [
+          "pre-3",
+          1
+        ],
+        [
+          "quotient",
+          2
+        ]
+      ],
+      "public_state": [
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": 2,
+      "steps": 13,
+      "trace": [
+        "0:assign",
+        "1:emit",
+        "2:assign",
+        "3:emit",
+        "4:assign",
+        "5:emit",
+        "6:assign",
+        "7:emit",
+        "8:assign",
+        "9:nop",
+        "10:divide",
+        "11:emit",
+        "12:return"
+      ],
+      "violation": null
+    }
+  },
+  {
+    "case": "divide_zero-wrapper-1",
+    "first_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 0
+    },
+    "first_result": {
+      "aborted": false,
+      "events": [
+        [
+          "quotient",
+          2
+        ],
+        [
+          "post-0",
+          2
+        ],
+        [
+          "post-1",
+          4
+        ],
+        [
+          "post-2",
+          6
+        ],
+        [
+          "post-3",
+          8
+        ]
+      ],
+      "public_state": [
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": 2,
+      "steps": 13,
+      "trace": [
+        "0:assign",
+        "1:assign",
+        "2:assign",
+        "3:assign",
+        "4:assign",
+        "5:nop",
+        "6:divide",
+        "7:emit",
+        "8:emit",
+        "9:emit",
+        "10:emit",
+        "11:emit",
+        "12:return"
+      ],
+      "violation": null
+    },
+    "root_input": {
+      "denominator": -1,
+      "numerator": -2
+    },
+    "second_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 1
+    },
+    "second_result": {
+      "aborted": false,
+      "events": [
+        [
+          "quotient",
+          2
+        ],
+        [
+          "post-0",
+          2
+        ],
+        [
+          "post-1",
+          4
+        ],
+        [
+          "post-2",
+          6
+        ],
+        [
+          "post-3",
+          10
+        ]
+      ],
+      "public_state": [
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": 2,
+      "steps": 13,
+      "trace": [
+        "0:assign",
+        "1:assign",
+        "2:assign",
+        "3:assign",
+        "4:assign",
+        "5:nop",
+        "6:divide",
+        "7:emit",
+        "8:emit",
+        "9:emit",
+        "10:emit",
+        "11:emit",
+        "12:return"
+      ],
+      "violation": null
+    }
+  },
+  {
+    "case": "divide_zero-wrapper-2",
+    "first_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 0
+    },
+    "first_result": {
+      "aborted": false,
+      "events": [
+        [
+          "pre-0",
+          true
+        ],
+        [
+          "pre-1",
+          true
+        ],
+        [
+          "pre-2",
+          true
+        ],
+        [
+          "pre-3",
+          true
+        ],
+        [
+          "quotient",
+          2
+        ]
+      ],
+      "public_state": [
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": 2,
+      "steps": 13,
+      "trace": [
+        "0:assign",
+        "1:emit",
+        "2:assign",
+        "3:emit",
+        "4:assign",
+        "5:emit",
+        "6:assign",
+        "7:emit",
+        "8:assign",
+        "9:nop",
+        "10:divide",
+        "11:emit",
+        "12:return"
+      ],
+      "violation": null
+    },
+    "root_input": {
+      "denominator": -1,
+      "numerator": -2
+    },
+    "second_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 1
+    },
+    "second_result": {
+      "aborted": false,
+      "events": [
+        [
+          "pre-0",
+          true
+        ],
+        [
+          "pre-1",
+          true
+        ],
+        [
+          "pre-2",
+          true
+        ],
+        [
+          "pre-3",
+          false
+        ],
+        [
+          "quotient",
+          2
+        ]
+      ],
+      "public_state": [
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": 2,
+      "steps": 13,
+      "trace": [
+        "0:assign",
+        "1:emit",
+        "2:assign",
+        "3:emit",
+        "4:assign",
+        "5:emit",
+        "6:assign",
+        "7:emit",
+        "8:assign",
+        "9:nop",
+        "10:divide",
+        "11:emit",
+        "12:return"
+      ],
+      "violation": null
+    }
+  },
+  {
+    "case": "divide_zero-wrapper-3",
+    "first_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 0
+    },
+    "first_result": {
+      "aborted": false,
+      "events": [
+        [
+          "quotient",
+          2
+        ],
+        [
+          "post-0",
+          0
+        ],
+        [
+          "post-1",
+          0
+        ],
+        [
+          "post-2",
+          0
+        ],
+        [
+          "post-3",
+          0
+        ]
+      ],
+      "public_state": [
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": 2,
+      "steps": 13,
+      "trace": [
+        "0:assign",
+        "1:assign",
+        "2:assign",
+        "3:assign",
+        "4:assign",
+        "5:nop",
+        "6:divide",
+        "7:emit",
+        "8:emit",
+        "9:emit",
+        "10:emit",
+        "11:emit",
+        "12:return"
+      ],
+      "violation": null
+    },
+    "root_input": {
+      "denominator": -1,
+      "numerator": -2
+    },
+    "second_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 1
+    },
+    "second_result": {
+      "aborted": false,
+      "events": [
+        [
+          "quotient",
+          2
+        ],
+        [
+          "post-0",
+          0
+        ],
+        [
+          "post-1",
+          0
+        ],
+        [
+          "post-2",
+          0
+        ],
+        [
+          "post-3",
+          1
+        ]
+      ],
+      "public_state": [
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": 2,
+      "steps": 13,
+      "trace": [
+        "0:assign",
+        "1:assign",
+        "2:assign",
+        "3:assign",
+        "4:assign",
+        "5:nop",
+        "6:divide",
+        "7:emit",
+        "8:emit",
+        "9:emit",
+        "10:emit",
+        "11:emit",
+        "12:return"
+      ],
+      "violation": null
+    }
+  },
+  {
+    "case": "divide_zero-wrapper-4",
+    "first_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 0
+    },
+    "first_result": {
+      "aborted": false,
+      "events": [
+        [
+          "pre-0",
+          2
+        ],
+        [
+          "pre-1",
+          4
+        ],
+        [
+          "pre-2",
+          6
+        ],
+        [
+          "pre-3",
+          8
+        ],
+        [
+          "quotient",
+          2
+        ]
+      ],
+      "public_state": [
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": 2,
+      "steps": 13,
+      "trace": [
+        "0:assign",
+        "1:emit",
+        "2:assign",
+        "3:emit",
+        "4:assign",
+        "5:emit",
+        "6:assign",
+        "7:emit",
+        "8:assign",
+        "9:nop",
+        "10:divide",
+        "11:emit",
+        "12:return"
+      ],
+      "violation": null
+    },
+    "root_input": {
+      "denominator": -1,
+      "numerator": -2
+    },
+    "second_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 1
+    },
+    "second_result": {
+      "aborted": false,
+      "events": [
+        [
+          "pre-0",
+          2
+        ],
+        [
+          "pre-1",
+          4
+        ],
+        [
+          "pre-2",
+          6
+        ],
+        [
+          "pre-3",
+          10
+        ],
+        [
+          "quotient",
+          2
+        ]
+      ],
+      "public_state": [
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": 2,
+      "steps": 13,
+      "trace": [
+        "0:assign",
+        "1:emit",
+        "2:assign",
+        "3:emit",
+        "4:assign",
+        "5:emit",
+        "6:assign",
+        "7:emit",
+        "8:assign",
+        "9:nop",
+        "10:divide",
+        "11:emit",
+        "12:return"
+      ],
+      "violation": null
+    }
+  },
+  {
+    "case": "divide_zero-wrapper-5",
+    "first_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 0
+    },
+    "first_result": {
+      "aborted": false,
+      "events": [
+        [
+          "quotient",
+          2
+        ],
+        [
+          "post-0",
+          true
+        ],
+        [
+          "post-1",
+          true
+        ],
+        [
+          "post-2",
+          true
+        ],
+        [
+          "post-3",
+          true
+        ]
+      ],
+      "public_state": [
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": 2,
+      "steps": 13,
+      "trace": [
+        "0:assign",
+        "1:assign",
+        "2:assign",
+        "3:assign",
+        "4:assign",
+        "5:nop",
+        "6:divide",
+        "7:emit",
+        "8:emit",
+        "9:emit",
+        "10:emit",
+        "11:emit",
+        "12:return"
+      ],
+      "violation": null
+    },
+    "root_input": {
+      "denominator": -1,
+      "numerator": -2
+    },
+    "second_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 1
+    },
+    "second_result": {
+      "aborted": false,
+      "events": [
+        [
+          "quotient",
+          2
+        ],
+        [
+          "post-0",
+          true
+        ],
+        [
+          "post-1",
+          true
+        ],
+        [
+          "post-2",
+          true
+        ],
+        [
+          "post-3",
+          false
+        ]
+      ],
+      "public_state": [
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": 2,
+      "steps": 13,
+      "trace": [
+        "0:assign",
+        "1:assign",
+        "2:assign",
+        "3:assign",
+        "4:assign",
+        "5:nop",
+        "6:divide",
+        "7:emit",
+        "8:emit",
+        "9:emit",
+        "10:emit",
+        "11:emit",
+        "12:return"
+      ],
+      "violation": null
+    }
+  },
+  {
+    "case": "fixed_overflow-wrapper-0",
+    "first_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 0
+    },
+    "first_result": {
+      "aborted": false,
+      "events": [
+        [
+          "pre-0",
+          0
+        ],
+        [
+          "pre-1",
+          0
+        ],
+        [
+          "pre-2",
+          0
+        ],
+        [
+          "pre-3",
+          0
+        ],
+        [
+          "sum",
+          0
+        ]
+      ],
+      "public_state": [
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": 0,
+      "steps": 13,
+      "trace": [
+        "0:assign",
+        "1:emit",
+        "2:assign",
+        "3:emit",
+        "4:assign",
+        "5:emit",
+        "6:assign",
+        "7:emit",
+        "8:assign",
+        "9:nop",
+        "10:add_fixed",
+        "11:emit",
+        "12:return"
+      ],
+      "violation": null
+    },
+    "root_input": {
+      "delta": 0,
+      "x": 0
+    },
+    "second_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 1
+    },
+    "second_result": {
+      "aborted": false,
+      "events": [
+        [
+          "pre-0",
+          0
+        ],
+        [
+          "pre-1",
+          0
+        ],
+        [
+          "pre-2",
+          0
+        ],
+        [
+          "pre-3",
+          1
+        ],
+        [
+          "sum",
+          0
+        ]
+      ],
+      "public_state": [
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": 0,
+      "steps": 13,
+      "trace": [
+        "0:assign",
+        "1:emit",
+        "2:assign",
+        "3:emit",
+        "4:assign",
+        "5:emit",
+        "6:assign",
+        "7:emit",
+        "8:assign",
+        "9:nop",
+        "10:add_fixed",
+        "11:emit",
+        "12:return"
+      ],
+      "violation": null
+    }
+  },
+  {
+    "case": "fixed_overflow-wrapper-1",
+    "first_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 0
+    },
+    "first_result": {
+      "aborted": false,
+      "events": [
+        [
+          "sum",
+          0
+        ],
+        [
+          "post-0",
+          2
+        ],
+        [
+          "post-1",
+          4
+        ],
+        [
+          "post-2",
+          6
+        ],
+        [
+          "post-3",
+          8
+        ]
+      ],
+      "public_state": [
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": 0,
+      "steps": 13,
+      "trace": [
+        "0:assign",
+        "1:assign",
+        "2:assign",
+        "3:assign",
+        "4:assign",
+        "5:nop",
+        "6:add_fixed",
+        "7:emit",
+        "8:emit",
+        "9:emit",
+        "10:emit",
+        "11:emit",
+        "12:return"
+      ],
+      "violation": null
+    },
+    "root_input": {
+      "delta": 0,
+      "x": 0
+    },
+    "second_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 1
+    },
+    "second_result": {
+      "aborted": false,
+      "events": [
+        [
+          "sum",
+          0
+        ],
+        [
+          "post-0",
+          2
+        ],
+        [
+          "post-1",
+          4
+        ],
+        [
+          "post-2",
+          6
+        ],
+        [
+          "post-3",
+          10
+        ]
+      ],
+      "public_state": [
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": 0,
+      "steps": 13,
+      "trace": [
+        "0:assign",
+        "1:assign",
+        "2:assign",
+        "3:assign",
+        "4:assign",
+        "5:nop",
+        "6:add_fixed",
+        "7:emit",
+        "8:emit",
+        "9:emit",
+        "10:emit",
+        "11:emit",
+        "12:return"
+      ],
+      "violation": null
+    }
+  },
+  {
+    "case": "fixed_overflow-wrapper-2",
+    "first_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 0
+    },
+    "first_result": {
+      "aborted": false,
+      "events": [
+        [
+          "pre-0",
+          true
+        ],
+        [
+          "pre-1",
+          true
+        ],
+        [
+          "pre-2",
+          true
+        ],
+        [
+          "pre-3",
+          true
+        ],
+        [
+          "sum",
+          0
+        ]
+      ],
+      "public_state": [
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": 0,
+      "steps": 13,
+      "trace": [
+        "0:assign",
+        "1:emit",
+        "2:assign",
+        "3:emit",
+        "4:assign",
+        "5:emit",
+        "6:assign",
+        "7:emit",
+        "8:assign",
+        "9:nop",
+        "10:add_fixed",
+        "11:emit",
+        "12:return"
+      ],
+      "violation": null
+    },
+    "root_input": {
+      "delta": 0,
+      "x": 0
+    },
+    "second_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 1
+    },
+    "second_result": {
+      "aborted": false,
+      "events": [
+        [
+          "pre-0",
+          true
+        ],
+        [
+          "pre-1",
+          true
+        ],
+        [
+          "pre-2",
+          true
+        ],
+        [
+          "pre-3",
+          false
+        ],
+        [
+          "sum",
+          0
+        ]
+      ],
+      "public_state": [
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": 0,
+      "steps": 13,
+      "trace": [
+        "0:assign",
+        "1:emit",
+        "2:assign",
+        "3:emit",
+        "4:assign",
+        "5:emit",
+        "6:assign",
+        "7:emit",
+        "8:assign",
+        "9:nop",
+        "10:add_fixed",
+        "11:emit",
+        "12:return"
+      ],
+      "violation": null
+    }
+  },
+  {
+    "case": "fixed_overflow-wrapper-3",
+    "first_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 0
+    },
+    "first_result": {
+      "aborted": false,
+      "events": [
+        [
+          "sum",
+          0
+        ],
+        [
+          "post-0",
+          0
+        ],
+        [
+          "post-1",
+          0
+        ],
+        [
+          "post-2",
+          0
+        ],
+        [
+          "post-3",
+          0
+        ]
+      ],
+      "public_state": [
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": 0,
+      "steps": 13,
+      "trace": [
+        "0:assign",
+        "1:assign",
+        "2:assign",
+        "3:assign",
+        "4:assign",
+        "5:nop",
+        "6:add_fixed",
+        "7:emit",
+        "8:emit",
+        "9:emit",
+        "10:emit",
+        "11:emit",
+        "12:return"
+      ],
+      "violation": null
+    },
+    "root_input": {
+      "delta": 0,
+      "x": 0
+    },
+    "second_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 1
+    },
+    "second_result": {
+      "aborted": false,
+      "events": [
+        [
+          "sum",
+          0
+        ],
+        [
+          "post-0",
+          0
+        ],
+        [
+          "post-1",
+          0
+        ],
+        [
+          "post-2",
+          0
+        ],
+        [
+          "post-3",
+          1
+        ]
+      ],
+      "public_state": [
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": 0,
+      "steps": 13,
+      "trace": [
+        "0:assign",
+        "1:assign",
+        "2:assign",
+        "3:assign",
+        "4:assign",
+        "5:nop",
+        "6:add_fixed",
+        "7:emit",
+        "8:emit",
+        "9:emit",
+        "10:emit",
+        "11:emit",
+        "12:return"
+      ],
+      "violation": null
+    }
+  },
+  {
+    "case": "fixed_overflow-wrapper-4",
+    "first_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 0
+    },
+    "first_result": {
+      "aborted": false,
+      "events": [
+        [
+          "pre-0",
+          2
+        ],
+        [
+          "pre-1",
+          4
+        ],
+        [
+          "pre-2",
+          6
+        ],
+        [
+          "pre-3",
+          8
+        ],
+        [
+          "sum",
+          0
+        ]
+      ],
+      "public_state": [
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": 0,
+      "steps": 13,
+      "trace": [
+        "0:assign",
+        "1:emit",
+        "2:assign",
+        "3:emit",
+        "4:assign",
+        "5:emit",
+        "6:assign",
+        "7:emit",
+        "8:assign",
+        "9:nop",
+        "10:add_fixed",
+        "11:emit",
+        "12:return"
+      ],
+      "violation": null
+    },
+    "root_input": {
+      "delta": 0,
+      "x": 0
+    },
+    "second_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 1
+    },
+    "second_result": {
+      "aborted": false,
+      "events": [
+        [
+          "pre-0",
+          2
+        ],
+        [
+          "pre-1",
+          4
+        ],
+        [
+          "pre-2",
+          6
+        ],
+        [
+          "pre-3",
+          10
+        ],
+        [
+          "sum",
+          0
+        ]
+      ],
+      "public_state": [
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": 0,
+      "steps": 13,
+      "trace": [
+        "0:assign",
+        "1:emit",
+        "2:assign",
+        "3:emit",
+        "4:assign",
+        "5:emit",
+        "6:assign",
+        "7:emit",
+        "8:assign",
+        "9:nop",
+        "10:add_fixed",
+        "11:emit",
+        "12:return"
+      ],
+      "violation": null
+    }
+  },
+  {
+    "case": "fixed_overflow-wrapper-5",
+    "first_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 0
+    },
+    "first_result": {
+      "aborted": false,
+      "events": [
+        [
+          "sum",
+          0
+        ],
+        [
+          "post-0",
+          true
+        ],
+        [
+          "post-1",
+          true
+        ],
+        [
+          "post-2",
+          true
+        ],
+        [
+          "post-3",
+          true
+        ]
+      ],
+      "public_state": [
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": 0,
+      "steps": 13,
+      "trace": [
+        "0:assign",
+        "1:assign",
+        "2:assign",
+        "3:assign",
+        "4:assign",
+        "5:nop",
+        "6:add_fixed",
+        "7:emit",
+        "8:emit",
+        "9:emit",
+        "10:emit",
+        "11:emit",
+        "12:return"
+      ],
+      "violation": null
+    },
+    "root_input": {
+      "delta": 0,
+      "x": 0
+    },
+    "second_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 1
+    },
+    "second_result": {
+      "aborted": false,
+      "events": [
+        [
+          "sum",
+          0
+        ],
+        [
+          "post-0",
+          true
+        ],
+        [
+          "post-1",
+          true
+        ],
+        [
+          "post-2",
+          true
+        ],
+        [
+          "post-3",
+          false
+        ]
+      ],
+      "public_state": [
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": 0,
+      "steps": 13,
+      "trace": [
+        "0:assign",
+        "1:assign",
+        "2:assign",
+        "3:assign",
+        "4:assign",
+        "5:nop",
+        "6:add_fixed",
+        "7:emit",
+        "8:emit",
+        "9:emit",
+        "10:emit",
+        "11:emit",
+        "12:return"
+      ],
+      "violation": null
+    }
+  },
+  {
+    "case": "access_control-wrapper-0",
+    "first_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 0
+    },
+    "first_result": {
+      "aborted": false,
+      "events": [
+        [
+          "pre-0",
+          0
+        ],
+        [
+          "pre-1",
+          0
+        ],
+        [
+          "pre-2",
+          0
+        ],
+        [
+          "pre-3",
+          0
+        ],
+        [
+          "setting",
+          0
+        ]
+      ],
+      "public_state": [
+        [
+          "owner",
+          "owner0"
+        ],
+        [
+          "setting",
+          0
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": 0,
+      "steps": 13,
+      "trace": [
+        "0:assign",
+        "1:emit",
+        "2:assign",
+        "3:emit",
+        "4:assign",
+        "5:emit",
+        "6:assign",
+        "7:emit",
+        "8:assign",
+        "9:nop",
+        "10:protected_store",
+        "11:emit",
+        "12:return"
+      ],
+      "violation": null
+    },
+    "root_input": {
+      "sender": "owner0",
+      "value": 0
+    },
+    "second_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 1
+    },
+    "second_result": {
+      "aborted": false,
+      "events": [
+        [
+          "pre-0",
+          0
+        ],
+        [
+          "pre-1",
+          0
+        ],
+        [
+          "pre-2",
+          0
+        ],
+        [
+          "pre-3",
+          1
+        ],
+        [
+          "setting",
+          0
+        ]
+      ],
+      "public_state": [
+        [
+          "owner",
+          "owner0"
+        ],
+        [
+          "setting",
+          0
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": 0,
+      "steps": 13,
+      "trace": [
+        "0:assign",
+        "1:emit",
+        "2:assign",
+        "3:emit",
+        "4:assign",
+        "5:emit",
+        "6:assign",
+        "7:emit",
+        "8:assign",
+        "9:nop",
+        "10:protected_store",
+        "11:emit",
+        "12:return"
+      ],
+      "violation": null
+    }
+  },
+  {
+    "case": "access_control-wrapper-1",
+    "first_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 0
+    },
+    "first_result": {
+      "aborted": false,
+      "events": [
+        [
+          "setting",
+          0
+        ],
+        [
+          "post-0",
+          2
+        ],
+        [
+          "post-1",
+          4
+        ],
+        [
+          "post-2",
+          6
+        ],
+        [
+          "post-3",
+          8
+        ]
+      ],
+      "public_state": [
+        [
+          "owner",
+          "owner0"
+        ],
+        [
+          "setting",
+          0
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": 0,
+      "steps": 13,
+      "trace": [
+        "0:assign",
+        "1:assign",
+        "2:assign",
+        "3:assign",
+        "4:assign",
+        "5:nop",
+        "6:protected_store",
+        "7:emit",
+        "8:emit",
+        "9:emit",
+        "10:emit",
+        "11:emit",
+        "12:return"
+      ],
+      "violation": null
+    },
+    "root_input": {
+      "sender": "owner0",
+      "value": 0
+    },
+    "second_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 1
+    },
+    "second_result": {
+      "aborted": false,
+      "events": [
+        [
+          "setting",
+          0
+        ],
+        [
+          "post-0",
+          2
+        ],
+        [
+          "post-1",
+          4
+        ],
+        [
+          "post-2",
+          6
+        ],
+        [
+          "post-3",
+          10
+        ]
+      ],
+      "public_state": [
+        [
+          "owner",
+          "owner0"
+        ],
+        [
+          "setting",
+          0
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": 0,
+      "steps": 13,
+      "trace": [
+        "0:assign",
+        "1:assign",
+        "2:assign",
+        "3:assign",
+        "4:assign",
+        "5:nop",
+        "6:protected_store",
+        "7:emit",
+        "8:emit",
+        "9:emit",
+        "10:emit",
+        "11:emit",
+        "12:return"
+      ],
+      "violation": null
+    }
+  },
+  {
+    "case": "access_control-wrapper-2",
+    "first_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 0
+    },
+    "first_result": {
+      "aborted": false,
+      "events": [
+        [
+          "pre-0",
+          true
+        ],
+        [
+          "pre-1",
+          true
+        ],
+        [
+          "pre-2",
+          true
+        ],
+        [
+          "pre-3",
+          true
+        ],
+        [
+          "setting",
+          0
+        ]
+      ],
+      "public_state": [
+        [
+          "owner",
+          "owner0"
+        ],
+        [
+          "setting",
+          0
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": 0,
+      "steps": 13,
+      "trace": [
+        "0:assign",
+        "1:emit",
+        "2:assign",
+        "3:emit",
+        "4:assign",
+        "5:emit",
+        "6:assign",
+        "7:emit",
+        "8:assign",
+        "9:nop",
+        "10:protected_store",
+        "11:emit",
+        "12:return"
+      ],
+      "violation": null
+    },
+    "root_input": {
+      "sender": "owner0",
+      "value": 0
+    },
+    "second_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 1
+    },
+    "second_result": {
+      "aborted": false,
+      "events": [
+        [
+          "pre-0",
+          true
+        ],
+        [
+          "pre-1",
+          true
+        ],
+        [
+          "pre-2",
+          true
+        ],
+        [
+          "pre-3",
+          false
+        ],
+        [
+          "setting",
+          0
+        ]
+      ],
+      "public_state": [
+        [
+          "owner",
+          "owner0"
+        ],
+        [
+          "setting",
+          0
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": 0,
+      "steps": 13,
+      "trace": [
+        "0:assign",
+        "1:emit",
+        "2:assign",
+        "3:emit",
+        "4:assign",
+        "5:emit",
+        "6:assign",
+        "7:emit",
+        "8:assign",
+        "9:nop",
+        "10:protected_store",
+        "11:emit",
+        "12:return"
+      ],
+      "violation": null
+    }
+  },
+  {
+    "case": "access_control-wrapper-3",
+    "first_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 0
+    },
+    "first_result": {
+      "aborted": false,
+      "events": [
+        [
+          "setting",
+          0
+        ],
+        [
+          "post-0",
+          0
+        ],
+        [
+          "post-1",
+          0
+        ],
+        [
+          "post-2",
+          0
+        ],
+        [
+          "post-3",
+          0
+        ]
+      ],
+      "public_state": [
+        [
+          "owner",
+          "owner0"
+        ],
+        [
+          "setting",
+          0
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": 0,
+      "steps": 13,
+      "trace": [
+        "0:assign",
+        "1:assign",
+        "2:assign",
+        "3:assign",
+        "4:assign",
+        "5:nop",
+        "6:protected_store",
+        "7:emit",
+        "8:emit",
+        "9:emit",
+        "10:emit",
+        "11:emit",
+        "12:return"
+      ],
+      "violation": null
+    },
+    "root_input": {
+      "sender": "owner0",
+      "value": 0
+    },
+    "second_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 1
+    },
+    "second_result": {
+      "aborted": false,
+      "events": [
+        [
+          "setting",
+          0
+        ],
+        [
+          "post-0",
+          0
+        ],
+        [
+          "post-1",
+          0
+        ],
+        [
+          "post-2",
+          0
+        ],
+        [
+          "post-3",
+          1
+        ]
+      ],
+      "public_state": [
+        [
+          "owner",
+          "owner0"
+        ],
+        [
+          "setting",
+          0
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": 0,
+      "steps": 13,
+      "trace": [
+        "0:assign",
+        "1:assign",
+        "2:assign",
+        "3:assign",
+        "4:assign",
+        "5:nop",
+        "6:protected_store",
+        "7:emit",
+        "8:emit",
+        "9:emit",
+        "10:emit",
+        "11:emit",
+        "12:return"
+      ],
+      "violation": null
+    }
+  },
+  {
+    "case": "access_control-wrapper-4",
+    "first_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 0
+    },
+    "first_result": {
+      "aborted": false,
+      "events": [
+        [
+          "pre-0",
+          2
+        ],
+        [
+          "pre-1",
+          4
+        ],
+        [
+          "pre-2",
+          6
+        ],
+        [
+          "pre-3",
+          8
+        ],
+        [
+          "setting",
+          0
+        ]
+      ],
+      "public_state": [
+        [
+          "owner",
+          "owner0"
+        ],
+        [
+          "setting",
+          0
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": 0,
+      "steps": 13,
+      "trace": [
+        "0:assign",
+        "1:emit",
+        "2:assign",
+        "3:emit",
+        "4:assign",
+        "5:emit",
+        "6:assign",
+        "7:emit",
+        "8:assign",
+        "9:nop",
+        "10:protected_store",
+        "11:emit",
+        "12:return"
+      ],
+      "violation": null
+    },
+    "root_input": {
+      "sender": "owner0",
+      "value": 0
+    },
+    "second_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 1
+    },
+    "second_result": {
+      "aborted": false,
+      "events": [
+        [
+          "pre-0",
+          2
+        ],
+        [
+          "pre-1",
+          4
+        ],
+        [
+          "pre-2",
+          6
+        ],
+        [
+          "pre-3",
+          10
+        ],
+        [
+          "setting",
+          0
+        ]
+      ],
+      "public_state": [
+        [
+          "owner",
+          "owner0"
+        ],
+        [
+          "setting",
+          0
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": 0,
+      "steps": 13,
+      "trace": [
+        "0:assign",
+        "1:emit",
+        "2:assign",
+        "3:emit",
+        "4:assign",
+        "5:emit",
+        "6:assign",
+        "7:emit",
+        "8:assign",
+        "9:nop",
+        "10:protected_store",
+        "11:emit",
+        "12:return"
+      ],
+      "violation": null
+    }
+  },
+  {
+    "case": "access_control-wrapper-5",
+    "first_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 0
+    },
+    "first_result": {
+      "aborted": false,
+      "events": [
+        [
+          "setting",
+          0
+        ],
+        [
+          "post-0",
+          true
+        ],
+        [
+          "post-1",
+          true
+        ],
+        [
+          "post-2",
+          true
+        ],
+        [
+          "post-3",
+          true
+        ]
+      ],
+      "public_state": [
+        [
+          "owner",
+          "owner0"
+        ],
+        [
+          "setting",
+          0
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": 0,
+      "steps": 13,
+      "trace": [
+        "0:assign",
+        "1:assign",
+        "2:assign",
+        "3:assign",
+        "4:assign",
+        "5:nop",
+        "6:protected_store",
+        "7:emit",
+        "8:emit",
+        "9:emit",
+        "10:emit",
+        "11:emit",
+        "12:return"
+      ],
+      "violation": null
+    },
+    "root_input": {
+      "sender": "owner0",
+      "value": 0
+    },
+    "second_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 1
+    },
+    "second_result": {
+      "aborted": false,
+      "events": [
+        [
+          "setting",
+          0
+        ],
+        [
+          "post-0",
+          true
+        ],
+        [
+          "post-1",
+          true
+        ],
+        [
+          "post-2",
+          true
+        ],
+        [
+          "post-3",
+          false
+        ]
+      ],
+      "public_state": [
+        [
+          "owner",
+          "owner0"
+        ],
+        [
+          "setting",
+          0
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": 0,
+      "steps": 13,
+      "trace": [
+        "0:assign",
+        "1:assign",
+        "2:assign",
+        "3:assign",
+        "4:assign",
+        "5:nop",
+        "6:protected_store",
+        "7:emit",
+        "8:emit",
+        "9:emit",
+        "10:emit",
+        "11:emit",
+        "12:return"
+      ],
+      "violation": null
+    }
+  },
+  {
+    "case": "reentrancy-wrapper-0",
+    "first_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 0
+    },
+    "first_result": {
+      "aborted": false,
+      "events": [
+        [
+          "pre-0",
+          0
+        ],
+        [
+          "pre-1",
+          0
+        ],
+        [
+          "pre-2",
+          0
+        ],
+        [
+          "pre-3",
+          0
+        ],
+        [
+          "withdraw",
+          {
+            "user": 0
+          }
+        ]
+      ],
+      "public_state": [
+        [
+          "balances",
+          {
+            "user": 0
+          }
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": {
+        "user": 0
+      },
+      "steps": 14,
+      "trace": [
+        "0:assign",
+        "1:emit",
+        "2:assign",
+        "3:emit",
+        "4:assign",
+        "5:emit",
+        "6:assign",
+        "7:emit",
+        "8:assign",
+        "9:nop",
+        "10:external_call",
+        "11:update_balance",
+        "12:emit",
+        "13:return"
+      ],
+      "violation": null
+    },
+    "root_input": {
+      "amount": 1,
+      "reenter": false,
+      "sender": "user"
+    },
+    "second_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 1
+    },
+    "second_result": {
+      "aborted": false,
+      "events": [
+        [
+          "pre-0",
+          0
+        ],
+        [
+          "pre-1",
+          0
+        ],
+        [
+          "pre-2",
+          0
+        ],
+        [
+          "pre-3",
+          1
+        ],
+        [
+          "withdraw",
+          {
+            "user": 0
+          }
+        ]
+      ],
+      "public_state": [
+        [
+          "balances",
+          {
+            "user": 0
+          }
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": {
+        "user": 0
+      },
+      "steps": 14,
+      "trace": [
+        "0:assign",
+        "1:emit",
+        "2:assign",
+        "3:emit",
+        "4:assign",
+        "5:emit",
+        "6:assign",
+        "7:emit",
+        "8:assign",
+        "9:nop",
+        "10:external_call",
+        "11:update_balance",
+        "12:emit",
+        "13:return"
+      ],
+      "violation": null
+    }
+  },
+  {
+    "case": "reentrancy-wrapper-1",
+    "first_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 0
+    },
+    "first_result": {
+      "aborted": false,
+      "events": [
+        [
+          "withdraw",
+          {
+            "user": 0
+          }
+        ],
+        [
+          "post-0",
+          2
+        ],
+        [
+          "post-1",
+          4
+        ],
+        [
+          "post-2",
+          6
+        ],
+        [
+          "post-3",
+          8
+        ]
+      ],
+      "public_state": [
+        [
+          "balances",
+          {
+            "user": 0
+          }
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": {
+        "user": 0
+      },
+      "steps": 14,
+      "trace": [
+        "0:assign",
+        "1:assign",
+        "2:assign",
+        "3:assign",
+        "4:assign",
+        "5:nop",
+        "6:external_call",
+        "7:update_balance",
+        "8:emit",
+        "9:emit",
+        "10:emit",
+        "11:emit",
+        "12:emit",
+        "13:return"
+      ],
+      "violation": null
+    },
+    "root_input": {
+      "amount": 1,
+      "reenter": false,
+      "sender": "user"
+    },
+    "second_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 1
+    },
+    "second_result": {
+      "aborted": false,
+      "events": [
+        [
+          "withdraw",
+          {
+            "user": 0
+          }
+        ],
+        [
+          "post-0",
+          2
+        ],
+        [
+          "post-1",
+          4
+        ],
+        [
+          "post-2",
+          6
+        ],
+        [
+          "post-3",
+          10
+        ]
+      ],
+      "public_state": [
+        [
+          "balances",
+          {
+            "user": 0
+          }
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": {
+        "user": 0
+      },
+      "steps": 14,
+      "trace": [
+        "0:assign",
+        "1:assign",
+        "2:assign",
+        "3:assign",
+        "4:assign",
+        "5:nop",
+        "6:external_call",
+        "7:update_balance",
+        "8:emit",
+        "9:emit",
+        "10:emit",
+        "11:emit",
+        "12:emit",
+        "13:return"
+      ],
+      "violation": null
+    }
+  },
+  {
+    "case": "reentrancy-wrapper-2",
+    "first_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 0
+    },
+    "first_result": {
+      "aborted": false,
+      "events": [
+        [
+          "pre-0",
+          true
+        ],
+        [
+          "pre-1",
+          true
+        ],
+        [
+          "pre-2",
+          true
+        ],
+        [
+          "pre-3",
+          true
+        ],
+        [
+          "withdraw",
+          {
+            "user": 0
+          }
+        ]
+      ],
+      "public_state": [
+        [
+          "balances",
+          {
+            "user": 0
+          }
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": {
+        "user": 0
+      },
+      "steps": 14,
+      "trace": [
+        "0:assign",
+        "1:emit",
+        "2:assign",
+        "3:emit",
+        "4:assign",
+        "5:emit",
+        "6:assign",
+        "7:emit",
+        "8:assign",
+        "9:nop",
+        "10:external_call",
+        "11:update_balance",
+        "12:emit",
+        "13:return"
+      ],
+      "violation": null
+    },
+    "root_input": {
+      "amount": 1,
+      "reenter": false,
+      "sender": "user"
+    },
+    "second_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 1
+    },
+    "second_result": {
+      "aborted": false,
+      "events": [
+        [
+          "pre-0",
+          true
+        ],
+        [
+          "pre-1",
+          true
+        ],
+        [
+          "pre-2",
+          true
+        ],
+        [
+          "pre-3",
+          false
+        ],
+        [
+          "withdraw",
+          {
+            "user": 0
+          }
+        ]
+      ],
+      "public_state": [
+        [
+          "balances",
+          {
+            "user": 0
+          }
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": {
+        "user": 0
+      },
+      "steps": 14,
+      "trace": [
+        "0:assign",
+        "1:emit",
+        "2:assign",
+        "3:emit",
+        "4:assign",
+        "5:emit",
+        "6:assign",
+        "7:emit",
+        "8:assign",
+        "9:nop",
+        "10:external_call",
+        "11:update_balance",
+        "12:emit",
+        "13:return"
+      ],
+      "violation": null
+    }
+  },
+  {
+    "case": "reentrancy-wrapper-3",
+    "first_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 0
+    },
+    "first_result": {
+      "aborted": false,
+      "events": [
+        [
+          "withdraw",
+          {
+            "user": 0
+          }
+        ],
+        [
+          "post-0",
+          0
+        ],
+        [
+          "post-1",
+          0
+        ],
+        [
+          "post-2",
+          0
+        ],
+        [
+          "post-3",
+          0
+        ]
+      ],
+      "public_state": [
+        [
+          "balances",
+          {
+            "user": 0
+          }
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": {
+        "user": 0
+      },
+      "steps": 14,
+      "trace": [
+        "0:assign",
+        "1:assign",
+        "2:assign",
+        "3:assign",
+        "4:assign",
+        "5:nop",
+        "6:external_call",
+        "7:update_balance",
+        "8:emit",
+        "9:emit",
+        "10:emit",
+        "11:emit",
+        "12:emit",
+        "13:return"
+      ],
+      "violation": null
+    },
+    "root_input": {
+      "amount": 1,
+      "reenter": false,
+      "sender": "user"
+    },
+    "second_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 1
+    },
+    "second_result": {
+      "aborted": false,
+      "events": [
+        [
+          "withdraw",
+          {
+            "user": 0
+          }
+        ],
+        [
+          "post-0",
+          0
+        ],
+        [
+          "post-1",
+          0
+        ],
+        [
+          "post-2",
+          0
+        ],
+        [
+          "post-3",
+          1
+        ]
+      ],
+      "public_state": [
+        [
+          "balances",
+          {
+            "user": 0
+          }
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": {
+        "user": 0
+      },
+      "steps": 14,
+      "trace": [
+        "0:assign",
+        "1:assign",
+        "2:assign",
+        "3:assign",
+        "4:assign",
+        "5:nop",
+        "6:external_call",
+        "7:update_balance",
+        "8:emit",
+        "9:emit",
+        "10:emit",
+        "11:emit",
+        "12:emit",
+        "13:return"
+      ],
+      "violation": null
+    }
+  },
+  {
+    "case": "reentrancy-wrapper-4",
+    "first_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 0
+    },
+    "first_result": {
+      "aborted": false,
+      "events": [
+        [
+          "pre-0",
+          2
+        ],
+        [
+          "pre-1",
+          4
+        ],
+        [
+          "pre-2",
+          6
+        ],
+        [
+          "pre-3",
+          8
+        ],
+        [
+          "withdraw",
+          {
+            "user": 0
+          }
+        ]
+      ],
+      "public_state": [
+        [
+          "balances",
+          {
+            "user": 0
+          }
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": {
+        "user": 0
+      },
+      "steps": 14,
+      "trace": [
+        "0:assign",
+        "1:emit",
+        "2:assign",
+        "3:emit",
+        "4:assign",
+        "5:emit",
+        "6:assign",
+        "7:emit",
+        "8:assign",
+        "9:nop",
+        "10:external_call",
+        "11:update_balance",
+        "12:emit",
+        "13:return"
+      ],
+      "violation": null
+    },
+    "root_input": {
+      "amount": 1,
+      "reenter": false,
+      "sender": "user"
+    },
+    "second_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 1
+    },
+    "second_result": {
+      "aborted": false,
+      "events": [
+        [
+          "pre-0",
+          2
+        ],
+        [
+          "pre-1",
+          4
+        ],
+        [
+          "pre-2",
+          6
+        ],
+        [
+          "pre-3",
+          10
+        ],
+        [
+          "withdraw",
+          {
+            "user": 0
+          }
+        ]
+      ],
+      "public_state": [
+        [
+          "balances",
+          {
+            "user": 0
+          }
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": {
+        "user": 0
+      },
+      "steps": 14,
+      "trace": [
+        "0:assign",
+        "1:emit",
+        "2:assign",
+        "3:emit",
+        "4:assign",
+        "5:emit",
+        "6:assign",
+        "7:emit",
+        "8:assign",
+        "9:nop",
+        "10:external_call",
+        "11:update_balance",
+        "12:emit",
+        "13:return"
+      ],
+      "violation": null
+    }
+  },
+  {
+    "case": "reentrancy-wrapper-5",
+    "first_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 0
+    },
+    "first_result": {
+      "aborted": false,
+      "events": [
+        [
+          "withdraw",
+          {
+            "user": 0
+          }
+        ],
+        [
+          "post-0",
+          true
+        ],
+        [
+          "post-1",
+          true
+        ],
+        [
+          "post-2",
+          true
+        ],
+        [
+          "post-3",
+          true
+        ]
+      ],
+      "public_state": [
+        [
+          "balances",
+          {
+            "user": 0
+          }
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": {
+        "user": 0
+      },
+      "steps": 14,
+      "trace": [
+        "0:assign",
+        "1:assign",
+        "2:assign",
+        "3:assign",
+        "4:assign",
+        "5:nop",
+        "6:external_call",
+        "7:update_balance",
+        "8:emit",
+        "9:emit",
+        "10:emit",
+        "11:emit",
+        "12:emit",
+        "13:return"
+      ],
+      "violation": null
+    },
+    "root_input": {
+      "amount": 1,
+      "reenter": false,
+      "sender": "user"
+    },
+    "second_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 1
+    },
+    "second_result": {
+      "aborted": false,
+      "events": [
+        [
+          "withdraw",
+          {
+            "user": 0
+          }
+        ],
+        [
+          "post-0",
+          true
+        ],
+        [
+          "post-1",
+          true
+        ],
+        [
+          "post-2",
+          true
+        ],
+        [
+          "post-3",
+          false
+        ]
+      ],
+      "public_state": [
+        [
+          "balances",
+          {
+            "user": 0
+          }
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": {
+        "user": 0
+      },
+      "steps": 14,
+      "trace": [
+        "0:assign",
+        "1:assign",
+        "2:assign",
+        "3:assign",
+        "4:assign",
+        "5:nop",
+        "6:external_call",
+        "7:update_balance",
+        "8:emit",
+        "9:emit",
+        "10:emit",
+        "11:emit",
+        "12:emit",
+        "13:return"
+      ],
+      "violation": null
+    }
+  },
+  {
+    "case": "unchecked_call-wrapper-0",
+    "first_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 0
+    },
+    "first_result": {
+      "aborted": false,
+      "events": [
+        [
+          "pre-0",
+          0
+        ],
+        [
+          "pre-1",
+          0
+        ],
+        [
+          "pre-2",
+          0
+        ],
+        [
+          "pre-3",
+          0
+        ],
+        [
+          "commit",
+          0
+        ]
+      ],
+      "public_state": [
+        [
+          "committed",
+          0
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": 0,
+      "steps": 14,
+      "trace": [
+        "0:assign",
+        "1:emit",
+        "2:assign",
+        "3:emit",
+        "4:assign",
+        "5:emit",
+        "6:assign",
+        "7:emit",
+        "8:assign",
+        "9:nop",
+        "10:low_call",
+        "11:commit_after_call",
+        "12:emit",
+        "13:return"
+      ],
+      "violation": null
+    },
+    "root_input": {
+      "call_ok": true,
+      "value": 0
+    },
+    "second_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 1
+    },
+    "second_result": {
+      "aborted": false,
+      "events": [
+        [
+          "pre-0",
+          0
+        ],
+        [
+          "pre-1",
+          0
+        ],
+        [
+          "pre-2",
+          0
+        ],
+        [
+          "pre-3",
+          1
+        ],
+        [
+          "commit",
+          0
+        ]
+      ],
+      "public_state": [
+        [
+          "committed",
+          0
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": 0,
+      "steps": 14,
+      "trace": [
+        "0:assign",
+        "1:emit",
+        "2:assign",
+        "3:emit",
+        "4:assign",
+        "5:emit",
+        "6:assign",
+        "7:emit",
+        "8:assign",
+        "9:nop",
+        "10:low_call",
+        "11:commit_after_call",
+        "12:emit",
+        "13:return"
+      ],
+      "violation": null
+    }
+  },
+  {
+    "case": "unchecked_call-wrapper-1",
+    "first_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 0
+    },
+    "first_result": {
+      "aborted": false,
+      "events": [
+        [
+          "commit",
+          0
+        ],
+        [
+          "post-0",
+          2
+        ],
+        [
+          "post-1",
+          4
+        ],
+        [
+          "post-2",
+          6
+        ],
+        [
+          "post-3",
+          8
+        ]
+      ],
+      "public_state": [
+        [
+          "committed",
+          0
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": 0,
+      "steps": 14,
+      "trace": [
+        "0:assign",
+        "1:assign",
+        "2:assign",
+        "3:assign",
+        "4:assign",
+        "5:nop",
+        "6:low_call",
+        "7:commit_after_call",
+        "8:emit",
+        "9:emit",
+        "10:emit",
+        "11:emit",
+        "12:emit",
+        "13:return"
+      ],
+      "violation": null
+    },
+    "root_input": {
+      "call_ok": true,
+      "value": 0
+    },
+    "second_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 1
+    },
+    "second_result": {
+      "aborted": false,
+      "events": [
+        [
+          "commit",
+          0
+        ],
+        [
+          "post-0",
+          2
+        ],
+        [
+          "post-1",
+          4
+        ],
+        [
+          "post-2",
+          6
+        ],
+        [
+          "post-3",
+          10
+        ]
+      ],
+      "public_state": [
+        [
+          "committed",
+          0
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": 0,
+      "steps": 14,
+      "trace": [
+        "0:assign",
+        "1:assign",
+        "2:assign",
+        "3:assign",
+        "4:assign",
+        "5:nop",
+        "6:low_call",
+        "7:commit_after_call",
+        "8:emit",
+        "9:emit",
+        "10:emit",
+        "11:emit",
+        "12:emit",
+        "13:return"
+      ],
+      "violation": null
+    }
+  },
+  {
+    "case": "unchecked_call-wrapper-2",
+    "first_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 0
+    },
+    "first_result": {
+      "aborted": false,
+      "events": [
+        [
+          "pre-0",
+          true
+        ],
+        [
+          "pre-1",
+          true
+        ],
+        [
+          "pre-2",
+          true
+        ],
+        [
+          "pre-3",
+          true
+        ],
+        [
+          "commit",
+          0
+        ]
+      ],
+      "public_state": [
+        [
+          "committed",
+          0
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": 0,
+      "steps": 14,
+      "trace": [
+        "0:assign",
+        "1:emit",
+        "2:assign",
+        "3:emit",
+        "4:assign",
+        "5:emit",
+        "6:assign",
+        "7:emit",
+        "8:assign",
+        "9:nop",
+        "10:low_call",
+        "11:commit_after_call",
+        "12:emit",
+        "13:return"
+      ],
+      "violation": null
+    },
+    "root_input": {
+      "call_ok": true,
+      "value": 0
+    },
+    "second_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 1
+    },
+    "second_result": {
+      "aborted": false,
+      "events": [
+        [
+          "pre-0",
+          true
+        ],
+        [
+          "pre-1",
+          true
+        ],
+        [
+          "pre-2",
+          true
+        ],
+        [
+          "pre-3",
+          false
+        ],
+        [
+          "commit",
+          0
+        ]
+      ],
+      "public_state": [
+        [
+          "committed",
+          0
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": 0,
+      "steps": 14,
+      "trace": [
+        "0:assign",
+        "1:emit",
+        "2:assign",
+        "3:emit",
+        "4:assign",
+        "5:emit",
+        "6:assign",
+        "7:emit",
+        "8:assign",
+        "9:nop",
+        "10:low_call",
+        "11:commit_after_call",
+        "12:emit",
+        "13:return"
+      ],
+      "violation": null
+    }
+  },
+  {
+    "case": "unchecked_call-wrapper-3",
+    "first_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 0
+    },
+    "first_result": {
+      "aborted": false,
+      "events": [
+        [
+          "commit",
+          0
+        ],
+        [
+          "post-0",
+          0
+        ],
+        [
+          "post-1",
+          0
+        ],
+        [
+          "post-2",
+          0
+        ],
+        [
+          "post-3",
+          0
+        ]
+      ],
+      "public_state": [
+        [
+          "committed",
+          0
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": 0,
+      "steps": 14,
+      "trace": [
+        "0:assign",
+        "1:assign",
+        "2:assign",
+        "3:assign",
+        "4:assign",
+        "5:nop",
+        "6:low_call",
+        "7:commit_after_call",
+        "8:emit",
+        "9:emit",
+        "10:emit",
+        "11:emit",
+        "12:emit",
+        "13:return"
+      ],
+      "violation": null
+    },
+    "root_input": {
+      "call_ok": true,
+      "value": 0
+    },
+    "second_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 1
+    },
+    "second_result": {
+      "aborted": false,
+      "events": [
+        [
+          "commit",
+          0
+        ],
+        [
+          "post-0",
+          0
+        ],
+        [
+          "post-1",
+          0
+        ],
+        [
+          "post-2",
+          0
+        ],
+        [
+          "post-3",
+          1
+        ]
+      ],
+      "public_state": [
+        [
+          "committed",
+          0
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": 0,
+      "steps": 14,
+      "trace": [
+        "0:assign",
+        "1:assign",
+        "2:assign",
+        "3:assign",
+        "4:assign",
+        "5:nop",
+        "6:low_call",
+        "7:commit_after_call",
+        "8:emit",
+        "9:emit",
+        "10:emit",
+        "11:emit",
+        "12:emit",
+        "13:return"
+      ],
+      "violation": null
+    }
+  },
+  {
+    "case": "unchecked_call-wrapper-4",
+    "first_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 0
+    },
+    "first_result": {
+      "aborted": false,
+      "events": [
+        [
+          "pre-0",
+          2
+        ],
+        [
+          "pre-1",
+          4
+        ],
+        [
+          "pre-2",
+          6
+        ],
+        [
+          "pre-3",
+          8
+        ],
+        [
+          "commit",
+          0
+        ]
+      ],
+      "public_state": [
+        [
+          "committed",
+          0
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": 0,
+      "steps": 14,
+      "trace": [
+        "0:assign",
+        "1:emit",
+        "2:assign",
+        "3:emit",
+        "4:assign",
+        "5:emit",
+        "6:assign",
+        "7:emit",
+        "8:assign",
+        "9:nop",
+        "10:low_call",
+        "11:commit_after_call",
+        "12:emit",
+        "13:return"
+      ],
+      "violation": null
+    },
+    "root_input": {
+      "call_ok": true,
+      "value": 0
+    },
+    "second_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 1
+    },
+    "second_result": {
+      "aborted": false,
+      "events": [
+        [
+          "pre-0",
+          2
+        ],
+        [
+          "pre-1",
+          4
+        ],
+        [
+          "pre-2",
+          6
+        ],
+        [
+          "pre-3",
+          10
+        ],
+        [
+          "commit",
+          0
+        ]
+      ],
+      "public_state": [
+        [
+          "committed",
+          0
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": 0,
+      "steps": 14,
+      "trace": [
+        "0:assign",
+        "1:emit",
+        "2:assign",
+        "3:emit",
+        "4:assign",
+        "5:emit",
+        "6:assign",
+        "7:emit",
+        "8:assign",
+        "9:nop",
+        "10:low_call",
+        "11:commit_after_call",
+        "12:emit",
+        "13:return"
+      ],
+      "violation": null
+    }
+  },
+  {
+    "case": "unchecked_call-wrapper-5",
+    "first_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 0
+    },
+    "first_result": {
+      "aborted": false,
+      "events": [
+        [
+          "commit",
+          0
+        ],
+        [
+          "post-0",
+          true
+        ],
+        [
+          "post-1",
+          true
+        ],
+        [
+          "post-2",
+          true
+        ],
+        [
+          "post-3",
+          true
+        ]
+      ],
+      "public_state": [
+        [
+          "committed",
+          0
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": 0,
+      "steps": 14,
+      "trace": [
+        "0:assign",
+        "1:assign",
+        "2:assign",
+        "3:assign",
+        "4:assign",
+        "5:nop",
+        "6:low_call",
+        "7:commit_after_call",
+        "8:emit",
+        "9:emit",
+        "10:emit",
+        "11:emit",
+        "12:emit",
+        "13:return"
+      ],
+      "violation": null
+    },
+    "root_input": {
+      "call_ok": true,
+      "value": 0
+    },
+    "second_context": {
+      "noise_0": 0,
+      "noise_1": 0,
+      "noise_2": 0,
+      "noise_3": 1
+    },
+    "second_result": {
+      "aborted": false,
+      "events": [
+        [
+          "commit",
+          0
+        ],
+        [
+          "post-0",
+          true
+        ],
+        [
+          "post-1",
+          true
+        ],
+        [
+          "post-2",
+          true
+        ],
+        [
+          "post-3",
+          false
+        ]
+      ],
+      "public_state": [
+        [
+          "committed",
+          0
+        ],
+        [
+          "audit",
+          0
+        ]
+      ],
+      "returned": 0,
+      "steps": 14,
+      "trace": [
+        "0:assign",
+        "1:assign",
+        "2:assign",
+        "3:assign",
+        "4:assign",
+        "5:nop",
+        "6:low_call",
+        "7:commit_after_call",
+        "8:emit",
+        "9:emit",
+        "10:emit",
+        "11:emit",
+        "12:emit",
+        "13:return"
+      ],
+      "violation": null
+    }
+  }
+]

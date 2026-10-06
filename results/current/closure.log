@@ -1,0 +1,10 @@
+{
+  "off_anchor_counterexamples": 22,
+  "oracle_scope_controls": 2,
+  "primary_pairs": 36,
+  "raw_tables": 6,
+  "raw_transport_trials_per_scaling_point": 3,
+  "status": "consistent",
+  "symbolic_points_not_executed": 6,
+  "valid_exclusions": 13
+}

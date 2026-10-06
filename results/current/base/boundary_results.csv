@@ -1,0 +1,5 @@
+case,ablation_accepted,strengthened_accepted,strengthened_reason,safe_inputs_compared,productive_safe_inputs,expected_property
+empty-benign-domain,True,False,missing-safe-input,0,0,True
+root-role-label-channel,True,False,root-repair-mismatch,0,0,True
+semantically-equivalent-undeclared-guard,True,False,root-repair-mismatch,0,0,True
+pre-root-abort-only-safe-partition,True,False,missing-productive-safe-input,1,0,True

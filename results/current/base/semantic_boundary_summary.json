@@ -1,0 +1,122 @@
+{
+  "expression_matrix": {
+    "cases": 1596,
+    "comparison_rule": "exact type-tagged value equality when defined; definedness equality otherwise",
+    "defined_cases": 651,
+    "error_cases": 945,
+    "mismatches": 0,
+    "mixed_definedness_cases": 0,
+    "operators": [
+      "add",
+      "sub",
+      "mul",
+      "eq",
+      "ne",
+      "lt",
+      "le",
+      "gt",
+      "ge",
+      "and",
+      "or",
+      "not"
+    ],
+    "per_operator": {
+      "add": {
+        "defined": 9,
+        "error": 135,
+        "mixed_definedness": 0
+      },
+      "and": {
+        "defined": 144,
+        "error": 0,
+        "mixed_definedness": 0
+      },
+      "eq": {
+        "defined": 144,
+        "error": 0,
+        "mixed_definedness": 0
+      },
+      "ge": {
+        "defined": 9,
+        "error": 135,
+        "mixed_definedness": 0
+      },
+      "gt": {
+        "defined": 9,
+        "error": 135,
+        "mixed_definedness": 0
+      },
+      "le": {
+        "defined": 9,
+        "error": 135,
+        "mixed_definedness": 0
+      },
+      "lt": {
+        "defined": 9,
+        "error": 135,
+        "mixed_definedness": 0
+      },
+      "mul": {
+        "defined": 9,
+        "error": 135,
+        "mixed_definedness": 0
+      },
+      "ne": {
+        "defined": 144,
+        "error": 0,
+        "mixed_definedness": 0
+      },
+      "not": {
+        "defined": 12,
+        "error": 0,
+        "mixed_definedness": 0
+      },
+      "or": {
+        "defined": 144,
+        "error": 0,
+        "mixed_definedness": 0
+      },
+      "sub": {
+        "defined": 9,
+        "error": 135,
+        "mixed_definedness": 0
+      }
+    },
+    "typed_values": 12
+  },
+  "instruction_matrix": {
+    "comparison_rule": "exact operational equality when defined; definedness equality otherwise",
+    "defined_cases": 588,
+    "error_cases": 425,
+    "instruction_operations": [
+      "add_fixed",
+      "assign",
+      "branch_abort",
+      "buf_write",
+      "check_call",
+      "commit_after_call",
+      "divide",
+      "emit",
+      "external_call",
+      "guard",
+      "low_call",
+      "nop",
+      "protected_store",
+      "return",
+      "update_balance"
+    ],
+    "interpreter_runs": 3039,
+    "mismatches": 0,
+    "mixed_definedness_cases": 0,
+    "profiles": {
+      "c": 14,
+      "solidity": 6
+    },
+    "programs": 20,
+    "valuations": 1013
+  },
+  "mismatches": 0,
+  "scope": "frozen typed boundary matrices; exhaustive over the declared value/operator matrix and the retained instruction microprogram valuations, not over all admitted programs",
+  "total_cases": 2609,
+  "total_interpreter_evaluations": 7827
+}

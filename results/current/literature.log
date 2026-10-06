@@ -1,0 +1,51 @@
+{
+  "calibration_role_counts": {
+    "adjacent": 5,
+    "distinguished": 5,
+    "foundational": 6,
+    "same-track": 12
+  },
+  "calibration_works": 72,
+  "category_counts": {
+    "certificate": 3,
+    "corpus": 8,
+    "detector": 13,
+    "diagnostics": 3,
+    "relational": 16,
+    "repair": 7,
+    "semantics-and-assurance": 8,
+    "transformation": 4
+  },
+  "external_resources": 78,
+  "live_registry_queries_during_reproduction": 0,
+  "manuscript_cross_check": {
+    "bib_entries": 62,
+    "metadata_records_checked": 62,
+    "source": "bundled manuscript-records snapshot",
+    "uncited_entries": 0,
+    "undefined_citations": 0,
+    "unique_citations": 62
+  },
+  "manuscript_reference_records": 62,
+  "offline_scope": "cross-file metadata, status, stable-identifier, role, citation, and BibTeX consistency; not a live publisher or DOI-registry re-query",
+  "peer_review_status_counts": {
+    "not peer-reviewed": 1,
+    "peer-reviewed": 61
+  },
+  "peer_reviewed_reference_records": 61,
+  "reading_statuses": {
+    "claim-verified": 48,
+    "complete": 24
+  },
+  "reference_type_counts": {
+    "peer-reviewed publication": 61,
+    "scholarly preprint": 1
+  },
+  "scholarly_reference_records": 62,
+  "status": "consistent",
+  "verification_dates": [
+    "2026-09-16",
+    "2026-09-21"
+  ],
+  "verification_mode": "offline closure against the recorded bibliographic inventory"
+}

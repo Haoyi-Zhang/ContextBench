@@ -1,0 +1,1600 @@
+[
+  {
+    "pair_id": "description-nist-sard-62684",
+    "family": "bounds_write",
+    "profile": "c",
+    "source_kind": "public-description-abstraction",
+    "record": "NIST-SARD-62684",
+    "vulnerable": {
+      "schema": "rcsc-program",
+      "profile": "c",
+      "family": "bounds_write",
+      "parameters": {
+        "abstraction": "indexed-write",
+        "source_record": "NIST-SARD-62684",
+        "length": 10
+      },
+      "input_domains": {
+        "idx": [
+          0,
+          9,
+          10,
+          11
+        ],
+        "value": [
+          0,
+          1
+        ]
+      },
+      "context": {
+        "source_record": "NIST-SARD-62684",
+        "source_kind": "individual-case-description",
+        "scope": "declared description predicate; not native source semantics"
+      },
+      "initial_public_state": {
+        "buffer": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "public_projection": [
+        "buffer"
+      ],
+      "program_id": "description-nist-sard-62684-vulnerable",
+      "label": "vulnerable",
+      "instructions": [
+        {
+          "op": "buf_write",
+          "role": "root",
+          "buffer": "buffer",
+          "index": {
+            "var": "idx"
+          },
+          "value": {
+            "var": "value"
+          }
+        },
+        {
+          "op": "emit",
+          "role": "context",
+          "name": "effect",
+          "value": {
+            "const": 0
+          }
+        },
+        {
+          "op": "return",
+          "role": "context",
+          "value": {
+            "const": 0
+          }
+        }
+      ]
+    },
+    "patched": {
+      "schema": "rcsc-program",
+      "profile": "c",
+      "family": "bounds_write",
+      "parameters": {
+        "abstraction": "indexed-write",
+        "source_record": "NIST-SARD-62684",
+        "length": 10
+      },
+      "input_domains": {
+        "idx": [
+          0,
+          9,
+          10,
+          11
+        ],
+        "value": [
+          0,
+          1
+        ]
+      },
+      "context": {
+        "source_record": "NIST-SARD-62684",
+        "source_kind": "individual-case-description",
+        "scope": "declared description predicate; not native source semantics"
+      },
+      "initial_public_state": {
+        "buffer": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "public_projection": [
+        "buffer"
+      ],
+      "program_id": "description-nist-sard-62684-patched",
+      "label": "patched",
+      "instructions": [
+        {
+          "op": "guard",
+          "role": "root",
+          "pred": {
+            "op": "lt",
+            "left": {
+              "var": "idx"
+            },
+            "right": {
+              "const": 10
+            }
+          }
+        },
+        {
+          "op": "buf_write",
+          "role": "root",
+          "buffer": "buffer",
+          "index": {
+            "var": "idx"
+          },
+          "value": {
+            "var": "value"
+          }
+        },
+        {
+          "op": "emit",
+          "role": "context",
+          "name": "effect",
+          "value": {
+            "const": 0
+          }
+        },
+        {
+          "op": "return",
+          "role": "context",
+          "value": {
+            "const": 0
+          }
+        }
+      ]
+    },
+    "certificate": {
+      "schema": "rcsc-pair-certificate",
+      "pair_id": "description-nist-sard-62684",
+      "vulnerable_id": "description-nist-sard-62684-vulnerable",
+      "patched_id": "description-nist-sard-62684-patched",
+      "declared_family": "bounds_write",
+      "declared_repair": "insert-root-guard",
+      "witness_input": {
+        "idx": 10,
+        "value": 0
+      }
+    }
+  },
+  {
+    "pair_id": "description-nist-sard-62695",
+    "family": "bounds_write",
+    "profile": "c",
+    "source_kind": "public-description-abstraction",
+    "record": "NIST-SARD-62695",
+    "vulnerable": {
+      "schema": "rcsc-program",
+      "profile": "c",
+      "family": "bounds_write",
+      "parameters": {
+        "abstraction": "indexed-write",
+        "source_record": "NIST-SARD-62695",
+        "length": 10
+      },
+      "input_domains": {
+        "idx": [
+          0,
+          9,
+          10,
+          11
+        ],
+        "value": [
+          0,
+          1
+        ]
+      },
+      "context": {
+        "source_record": "NIST-SARD-62695",
+        "source_kind": "individual-case-description",
+        "scope": "declared description predicate; not native source semantics"
+      },
+      "initial_public_state": {
+        "buffer": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "public_projection": [
+        "buffer"
+      ],
+      "program_id": "description-nist-sard-62695-vulnerable",
+      "label": "vulnerable",
+      "instructions": [
+        {
+          "op": "buf_write",
+          "role": "root",
+          "buffer": "buffer",
+          "index": {
+            "var": "idx"
+          },
+          "value": {
+            "var": "value"
+          }
+        },
+        {
+          "op": "emit",
+          "role": "context",
+          "name": "effect",
+          "value": {
+            "const": 0
+          }
+        },
+        {
+          "op": "return",
+          "role": "context",
+          "value": {
+            "const": 0
+          }
+        }
+      ]
+    },
+    "patched": {
+      "schema": "rcsc-program",
+      "profile": "c",
+      "family": "bounds_write",
+      "parameters": {
+        "abstraction": "indexed-write",
+        "source_record": "NIST-SARD-62695",
+        "length": 10
+      },
+      "input_domains": {
+        "idx": [
+          0,
+          9,
+          10,
+          11
+        ],
+        "value": [
+          0,
+          1
+        ]
+      },
+      "context": {
+        "source_record": "NIST-SARD-62695",
+        "source_kind": "individual-case-description",
+        "scope": "declared description predicate; not native source semantics"
+      },
+      "initial_public_state": {
+        "buffer": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "public_projection": [
+        "buffer"
+      ],
+      "program_id": "description-nist-sard-62695-patched",
+      "label": "patched",
+      "instructions": [
+        {
+          "op": "guard",
+          "role": "root",
+          "pred": {
+            "op": "lt",
+            "left": {
+              "var": "idx"
+            },
+            "right": {
+              "const": 10
+            }
+          }
+        },
+        {
+          "op": "buf_write",
+          "role": "root",
+          "buffer": "buffer",
+          "index": {
+            "var": "idx"
+          },
+          "value": {
+            "var": "value"
+          }
+        },
+        {
+          "op": "emit",
+          "role": "context",
+          "name": "effect",
+          "value": {
+            "const": 0
+          }
+        },
+        {
+          "op": "return",
+          "role": "context",
+          "value": {
+            "const": 0
+          }
+        }
+      ]
+    },
+    "certificate": {
+      "schema": "rcsc-pair-certificate",
+      "pair_id": "description-nist-sard-62695",
+      "vulnerable_id": "description-nist-sard-62695-vulnerable",
+      "patched_id": "description-nist-sard-62695-patched",
+      "declared_family": "bounds_write",
+      "declared_repair": "insert-root-guard",
+      "witness_input": {
+        "idx": 10,
+        "value": 0
+      }
+    }
+  },
+  {
+    "pair_id": "description-nist-sard-67603",
+    "family": "bounds_write",
+    "profile": "c",
+    "source_kind": "public-description-abstraction",
+    "record": "NIST-SARD-67603",
+    "vulnerable": {
+      "schema": "rcsc-program",
+      "profile": "c",
+      "family": "bounds_write",
+      "parameters": {
+        "abstraction": "indexed-write",
+        "source_record": "NIST-SARD-67603",
+        "length": 10
+      },
+      "input_domains": {
+        "idx": [
+          0,
+          9,
+          10,
+          11
+        ],
+        "value": [
+          0,
+          1
+        ]
+      },
+      "context": {
+        "source_record": "NIST-SARD-67603",
+        "source_kind": "individual-case-description",
+        "scope": "declared description predicate; not native source semantics"
+      },
+      "initial_public_state": {
+        "buffer": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "public_projection": [
+        "buffer"
+      ],
+      "program_id": "description-nist-sard-67603-vulnerable",
+      "label": "vulnerable",
+      "instructions": [
+        {
+          "op": "buf_write",
+          "role": "root",
+          "buffer": "buffer",
+          "index": {
+            "var": "idx"
+          },
+          "value": {
+            "var": "value"
+          }
+        },
+        {
+          "op": "emit",
+          "role": "context",
+          "name": "effect",
+          "value": {
+            "const": 0
+          }
+        },
+        {
+          "op": "return",
+          "role": "context",
+          "value": {
+            "const": 0
+          }
+        }
+      ]
+    },
+    "patched": {
+      "schema": "rcsc-program",
+      "profile": "c",
+      "family": "bounds_write",
+      "parameters": {
+        "abstraction": "indexed-write",
+        "source_record": "NIST-SARD-67603",
+        "length": 10
+      },
+      "input_domains": {
+        "idx": [
+          0,
+          9,
+          10,
+          11
+        ],
+        "value": [
+          0,
+          1
+        ]
+      },
+      "context": {
+        "source_record": "NIST-SARD-67603",
+        "source_kind": "individual-case-description",
+        "scope": "declared description predicate; not native source semantics"
+      },
+      "initial_public_state": {
+        "buffer": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "public_projection": [
+        "buffer"
+      ],
+      "program_id": "description-nist-sard-67603-patched",
+      "label": "patched",
+      "instructions": [
+        {
+          "op": "guard",
+          "role": "root",
+          "pred": {
+            "op": "lt",
+            "left": {
+              "var": "idx"
+            },
+            "right": {
+              "const": 10
+            }
+          }
+        },
+        {
+          "op": "buf_write",
+          "role": "root",
+          "buffer": "buffer",
+          "index": {
+            "var": "idx"
+          },
+          "value": {
+            "var": "value"
+          }
+        },
+        {
+          "op": "emit",
+          "role": "context",
+          "name": "effect",
+          "value": {
+            "const": 0
+          }
+        },
+        {
+          "op": "return",
+          "role": "context",
+          "value": {
+            "const": 0
+          }
+        }
+      ]
+    },
+    "certificate": {
+      "schema": "rcsc-pair-certificate",
+      "pair_id": "description-nist-sard-67603",
+      "vulnerable_id": "description-nist-sard-67603-vulnerable",
+      "patched_id": "description-nist-sard-67603-patched",
+      "declared_family": "bounds_write",
+      "declared_repair": "insert-root-guard",
+      "witness_input": {
+        "idx": 10,
+        "value": 0
+      }
+    }
+  },
+  {
+    "pair_id": "description-nist-sard-95487",
+    "family": "divide_zero",
+    "profile": "c",
+    "source_kind": "public-description-abstraction",
+    "record": "NIST-SARD-95487",
+    "vulnerable": {
+      "schema": "rcsc-program",
+      "profile": "c",
+      "family": "divide_zero",
+      "parameters": {
+        "abstraction": "division",
+        "source_record": "NIST-SARD-95487",
+        "numerator": 12
+      },
+      "input_domains": {
+        "denominator": [
+          -1,
+          0,
+          1,
+          2
+        ]
+      },
+      "context": {
+        "source_record": "NIST-SARD-95487",
+        "source_kind": "individual-case-description",
+        "scope": "declared description predicate; not native source semantics"
+      },
+      "initial_public_state": {
+        "audit": 0
+      },
+      "public_projection": [
+        "audit"
+      ],
+      "program_id": "description-nist-sard-95487-vulnerable",
+      "label": "vulnerable",
+      "instructions": [
+        {
+          "op": "divide",
+          "role": "root",
+          "dst": "result",
+          "numerator": {
+            "const": 12
+          },
+          "denominator": {
+            "var": "denominator"
+          }
+        },
+        {
+          "op": "emit",
+          "role": "context",
+          "name": "effect",
+          "value": {
+            "var": "result"
+          }
+        },
+        {
+          "op": "return",
+          "role": "context",
+          "value": {
+            "var": "result"
+          }
+        }
+      ]
+    },
+    "patched": {
+      "schema": "rcsc-program",
+      "profile": "c",
+      "family": "divide_zero",
+      "parameters": {
+        "abstraction": "division",
+        "source_record": "NIST-SARD-95487",
+        "numerator": 12
+      },
+      "input_domains": {
+        "denominator": [
+          -1,
+          0,
+          1,
+          2
+        ]
+      },
+      "context": {
+        "source_record": "NIST-SARD-95487",
+        "source_kind": "individual-case-description",
+        "scope": "declared description predicate; not native source semantics"
+      },
+      "initial_public_state": {
+        "audit": 0
+      },
+      "public_projection": [
+        "audit"
+      ],
+      "program_id": "description-nist-sard-95487-patched",
+      "label": "patched",
+      "instructions": [
+        {
+          "op": "guard",
+          "role": "root",
+          "pred": {
+            "op": "ne",
+            "left": {
+              "var": "denominator"
+            },
+            "right": {
+              "const": 0
+            }
+          }
+        },
+        {
+          "op": "divide",
+          "role": "root",
+          "dst": "result",
+          "numerator": {
+            "const": 12
+          },
+          "denominator": {
+            "var": "denominator"
+          }
+        },
+        {
+          "op": "emit",
+          "role": "context",
+          "name": "effect",
+          "value": {
+            "var": "result"
+          }
+        },
+        {
+          "op": "return",
+          "role": "context",
+          "value": {
+            "var": "result"
+          }
+        }
+      ]
+    },
+    "certificate": {
+      "schema": "rcsc-pair-certificate",
+      "pair_id": "description-nist-sard-95487",
+      "vulnerable_id": "description-nist-sard-95487-vulnerable",
+      "patched_id": "description-nist-sard-95487-patched",
+      "declared_family": "divide_zero",
+      "declared_repair": "insert-root-guard",
+      "witness_input": {
+        "denominator": 0
+      }
+    }
+  },
+  {
+    "pair_id": "description-nist-sard-236684",
+    "family": "fixed_overflow",
+    "profile": "c",
+    "source_kind": "public-description-abstraction",
+    "record": "NIST-SARD-236684",
+    "vulnerable": {
+      "schema": "rcsc-program",
+      "profile": "c",
+      "family": "fixed_overflow",
+      "parameters": {
+        "abstraction": "increment",
+        "source_record": "NIST-SARD-236684",
+        "width": 4,
+        "signed": true,
+        "increment": 1
+      },
+      "input_domains": {
+        "x": [
+          -8,
+          0,
+          6,
+          7
+        ]
+      },
+      "context": {
+        "source_record": "NIST-SARD-236684",
+        "source_kind": "individual-case-description",
+        "scope": "declared description predicate; not native source semantics"
+      },
+      "initial_public_state": {
+        "audit": 0
+      },
+      "public_projection": [
+        "audit"
+      ],
+      "program_id": "description-nist-sard-236684-vulnerable",
+      "label": "vulnerable",
+      "instructions": [
+        {
+          "op": "add_fixed",
+          "role": "root",
+          "dst": "result",
+          "left": {
+            "var": "x"
+          },
+          "right": {
+            "const": 1
+          },
+          "width": 4,
+          "signed": true
+        },
+        {
+          "op": "emit",
+          "role": "context",
+          "name": "effect",
+          "value": {
+            "var": "result"
+          }
+        },
+        {
+          "op": "return",
+          "role": "context",
+          "value": {
+            "var": "result"
+          }
+        }
+      ]
+    },
+    "patched": {
+      "schema": "rcsc-program",
+      "profile": "c",
+      "family": "fixed_overflow",
+      "parameters": {
+        "abstraction": "increment",
+        "source_record": "NIST-SARD-236684",
+        "width": 4,
+        "signed": true,
+        "increment": 1
+      },
+      "input_domains": {
+        "x": [
+          -8,
+          0,
+          6,
+          7
+        ]
+      },
+      "context": {
+        "source_record": "NIST-SARD-236684",
+        "source_kind": "individual-case-description",
+        "scope": "declared description predicate; not native source semantics"
+      },
+      "initial_public_state": {
+        "audit": 0
+      },
+      "public_projection": [
+        "audit"
+      ],
+      "program_id": "description-nist-sard-236684-patched",
+      "label": "patched",
+      "instructions": [
+        {
+          "op": "guard",
+          "role": "root",
+          "pred": {
+            "op": "le",
+            "left": {
+              "var": "x"
+            },
+            "right": {
+              "const": 6
+            }
+          }
+        },
+        {
+          "op": "add_fixed",
+          "role": "root",
+          "dst": "result",
+          "left": {
+            "var": "x"
+          },
+          "right": {
+            "const": 1
+          },
+          "width": 4,
+          "signed": true
+        },
+        {
+          "op": "emit",
+          "role": "context",
+          "name": "effect",
+          "value": {
+            "var": "result"
+          }
+        },
+        {
+          "op": "return",
+          "role": "context",
+          "value": {
+            "var": "result"
+          }
+        }
+      ]
+    },
+    "certificate": {
+      "schema": "rcsc-pair-certificate",
+      "pair_id": "description-nist-sard-236684",
+      "vulnerable_id": "description-nist-sard-236684-vulnerable",
+      "patched_id": "description-nist-sard-236684-patched",
+      "declared_family": "fixed_overflow",
+      "declared_repair": "insert-root-guard",
+      "witness_input": {
+        "x": 7
+      }
+    }
+  },
+  {
+    "pair_id": "description-nist-sard-236942",
+    "family": "fixed_overflow",
+    "profile": "c",
+    "source_kind": "public-description-abstraction",
+    "record": "NIST-SARD-236942",
+    "vulnerable": {
+      "schema": "rcsc-program",
+      "profile": "c",
+      "family": "fixed_overflow",
+      "parameters": {
+        "abstraction": "increment",
+        "source_record": "NIST-SARD-236942",
+        "width": 4,
+        "signed": true,
+        "increment": 1
+      },
+      "input_domains": {
+        "x": [
+          -8,
+          0,
+          6,
+          7
+        ]
+      },
+      "context": {
+        "source_record": "NIST-SARD-236942",
+        "source_kind": "individual-case-description",
+        "scope": "declared description predicate; not native source semantics"
+      },
+      "initial_public_state": {
+        "audit": 0
+      },
+      "public_projection": [
+        "audit"
+      ],
+      "program_id": "description-nist-sard-236942-vulnerable",
+      "label": "vulnerable",
+      "instructions": [
+        {
+          "op": "add_fixed",
+          "role": "root",
+          "dst": "result",
+          "left": {
+            "var": "x"
+          },
+          "right": {
+            "const": 1
+          },
+          "width": 4,
+          "signed": true
+        },
+        {
+          "op": "emit",
+          "role": "context",
+          "name": "effect",
+          "value": {
+            "var": "result"
+          }
+        },
+        {
+          "op": "return",
+          "role": "context",
+          "value": {
+            "var": "result"
+          }
+        }
+      ]
+    },
+    "patched": {
+      "schema": "rcsc-program",
+      "profile": "c",
+      "family": "fixed_overflow",
+      "parameters": {
+        "abstraction": "increment",
+        "source_record": "NIST-SARD-236942",
+        "width": 4,
+        "signed": true,
+        "increment": 1
+      },
+      "input_domains": {
+        "x": [
+          -8,
+          0,
+          6,
+          7
+        ]
+      },
+      "context": {
+        "source_record": "NIST-SARD-236942",
+        "source_kind": "individual-case-description",
+        "scope": "declared description predicate; not native source semantics"
+      },
+      "initial_public_state": {
+        "audit": 0
+      },
+      "public_projection": [
+        "audit"
+      ],
+      "program_id": "description-nist-sard-236942-patched",
+      "label": "patched",
+      "instructions": [
+        {
+          "op": "guard",
+          "role": "root",
+          "pred": {
+            "op": "le",
+            "left": {
+              "var": "x"
+            },
+            "right": {
+              "const": 6
+            }
+          }
+        },
+        {
+          "op": "add_fixed",
+          "role": "root",
+          "dst": "result",
+          "left": {
+            "var": "x"
+          },
+          "right": {
+            "const": 1
+          },
+          "width": 4,
+          "signed": true
+        },
+        {
+          "op": "emit",
+          "role": "context",
+          "name": "effect",
+          "value": {
+            "var": "result"
+          }
+        },
+        {
+          "op": "return",
+          "role": "context",
+          "value": {
+            "var": "result"
+          }
+        }
+      ]
+    },
+    "certificate": {
+      "schema": "rcsc-pair-certificate",
+      "pair_id": "description-nist-sard-236942",
+      "vulnerable_id": "description-nist-sard-236942-vulnerable",
+      "patched_id": "description-nist-sard-236942-patched",
+      "declared_family": "fixed_overflow",
+      "declared_repair": "insert-root-guard",
+      "witness_input": {
+        "x": 7
+      }
+    }
+  },
+  {
+    "pair_id": "description-nist-sard-83596",
+    "family": "fixed_overflow",
+    "profile": "c",
+    "source_kind": "public-description-abstraction",
+    "record": "NIST-SARD-83596",
+    "vulnerable": {
+      "schema": "rcsc-program",
+      "profile": "c",
+      "family": "fixed_overflow",
+      "parameters": {
+        "abstraction": "add-one",
+        "source_record": "NIST-SARD-83596",
+        "width": 4,
+        "signed": true,
+        "increment": 1
+      },
+      "input_domains": {
+        "x": [
+          -8,
+          0,
+          6,
+          7
+        ]
+      },
+      "context": {
+        "source_record": "NIST-SARD-83596",
+        "source_kind": "individual-case-description",
+        "scope": "declared description predicate; not native source semantics"
+      },
+      "initial_public_state": {
+        "audit": 0
+      },
+      "public_projection": [
+        "audit"
+      ],
+      "program_id": "description-nist-sard-83596-vulnerable",
+      "label": "vulnerable",
+      "instructions": [
+        {
+          "op": "add_fixed",
+          "role": "root",
+          "dst": "result",
+          "left": {
+            "var": "x"
+          },
+          "right": {
+            "const": 1
+          },
+          "width": 4,
+          "signed": true
+        },
+        {
+          "op": "emit",
+          "role": "context",
+          "name": "effect",
+          "value": {
+            "var": "result"
+          }
+        },
+        {
+          "op": "return",
+          "role": "context",
+          "value": {
+            "var": "result"
+          }
+        }
+      ]
+    },
+    "patched": {
+      "schema": "rcsc-program",
+      "profile": "c",
+      "family": "fixed_overflow",
+      "parameters": {
+        "abstraction": "add-one",
+        "source_record": "NIST-SARD-83596",
+        "width": 4,
+        "signed": true,
+        "increment": 1
+      },
+      "input_domains": {
+        "x": [
+          -8,
+          0,
+          6,
+          7
+        ]
+      },
+      "context": {
+        "source_record": "NIST-SARD-83596",
+        "source_kind": "individual-case-description",
+        "scope": "declared description predicate; not native source semantics"
+      },
+      "initial_public_state": {
+        "audit": 0
+      },
+      "public_projection": [
+        "audit"
+      ],
+      "program_id": "description-nist-sard-83596-patched",
+      "label": "patched",
+      "instructions": [
+        {
+          "op": "guard",
+          "role": "root",
+          "pred": {
+            "op": "le",
+            "left": {
+              "var": "x"
+            },
+            "right": {
+              "const": 6
+            }
+          }
+        },
+        {
+          "op": "add_fixed",
+          "role": "root",
+          "dst": "result",
+          "left": {
+            "var": "x"
+          },
+          "right": {
+            "const": 1
+          },
+          "width": 4,
+          "signed": true
+        },
+        {
+          "op": "emit",
+          "role": "context",
+          "name": "effect",
+          "value": {
+            "var": "result"
+          }
+        },
+        {
+          "op": "return",
+          "role": "context",
+          "value": {
+            "var": "result"
+          }
+        }
+      ]
+    },
+    "certificate": {
+      "schema": "rcsc-pair-certificate",
+      "pair_id": "description-nist-sard-83596",
+      "vulnerable_id": "description-nist-sard-83596-vulnerable",
+      "patched_id": "description-nist-sard-83596-patched",
+      "declared_family": "fixed_overflow",
+      "declared_repair": "insert-root-guard",
+      "witness_input": {
+        "x": 7
+      }
+    }
+  },
+  {
+    "pair_id": "description-swc-105",
+    "family": "access_control",
+    "profile": "solidity",
+    "source_kind": "public-description-abstraction",
+    "record": "SWC-105",
+    "vulnerable": {
+      "schema": "rcsc-program",
+      "profile": "solidity",
+      "family": "access_control",
+      "parameters": {
+        "abstraction": "authorization",
+        "source_record": "SWC-105"
+      },
+      "input_domains": {
+        "sender": [
+          "owner",
+          "other"
+        ]
+      },
+      "context": {
+        "source_record": "SWC-105",
+        "source_kind": "category-description",
+        "scope": "declared description predicate; not native source semantics"
+      },
+      "initial_public_state": {
+        "owner": "owner",
+        "effect": 0
+      },
+      "public_projection": [
+        "effect",
+        "owner"
+      ],
+      "program_id": "description-swc-105-vulnerable",
+      "label": "vulnerable",
+      "instructions": [
+        {
+          "op": "protected_store",
+          "role": "root",
+          "owner_key": "owner",
+          "key": "effect",
+          "value": {
+            "const": 1
+          }
+        },
+        {
+          "op": "emit",
+          "role": "context",
+          "name": "effect",
+          "value": {
+            "const": 0
+          }
+        },
+        {
+          "op": "return",
+          "role": "context",
+          "value": {
+            "const": 0
+          }
+        }
+      ]
+    },
+    "patched": {
+      "schema": "rcsc-program",
+      "profile": "solidity",
+      "family": "access_control",
+      "parameters": {
+        "abstraction": "authorization",
+        "source_record": "SWC-105"
+      },
+      "input_domains": {
+        "sender": [
+          "owner",
+          "other"
+        ]
+      },
+      "context": {
+        "source_record": "SWC-105",
+        "source_kind": "category-description",
+        "scope": "declared description predicate; not native source semantics"
+      },
+      "initial_public_state": {
+        "owner": "owner",
+        "effect": 0
+      },
+      "public_projection": [
+        "effect",
+        "owner"
+      ],
+      "program_id": "description-swc-105-patched",
+      "label": "patched",
+      "instructions": [
+        {
+          "op": "guard",
+          "role": "root",
+          "pred": {
+            "op": "eq",
+            "left": {
+              "var": "sender"
+            },
+            "right": {
+              "public": "owner"
+            }
+          }
+        },
+        {
+          "op": "protected_store",
+          "role": "root",
+          "owner_key": "owner",
+          "key": "effect",
+          "value": {
+            "const": 1
+          }
+        },
+        {
+          "op": "emit",
+          "role": "context",
+          "name": "effect",
+          "value": {
+            "const": 0
+          }
+        },
+        {
+          "op": "return",
+          "role": "context",
+          "value": {
+            "const": 0
+          }
+        }
+      ]
+    },
+    "certificate": {
+      "schema": "rcsc-pair-certificate",
+      "pair_id": "description-swc-105",
+      "vulnerable_id": "description-swc-105-vulnerable",
+      "patched_id": "description-swc-105-patched",
+      "declared_family": "access_control",
+      "declared_repair": "insert-root-guard",
+      "witness_input": {
+        "sender": "other"
+      }
+    }
+  },
+  {
+    "pair_id": "description-swc-107",
+    "family": "reentrancy",
+    "profile": "solidity",
+    "source_kind": "public-description-abstraction",
+    "record": "SWC-107",
+    "vulnerable": {
+      "schema": "rcsc-program",
+      "profile": "solidity",
+      "family": "reentrancy",
+      "parameters": {
+        "abstraction": "callback-order",
+        "source_record": "SWC-107",
+        "full_withdrawal_amount": 4
+      },
+      "input_domains": {
+        "sender": [
+          "member"
+        ],
+        "reenter": [
+          false,
+          true
+        ]
+      },
+      "context": {
+        "source_record": "SWC-107",
+        "source_kind": "category-description",
+        "scope": "declared description predicate; not native source semantics"
+      },
+      "initial_public_state": {
+        "balances": {
+          "member": 4
+        }
+      },
+      "public_projection": [
+        "balances"
+      ],
+      "program_id": "description-swc-107-vulnerable",
+      "label": "vulnerable",
+      "instructions": [
+        {
+          "op": "external_call",
+          "role": "root",
+          "account_var": "sender",
+          "balances_key": "balances",
+          "amount": {
+            "const": 4
+          }
+        },
+        {
+          "op": "update_balance",
+          "role": "root",
+          "account_var": "sender",
+          "balances_key": "balances",
+          "set": {
+            "const": 0
+          }
+        },
+        {
+          "op": "emit",
+          "role": "context",
+          "name": "effect",
+          "value": {
+            "const": 0
+          }
+        },
+        {
+          "op": "return",
+          "role": "context",
+          "value": {
+            "const": 0
+          }
+        }
+      ]
+    },
+    "patched": {
+      "schema": "rcsc-program",
+      "profile": "solidity",
+      "family": "reentrancy",
+      "parameters": {
+        "abstraction": "callback-order",
+        "source_record": "SWC-107",
+        "full_withdrawal_amount": 4
+      },
+      "input_domains": {
+        "sender": [
+          "member"
+        ],
+        "reenter": [
+          false,
+          true
+        ]
+      },
+      "context": {
+        "source_record": "SWC-107",
+        "source_kind": "category-description",
+        "scope": "declared description predicate; not native source semantics"
+      },
+      "initial_public_state": {
+        "balances": {
+          "member": 4
+        }
+      },
+      "public_projection": [
+        "balances"
+      ],
+      "program_id": "description-swc-107-patched",
+      "label": "patched",
+      "instructions": [
+        {
+          "op": "update_balance",
+          "role": "root",
+          "account_var": "sender",
+          "balances_key": "balances",
+          "set": {
+            "const": 0
+          }
+        },
+        {
+          "op": "external_call",
+          "role": "root",
+          "account_var": "sender",
+          "balances_key": "balances",
+          "amount": {
+            "const": 4
+          }
+        },
+        {
+          "op": "emit",
+          "role": "context",
+          "name": "effect",
+          "value": {
+            "const": 0
+          }
+        },
+        {
+          "op": "return",
+          "role": "context",
+          "value": {
+            "const": 0
+          }
+        }
+      ]
+    },
+    "certificate": {
+      "schema": "rcsc-pair-certificate",
+      "pair_id": "description-swc-107",
+      "vulnerable_id": "description-swc-107-vulnerable",
+      "patched_id": "description-swc-107-patched",
+      "declared_family": "reentrancy",
+      "declared_repair": "effects-before-interaction",
+      "witness_input": {
+        "sender": "member",
+        "reenter": true
+      }
+    }
+  },
+  {
+    "pair_id": "description-swc-104",
+    "family": "unchecked_call",
+    "profile": "solidity",
+    "source_kind": "public-description-abstraction",
+    "record": "SWC-104",
+    "vulnerable": {
+      "schema": "rcsc-program",
+      "profile": "solidity",
+      "family": "unchecked_call",
+      "parameters": {
+        "abstraction": "call-status",
+        "source_record": "SWC-104"
+      },
+      "input_domains": {
+        "call_ok": [
+          false,
+          true
+        ]
+      },
+      "context": {
+        "source_record": "SWC-104",
+        "source_kind": "category-description",
+        "scope": "declared description predicate; not native source semantics"
+      },
+      "initial_public_state": {
+        "effect": 0
+      },
+      "public_projection": [
+        "effect"
+      ],
+      "program_id": "description-swc-104-vulnerable",
+      "label": "vulnerable",
+      "instructions": [
+        {
+          "op": "low_call",
+          "role": "root",
+          "success_var": "call_ok"
+        },
+        {
+          "op": "commit_after_call",
+          "role": "root",
+          "key": "effect",
+          "value": {
+            "const": 1
+          }
+        },
+        {
+          "op": "emit",
+          "role": "context",
+          "name": "effect",
+          "value": {
+            "const": 0
+          }
+        },
+        {
+          "op": "return",
+          "role": "context",
+          "value": {
+            "const": 0
+          }
+        }
+      ]
+    },
+    "patched": {
+      "schema": "rcsc-program",
+      "profile": "solidity",
+      "family": "unchecked_call",
+      "parameters": {
+        "abstraction": "call-status",
+        "source_record": "SWC-104"
+      },
+      "input_domains": {
+        "call_ok": [
+          false,
+          true
+        ]
+      },
+      "context": {
+        "source_record": "SWC-104",
+        "source_kind": "category-description",
+        "scope": "declared description predicate; not native source semantics"
+      },
+      "initial_public_state": {
+        "effect": 0
+      },
+      "public_projection": [
+        "effect"
+      ],
+      "program_id": "description-swc-104-patched",
+      "label": "patched",
+      "instructions": [
+        {
+          "op": "low_call",
+          "role": "root",
+          "success_var": "call_ok"
+        },
+        {
+          "op": "check_call",
+          "role": "root"
+        },
+        {
+          "op": "commit_after_call",
+          "role": "root",
+          "key": "effect",
+          "value": {
+            "const": 1
+          }
+        },
+        {
+          "op": "emit",
+          "role": "context",
+          "name": "effect",
+          "value": {
+            "const": 0
+          }
+        },
+        {
+          "op": "return",
+          "role": "context",
+          "value": {
+            "const": 0
+          }
+        }
+      ]
+    },
+    "certificate": {
+      "schema": "rcsc-pair-certificate",
+      "pair_id": "description-swc-104",
+      "vulnerable_id": "description-swc-104-vulnerable",
+      "patched_id": "description-swc-104-patched",
+      "declared_family": "unchecked_call",
+      "declared_repair": "check-call-result",
+      "witness_input": {
+        "call_ok": false
+      }
+    }
+  }
+]
