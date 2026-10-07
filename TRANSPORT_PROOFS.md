@@ -268,7 +268,13 @@ with it is not an independent soundness check.
 Let t = |D_R| and M = product_x |D_N(x)|. The semantic replay count is exactly
 2t, compared with 2tM full endpoint executions. Reading explicit input lists and
 checking each context are still required, and suffix analysis is repeated for at
-most 2t normal root outcomes. The row table is independent of M for fixed root
+most 2t normal root outcomes. Within one check, successful suffix cost bounds are
+reused for identical complete abstract local/public stores, after validating the
+current exact exit values. All bound fields and store names participate in the
+key; the suffix is fixed for that invocation. This is deterministic analysis
+reuse, not a trusted root-table cache: failures are not cached and all root rows
+are replayed. The worst-case bound and certificate-free baseline are unchanged.
+The row table is independent of M for fixed root
 binding. If s bounds serialized row size, its size is O(t s + binding size).
 
 The implemented syntax checks are not all linear: exact repair checking can

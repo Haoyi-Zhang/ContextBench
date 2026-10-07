@@ -208,6 +208,16 @@ def core_probe(program: dict, core: list, root_domains: dict, probe_names: set[s
     return out
 
 
+def _suffix_cost(code: list[dict], env: dict[str, Bound],
+                 public: dict[str, Bound], costs: dict[tuple, int]) -> int:
+    """Reuse only successful costs for the fixed suffix in this invocation."""
+    key = (tuple(sorted(env.items())), tuple(sorted(public.items())))
+    if key not in costs:
+        _, cost = abstract_context(code, env, public)
+        costs[key] = cost
+    return costs[key]
+
+
 def prepare(v: dict, p: dict, context_domains: dict) -> dict:
     validate_program(v)
     validate_program(p)
@@ -323,6 +333,10 @@ def _check_transport(packet: Any, *, claim_check: bool) -> TransportReport:
                         if claim_check else None)
         witness_seen = False
         max_suffix_cost = 0
+        # Fixed suffix, invocation-local complete abstract stores. Bound is frozen
+        # and its hash/equality includes kinds, interval endpoints and node count.
+        # At most two normal outcomes per admitted root row can be retained.
+        suffix_costs: dict[tuple, int] = {}
         for index, inputs in enumerate(expected_inputs):
             row = replay_row(plan, inputs)
             report.core_executions += 2
@@ -350,7 +364,7 @@ def _check_transport(packet: Any, *, claim_check: bool) -> TransportReport:
                 env.update({name.removeprefix('local:'): exact_bound(value)
                             for name, value in result['events']})
                 pub = {name: exact_bound(value) for name, value in result['public_state']}
-                _, cost = abstract_context(plan['suffix'], env, pub)
+                cost = _suffix_cost(plan['suffix'], env, pub, suffix_costs)
                 max_suffix_cost = max(max_suffix_cost, cost)
         require(witness_seen, 'certificate-witness-not-vulnerable')
         require(report.productive_safe_roots > 0, 'missing-productive-safe-input')

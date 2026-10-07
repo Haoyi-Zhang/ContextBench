@@ -35,7 +35,8 @@ PYTHONDONTWRITEBYTECODE=1 python export_paper_data.py --results results --output
 PYTHONDONTWRITEBYTECODE=1 python export_transport_data.py --results results --output paper-data
 ```
 
-The first command runs all 136 regression tests and records their identifiers
+The first command discovers the regression suite (including the 136 tests in the
+retained campaign and six portable suffix-reuse tests) and records identifiers
 and outcomes without timing-dependent text in `results/test_summary.json`.
 The two campaigns use one worker. The base campaign reconstructs the finite
 execution substrate. The transport campaign generates its own 36 primary pairs,
@@ -100,6 +101,18 @@ post-prefix abstract store and overrides only root-probed values; resetting all
 input bindings would be unsound. The resource analysis bounds each complete
 execution, not merely the isolated root replay. The formal argument is not a
 mechanized proof of the Python implementation.
+
+Within one check, identical complete post-prefix/root-exit abstract stores reuse
+successful suffix cost bounds. Keys include every local/public name and each
+bound's kinds, integer endpoints, and node count; current exact values are still
+validated first. Failures are not cached, and every root row is still replayed.
+The certificate-free audit uses the same local reuse. The independent Cartesian
+oracle is unchanged. This does not alter the retained measurements or claim a
+wall-time improvement. The portable gate needs only this artifact:
+
+```sh
+PYTHONDONTWRITEBYTECODE=1 python -m unittest tests.test_suffix_reuse
+```
 
 ## Main evidence and negative results
 
