@@ -52,6 +52,7 @@ Define H_b(r,n) = (violation, abort) of this execution. Context transport requir
 
 There is deliberately no equality requirement between Obs(P_b,r,n) and
 Obs(P_b,r,n') when n differs from n'. Functionality may vary with context.
+The monitor classifies a declared violation, not a unique native fault site.
 The universal quantifiers concern declared inputs and checked context syntax,
 not arbitrary wrappers, native-language programs, filenames, or model behavior.
 
@@ -359,3 +360,90 @@ an optional project-defined textual representation with no native-language bridg
 ## 9. Pointwise label constancy is strictly weaker
 
 Let root input r and context n each range over {0,1}. Use the vulnerable operation 1/(r-n) and its canonical denominator-nonzero guard repair. At each n, r=n is a violating witness and r=1-n a productive safe witness. All nonviolating paired observations agree. Thus each point-instantiated pair satisfies the ordinary relation. However, the vulnerable profile changes from violating to safe at r=0 when n changes, and vice versa at r=1. No uniform bad or good witness exists. The contextual relation therefore fails despite valid labels and repairs at every point. The transport frame rejects the read of n in the root. `MovingWitnessTest` in `tests/test_transport.py` checks both pointwise acceptances, the direct oracle's pointwise relation, the changed security profile, and the frame rejection. This is a targeted proof regression, not an extra primary case in the 36-pair campaign.
+
+## 10. Observable context domain and syntax normalization
+
+The supplementary assessment is separate from the historical 36 pairs and 142
+pre-assessment tests. It crosses four configurations within each of the six
+existing monitors with six wrapper functions. Holding out a configuration is
+not holding out a monitor class or establishing a new native fault mechanism.
+
+### Observable-domain relevance
+
+For a fixed productive-safe root input r, define n ~ n' exactly when the typed
+nonsecurity observations of V on (r,n) and (r,n') are equal. The number of classes
+in D_N / ~ counts distinguishable functional contexts at that root; |D_N| alone
+does not. A coordinate is effective at r when two valuations differing only in
+that coordinate have different observations. Neither quantity measures the
+number of fault locations, and variation at one root is not universal variation
+at every root. The security and within-pair universal obligations remain those
+of Sections 1-5 and are separately replayed for all roots.
+
+In `make_assessment_case`, x,y range over {-1,0,1}, mode over {false,true}, and
+token over {empty-string,"a","b"}. Hence |D_N| = 3*3*2*3 = 54. Each wrapper emits
+one event for each named coordinate, either directly or, for wrapper 1, by the
+injective maps 2*x+1, 2*y+1 and Boolean negation (token remains unchanged).
+For any two distinct valuations, one coordinate differs; its corresponding
+typed event payload differs. The event name and position are fixed for that
+wrapper. Consequently the complete observations differ, so D_N / ~ has exactly
+54 classes. Holding the other coordinates fixed supplies an observation-changing
+edge for every coordinate. At a productive-safe root the accepted total prefix,
+root and suffix reach those events. Section 5 fixes security profiles, so every
+edge preserves security even while changing functionality. The finite witness
+file supplies explicit edges, and the result checker replays them.
+
+Removing the token emission in wrapper 0 leaves the return and all remaining
+events independent of token. For fixed x,y,mode the three token values now have
+equal observations; different x,y,mode triples remain separated by their direct
+events. There are therefore exactly 3*3*2 = 18 classes and three effective
+coordinates despite 54 declared valuations. The corresponding regression makes
+bulk input cardinality insufficient for passing this assessment.
+The same injectivity argument applies to the historical four integer bits:
+identity, affine maps, and equality to zero each distinguish their two values.
+Their four named events therefore separate all 16 contexts. This is observable
+variation, not a diversity claim about native context mechanisms.
+
+Wrappers 2-5 also emit cross-input combinations and a comparison of a root-derived
+result with context mode. Boundary-store preservation matters: a difference in
+that root result can become a suffix-observable difference. These additional
+events do not create more than 54 input valuations or new monitor mechanisms.
+
+### Endpoint-local normalization
+
+The normalizer removes `nop` instructions and canonically spells comparisons:
+`a > b` becomes `b < a`, `a >= b` becomes `b <= a`, and typed equality/inequality
+operands are sorted by their serialized expression. It leaves all other operators,
+names, typed constants, domains, stores, roles, labels and instruction order
+unchanged. It rejects rather than fabricates a root if no-op deletion leaves an
+inadmissible program. Admission is rechecked after normalization.
+
+For the assessment's defined bounded executions, structural induction proves
+each normalized expression has the same typed value: the ordering identities
+hold for integer operands, and typed equality/inequality are symmetric. Operand
+expressions are pure and eagerly evaluated in both interpreters. Reversing them
+does not change their total copied-node charge. No-ops change no state, events,
+return, monitor or abort flag. Induction over the remaining instructions gives
+equal semantic outcomes; removing no-ops may change step counts and traces.
+No guard or status check is erased and no effect/call order is reversed. This
+claim is not the pair-conditioned repair quotient and supplies no label-blindness
+theorem. Full-domain replay compares both actual labels in 111,456 raw/normalized
+semantic comparisons and compares 222,912 representation-level endpoint runs
+with the immutable reference, with zero differences.
+
+### Why a perfect syntax predictor does not establish transport
+
+The fitted repair probe uses only three syntax bits (root guard, root status
+check, effect-before-call order) and sees no certificate, endpoint id, peer code,
+label field, runtime result or test annotation. Its cells and fallback are fitted
+on training labels only. In the owned catalogue these bits perfectly distinguish
+all held-out endpoint labels in both representations. The result is a residual
+shortcut finding, not an accuracy guarantee outside this grid.
+
+Consider the anchored-valid division repair with the extra conjunct n=0 from
+Section 7. Adding this conjunct changes none of those three bits. At n=1 and a
+nonzero denominator, V completes and P aborts, violating within-context
+preservation. Alternatively, a common abort at n=1 changes no root bit but removes
+all root support at that context. Thus correct syntax predictions can coincide
+with a false expanded relation. `relevance_controls.csv` replays both cases in
+both representations, preserving their anchored labels. These four rows and
+their 192 endpoint executions are separate from the primary 144-pair campaign.

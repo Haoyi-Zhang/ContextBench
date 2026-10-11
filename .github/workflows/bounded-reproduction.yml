@@ -20,22 +20,28 @@ jobs:
         shell: bash
         run: |
           mkdir -p ci-results
-          set -o pipefail
+          set -euo pipefail
           timeout 120s python run_tests.py --output ci-results/test_summary.json 2>&1 | tee ci-results/tests.log
           timeout 60s python audit_literature.py 2>&1 | tee ci-results/literature.log
       - name: Reproduce the full owned finite base corpus
         shell: bash
         run: |
-          set -o pipefail
+          set -euo pipefail
           timeout 600s python reproduce.py --output ci-results/base 2>&1 | tee ci-results/base.log
           timeout 120s python check_results.py ci-results/base 2>&1 | tee ci-results/base-check.log
       - name: Reproduce owned transport fixtures using retained finite applicability inputs
         shell: bash
         run: |
-          set -o pipefail
+          set -euo pipefail
           timeout 120s python reproduce_transport.py --output ci-results 2>&1 | tee ci-results/transport.log
           timeout 60s python check_transport_results.py ci-results 2>&1 | tee ci-results/closure.log
           timeout 30s python verify.py transport examples/transport.json 2>&1 | tee ci-results/verifier.log
+      - name: Execute current root and context holdouts
+        shell: bash
+        run: |
+          set -euo pipefail
+          timeout 180s python reproduce_context_assessment.py --output ci-results/context-assessment 2>&1 | tee ci-results/context-assessment.log
+          timeout 60s python check_context_assessment.py ci-results/context-assessment 2>&1 | tee ci-results/context-assessment-check.log
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()
         with:

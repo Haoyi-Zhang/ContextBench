@@ -1,4 +1,4 @@
-# Context transport for root-cause-controlled vulnerability benchmarks
+# Context transport for finite vulnerability benchmark pairs
 
 This repository checks when a declared vulnerable/patched pair remains the same
 security experiment across a Cartesian family of context inputs. It is a finite,
@@ -21,12 +21,14 @@ solver, downloaded dependency, or external account is needed for these commands.
 Run from this directory, in the displayed order:
 
 ```sh
-PYTHONDONTWRITEBYTECODE=1 python run_tests.py
+PYTHONDONTWRITEBYTECODE=1 python run_tests.py --output results/context_assessment/test_summary.json
 PYTHONDONTWRITEBYTECODE=1 python audit_literature.py
 PYTHONDONTWRITEBYTECODE=1 timeout 120s python reproduce.py --output results
 PYTHONDONTWRITEBYTECODE=1 python check_results.py results
 PYTHONDONTWRITEBYTECODE=1 timeout 120s python reproduce_transport.py --output results
 PYTHONDONTWRITEBYTECODE=1 python check_transport_results.py results
+PYTHONDONTWRITEBYTECODE=1 python reproduce_context_assessment.py
+PYTHONDONTWRITEBYTECODE=1 python check_context_assessment.py results/context_assessment
 PYTHONDONTWRITEBYTECODE=1 python verify.py pair examples/pair.json
 PYTHONDONTWRITEBYTECODE=1 python verify.py transform examples/transform.json
 PYTHONDONTWRITEBYTECODE=1 python verify.py source-pair examples/source_pair.json
@@ -35,9 +37,10 @@ PYTHONDONTWRITEBYTECODE=1 python export_paper_data.py --results results --output
 PYTHONDONTWRITEBYTECODE=1 python export_transport_data.py --results results --output paper-data
 ```
 
-The first command discovers the regression suite (including the 136 tests in the
-retained campaign and six portable suffix-reuse tests) and records identifiers
-and outcomes without timing-dependent text in `results/test_summary.json`.
+The first command discovers the regression suite (including the historical 136
+tests, six portable suffix-reuse tests, and the separate assessment tests) and records identifiers
+and outcomes without timing-dependent text in the separate current
+`results/context_assessment/test_summary.json`, preserving historical test records.
 The two campaigns use one worker. The base campaign reconstructs the finite
 execution substrate. The transport campaign generates its own 36 primary pairs,
 76 controls, and 42 scaling points; its compatibility audit reads the three
@@ -56,10 +59,9 @@ witnesses for each primary pair, and checks control-packet identities and produc
 outcomes. Binary null operands remain explicit JSON `null` in the typed boundary
 matrix; an empty right-operand cell denotes only unary `not`.
 
-The Linux workflow `bounded-reproduction.yml` runs the owned regression suite and
-transport campaign under per-command deadlines, using the retained finite corpora
-for applicability. It retains logs and generated results. Fixture and oracle helpers can be imported
-on Windows, but campaign RSS measurement and the CLI deadline still require POSIX.
+The historical transport campaign's RSS measurement and the CLI deadline require
+POSIX. The supplementary assessment uses only the standard library and does not
+report platform-specific resource or timing measurements; it also runs on Windows.
 
 The JSON command-line verifier accepts packets up to 2 MiB and installs a
 15-second POSIX deadline. Exit zero means accepted, one means a checked rejection,
@@ -161,6 +163,59 @@ are recorded separately by `transport_contract_gate.py`. The repair gate reuses 
 production repair implementation and is therefore not independent validation.
 Certificate-free factored agreement is likewise not counted as an independent
 soundness check.
+
+## Supplementary held-out assessment
+
+`reproduce_context_assessment.py` writes only `results/context_assessment/` by
+default. It does not replace any historical result table or test count. This is
+a 144-pair grid: four owned root configurations per existing monitor and six
+wrapper functions. Roots 0/1 and wrappers 0..3 form 48 training pairs. Holding out
+roots 2/3, wrappers 4/5, or both gives 48, 24, and 24 test pairs. Both labels and
+both representations of a pair stay together. `split_manifest.csv.gz` binds the
+actual normalized root objects and context code; neither held-out axis overlaps
+its training axis. The six monitor mechanisms themselves are not held out.
+
+Each pair has two ternary integers, one Boolean and one three-valued string:
+54 reachable valuations, not 54 new fault mechanisms. `functional_domain.json.gz`
+retains a productive-safe root and four one-coordinate observation-change
+witnesses. All 54 valuations have distinct typed observations at that root.
+Cross-input functions and root-result/context-mode comparisons supplement the
+direct emissions. The unused-token regression leaves 54 input valuations but
+only 18 observable contexts and three effective coordinates.
+The separate historical diagnostic finds 16 distinguishable observations and
+four effective coordinates in each original four-input wrapper. Those products
+are observable, although their independent-emission functions are shallow.
+
+`rcsc/syntax_normalization.py` applies the same endpoint-local no-op removal and
+comparison canonicalization to both labels. It preserves guards, status checks,
+effect/call order, literal types, event names and true labels. It never erases a
+repair or needs the peer endpoint. Step counts/traces are outside its semantic
+equivalence claim. All 111,456 raw/normalized semantic comparisons agree. Across
+both representations, 222,912 full endpoint runs and immutable-reference
+comparisons agree; these are executed cases. The certificate-free factored audit
+agrees with transport on all 288 checks and uses the same root replay counts.
+
+Three fixed feature maps see instruction syntax only, without ids, labels,
+certificates, pair side, peer code, runtime outcomes or split annotations. Lookup
+cells and fallback are fitted only on 96 training endpoints. Constant and
+context-only probes score 50%; guard/status/order probes score 100% on every
+held-out split, before and after normalization. `models.json.gz`, `features.json.gz`
+and `predictions.csv.gz` retain the training and test separation. The fixed syntax
+rule also predicts all 72 historical endpoint labels in both representations;
+that is a descriptive channel check, not held-out performance. These results
+confirm residual repair-catalogue shortcuts rather than claiming their removal.
+
+Two separate anchored-valid division controls retain correct syntax predictions
+but fail expanded transport. `relevance_controls.csv` records their full semantic
+counterexamples and frame/control rejections in both representations (192 endpoint
+executions, separate from the 222,912 primary runs). This separates predicting a
+label from validating a context change. `TRANSPORT_PROOFS.md` Section 10 proves
+the observable-domain and normalization claims for this bounded assessment.
+
+`check_context_assessment.py` reconstructs the actual split, typed domain,
+training-only models, predictions, replay counts and functional witnesses. It
+does not treat the feature probes as learned vulnerability detectors or as an
+independent proof of transport. No native or third-party code is executed.
 
 ## Supporting finite execution evidence
 
