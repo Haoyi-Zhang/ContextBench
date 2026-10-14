@@ -25,6 +25,49 @@ class ContextAdmissionTests(unittest.TestCase):
                 self.assertEqual(gate['preconditions_ok'], admitted)
                 self.assertEqual(tr.check_transport(packet).accepted, admitted)
 
+    def test_expanded_domain_value_budget_matches_consumer(self):
+        packet = self.packet()
+        for count, admitted in ((tr.MAX_DOMAIN_VALUES, True),
+                                (tr.MAX_DOMAIN_VALUES + 1, False)):
+            with self.subTest(count=count):
+                packet['context_domains']['noise_0'] = list(range(count))
+                original = copy.deepcopy(packet)
+                gate = relation_preconditions(packet)
+                consumer = tr.audit_transport(packet['vulnerable'], packet['patched'],
+                                              packet['context_domains'])
+                self.assertEqual(admitted, gate['context_domains_ok'])
+                self.assertEqual(admitted, gate['preconditions_ok'])
+                self.assertEqual(admitted, consumer.accepted)
+                if not admitted:
+                    self.assertEqual('transport-domain-schema', consumer.reason)
+                    self.assertIn('expanded-domain-values-exceed-budget',
+                                  str(gate['diagnostics']))
+                self.assertEqual(original, packet)
+
+    def test_expanded_domain_count_budget_is_structural(self):
+        packet = self.packet()
+        for count, admitted in ((tr.MAX_NUISANCE_INPUTS, True),
+                                (tr.MAX_NUISANCE_INPUTS + 1, False)):
+            with self.subTest(count=count):
+                current = copy.deepcopy(packet)
+                for index in range(count - 1):
+                    name = f'noise_extra_{index}'
+                    for side in ('vulnerable', 'patched'):
+                        current[side]['input_domains'][name] = [0]
+                    current['context_domains'][name] = [0]
+                original = copy.deepcopy(current)
+                gate = relation_preconditions(current)
+                consumer = tr.audit_transport(current['vulnerable'], current['patched'],
+                                              current['context_domains'])
+                self.assertEqual(admitted, gate['context_domains_ok'])
+                self.assertEqual(admitted, gate['preconditions_ok'])
+                self.assertEqual(admitted, consumer.accepted)
+                if not admitted:
+                    self.assertEqual('transport-domain-schema', consumer.reason)
+                    self.assertIn('expanded-domain-count-exceeds-budget',
+                                  str(gate['diagnostics']))
+                self.assertEqual(original, current)
+
     def test_context_keys_and_nonfinite_values_fail_structurally(self):
         for domains in [{0: [0]}, {'noise_0': [0, float('nan')]},
                         {'noise_0': [0, object()]}]:

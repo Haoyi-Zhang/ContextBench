@@ -13,6 +13,7 @@ from typing import Any, Mapping
 
 from .model import context_skeleton, stable_json, validate_json_tree, validate_program, value_key
 from .repair import check_repair_membership, expected_repair
+from .transport import MAX_DOMAIN_VALUES, MAX_NUISANCE_INPUTS
 
 
 def _failure(component: str, reason: str, detail: Any = None) -> dict[str, Any]:
@@ -86,6 +87,9 @@ def relation_preconditions(packet: Mapping[str, Any]) -> dict[str, Any]:
         if type(context_domains) is not dict:
             context_details.append({"reason": "context-domains-not-object"})
     else:
+        if len(context_domains) > MAX_NUISANCE_INPUTS:
+            context_ok = False
+            context_details.append({"reason": "expanded-domain-count-exceeds-budget"})
         for name, domain in sorted(context_domains.items()):
             if name not in vulnerable["input_domains"] or name not in patched["input_domains"]:
                 context_ok = False
@@ -99,6 +103,9 @@ def relation_preconditions(packet: Mapping[str, Any]) -> dict[str, Any]:
                 context_ok = False
                 context_details.append({"name": name, "reason": "expanded-domain-empty-or-malformed"})
                 continue
+            if len(domain) > MAX_DOMAIN_VALUES:
+                context_ok = False
+                context_details.append({"name": name, "reason": "expanded-domain-values-exceed-budget"})
             if any(type(value) not in (int, bool, str, type(None)) for value in domain):
                 context_ok = False
                 context_details.append({"name": name, "reason": "expanded-domain-nonscalar"})
