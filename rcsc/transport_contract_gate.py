@@ -11,7 +11,7 @@ from __future__ import annotations
 
 from typing import Any, Mapping
 
-from .model import context_skeleton, stable_json, validate_program, value_key
+from .model import context_skeleton, stable_json, validate_json_tree, validate_program, value_key
 from .repair import check_repair_membership, expected_repair
 
 
@@ -74,8 +74,17 @@ def relation_preconditions(packet: Mapping[str, Any]) -> dict[str, Any]:
 
     context_ok = type(context_domains) is dict
     context_details: list[dict[str, Any]] = []
+    # The expanded domain is source input too, not an unbounded host value.
+    # Preflight before sorting, serialization, or type-sensitive membership.
+    try:
+        validate_json_tree(context_domains)
+    except (ValueError, TypeError, OverflowError) as exc:
+        context_ok = False
+        context_details.append({'reason': 'expanded-domain-json-admission',
+                                'error': type(exc).__name__, 'detail': str(exc)})
     if not context_ok:
-        context_details.append({"reason": "context-domains-not-object"})
+        if type(context_domains) is not dict:
+            context_details.append({"reason": "context-domains-not-object"})
     else:
         for name, domain in sorted(context_domains.items()):
             if name not in vulnerable["input_domains"] or name not in patched["input_domains"]:

@@ -1,0 +1,7454 @@
+[
+  {
+    "case": "int-at-bound",
+    "packet": {
+      "certificate": {
+        "declared_family": "divide_zero",
+        "declared_repair": "insert-root-guard",
+        "pair_id": "transport-divide_zero-0-1-0",
+        "patched_id": "transport-divide_zero-0-1-0-patched",
+        "schema": "rcsc-pair-certificate",
+        "vulnerable_id": "transport-divide_zero-0-1-0-vulnerable",
+        "witness_input": {
+          "denominator": 0,
+          "noise_0": 0,
+          "numerator": -2
+        }
+      },
+      "context_domains": {
+        "noise_0": [
+          0,
+          57896044618658097711785492504343953926634992332820282019728792003956564819968
+        ]
+      },
+      "patched": {
+        "context": {
+          "provenance": null,
+          "scenario": "bounded quotient",
+          "shape": 0
+        },
+        "family": "divide_zero",
+        "initial_public_state": {
+          "audit": 0
+        },
+        "input_domains": {
+          "denominator": [
+            -1,
+            0,
+            1,
+            2
+          ],
+          "noise_0": [
+            0
+          ],
+          "numerator": [
+            -2,
+            0,
+            3
+          ]
+        },
+        "instructions": [
+          {
+            "dst": "context_0",
+            "expr": {
+              "var": "noise_0"
+            },
+            "op": "assign",
+            "role": "context"
+          },
+          {
+            "name": "pre-0",
+            "op": "emit",
+            "role": "context",
+            "value": {
+              "var": "context_0"
+            }
+          },
+          {
+            "dst": "aux",
+            "expr": {
+              "left": {
+                "const": 0
+              },
+              "op": "add",
+              "right": {
+                "const": 1
+              }
+            },
+            "op": "assign",
+            "role": "context"
+          },
+          {
+            "op": "nop",
+            "role": "context",
+            "tag": "shape-0"
+          },
+          {
+            "op": "guard",
+            "pred": {
+              "left": {
+                "var": "denominator"
+              },
+              "op": "ne",
+              "right": {
+                "const": 0
+              }
+            },
+            "role": "root"
+          },
+          {
+            "denominator": {
+              "var": "denominator"
+            },
+            "dst": "quotient",
+            "numerator": {
+              "var": "numerator"
+            },
+            "op": "divide",
+            "role": "root"
+          },
+          {
+            "name": "quotient",
+            "op": "emit",
+            "role": "context",
+            "value": {
+              "var": "quotient"
+            }
+          },
+          {
+            "op": "return",
+            "role": "context",
+            "value": {
+              "var": "quotient"
+            }
+          }
+        ],
+        "label": "patched",
+        "parameters": {
+          "result_name": "quotient",
+          "rounding": "toward-zero"
+        },
+        "profile": "c",
+        "program_id": "transport-divide_zero-0-1-0-patched",
+        "public_projection": [
+          "audit"
+        ],
+        "schema": "rcsc-program"
+      },
+      "transport_certificate": {
+        "core_binding": {
+          "family": "divide_zero",
+          "initial_public_state": {
+            "audit": 0
+          },
+          "patched_core": [
+            {
+              "op": "guard",
+              "pred": {
+                "left": {
+                  "var": "denominator"
+                },
+                "op": "ne",
+                "right": {
+                  "const": 0
+                }
+              },
+              "role": "root"
+            },
+            {
+              "denominator": {
+                "var": "denominator"
+              },
+              "dst": "quotient",
+              "numerator": {
+                "var": "numerator"
+              },
+              "op": "divide",
+              "role": "root"
+            }
+          ],
+          "profile": "c",
+          "read_variables": [
+            "denominator",
+            "numerator"
+          ],
+          "root_domains": {
+            "denominator": [
+              -1,
+              0,
+              1,
+              2
+            ],
+            "numerator": [
+              -2,
+              0,
+              3
+            ]
+          },
+          "vulnerable_core": [
+            {
+              "denominator": {
+                "var": "denominator"
+              },
+              "dst": "quotient",
+              "numerator": {
+                "var": "numerator"
+              },
+              "op": "divide",
+              "role": "root"
+            }
+          ],
+          "write_variables": [
+            "quotient"
+          ]
+        },
+        "rows": [
+          {
+            "input": {
+              "denominator": -1,
+              "numerator": -2
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  -1
+                ],
+                [
+                  "local:numerator",
+                  -2
+                ],
+                [
+                  "local:quotient",
+                  2
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  -1
+                ],
+                [
+                  "local:numerator",
+                  -2
+                ],
+                [
+                  "local:quotient",
+                  2
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          },
+          {
+            "input": {
+              "denominator": -1,
+              "numerator": 0
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  -1
+                ],
+                [
+                  "local:numerator",
+                  0
+                ],
+                [
+                  "local:quotient",
+                  0
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  -1
+                ],
+                [
+                  "local:numerator",
+                  0
+                ],
+                [
+                  "local:quotient",
+                  0
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          },
+          {
+            "input": {
+              "denominator": -1,
+              "numerator": 3
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  -1
+                ],
+                [
+                  "local:numerator",
+                  3
+                ],
+                [
+                  "local:quotient",
+                  -3
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  -1
+                ],
+                [
+                  "local:numerator",
+                  3
+                ],
+                [
+                  "local:quotient",
+                  -3
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          },
+          {
+            "input": {
+              "denominator": 0,
+              "numerator": -2
+            },
+            "patched": {
+              "aborted": true,
+              "events": [],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 1,
+              "trace": [
+                "0:guard"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 1,
+              "trace": [
+                "0:divide"
+              ],
+              "violation": "DIVIDE_BY_ZERO"
+            }
+          },
+          {
+            "input": {
+              "denominator": 0,
+              "numerator": 0
+            },
+            "patched": {
+              "aborted": true,
+              "events": [],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 1,
+              "trace": [
+                "0:guard"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 1,
+              "trace": [
+                "0:divide"
+              ],
+              "violation": "DIVIDE_BY_ZERO"
+            }
+          },
+          {
+            "input": {
+              "denominator": 0,
+              "numerator": 3
+            },
+            "patched": {
+              "aborted": true,
+              "events": [],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 1,
+              "trace": [
+                "0:guard"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 1,
+              "trace": [
+                "0:divide"
+              ],
+              "violation": "DIVIDE_BY_ZERO"
+            }
+          },
+          {
+            "input": {
+              "denominator": 1,
+              "numerator": -2
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  1
+                ],
+                [
+                  "local:numerator",
+                  -2
+                ],
+                [
+                  "local:quotient",
+                  -2
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  1
+                ],
+                [
+                  "local:numerator",
+                  -2
+                ],
+                [
+                  "local:quotient",
+                  -2
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          },
+          {
+            "input": {
+              "denominator": 1,
+              "numerator": 0
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  1
+                ],
+                [
+                  "local:numerator",
+                  0
+                ],
+                [
+                  "local:quotient",
+                  0
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  1
+                ],
+                [
+                  "local:numerator",
+                  0
+                ],
+                [
+                  "local:quotient",
+                  0
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          },
+          {
+            "input": {
+              "denominator": 1,
+              "numerator": 3
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  1
+                ],
+                [
+                  "local:numerator",
+                  3
+                ],
+                [
+                  "local:quotient",
+                  3
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  1
+                ],
+                [
+                  "local:numerator",
+                  3
+                ],
+                [
+                  "local:quotient",
+                  3
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          },
+          {
+            "input": {
+              "denominator": 2,
+              "numerator": -2
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  2
+                ],
+                [
+                  "local:numerator",
+                  -2
+                ],
+                [
+                  "local:quotient",
+                  -1
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  2
+                ],
+                [
+                  "local:numerator",
+                  -2
+                ],
+                [
+                  "local:quotient",
+                  -1
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          },
+          {
+            "input": {
+              "denominator": 2,
+              "numerator": 0
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  2
+                ],
+                [
+                  "local:numerator",
+                  0
+                ],
+                [
+                  "local:quotient",
+                  0
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  2
+                ],
+                [
+                  "local:numerator",
+                  0
+                ],
+                [
+                  "local:quotient",
+                  0
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          },
+          {
+            "input": {
+              "denominator": 2,
+              "numerator": 3
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  2
+                ],
+                [
+                  "local:numerator",
+                  3
+                ],
+                [
+                  "local:quotient",
+                  1
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  2
+                ],
+                [
+                  "local:numerator",
+                  3
+                ],
+                [
+                  "local:quotient",
+                  1
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          }
+        ],
+        "schema": "rcsc-context-transport"
+      },
+      "vulnerable": {
+        "context": {
+          "provenance": null,
+          "scenario": "bounded quotient",
+          "shape": 0
+        },
+        "family": "divide_zero",
+        "initial_public_state": {
+          "audit": 0
+        },
+        "input_domains": {
+          "denominator": [
+            -1,
+            0,
+            1,
+            2
+          ],
+          "noise_0": [
+            0
+          ],
+          "numerator": [
+            -2,
+            0,
+            3
+          ]
+        },
+        "instructions": [
+          {
+            "dst": "context_0",
+            "expr": {
+              "var": "noise_0"
+            },
+            "op": "assign",
+            "role": "context"
+          },
+          {
+            "name": "pre-0",
+            "op": "emit",
+            "role": "context",
+            "value": {
+              "var": "context_0"
+            }
+          },
+          {
+            "dst": "aux",
+            "expr": {
+              "left": {
+                "const": 0
+              },
+              "op": "add",
+              "right": {
+                "const": 1
+              }
+            },
+            "op": "assign",
+            "role": "context"
+          },
+          {
+            "op": "nop",
+            "role": "context",
+            "tag": "shape-0"
+          },
+          {
+            "denominator": {
+              "var": "denominator"
+            },
+            "dst": "quotient",
+            "numerator": {
+              "var": "numerator"
+            },
+            "op": "divide",
+            "role": "root"
+          },
+          {
+            "name": "quotient",
+            "op": "emit",
+            "role": "context",
+            "value": {
+              "var": "quotient"
+            }
+          },
+          {
+            "op": "return",
+            "role": "context",
+            "value": {
+              "var": "quotient"
+            }
+          }
+        ],
+        "label": "vulnerable",
+        "parameters": {
+          "result_name": "quotient",
+          "rounding": "toward-zero"
+        },
+        "profile": "c",
+        "program_id": "transport-divide_zero-0-1-0-vulnerable",
+        "public_projection": [
+          "audit"
+        ],
+        "schema": "rcsc-program"
+      }
+    }
+  },
+  {
+    "case": "int-over-bound",
+    "packet": {
+      "certificate": {
+        "declared_family": "divide_zero",
+        "declared_repair": "insert-root-guard",
+        "pair_id": "transport-divide_zero-0-1-0",
+        "patched_id": "transport-divide_zero-0-1-0-patched",
+        "schema": "rcsc-pair-certificate",
+        "vulnerable_id": "transport-divide_zero-0-1-0-vulnerable",
+        "witness_input": {
+          "denominator": 0,
+          "noise_0": 0,
+          "numerator": -2
+        }
+      },
+      "context_domains": {
+        "noise_0": [
+          0,
+          115792089237316195423570985008687907853269984665640564039457584007913129639936
+        ]
+      },
+      "patched": {
+        "context": {
+          "provenance": null,
+          "scenario": "bounded quotient",
+          "shape": 0
+        },
+        "family": "divide_zero",
+        "initial_public_state": {
+          "audit": 0
+        },
+        "input_domains": {
+          "denominator": [
+            -1,
+            0,
+            1,
+            2
+          ],
+          "noise_0": [
+            0
+          ],
+          "numerator": [
+            -2,
+            0,
+            3
+          ]
+        },
+        "instructions": [
+          {
+            "dst": "context_0",
+            "expr": {
+              "var": "noise_0"
+            },
+            "op": "assign",
+            "role": "context"
+          },
+          {
+            "name": "pre-0",
+            "op": "emit",
+            "role": "context",
+            "value": {
+              "var": "context_0"
+            }
+          },
+          {
+            "dst": "aux",
+            "expr": {
+              "left": {
+                "const": 0
+              },
+              "op": "add",
+              "right": {
+                "const": 1
+              }
+            },
+            "op": "assign",
+            "role": "context"
+          },
+          {
+            "op": "nop",
+            "role": "context",
+            "tag": "shape-0"
+          },
+          {
+            "op": "guard",
+            "pred": {
+              "left": {
+                "var": "denominator"
+              },
+              "op": "ne",
+              "right": {
+                "const": 0
+              }
+            },
+            "role": "root"
+          },
+          {
+            "denominator": {
+              "var": "denominator"
+            },
+            "dst": "quotient",
+            "numerator": {
+              "var": "numerator"
+            },
+            "op": "divide",
+            "role": "root"
+          },
+          {
+            "name": "quotient",
+            "op": "emit",
+            "role": "context",
+            "value": {
+              "var": "quotient"
+            }
+          },
+          {
+            "op": "return",
+            "role": "context",
+            "value": {
+              "var": "quotient"
+            }
+          }
+        ],
+        "label": "patched",
+        "parameters": {
+          "result_name": "quotient",
+          "rounding": "toward-zero"
+        },
+        "profile": "c",
+        "program_id": "transport-divide_zero-0-1-0-patched",
+        "public_projection": [
+          "audit"
+        ],
+        "schema": "rcsc-program"
+      },
+      "transport_certificate": {
+        "core_binding": {
+          "family": "divide_zero",
+          "initial_public_state": {
+            "audit": 0
+          },
+          "patched_core": [
+            {
+              "op": "guard",
+              "pred": {
+                "left": {
+                  "var": "denominator"
+                },
+                "op": "ne",
+                "right": {
+                  "const": 0
+                }
+              },
+              "role": "root"
+            },
+            {
+              "denominator": {
+                "var": "denominator"
+              },
+              "dst": "quotient",
+              "numerator": {
+                "var": "numerator"
+              },
+              "op": "divide",
+              "role": "root"
+            }
+          ],
+          "profile": "c",
+          "read_variables": [
+            "denominator",
+            "numerator"
+          ],
+          "root_domains": {
+            "denominator": [
+              -1,
+              0,
+              1,
+              2
+            ],
+            "numerator": [
+              -2,
+              0,
+              3
+            ]
+          },
+          "vulnerable_core": [
+            {
+              "denominator": {
+                "var": "denominator"
+              },
+              "dst": "quotient",
+              "numerator": {
+                "var": "numerator"
+              },
+              "op": "divide",
+              "role": "root"
+            }
+          ],
+          "write_variables": [
+            "quotient"
+          ]
+        },
+        "rows": [
+          {
+            "input": {
+              "denominator": -1,
+              "numerator": -2
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  -1
+                ],
+                [
+                  "local:numerator",
+                  -2
+                ],
+                [
+                  "local:quotient",
+                  2
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  -1
+                ],
+                [
+                  "local:numerator",
+                  -2
+                ],
+                [
+                  "local:quotient",
+                  2
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          },
+          {
+            "input": {
+              "denominator": -1,
+              "numerator": 0
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  -1
+                ],
+                [
+                  "local:numerator",
+                  0
+                ],
+                [
+                  "local:quotient",
+                  0
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  -1
+                ],
+                [
+                  "local:numerator",
+                  0
+                ],
+                [
+                  "local:quotient",
+                  0
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          },
+          {
+            "input": {
+              "denominator": -1,
+              "numerator": 3
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  -1
+                ],
+                [
+                  "local:numerator",
+                  3
+                ],
+                [
+                  "local:quotient",
+                  -3
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  -1
+                ],
+                [
+                  "local:numerator",
+                  3
+                ],
+                [
+                  "local:quotient",
+                  -3
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          },
+          {
+            "input": {
+              "denominator": 0,
+              "numerator": -2
+            },
+            "patched": {
+              "aborted": true,
+              "events": [],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 1,
+              "trace": [
+                "0:guard"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 1,
+              "trace": [
+                "0:divide"
+              ],
+              "violation": "DIVIDE_BY_ZERO"
+            }
+          },
+          {
+            "input": {
+              "denominator": 0,
+              "numerator": 0
+            },
+            "patched": {
+              "aborted": true,
+              "events": [],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 1,
+              "trace": [
+                "0:guard"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 1,
+              "trace": [
+                "0:divide"
+              ],
+              "violation": "DIVIDE_BY_ZERO"
+            }
+          },
+          {
+            "input": {
+              "denominator": 0,
+              "numerator": 3
+            },
+            "patched": {
+              "aborted": true,
+              "events": [],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 1,
+              "trace": [
+                "0:guard"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 1,
+              "trace": [
+                "0:divide"
+              ],
+              "violation": "DIVIDE_BY_ZERO"
+            }
+          },
+          {
+            "input": {
+              "denominator": 1,
+              "numerator": -2
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  1
+                ],
+                [
+                  "local:numerator",
+                  -2
+                ],
+                [
+                  "local:quotient",
+                  -2
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  1
+                ],
+                [
+                  "local:numerator",
+                  -2
+                ],
+                [
+                  "local:quotient",
+                  -2
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          },
+          {
+            "input": {
+              "denominator": 1,
+              "numerator": 0
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  1
+                ],
+                [
+                  "local:numerator",
+                  0
+                ],
+                [
+                  "local:quotient",
+                  0
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  1
+                ],
+                [
+                  "local:numerator",
+                  0
+                ],
+                [
+                  "local:quotient",
+                  0
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          },
+          {
+            "input": {
+              "denominator": 1,
+              "numerator": 3
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  1
+                ],
+                [
+                  "local:numerator",
+                  3
+                ],
+                [
+                  "local:quotient",
+                  3
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  1
+                ],
+                [
+                  "local:numerator",
+                  3
+                ],
+                [
+                  "local:quotient",
+                  3
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          },
+          {
+            "input": {
+              "denominator": 2,
+              "numerator": -2
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  2
+                ],
+                [
+                  "local:numerator",
+                  -2
+                ],
+                [
+                  "local:quotient",
+                  -1
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  2
+                ],
+                [
+                  "local:numerator",
+                  -2
+                ],
+                [
+                  "local:quotient",
+                  -1
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          },
+          {
+            "input": {
+              "denominator": 2,
+              "numerator": 0
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  2
+                ],
+                [
+                  "local:numerator",
+                  0
+                ],
+                [
+                  "local:quotient",
+                  0
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  2
+                ],
+                [
+                  "local:numerator",
+                  0
+                ],
+                [
+                  "local:quotient",
+                  0
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          },
+          {
+            "input": {
+              "denominator": 2,
+              "numerator": 3
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  2
+                ],
+                [
+                  "local:numerator",
+                  3
+                ],
+                [
+                  "local:quotient",
+                  1
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  2
+                ],
+                [
+                  "local:numerator",
+                  3
+                ],
+                [
+                  "local:quotient",
+                  1
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          }
+        ],
+        "schema": "rcsc-context-transport"
+      },
+      "vulnerable": {
+        "context": {
+          "provenance": null,
+          "scenario": "bounded quotient",
+          "shape": 0
+        },
+        "family": "divide_zero",
+        "initial_public_state": {
+          "audit": 0
+        },
+        "input_domains": {
+          "denominator": [
+            -1,
+            0,
+            1,
+            2
+          ],
+          "noise_0": [
+            0
+          ],
+          "numerator": [
+            -2,
+            0,
+            3
+          ]
+        },
+        "instructions": [
+          {
+            "dst": "context_0",
+            "expr": {
+              "var": "noise_0"
+            },
+            "op": "assign",
+            "role": "context"
+          },
+          {
+            "name": "pre-0",
+            "op": "emit",
+            "role": "context",
+            "value": {
+              "var": "context_0"
+            }
+          },
+          {
+            "dst": "aux",
+            "expr": {
+              "left": {
+                "const": 0
+              },
+              "op": "add",
+              "right": {
+                "const": 1
+              }
+            },
+            "op": "assign",
+            "role": "context"
+          },
+          {
+            "op": "nop",
+            "role": "context",
+            "tag": "shape-0"
+          },
+          {
+            "denominator": {
+              "var": "denominator"
+            },
+            "dst": "quotient",
+            "numerator": {
+              "var": "numerator"
+            },
+            "op": "divide",
+            "role": "root"
+          },
+          {
+            "name": "quotient",
+            "op": "emit",
+            "role": "context",
+            "value": {
+              "var": "quotient"
+            }
+          },
+          {
+            "op": "return",
+            "role": "context",
+            "value": {
+              "var": "quotient"
+            }
+          }
+        ],
+        "label": "vulnerable",
+        "parameters": {
+          "result_name": "quotient",
+          "rounding": "toward-zero"
+        },
+        "profile": "c",
+        "program_id": "transport-divide_zero-0-1-0-vulnerable",
+        "public_projection": [
+          "audit"
+        ],
+        "schema": "rcsc-program"
+      }
+    }
+  },
+  {
+    "case": "text-at-bound",
+    "packet": {
+      "certificate": {
+        "declared_family": "divide_zero",
+        "declared_repair": "insert-root-guard",
+        "pair_id": "transport-divide_zero-0-1-0",
+        "patched_id": "transport-divide_zero-0-1-0-patched",
+        "schema": "rcsc-pair-certificate",
+        "vulnerable_id": "transport-divide_zero-0-1-0-vulnerable",
+        "witness_input": {
+          "denominator": 0,
+          "noise_0": 0,
+          "numerator": -2
+        }
+      },
+      "context_domains": {
+        "noise_0": [
+          0,
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        ]
+      },
+      "patched": {
+        "context": {
+          "provenance": null,
+          "scenario": "bounded quotient",
+          "shape": 0
+        },
+        "family": "divide_zero",
+        "initial_public_state": {
+          "audit": 0
+        },
+        "input_domains": {
+          "denominator": [
+            -1,
+            0,
+            1,
+            2
+          ],
+          "noise_0": [
+            0
+          ],
+          "numerator": [
+            -2,
+            0,
+            3
+          ]
+        },
+        "instructions": [
+          {
+            "dst": "context_0",
+            "expr": {
+              "var": "noise_0"
+            },
+            "op": "assign",
+            "role": "context"
+          },
+          {
+            "name": "pre-0",
+            "op": "emit",
+            "role": "context",
+            "value": {
+              "var": "context_0"
+            }
+          },
+          {
+            "dst": "aux",
+            "expr": {
+              "left": {
+                "const": 0
+              },
+              "op": "add",
+              "right": {
+                "const": 1
+              }
+            },
+            "op": "assign",
+            "role": "context"
+          },
+          {
+            "op": "nop",
+            "role": "context",
+            "tag": "shape-0"
+          },
+          {
+            "op": "guard",
+            "pred": {
+              "left": {
+                "var": "denominator"
+              },
+              "op": "ne",
+              "right": {
+                "const": 0
+              }
+            },
+            "role": "root"
+          },
+          {
+            "denominator": {
+              "var": "denominator"
+            },
+            "dst": "quotient",
+            "numerator": {
+              "var": "numerator"
+            },
+            "op": "divide",
+            "role": "root"
+          },
+          {
+            "name": "quotient",
+            "op": "emit",
+            "role": "context",
+            "value": {
+              "var": "quotient"
+            }
+          },
+          {
+            "op": "return",
+            "role": "context",
+            "value": {
+              "var": "quotient"
+            }
+          }
+        ],
+        "label": "patched",
+        "parameters": {
+          "result_name": "quotient",
+          "rounding": "toward-zero"
+        },
+        "profile": "c",
+        "program_id": "transport-divide_zero-0-1-0-patched",
+        "public_projection": [
+          "audit"
+        ],
+        "schema": "rcsc-program"
+      },
+      "transport_certificate": {
+        "core_binding": {
+          "family": "divide_zero",
+          "initial_public_state": {
+            "audit": 0
+          },
+          "patched_core": [
+            {
+              "op": "guard",
+              "pred": {
+                "left": {
+                  "var": "denominator"
+                },
+                "op": "ne",
+                "right": {
+                  "const": 0
+                }
+              },
+              "role": "root"
+            },
+            {
+              "denominator": {
+                "var": "denominator"
+              },
+              "dst": "quotient",
+              "numerator": {
+                "var": "numerator"
+              },
+              "op": "divide",
+              "role": "root"
+            }
+          ],
+          "profile": "c",
+          "read_variables": [
+            "denominator",
+            "numerator"
+          ],
+          "root_domains": {
+            "denominator": [
+              -1,
+              0,
+              1,
+              2
+            ],
+            "numerator": [
+              -2,
+              0,
+              3
+            ]
+          },
+          "vulnerable_core": [
+            {
+              "denominator": {
+                "var": "denominator"
+              },
+              "dst": "quotient",
+              "numerator": {
+                "var": "numerator"
+              },
+              "op": "divide",
+              "role": "root"
+            }
+          ],
+          "write_variables": [
+            "quotient"
+          ]
+        },
+        "rows": [
+          {
+            "input": {
+              "denominator": -1,
+              "numerator": -2
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  -1
+                ],
+                [
+                  "local:numerator",
+                  -2
+                ],
+                [
+                  "local:quotient",
+                  2
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  -1
+                ],
+                [
+                  "local:numerator",
+                  -2
+                ],
+                [
+                  "local:quotient",
+                  2
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          },
+          {
+            "input": {
+              "denominator": -1,
+              "numerator": 0
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  -1
+                ],
+                [
+                  "local:numerator",
+                  0
+                ],
+                [
+                  "local:quotient",
+                  0
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  -1
+                ],
+                [
+                  "local:numerator",
+                  0
+                ],
+                [
+                  "local:quotient",
+                  0
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          },
+          {
+            "input": {
+              "denominator": -1,
+              "numerator": 3
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  -1
+                ],
+                [
+                  "local:numerator",
+                  3
+                ],
+                [
+                  "local:quotient",
+                  -3
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  -1
+                ],
+                [
+                  "local:numerator",
+                  3
+                ],
+                [
+                  "local:quotient",
+                  -3
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          },
+          {
+            "input": {
+              "denominator": 0,
+              "numerator": -2
+            },
+            "patched": {
+              "aborted": true,
+              "events": [],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 1,
+              "trace": [
+                "0:guard"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 1,
+              "trace": [
+                "0:divide"
+              ],
+              "violation": "DIVIDE_BY_ZERO"
+            }
+          },
+          {
+            "input": {
+              "denominator": 0,
+              "numerator": 0
+            },
+            "patched": {
+              "aborted": true,
+              "events": [],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 1,
+              "trace": [
+                "0:guard"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 1,
+              "trace": [
+                "0:divide"
+              ],
+              "violation": "DIVIDE_BY_ZERO"
+            }
+          },
+          {
+            "input": {
+              "denominator": 0,
+              "numerator": 3
+            },
+            "patched": {
+              "aborted": true,
+              "events": [],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 1,
+              "trace": [
+                "0:guard"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 1,
+              "trace": [
+                "0:divide"
+              ],
+              "violation": "DIVIDE_BY_ZERO"
+            }
+          },
+          {
+            "input": {
+              "denominator": 1,
+              "numerator": -2
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  1
+                ],
+                [
+                  "local:numerator",
+                  -2
+                ],
+                [
+                  "local:quotient",
+                  -2
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  1
+                ],
+                [
+                  "local:numerator",
+                  -2
+                ],
+                [
+                  "local:quotient",
+                  -2
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          },
+          {
+            "input": {
+              "denominator": 1,
+              "numerator": 0
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  1
+                ],
+                [
+                  "local:numerator",
+                  0
+                ],
+                [
+                  "local:quotient",
+                  0
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  1
+                ],
+                [
+                  "local:numerator",
+                  0
+                ],
+                [
+                  "local:quotient",
+                  0
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          },
+          {
+            "input": {
+              "denominator": 1,
+              "numerator": 3
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  1
+                ],
+                [
+                  "local:numerator",
+                  3
+                ],
+                [
+                  "local:quotient",
+                  3
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  1
+                ],
+                [
+                  "local:numerator",
+                  3
+                ],
+                [
+                  "local:quotient",
+                  3
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          },
+          {
+            "input": {
+              "denominator": 2,
+              "numerator": -2
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  2
+                ],
+                [
+                  "local:numerator",
+                  -2
+                ],
+                [
+                  "local:quotient",
+                  -1
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  2
+                ],
+                [
+                  "local:numerator",
+                  -2
+                ],
+                [
+                  "local:quotient",
+                  -1
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          },
+          {
+            "input": {
+              "denominator": 2,
+              "numerator": 0
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  2
+                ],
+                [
+                  "local:numerator",
+                  0
+                ],
+                [
+                  "local:quotient",
+                  0
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  2
+                ],
+                [
+                  "local:numerator",
+                  0
+                ],
+                [
+                  "local:quotient",
+                  0
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          },
+          {
+            "input": {
+              "denominator": 2,
+              "numerator": 3
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  2
+                ],
+                [
+                  "local:numerator",
+                  3
+                ],
+                [
+                  "local:quotient",
+                  1
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  2
+                ],
+                [
+                  "local:numerator",
+                  3
+                ],
+                [
+                  "local:quotient",
+                  1
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          }
+        ],
+        "schema": "rcsc-context-transport"
+      },
+      "vulnerable": {
+        "context": {
+          "provenance": null,
+          "scenario": "bounded quotient",
+          "shape": 0
+        },
+        "family": "divide_zero",
+        "initial_public_state": {
+          "audit": 0
+        },
+        "input_domains": {
+          "denominator": [
+            -1,
+            0,
+            1,
+            2
+          ],
+          "noise_0": [
+            0
+          ],
+          "numerator": [
+            -2,
+            0,
+            3
+          ]
+        },
+        "instructions": [
+          {
+            "dst": "context_0",
+            "expr": {
+              "var": "noise_0"
+            },
+            "op": "assign",
+            "role": "context"
+          },
+          {
+            "name": "pre-0",
+            "op": "emit",
+            "role": "context",
+            "value": {
+              "var": "context_0"
+            }
+          },
+          {
+            "dst": "aux",
+            "expr": {
+              "left": {
+                "const": 0
+              },
+              "op": "add",
+              "right": {
+                "const": 1
+              }
+            },
+            "op": "assign",
+            "role": "context"
+          },
+          {
+            "op": "nop",
+            "role": "context",
+            "tag": "shape-0"
+          },
+          {
+            "denominator": {
+              "var": "denominator"
+            },
+            "dst": "quotient",
+            "numerator": {
+              "var": "numerator"
+            },
+            "op": "divide",
+            "role": "root"
+          },
+          {
+            "name": "quotient",
+            "op": "emit",
+            "role": "context",
+            "value": {
+              "var": "quotient"
+            }
+          },
+          {
+            "op": "return",
+            "role": "context",
+            "value": {
+              "var": "quotient"
+            }
+          }
+        ],
+        "label": "vulnerable",
+        "parameters": {
+          "result_name": "quotient",
+          "rounding": "toward-zero"
+        },
+        "profile": "c",
+        "program_id": "transport-divide_zero-0-1-0-vulnerable",
+        "public_projection": [
+          "audit"
+        ],
+        "schema": "rcsc-program"
+      }
+    }
+  },
+  {
+    "case": "text-over-bound",
+    "packet": {
+      "certificate": {
+        "declared_family": "divide_zero",
+        "declared_repair": "insert-root-guard",
+        "pair_id": "transport-divide_zero-0-1-0",
+        "patched_id": "transport-divide_zero-0-1-0-patched",
+        "schema": "rcsc-pair-certificate",
+        "vulnerable_id": "transport-divide_zero-0-1-0-vulnerable",
+        "witness_input": {
+          "denominator": 0,
+          "noise_0": 0,
+          "numerator": -2
+        }
+      },
+      "context_domains": {
+        "noise_0": [
+          0,
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        ]
+      },
+      "patched": {
+        "context": {
+          "provenance": null,
+          "scenario": "bounded quotient",
+          "shape": 0
+        },
+        "family": "divide_zero",
+        "initial_public_state": {
+          "audit": 0
+        },
+        "input_domains": {
+          "denominator": [
+            -1,
+            0,
+            1,
+            2
+          ],
+          "noise_0": [
+            0
+          ],
+          "numerator": [
+            -2,
+            0,
+            3
+          ]
+        },
+        "instructions": [
+          {
+            "dst": "context_0",
+            "expr": {
+              "var": "noise_0"
+            },
+            "op": "assign",
+            "role": "context"
+          },
+          {
+            "name": "pre-0",
+            "op": "emit",
+            "role": "context",
+            "value": {
+              "var": "context_0"
+            }
+          },
+          {
+            "dst": "aux",
+            "expr": {
+              "left": {
+                "const": 0
+              },
+              "op": "add",
+              "right": {
+                "const": 1
+              }
+            },
+            "op": "assign",
+            "role": "context"
+          },
+          {
+            "op": "nop",
+            "role": "context",
+            "tag": "shape-0"
+          },
+          {
+            "op": "guard",
+            "pred": {
+              "left": {
+                "var": "denominator"
+              },
+              "op": "ne",
+              "right": {
+                "const": 0
+              }
+            },
+            "role": "root"
+          },
+          {
+            "denominator": {
+              "var": "denominator"
+            },
+            "dst": "quotient",
+            "numerator": {
+              "var": "numerator"
+            },
+            "op": "divide",
+            "role": "root"
+          },
+          {
+            "name": "quotient",
+            "op": "emit",
+            "role": "context",
+            "value": {
+              "var": "quotient"
+            }
+          },
+          {
+            "op": "return",
+            "role": "context",
+            "value": {
+              "var": "quotient"
+            }
+          }
+        ],
+        "label": "patched",
+        "parameters": {
+          "result_name": "quotient",
+          "rounding": "toward-zero"
+        },
+        "profile": "c",
+        "program_id": "transport-divide_zero-0-1-0-patched",
+        "public_projection": [
+          "audit"
+        ],
+        "schema": "rcsc-program"
+      },
+      "transport_certificate": {
+        "core_binding": {
+          "family": "divide_zero",
+          "initial_public_state": {
+            "audit": 0
+          },
+          "patched_core": [
+            {
+              "op": "guard",
+              "pred": {
+                "left": {
+                  "var": "denominator"
+                },
+                "op": "ne",
+                "right": {
+                  "const": 0
+                }
+              },
+              "role": "root"
+            },
+            {
+              "denominator": {
+                "var": "denominator"
+              },
+              "dst": "quotient",
+              "numerator": {
+                "var": "numerator"
+              },
+              "op": "divide",
+              "role": "root"
+            }
+          ],
+          "profile": "c",
+          "read_variables": [
+            "denominator",
+            "numerator"
+          ],
+          "root_domains": {
+            "denominator": [
+              -1,
+              0,
+              1,
+              2
+            ],
+            "numerator": [
+              -2,
+              0,
+              3
+            ]
+          },
+          "vulnerable_core": [
+            {
+              "denominator": {
+                "var": "denominator"
+              },
+              "dst": "quotient",
+              "numerator": {
+                "var": "numerator"
+              },
+              "op": "divide",
+              "role": "root"
+            }
+          ],
+          "write_variables": [
+            "quotient"
+          ]
+        },
+        "rows": [
+          {
+            "input": {
+              "denominator": -1,
+              "numerator": -2
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  -1
+                ],
+                [
+                  "local:numerator",
+                  -2
+                ],
+                [
+                  "local:quotient",
+                  2
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  -1
+                ],
+                [
+                  "local:numerator",
+                  -2
+                ],
+                [
+                  "local:quotient",
+                  2
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          },
+          {
+            "input": {
+              "denominator": -1,
+              "numerator": 0
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  -1
+                ],
+                [
+                  "local:numerator",
+                  0
+                ],
+                [
+                  "local:quotient",
+                  0
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  -1
+                ],
+                [
+                  "local:numerator",
+                  0
+                ],
+                [
+                  "local:quotient",
+                  0
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          },
+          {
+            "input": {
+              "denominator": -1,
+              "numerator": 3
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  -1
+                ],
+                [
+                  "local:numerator",
+                  3
+                ],
+                [
+                  "local:quotient",
+                  -3
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  -1
+                ],
+                [
+                  "local:numerator",
+                  3
+                ],
+                [
+                  "local:quotient",
+                  -3
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          },
+          {
+            "input": {
+              "denominator": 0,
+              "numerator": -2
+            },
+            "patched": {
+              "aborted": true,
+              "events": [],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 1,
+              "trace": [
+                "0:guard"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 1,
+              "trace": [
+                "0:divide"
+              ],
+              "violation": "DIVIDE_BY_ZERO"
+            }
+          },
+          {
+            "input": {
+              "denominator": 0,
+              "numerator": 0
+            },
+            "patched": {
+              "aborted": true,
+              "events": [],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 1,
+              "trace": [
+                "0:guard"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 1,
+              "trace": [
+                "0:divide"
+              ],
+              "violation": "DIVIDE_BY_ZERO"
+            }
+          },
+          {
+            "input": {
+              "denominator": 0,
+              "numerator": 3
+            },
+            "patched": {
+              "aborted": true,
+              "events": [],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 1,
+              "trace": [
+                "0:guard"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 1,
+              "trace": [
+                "0:divide"
+              ],
+              "violation": "DIVIDE_BY_ZERO"
+            }
+          },
+          {
+            "input": {
+              "denominator": 1,
+              "numerator": -2
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  1
+                ],
+                [
+                  "local:numerator",
+                  -2
+                ],
+                [
+                  "local:quotient",
+                  -2
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  1
+                ],
+                [
+                  "local:numerator",
+                  -2
+                ],
+                [
+                  "local:quotient",
+                  -2
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          },
+          {
+            "input": {
+              "denominator": 1,
+              "numerator": 0
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  1
+                ],
+                [
+                  "local:numerator",
+                  0
+                ],
+                [
+                  "local:quotient",
+                  0
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  1
+                ],
+                [
+                  "local:numerator",
+                  0
+                ],
+                [
+                  "local:quotient",
+                  0
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          },
+          {
+            "input": {
+              "denominator": 1,
+              "numerator": 3
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  1
+                ],
+                [
+                  "local:numerator",
+                  3
+                ],
+                [
+                  "local:quotient",
+                  3
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  1
+                ],
+                [
+                  "local:numerator",
+                  3
+                ],
+                [
+                  "local:quotient",
+                  3
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          },
+          {
+            "input": {
+              "denominator": 2,
+              "numerator": -2
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  2
+                ],
+                [
+                  "local:numerator",
+                  -2
+                ],
+                [
+                  "local:quotient",
+                  -1
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  2
+                ],
+                [
+                  "local:numerator",
+                  -2
+                ],
+                [
+                  "local:quotient",
+                  -1
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          },
+          {
+            "input": {
+              "denominator": 2,
+              "numerator": 0
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  2
+                ],
+                [
+                  "local:numerator",
+                  0
+                ],
+                [
+                  "local:quotient",
+                  0
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  2
+                ],
+                [
+                  "local:numerator",
+                  0
+                ],
+                [
+                  "local:quotient",
+                  0
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          },
+          {
+            "input": {
+              "denominator": 2,
+              "numerator": 3
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  2
+                ],
+                [
+                  "local:numerator",
+                  3
+                ],
+                [
+                  "local:quotient",
+                  1
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  2
+                ],
+                [
+                  "local:numerator",
+                  3
+                ],
+                [
+                  "local:quotient",
+                  1
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          }
+        ],
+        "schema": "rcsc-context-transport"
+      },
+      "vulnerable": {
+        "context": {
+          "provenance": null,
+          "scenario": "bounded quotient",
+          "shape": 0
+        },
+        "family": "divide_zero",
+        "initial_public_state": {
+          "audit": 0
+        },
+        "input_domains": {
+          "denominator": [
+            -1,
+            0,
+            1,
+            2
+          ],
+          "noise_0": [
+            0
+          ],
+          "numerator": [
+            -2,
+            0,
+            3
+          ]
+        },
+        "instructions": [
+          {
+            "dst": "context_0",
+            "expr": {
+              "var": "noise_0"
+            },
+            "op": "assign",
+            "role": "context"
+          },
+          {
+            "name": "pre-0",
+            "op": "emit",
+            "role": "context",
+            "value": {
+              "var": "context_0"
+            }
+          },
+          {
+            "dst": "aux",
+            "expr": {
+              "left": {
+                "const": 0
+              },
+              "op": "add",
+              "right": {
+                "const": 1
+              }
+            },
+            "op": "assign",
+            "role": "context"
+          },
+          {
+            "op": "nop",
+            "role": "context",
+            "tag": "shape-0"
+          },
+          {
+            "denominator": {
+              "var": "denominator"
+            },
+            "dst": "quotient",
+            "numerator": {
+              "var": "numerator"
+            },
+            "op": "divide",
+            "role": "root"
+          },
+          {
+            "name": "quotient",
+            "op": "emit",
+            "role": "context",
+            "value": {
+              "var": "quotient"
+            }
+          },
+          {
+            "op": "return",
+            "role": "context",
+            "value": {
+              "var": "quotient"
+            }
+          }
+        ],
+        "label": "vulnerable",
+        "parameters": {
+          "result_name": "quotient",
+          "rounding": "toward-zero"
+        },
+        "profile": "c",
+        "program_id": "transport-divide_zero-0-1-0-vulnerable",
+        "public_projection": [
+          "audit"
+        ],
+        "schema": "rcsc-program"
+      }
+    }
+  },
+  {
+    "case": "natural-first-error",
+    "packet": {
+      "certificate": {
+        "declared_family": "divide_zero",
+        "declared_repair": "insert-root-guard",
+        "pair_id": "transport-divide_zero-0-1-0",
+        "patched_id": "transport-divide_zero-0-1-0-patched",
+        "schema": "rcsc-pair-certificate",
+        "vulnerable_id": "transport-divide_zero-0-1-0-vulnerable",
+        "witness_input": {
+          "denominator": 0,
+          "noise_0": 0,
+          "numerator": -2
+        }
+      },
+      "context_domains": {
+        "noise_0": [
+          0,
+          1
+        ]
+      },
+      "patched": {
+        "context": {
+          "provenance": null,
+          "scenario": "bounded quotient",
+          "shape": 0
+        },
+        "family": "divide_zero",
+        "initial_public_state": {
+          "audit": 0
+        },
+        "input_domains": {
+          "denominator": [
+            -1,
+            0,
+            1,
+            2
+          ],
+          "noise_0": [
+            0
+          ],
+          "numerator": [
+            true
+          ]
+        },
+        "instructions": [
+          {
+            "dst": "context_0",
+            "expr": {
+              "var": "noise_0"
+            },
+            "op": "assign",
+            "role": "context"
+          },
+          {
+            "name": "pre-0",
+            "op": "emit",
+            "role": "context",
+            "value": {
+              "var": "context_0"
+            }
+          },
+          {
+            "dst": "aux",
+            "expr": {
+              "left": {
+                "const": 0
+              },
+              "op": "add",
+              "right": {
+                "const": 1
+              }
+            },
+            "op": "assign",
+            "role": "context"
+          },
+          {
+            "op": "nop",
+            "role": "context",
+            "tag": "shape-0"
+          },
+          {
+            "op": "guard",
+            "pred": {
+              "left": {
+                "var": "denominator"
+              },
+              "op": "ne",
+              "right": {
+                "const": 0
+              }
+            },
+            "role": "root"
+          },
+          {
+            "denominator": {
+              "var": "denominator"
+            },
+            "dst": "quotient",
+            "numerator": {
+              "var": "numerator"
+            },
+            "op": "divide",
+            "role": "root"
+          },
+          {
+            "name": "quotient",
+            "op": "emit",
+            "role": "context",
+            "value": {
+              "var": "quotient"
+            }
+          },
+          {
+            "op": "return",
+            "role": "context",
+            "value": {
+              "var": "quotient"
+            }
+          }
+        ],
+        "label": "patched",
+        "parameters": {
+          "result_name": "quotient",
+          "rounding": "toward-zero"
+        },
+        "profile": "c",
+        "program_id": "transport-divide_zero-0-1-0-patched",
+        "public_projection": [
+          "audit"
+        ],
+        "schema": "rcsc-program"
+      },
+      "transport_certificate": {
+        "core_binding": {
+          "family": "divide_zero",
+          "initial_public_state": {
+            "audit": 0
+          },
+          "patched_core": [
+            {
+              "op": "guard",
+              "pred": {
+                "left": {
+                  "var": "denominator"
+                },
+                "op": "ne",
+                "right": {
+                  "const": 0
+                }
+              },
+              "role": "root"
+            },
+            {
+              "denominator": {
+                "var": "denominator"
+              },
+              "dst": "quotient",
+              "numerator": {
+                "var": "numerator"
+              },
+              "op": "divide",
+              "role": "root"
+            }
+          ],
+          "profile": "c",
+          "read_variables": [
+            "denominator",
+            "numerator"
+          ],
+          "root_domains": {
+            "denominator": [
+              -1,
+              0,
+              1,
+              2
+            ],
+            "numerator": [
+              -2,
+              0,
+              3
+            ]
+          },
+          "vulnerable_core": [
+            {
+              "denominator": {
+                "var": "denominator"
+              },
+              "dst": "quotient",
+              "numerator": {
+                "var": "numerator"
+              },
+              "op": "divide",
+              "role": "root"
+            }
+          ],
+          "write_variables": [
+            "quotient"
+          ]
+        },
+        "rows": [
+          {
+            "input": {
+              "denominator": -1,
+              "numerator": -2
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  -1
+                ],
+                [
+                  "local:numerator",
+                  -2
+                ],
+                [
+                  "local:quotient",
+                  2
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  -1
+                ],
+                [
+                  "local:numerator",
+                  -2
+                ],
+                [
+                  "local:quotient",
+                  2
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          },
+          {
+            "input": {
+              "denominator": -1,
+              "numerator": 0
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  -1
+                ],
+                [
+                  "local:numerator",
+                  0
+                ],
+                [
+                  "local:quotient",
+                  0
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  -1
+                ],
+                [
+                  "local:numerator",
+                  0
+                ],
+                [
+                  "local:quotient",
+                  0
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          },
+          {
+            "input": {
+              "denominator": -1,
+              "numerator": 3
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  -1
+                ],
+                [
+                  "local:numerator",
+                  3
+                ],
+                [
+                  "local:quotient",
+                  -3
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  -1
+                ],
+                [
+                  "local:numerator",
+                  3
+                ],
+                [
+                  "local:quotient",
+                  -3
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          },
+          {
+            "input": {
+              "denominator": 0,
+              "numerator": -2
+            },
+            "patched": {
+              "aborted": true,
+              "events": [],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 1,
+              "trace": [
+                "0:guard"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 1,
+              "trace": [
+                "0:divide"
+              ],
+              "violation": "DIVIDE_BY_ZERO"
+            }
+          },
+          {
+            "input": {
+              "denominator": 0,
+              "numerator": 0
+            },
+            "patched": {
+              "aborted": true,
+              "events": [],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 1,
+              "trace": [
+                "0:guard"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 1,
+              "trace": [
+                "0:divide"
+              ],
+              "violation": "DIVIDE_BY_ZERO"
+            }
+          },
+          {
+            "input": {
+              "denominator": 0,
+              "numerator": 3
+            },
+            "patched": {
+              "aborted": true,
+              "events": [],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 1,
+              "trace": [
+                "0:guard"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 1,
+              "trace": [
+                "0:divide"
+              ],
+              "violation": "DIVIDE_BY_ZERO"
+            }
+          },
+          {
+            "input": {
+              "denominator": 1,
+              "numerator": -2
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  1
+                ],
+                [
+                  "local:numerator",
+                  -2
+                ],
+                [
+                  "local:quotient",
+                  -2
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  1
+                ],
+                [
+                  "local:numerator",
+                  -2
+                ],
+                [
+                  "local:quotient",
+                  -2
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          },
+          {
+            "input": {
+              "denominator": 1,
+              "numerator": 0
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  1
+                ],
+                [
+                  "local:numerator",
+                  0
+                ],
+                [
+                  "local:quotient",
+                  0
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  1
+                ],
+                [
+                  "local:numerator",
+                  0
+                ],
+                [
+                  "local:quotient",
+                  0
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          },
+          {
+            "input": {
+              "denominator": 1,
+              "numerator": 3
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  1
+                ],
+                [
+                  "local:numerator",
+                  3
+                ],
+                [
+                  "local:quotient",
+                  3
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  1
+                ],
+                [
+                  "local:numerator",
+                  3
+                ],
+                [
+                  "local:quotient",
+                  3
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          },
+          {
+            "input": {
+              "denominator": 2,
+              "numerator": -2
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  2
+                ],
+                [
+                  "local:numerator",
+                  -2
+                ],
+                [
+                  "local:quotient",
+                  -1
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  2
+                ],
+                [
+                  "local:numerator",
+                  -2
+                ],
+                [
+                  "local:quotient",
+                  -1
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          },
+          {
+            "input": {
+              "denominator": 2,
+              "numerator": 0
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  2
+                ],
+                [
+                  "local:numerator",
+                  0
+                ],
+                [
+                  "local:quotient",
+                  0
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  2
+                ],
+                [
+                  "local:numerator",
+                  0
+                ],
+                [
+                  "local:quotient",
+                  0
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          },
+          {
+            "input": {
+              "denominator": 2,
+              "numerator": 3
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  2
+                ],
+                [
+                  "local:numerator",
+                  3
+                ],
+                [
+                  "local:quotient",
+                  1
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  2
+                ],
+                [
+                  "local:numerator",
+                  3
+                ],
+                [
+                  "local:quotient",
+                  1
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          }
+        ],
+        "schema": "rcsc-context-transport"
+      },
+      "vulnerable": {
+        "context": {
+          "provenance": null,
+          "scenario": "bounded quotient",
+          "shape": 0
+        },
+        "family": "divide_zero",
+        "initial_public_state": {
+          "audit": 0
+        },
+        "input_domains": {
+          "denominator": [
+            -1,
+            0,
+            1,
+            2
+          ],
+          "noise_0": [
+            0
+          ],
+          "numerator": [
+            true
+          ]
+        },
+        "instructions": [
+          {
+            "dst": "context_0",
+            "expr": {
+              "var": "noise_0"
+            },
+            "op": "assign",
+            "role": "context"
+          },
+          {
+            "name": "pre-0",
+            "op": "emit",
+            "role": "context",
+            "value": {
+              "var": "context_0"
+            }
+          },
+          {
+            "dst": "aux",
+            "expr": {
+              "left": {
+                "const": 0
+              },
+              "op": "add",
+              "right": {
+                "const": 1
+              }
+            },
+            "op": "assign",
+            "role": "context"
+          },
+          {
+            "op": "nop",
+            "role": "context",
+            "tag": "shape-0"
+          },
+          {
+            "denominator": {
+              "var": "denominator"
+            },
+            "dst": "quotient",
+            "numerator": {
+              "var": "numerator"
+            },
+            "op": "divide",
+            "role": "root"
+          },
+          {
+            "name": "quotient",
+            "op": "emit",
+            "role": "context",
+            "value": {
+              "var": "quotient"
+            }
+          },
+          {
+            "op": "return",
+            "role": "context",
+            "value": {
+              "var": "quotient"
+            }
+          }
+        ],
+        "label": "vulnerable",
+        "parameters": {
+          "result_name": "quotient",
+          "rounding": "toward-zero"
+        },
+        "profile": "c",
+        "program_id": "transport-divide_zero-0-1-0-vulnerable",
+        "public_projection": [
+          "audit"
+        ],
+        "schema": "rcsc-program"
+      }
+    }
+  },
+  {
+    "case": "natural-second-error",
+    "packet": {
+      "certificate": {
+        "declared_family": "divide_zero",
+        "declared_repair": "insert-root-guard",
+        "pair_id": "transport-divide_zero-0-1-0",
+        "patched_id": "transport-divide_zero-0-1-0-patched",
+        "schema": "rcsc-pair-certificate",
+        "vulnerable_id": "transport-divide_zero-0-1-0-vulnerable",
+        "witness_input": {
+          "denominator": 0,
+          "noise_0": 0,
+          "numerator": -2
+        }
+      },
+      "context_domains": {
+        "noise_0": [
+          0,
+          1
+        ]
+      },
+      "patched": {
+        "context": {
+          "provenance": null,
+          "scenario": "bounded quotient",
+          "shape": 0
+        },
+        "family": "divide_zero",
+        "initial_public_state": {
+          "audit": 0
+        },
+        "input_domains": {
+          "denominator": [
+            -1,
+            0,
+            1,
+            2
+          ],
+          "noise_0": [
+            0
+          ],
+          "numerator": [
+            -2,
+            0,
+            3
+          ]
+        },
+        "instructions": [
+          {
+            "dst": "test_local",
+            "expr": {
+              "left": {
+                "const": true
+              },
+              "op": "add",
+              "right": {
+                "const": 1
+              }
+            },
+            "op": "assign",
+            "role": "root"
+          },
+          {
+            "dst": "context_0",
+            "expr": {
+              "var": "noise_0"
+            },
+            "op": "assign",
+            "role": "context"
+          },
+          {
+            "name": "pre-0",
+            "op": "emit",
+            "role": "context",
+            "value": {
+              "var": "context_0"
+            }
+          },
+          {
+            "dst": "aux",
+            "expr": {
+              "left": {
+                "const": 0
+              },
+              "op": "add",
+              "right": {
+                "const": 1
+              }
+            },
+            "op": "assign",
+            "role": "context"
+          },
+          {
+            "op": "nop",
+            "role": "context",
+            "tag": "shape-0"
+          },
+          {
+            "op": "guard",
+            "pred": {
+              "left": {
+                "var": "denominator"
+              },
+              "op": "ne",
+              "right": {
+                "const": 0
+              }
+            },
+            "role": "root"
+          },
+          {
+            "denominator": {
+              "var": "denominator"
+            },
+            "dst": "quotient",
+            "numerator": {
+              "var": "numerator"
+            },
+            "op": "divide",
+            "role": "root"
+          },
+          {
+            "name": "quotient",
+            "op": "emit",
+            "role": "context",
+            "value": {
+              "var": "quotient"
+            }
+          },
+          {
+            "op": "return",
+            "role": "context",
+            "value": {
+              "var": "quotient"
+            }
+          }
+        ],
+        "label": "patched",
+        "parameters": {
+          "result_name": "quotient",
+          "rounding": "toward-zero"
+        },
+        "profile": "c",
+        "program_id": "transport-divide_zero-0-1-0-patched",
+        "public_projection": [
+          "audit"
+        ],
+        "schema": "rcsc-program"
+      },
+      "transport_certificate": {
+        "core_binding": {
+          "family": "divide_zero",
+          "initial_public_state": {
+            "audit": 0
+          },
+          "patched_core": [
+            {
+              "op": "guard",
+              "pred": {
+                "left": {
+                  "var": "denominator"
+                },
+                "op": "ne",
+                "right": {
+                  "const": 0
+                }
+              },
+              "role": "root"
+            },
+            {
+              "denominator": {
+                "var": "denominator"
+              },
+              "dst": "quotient",
+              "numerator": {
+                "var": "numerator"
+              },
+              "op": "divide",
+              "role": "root"
+            }
+          ],
+          "profile": "c",
+          "read_variables": [
+            "denominator",
+            "numerator"
+          ],
+          "root_domains": {
+            "denominator": [
+              -1,
+              0,
+              1,
+              2
+            ],
+            "numerator": [
+              -2,
+              0,
+              3
+            ]
+          },
+          "vulnerable_core": [
+            {
+              "denominator": {
+                "var": "denominator"
+              },
+              "dst": "quotient",
+              "numerator": {
+                "var": "numerator"
+              },
+              "op": "divide",
+              "role": "root"
+            }
+          ],
+          "write_variables": [
+            "quotient"
+          ]
+        },
+        "rows": [
+          {
+            "input": {
+              "denominator": -1,
+              "numerator": -2
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  -1
+                ],
+                [
+                  "local:numerator",
+                  -2
+                ],
+                [
+                  "local:quotient",
+                  2
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  -1
+                ],
+                [
+                  "local:numerator",
+                  -2
+                ],
+                [
+                  "local:quotient",
+                  2
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          },
+          {
+            "input": {
+              "denominator": -1,
+              "numerator": 0
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  -1
+                ],
+                [
+                  "local:numerator",
+                  0
+                ],
+                [
+                  "local:quotient",
+                  0
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  -1
+                ],
+                [
+                  "local:numerator",
+                  0
+                ],
+                [
+                  "local:quotient",
+                  0
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          },
+          {
+            "input": {
+              "denominator": -1,
+              "numerator": 3
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  -1
+                ],
+                [
+                  "local:numerator",
+                  3
+                ],
+                [
+                  "local:quotient",
+                  -3
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  -1
+                ],
+                [
+                  "local:numerator",
+                  3
+                ],
+                [
+                  "local:quotient",
+                  -3
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          },
+          {
+            "input": {
+              "denominator": 0,
+              "numerator": -2
+            },
+            "patched": {
+              "aborted": true,
+              "events": [],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 1,
+              "trace": [
+                "0:guard"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 1,
+              "trace": [
+                "0:divide"
+              ],
+              "violation": "DIVIDE_BY_ZERO"
+            }
+          },
+          {
+            "input": {
+              "denominator": 0,
+              "numerator": 0
+            },
+            "patched": {
+              "aborted": true,
+              "events": [],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 1,
+              "trace": [
+                "0:guard"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 1,
+              "trace": [
+                "0:divide"
+              ],
+              "violation": "DIVIDE_BY_ZERO"
+            }
+          },
+          {
+            "input": {
+              "denominator": 0,
+              "numerator": 3
+            },
+            "patched": {
+              "aborted": true,
+              "events": [],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 1,
+              "trace": [
+                "0:guard"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 1,
+              "trace": [
+                "0:divide"
+              ],
+              "violation": "DIVIDE_BY_ZERO"
+            }
+          },
+          {
+            "input": {
+              "denominator": 1,
+              "numerator": -2
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  1
+                ],
+                [
+                  "local:numerator",
+                  -2
+                ],
+                [
+                  "local:quotient",
+                  -2
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  1
+                ],
+                [
+                  "local:numerator",
+                  -2
+                ],
+                [
+                  "local:quotient",
+                  -2
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          },
+          {
+            "input": {
+              "denominator": 1,
+              "numerator": 0
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  1
+                ],
+                [
+                  "local:numerator",
+                  0
+                ],
+                [
+                  "local:quotient",
+                  0
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  1
+                ],
+                [
+                  "local:numerator",
+                  0
+                ],
+                [
+                  "local:quotient",
+                  0
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          },
+          {
+            "input": {
+              "denominator": 1,
+              "numerator": 3
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  1
+                ],
+                [
+                  "local:numerator",
+                  3
+                ],
+                [
+                  "local:quotient",
+                  3
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  1
+                ],
+                [
+                  "local:numerator",
+                  3
+                ],
+                [
+                  "local:quotient",
+                  3
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          },
+          {
+            "input": {
+              "denominator": 2,
+              "numerator": -2
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  2
+                ],
+                [
+                  "local:numerator",
+                  -2
+                ],
+                [
+                  "local:quotient",
+                  -1
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  2
+                ],
+                [
+                  "local:numerator",
+                  -2
+                ],
+                [
+                  "local:quotient",
+                  -1
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          },
+          {
+            "input": {
+              "denominator": 2,
+              "numerator": 0
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  2
+                ],
+                [
+                  "local:numerator",
+                  0
+                ],
+                [
+                  "local:quotient",
+                  0
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  2
+                ],
+                [
+                  "local:numerator",
+                  0
+                ],
+                [
+                  "local:quotient",
+                  0
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          },
+          {
+            "input": {
+              "denominator": 2,
+              "numerator": 3
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  2
+                ],
+                [
+                  "local:numerator",
+                  3
+                ],
+                [
+                  "local:quotient",
+                  1
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  2
+                ],
+                [
+                  "local:numerator",
+                  3
+                ],
+                [
+                  "local:quotient",
+                  1
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          }
+        ],
+        "schema": "rcsc-context-transport"
+      },
+      "vulnerable": {
+        "context": {
+          "provenance": null,
+          "scenario": "bounded quotient",
+          "shape": 0
+        },
+        "family": "divide_zero",
+        "initial_public_state": {
+          "audit": 0
+        },
+        "input_domains": {
+          "denominator": [
+            -1,
+            0,
+            1,
+            2
+          ],
+          "noise_0": [
+            0
+          ],
+          "numerator": [
+            -2,
+            0,
+            3
+          ]
+        },
+        "instructions": [
+          {
+            "dst": "context_0",
+            "expr": {
+              "var": "noise_0"
+            },
+            "op": "assign",
+            "role": "context"
+          },
+          {
+            "name": "pre-0",
+            "op": "emit",
+            "role": "context",
+            "value": {
+              "var": "context_0"
+            }
+          },
+          {
+            "dst": "aux",
+            "expr": {
+              "left": {
+                "const": 0
+              },
+              "op": "add",
+              "right": {
+                "const": 1
+              }
+            },
+            "op": "assign",
+            "role": "context"
+          },
+          {
+            "op": "nop",
+            "role": "context",
+            "tag": "shape-0"
+          },
+          {
+            "denominator": {
+              "var": "denominator"
+            },
+            "dst": "quotient",
+            "numerator": {
+              "var": "numerator"
+            },
+            "op": "divide",
+            "role": "root"
+          },
+          {
+            "name": "quotient",
+            "op": "emit",
+            "role": "context",
+            "value": {
+              "var": "quotient"
+            }
+          },
+          {
+            "op": "return",
+            "role": "context",
+            "value": {
+              "var": "quotient"
+            }
+          }
+        ],
+        "label": "vulnerable",
+        "parameters": {
+          "result_name": "quotient",
+          "rounding": "toward-zero"
+        },
+        "profile": "c",
+        "program_id": "transport-divide_zero-0-1-0-vulnerable",
+        "public_projection": [
+          "audit"
+        ],
+        "schema": "rcsc-program"
+      }
+    }
+  },
+  {
+    "case": "test-only-core-second-call-injection",
+    "instrument": "raise ValueError before the second evaluator call; unit accounting only",
+    "packet": {
+      "certificate": {
+        "declared_family": "divide_zero",
+        "declared_repair": "insert-root-guard",
+        "pair_id": "transport-divide_zero-0-1-0",
+        "patched_id": "transport-divide_zero-0-1-0-patched",
+        "schema": "rcsc-pair-certificate",
+        "vulnerable_id": "transport-divide_zero-0-1-0-vulnerable",
+        "witness_input": {
+          "denominator": 0,
+          "noise_0": 0,
+          "numerator": -2
+        }
+      },
+      "context_domains": {
+        "noise_0": [
+          0,
+          1
+        ]
+      },
+      "patched": {
+        "context": {
+          "provenance": null,
+          "scenario": "bounded quotient",
+          "shape": 0
+        },
+        "family": "divide_zero",
+        "initial_public_state": {
+          "audit": 0
+        },
+        "input_domains": {
+          "denominator": [
+            -1,
+            0,
+            1,
+            2
+          ],
+          "noise_0": [
+            0
+          ],
+          "numerator": [
+            -2,
+            0,
+            3
+          ]
+        },
+        "instructions": [
+          {
+            "dst": "context_0",
+            "expr": {
+              "var": "noise_0"
+            },
+            "op": "assign",
+            "role": "context"
+          },
+          {
+            "name": "pre-0",
+            "op": "emit",
+            "role": "context",
+            "value": {
+              "var": "context_0"
+            }
+          },
+          {
+            "dst": "aux",
+            "expr": {
+              "left": {
+                "const": 0
+              },
+              "op": "add",
+              "right": {
+                "const": 1
+              }
+            },
+            "op": "assign",
+            "role": "context"
+          },
+          {
+            "op": "nop",
+            "role": "context",
+            "tag": "shape-0"
+          },
+          {
+            "op": "guard",
+            "pred": {
+              "left": {
+                "var": "denominator"
+              },
+              "op": "ne",
+              "right": {
+                "const": 0
+              }
+            },
+            "role": "root"
+          },
+          {
+            "denominator": {
+              "var": "denominator"
+            },
+            "dst": "quotient",
+            "numerator": {
+              "var": "numerator"
+            },
+            "op": "divide",
+            "role": "root"
+          },
+          {
+            "name": "quotient",
+            "op": "emit",
+            "role": "context",
+            "value": {
+              "var": "quotient"
+            }
+          },
+          {
+            "op": "return",
+            "role": "context",
+            "value": {
+              "var": "quotient"
+            }
+          }
+        ],
+        "label": "patched",
+        "parameters": {
+          "result_name": "quotient",
+          "rounding": "toward-zero"
+        },
+        "profile": "c",
+        "program_id": "transport-divide_zero-0-1-0-patched",
+        "public_projection": [
+          "audit"
+        ],
+        "schema": "rcsc-program"
+      },
+      "transport_certificate": {
+        "core_binding": {
+          "family": "divide_zero",
+          "initial_public_state": {
+            "audit": 0
+          },
+          "patched_core": [
+            {
+              "op": "guard",
+              "pred": {
+                "left": {
+                  "var": "denominator"
+                },
+                "op": "ne",
+                "right": {
+                  "const": 0
+                }
+              },
+              "role": "root"
+            },
+            {
+              "denominator": {
+                "var": "denominator"
+              },
+              "dst": "quotient",
+              "numerator": {
+                "var": "numerator"
+              },
+              "op": "divide",
+              "role": "root"
+            }
+          ],
+          "profile": "c",
+          "read_variables": [
+            "denominator",
+            "numerator"
+          ],
+          "root_domains": {
+            "denominator": [
+              -1,
+              0,
+              1,
+              2
+            ],
+            "numerator": [
+              -2,
+              0,
+              3
+            ]
+          },
+          "vulnerable_core": [
+            {
+              "denominator": {
+                "var": "denominator"
+              },
+              "dst": "quotient",
+              "numerator": {
+                "var": "numerator"
+              },
+              "op": "divide",
+              "role": "root"
+            }
+          ],
+          "write_variables": [
+            "quotient"
+          ]
+        },
+        "rows": [
+          {
+            "input": {
+              "denominator": -1,
+              "numerator": -2
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  -1
+                ],
+                [
+                  "local:numerator",
+                  -2
+                ],
+                [
+                  "local:quotient",
+                  2
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  -1
+                ],
+                [
+                  "local:numerator",
+                  -2
+                ],
+                [
+                  "local:quotient",
+                  2
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          },
+          {
+            "input": {
+              "denominator": -1,
+              "numerator": 0
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  -1
+                ],
+                [
+                  "local:numerator",
+                  0
+                ],
+                [
+                  "local:quotient",
+                  0
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  -1
+                ],
+                [
+                  "local:numerator",
+                  0
+                ],
+                [
+                  "local:quotient",
+                  0
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          },
+          {
+            "input": {
+              "denominator": -1,
+              "numerator": 3
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  -1
+                ],
+                [
+                  "local:numerator",
+                  3
+                ],
+                [
+                  "local:quotient",
+                  -3
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  -1
+                ],
+                [
+                  "local:numerator",
+                  3
+                ],
+                [
+                  "local:quotient",
+                  -3
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          },
+          {
+            "input": {
+              "denominator": 0,
+              "numerator": -2
+            },
+            "patched": {
+              "aborted": true,
+              "events": [],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 1,
+              "trace": [
+                "0:guard"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 1,
+              "trace": [
+                "0:divide"
+              ],
+              "violation": "DIVIDE_BY_ZERO"
+            }
+          },
+          {
+            "input": {
+              "denominator": 0,
+              "numerator": 0
+            },
+            "patched": {
+              "aborted": true,
+              "events": [],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 1,
+              "trace": [
+                "0:guard"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 1,
+              "trace": [
+                "0:divide"
+              ],
+              "violation": "DIVIDE_BY_ZERO"
+            }
+          },
+          {
+            "input": {
+              "denominator": 0,
+              "numerator": 3
+            },
+            "patched": {
+              "aborted": true,
+              "events": [],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 1,
+              "trace": [
+                "0:guard"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 1,
+              "trace": [
+                "0:divide"
+              ],
+              "violation": "DIVIDE_BY_ZERO"
+            }
+          },
+          {
+            "input": {
+              "denominator": 1,
+              "numerator": -2
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  1
+                ],
+                [
+                  "local:numerator",
+                  -2
+                ],
+                [
+                  "local:quotient",
+                  -2
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  1
+                ],
+                [
+                  "local:numerator",
+                  -2
+                ],
+                [
+                  "local:quotient",
+                  -2
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          },
+          {
+            "input": {
+              "denominator": 1,
+              "numerator": 0
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  1
+                ],
+                [
+                  "local:numerator",
+                  0
+                ],
+                [
+                  "local:quotient",
+                  0
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  1
+                ],
+                [
+                  "local:numerator",
+                  0
+                ],
+                [
+                  "local:quotient",
+                  0
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          },
+          {
+            "input": {
+              "denominator": 1,
+              "numerator": 3
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  1
+                ],
+                [
+                  "local:numerator",
+                  3
+                ],
+                [
+                  "local:quotient",
+                  3
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  1
+                ],
+                [
+                  "local:numerator",
+                  3
+                ],
+                [
+                  "local:quotient",
+                  3
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          },
+          {
+            "input": {
+              "denominator": 2,
+              "numerator": -2
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  2
+                ],
+                [
+                  "local:numerator",
+                  -2
+                ],
+                [
+                  "local:quotient",
+                  -1
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  2
+                ],
+                [
+                  "local:numerator",
+                  -2
+                ],
+                [
+                  "local:quotient",
+                  -1
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          },
+          {
+            "input": {
+              "denominator": 2,
+              "numerator": 0
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  2
+                ],
+                [
+                  "local:numerator",
+                  0
+                ],
+                [
+                  "local:quotient",
+                  0
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  2
+                ],
+                [
+                  "local:numerator",
+                  0
+                ],
+                [
+                  "local:quotient",
+                  0
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          },
+          {
+            "input": {
+              "denominator": 2,
+              "numerator": 3
+            },
+            "patched": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  2
+                ],
+                [
+                  "local:numerator",
+                  3
+                ],
+                [
+                  "local:quotient",
+                  1
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 5,
+              "trace": [
+                "0:guard",
+                "1:divide",
+                "2:emit",
+                "3:emit",
+                "4:emit"
+              ],
+              "violation": null
+            },
+            "vulnerable": {
+              "aborted": false,
+              "events": [
+                [
+                  "local:denominator",
+                  2
+                ],
+                [
+                  "local:numerator",
+                  3
+                ],
+                [
+                  "local:quotient",
+                  1
+                ]
+              ],
+              "public_state": [
+                [
+                  "audit",
+                  0
+                ]
+              ],
+              "returned": null,
+              "steps": 4,
+              "trace": [
+                "0:divide",
+                "1:emit",
+                "2:emit",
+                "3:emit"
+              ],
+              "violation": null
+            }
+          }
+        ],
+        "schema": "rcsc-context-transport"
+      },
+      "vulnerable": {
+        "context": {
+          "provenance": null,
+          "scenario": "bounded quotient",
+          "shape": 0
+        },
+        "family": "divide_zero",
+        "initial_public_state": {
+          "audit": 0
+        },
+        "input_domains": {
+          "denominator": [
+            -1,
+            0,
+            1,
+            2
+          ],
+          "noise_0": [
+            0
+          ],
+          "numerator": [
+            -2,
+            0,
+            3
+          ]
+        },
+        "instructions": [
+          {
+            "dst": "context_0",
+            "expr": {
+              "var": "noise_0"
+            },
+            "op": "assign",
+            "role": "context"
+          },
+          {
+            "name": "pre-0",
+            "op": "emit",
+            "role": "context",
+            "value": {
+              "var": "context_0"
+            }
+          },
+          {
+            "dst": "aux",
+            "expr": {
+              "left": {
+                "const": 0
+              },
+              "op": "add",
+              "right": {
+                "const": 1
+              }
+            },
+            "op": "assign",
+            "role": "context"
+          },
+          {
+            "op": "nop",
+            "role": "context",
+            "tag": "shape-0"
+          },
+          {
+            "denominator": {
+              "var": "denominator"
+            },
+            "dst": "quotient",
+            "numerator": {
+              "var": "numerator"
+            },
+            "op": "divide",
+            "role": "root"
+          },
+          {
+            "name": "quotient",
+            "op": "emit",
+            "role": "context",
+            "value": {
+              "var": "quotient"
+            }
+          },
+          {
+            "op": "return",
+            "role": "context",
+            "value": {
+              "var": "quotient"
+            }
+          }
+        ],
+        "label": "vulnerable",
+        "parameters": {
+          "result_name": "quotient",
+          "rounding": "toward-zero"
+        },
+        "profile": "c",
+        "program_id": "transport-divide_zero-0-1-0-vulnerable",
+        "public_projection": [
+          "audit"
+        ],
+        "schema": "rcsc-program"
+      }
+    }
+  }
+]

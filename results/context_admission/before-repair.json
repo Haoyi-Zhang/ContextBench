@@ -1,0 +1,1495 @@
+{
+  "domain_probes": [
+    {
+      "case": "int-at-bound",
+      "gate": {
+        "admission_ok": true,
+        "context_domains_ok": true,
+        "declarations_ok": true,
+        "diagnostics": [],
+        "preconditions_ok": true,
+        "repair_check_independent": false,
+        "repair_detail": {
+          "guard_binding": {
+            "canonical_relation": "denominator != 0",
+            "denominator": [
+              [
+                "var",
+                "denominator"
+              ]
+            ],
+            "extra_conjuncts": 0,
+            "family": "divide_zero"
+          },
+          "protected_operation": "divide",
+          "repair": "insert-root-guard",
+          "site": 4
+        },
+        "repair_membership_ok": true,
+        "repair_reason": "accepted",
+        "shared_repair_checker": "rcsc.repair.check_repair_membership",
+        "uses_context_abstract_interpreter": false,
+        "uses_root_table": false,
+        "uses_transport_footprint": false
+      },
+      "production": {
+        "accepted": true,
+        "allocation_upper_bound": 49170,
+        "certificate_bytes": 6187,
+        "context_valuations": 2,
+        "core_executions": 24,
+        "core_valuations": 12,
+        "detail": null,
+        "elapsed_ms": 4.253799997968599,
+        "productive_safe_roots": 9,
+        "reason": "accepted",
+        "represented_endpoint_executions": 48,
+        "vulnerable_roots": 3
+      },
+      "value_size": 256,
+      "value_type": "int"
+    },
+    {
+      "case": "int-over-bound",
+      "gate": {
+        "admission_ok": true,
+        "context_domains_ok": true,
+        "declarations_ok": true,
+        "diagnostics": [],
+        "preconditions_ok": true,
+        "repair_check_independent": false,
+        "repair_detail": {
+          "guard_binding": {
+            "canonical_relation": "denominator != 0",
+            "denominator": [
+              [
+                "var",
+                "denominator"
+              ]
+            ],
+            "extra_conjuncts": 0,
+            "family": "divide_zero"
+          },
+          "protected_operation": "divide",
+          "repair": "insert-root-guard",
+          "site": 4
+        },
+        "repair_membership_ok": true,
+        "repair_reason": "accepted",
+        "shared_repair_checker": "rcsc.repair.check_repair_membership",
+        "uses_context_abstract_interpreter": false,
+        "uses_root_table": false,
+        "uses_transport_footprint": false
+      },
+      "production": {
+        "accepted": false,
+        "allocation_upper_bound": 0,
+        "certificate_bytes": 0,
+        "context_valuations": 0,
+        "core_executions": 0,
+        "core_valuations": 0,
+        "detail": "integer exceeds the finite value bound",
+        "elapsed_ms": 0.10410000686533749,
+        "productive_safe_roots": 0,
+        "reason": "transport-admission-or-execution-error",
+        "represented_endpoint_executions": 0,
+        "vulnerable_roots": 0
+      },
+      "value_size": 257,
+      "value_type": "int"
+    },
+    {
+      "case": "text-at-bound",
+      "gate": {
+        "admission_ok": true,
+        "context_domains_ok": true,
+        "declarations_ok": true,
+        "diagnostics": [],
+        "preconditions_ok": true,
+        "repair_check_independent": false,
+        "repair_detail": {
+          "guard_binding": {
+            "canonical_relation": "denominator != 0",
+            "denominator": [
+              [
+                "var",
+                "denominator"
+              ]
+            ],
+            "extra_conjuncts": 0,
+            "family": "divide_zero"
+          },
+          "protected_operation": "divide",
+          "repair": "insert-root-guard",
+          "site": 4
+        },
+        "repair_membership_ok": true,
+        "repair_reason": "accepted",
+        "shared_repair_checker": "rcsc.repair.check_repair_membership",
+        "uses_context_abstract_interpreter": false,
+        "uses_root_table": false,
+        "uses_transport_footprint": false
+      },
+      "production": {
+        "accepted": true,
+        "allocation_upper_bound": 49170,
+        "certificate_bytes": 6187,
+        "context_valuations": 2,
+        "core_executions": 24,
+        "core_valuations": 12,
+        "detail": null,
+        "elapsed_ms": 4.168200015556067,
+        "productive_safe_roots": 9,
+        "reason": "accepted",
+        "represented_endpoint_executions": 48,
+        "vulnerable_roots": 3
+      },
+      "value_size": 4096,
+      "value_type": "str"
+    },
+    {
+      "case": "text-over-bound",
+      "gate": {
+        "admission_ok": true,
+        "context_domains_ok": true,
+        "declarations_ok": true,
+        "diagnostics": [],
+        "preconditions_ok": true,
+        "repair_check_independent": false,
+        "repair_detail": {
+          "guard_binding": {
+            "canonical_relation": "denominator != 0",
+            "denominator": [
+              [
+                "var",
+                "denominator"
+              ]
+            ],
+            "extra_conjuncts": 0,
+            "family": "divide_zero"
+          },
+          "protected_operation": "divide",
+          "repair": "insert-root-guard",
+          "site": 4
+        },
+        "repair_membership_ok": true,
+        "repair_reason": "accepted",
+        "shared_repair_checker": "rcsc.repair.check_repair_membership",
+        "uses_context_abstract_interpreter": false,
+        "uses_root_table": false,
+        "uses_transport_footprint": false
+      },
+      "production": {
+        "accepted": false,
+        "allocation_upper_bound": 0,
+        "certificate_bytes": 0,
+        "context_valuations": 0,
+        "core_executions": 0,
+        "core_valuations": 0,
+        "detail": "string exceeds the finite value bound",
+        "elapsed_ms": 0.10680002742446959,
+        "productive_safe_roots": 0,
+        "reason": "transport-admission-or-execution-error",
+        "represented_endpoint_executions": 0,
+        "vulnerable_roots": 0
+      },
+      "value_size": 4097,
+      "value_type": "str"
+    }
+  ],
+  "natural_error_input": {
+    "certificate": {
+      "declared_family": "divide_zero",
+      "declared_repair": "insert-root-guard",
+      "pair_id": "transport-divide_zero-0-1-0",
+      "patched_id": "transport-divide_zero-0-1-0-patched",
+      "schema": "rcsc-pair-certificate",
+      "vulnerable_id": "transport-divide_zero-0-1-0-vulnerable",
+      "witness_input": {
+        "denominator": 0,
+        "noise_0": 0,
+        "numerator": -2
+      }
+    },
+    "context_domains": {
+      "noise_0": [
+        0,
+        1
+      ]
+    },
+    "patched": {
+      "context": {
+        "provenance": null,
+        "scenario": "bounded quotient",
+        "shape": 0
+      },
+      "family": "divide_zero",
+      "initial_public_state": {
+        "audit": 0
+      },
+      "input_domains": {
+        "denominator": [
+          -1,
+          0,
+          1,
+          2
+        ],
+        "noise_0": [
+          0
+        ],
+        "numerator": [
+          true
+        ]
+      },
+      "instructions": [
+        {
+          "dst": "context_0",
+          "expr": {
+            "var": "noise_0"
+          },
+          "op": "assign",
+          "role": "context"
+        },
+        {
+          "name": "pre-0",
+          "op": "emit",
+          "role": "context",
+          "value": {
+            "var": "context_0"
+          }
+        },
+        {
+          "dst": "aux",
+          "expr": {
+            "left": {
+              "const": 0
+            },
+            "op": "add",
+            "right": {
+              "const": 1
+            }
+          },
+          "op": "assign",
+          "role": "context"
+        },
+        {
+          "op": "nop",
+          "role": "context",
+          "tag": "shape-0"
+        },
+        {
+          "op": "guard",
+          "pred": {
+            "left": {
+              "var": "denominator"
+            },
+            "op": "ne",
+            "right": {
+              "const": 0
+            }
+          },
+          "role": "root"
+        },
+        {
+          "denominator": {
+            "var": "denominator"
+          },
+          "dst": "quotient",
+          "numerator": {
+            "var": "numerator"
+          },
+          "op": "divide",
+          "role": "root"
+        },
+        {
+          "name": "quotient",
+          "op": "emit",
+          "role": "context",
+          "value": {
+            "var": "quotient"
+          }
+        },
+        {
+          "op": "return",
+          "role": "context",
+          "value": {
+            "var": "quotient"
+          }
+        }
+      ],
+      "label": "patched",
+      "parameters": {
+        "result_name": "quotient",
+        "rounding": "toward-zero"
+      },
+      "profile": "c",
+      "program_id": "transport-divide_zero-0-1-0-patched",
+      "public_projection": [
+        "audit"
+      ],
+      "schema": "rcsc-program"
+    },
+    "transport_certificate": {
+      "core_binding": {
+        "family": "divide_zero",
+        "initial_public_state": {
+          "audit": 0
+        },
+        "patched_core": [
+          {
+            "op": "guard",
+            "pred": {
+              "left": {
+                "var": "denominator"
+              },
+              "op": "ne",
+              "right": {
+                "const": 0
+              }
+            },
+            "role": "root"
+          },
+          {
+            "denominator": {
+              "var": "denominator"
+            },
+            "dst": "quotient",
+            "numerator": {
+              "var": "numerator"
+            },
+            "op": "divide",
+            "role": "root"
+          }
+        ],
+        "profile": "c",
+        "read_variables": [
+          "denominator",
+          "numerator"
+        ],
+        "root_domains": {
+          "denominator": [
+            -1,
+            0,
+            1,
+            2
+          ],
+          "numerator": [
+            -2,
+            0,
+            3
+          ]
+        },
+        "vulnerable_core": [
+          {
+            "denominator": {
+              "var": "denominator"
+            },
+            "dst": "quotient",
+            "numerator": {
+              "var": "numerator"
+            },
+            "op": "divide",
+            "role": "root"
+          }
+        ],
+        "write_variables": [
+          "quotient"
+        ]
+      },
+      "rows": [
+        {
+          "input": {
+            "denominator": -1,
+            "numerator": -2
+          },
+          "patched": {
+            "aborted": false,
+            "events": [
+              [
+                "local:denominator",
+                -1
+              ],
+              [
+                "local:numerator",
+                -2
+              ],
+              [
+                "local:quotient",
+                2
+              ]
+            ],
+            "public_state": [
+              [
+                "audit",
+                0
+              ]
+            ],
+            "returned": null,
+            "steps": 5,
+            "trace": [
+              "0:guard",
+              "1:divide",
+              "2:emit",
+              "3:emit",
+              "4:emit"
+            ],
+            "violation": null
+          },
+          "vulnerable": {
+            "aborted": false,
+            "events": [
+              [
+                "local:denominator",
+                -1
+              ],
+              [
+                "local:numerator",
+                -2
+              ],
+              [
+                "local:quotient",
+                2
+              ]
+            ],
+            "public_state": [
+              [
+                "audit",
+                0
+              ]
+            ],
+            "returned": null,
+            "steps": 4,
+            "trace": [
+              "0:divide",
+              "1:emit",
+              "2:emit",
+              "3:emit"
+            ],
+            "violation": null
+          }
+        },
+        {
+          "input": {
+            "denominator": -1,
+            "numerator": 0
+          },
+          "patched": {
+            "aborted": false,
+            "events": [
+              [
+                "local:denominator",
+                -1
+              ],
+              [
+                "local:numerator",
+                0
+              ],
+              [
+                "local:quotient",
+                0
+              ]
+            ],
+            "public_state": [
+              [
+                "audit",
+                0
+              ]
+            ],
+            "returned": null,
+            "steps": 5,
+            "trace": [
+              "0:guard",
+              "1:divide",
+              "2:emit",
+              "3:emit",
+              "4:emit"
+            ],
+            "violation": null
+          },
+          "vulnerable": {
+            "aborted": false,
+            "events": [
+              [
+                "local:denominator",
+                -1
+              ],
+              [
+                "local:numerator",
+                0
+              ],
+              [
+                "local:quotient",
+                0
+              ]
+            ],
+            "public_state": [
+              [
+                "audit",
+                0
+              ]
+            ],
+            "returned": null,
+            "steps": 4,
+            "trace": [
+              "0:divide",
+              "1:emit",
+              "2:emit",
+              "3:emit"
+            ],
+            "violation": null
+          }
+        },
+        {
+          "input": {
+            "denominator": -1,
+            "numerator": 3
+          },
+          "patched": {
+            "aborted": false,
+            "events": [
+              [
+                "local:denominator",
+                -1
+              ],
+              [
+                "local:numerator",
+                3
+              ],
+              [
+                "local:quotient",
+                -3
+              ]
+            ],
+            "public_state": [
+              [
+                "audit",
+                0
+              ]
+            ],
+            "returned": null,
+            "steps": 5,
+            "trace": [
+              "0:guard",
+              "1:divide",
+              "2:emit",
+              "3:emit",
+              "4:emit"
+            ],
+            "violation": null
+          },
+          "vulnerable": {
+            "aborted": false,
+            "events": [
+              [
+                "local:denominator",
+                -1
+              ],
+              [
+                "local:numerator",
+                3
+              ],
+              [
+                "local:quotient",
+                -3
+              ]
+            ],
+            "public_state": [
+              [
+                "audit",
+                0
+              ]
+            ],
+            "returned": null,
+            "steps": 4,
+            "trace": [
+              "0:divide",
+              "1:emit",
+              "2:emit",
+              "3:emit"
+            ],
+            "violation": null
+          }
+        },
+        {
+          "input": {
+            "denominator": 0,
+            "numerator": -2
+          },
+          "patched": {
+            "aborted": true,
+            "events": [],
+            "public_state": [
+              [
+                "audit",
+                0
+              ]
+            ],
+            "returned": null,
+            "steps": 1,
+            "trace": [
+              "0:guard"
+            ],
+            "violation": null
+          },
+          "vulnerable": {
+            "aborted": false,
+            "events": [],
+            "public_state": [
+              [
+                "audit",
+                0
+              ]
+            ],
+            "returned": null,
+            "steps": 1,
+            "trace": [
+              "0:divide"
+            ],
+            "violation": "DIVIDE_BY_ZERO"
+          }
+        },
+        {
+          "input": {
+            "denominator": 0,
+            "numerator": 0
+          },
+          "patched": {
+            "aborted": true,
+            "events": [],
+            "public_state": [
+              [
+                "audit",
+                0
+              ]
+            ],
+            "returned": null,
+            "steps": 1,
+            "trace": [
+              "0:guard"
+            ],
+            "violation": null
+          },
+          "vulnerable": {
+            "aborted": false,
+            "events": [],
+            "public_state": [
+              [
+                "audit",
+                0
+              ]
+            ],
+            "returned": null,
+            "steps": 1,
+            "trace": [
+              "0:divide"
+            ],
+            "violation": "DIVIDE_BY_ZERO"
+          }
+        },
+        {
+          "input": {
+            "denominator": 0,
+            "numerator": 3
+          },
+          "patched": {
+            "aborted": true,
+            "events": [],
+            "public_state": [
+              [
+                "audit",
+                0
+              ]
+            ],
+            "returned": null,
+            "steps": 1,
+            "trace": [
+              "0:guard"
+            ],
+            "violation": null
+          },
+          "vulnerable": {
+            "aborted": false,
+            "events": [],
+            "public_state": [
+              [
+                "audit",
+                0
+              ]
+            ],
+            "returned": null,
+            "steps": 1,
+            "trace": [
+              "0:divide"
+            ],
+            "violation": "DIVIDE_BY_ZERO"
+          }
+        },
+        {
+          "input": {
+            "denominator": 1,
+            "numerator": -2
+          },
+          "patched": {
+            "aborted": false,
+            "events": [
+              [
+                "local:denominator",
+                1
+              ],
+              [
+                "local:numerator",
+                -2
+              ],
+              [
+                "local:quotient",
+                -2
+              ]
+            ],
+            "public_state": [
+              [
+                "audit",
+                0
+              ]
+            ],
+            "returned": null,
+            "steps": 5,
+            "trace": [
+              "0:guard",
+              "1:divide",
+              "2:emit",
+              "3:emit",
+              "4:emit"
+            ],
+            "violation": null
+          },
+          "vulnerable": {
+            "aborted": false,
+            "events": [
+              [
+                "local:denominator",
+                1
+              ],
+              [
+                "local:numerator",
+                -2
+              ],
+              [
+                "local:quotient",
+                -2
+              ]
+            ],
+            "public_state": [
+              [
+                "audit",
+                0
+              ]
+            ],
+            "returned": null,
+            "steps": 4,
+            "trace": [
+              "0:divide",
+              "1:emit",
+              "2:emit",
+              "3:emit"
+            ],
+            "violation": null
+          }
+        },
+        {
+          "input": {
+            "denominator": 1,
+            "numerator": 0
+          },
+          "patched": {
+            "aborted": false,
+            "events": [
+              [
+                "local:denominator",
+                1
+              ],
+              [
+                "local:numerator",
+                0
+              ],
+              [
+                "local:quotient",
+                0
+              ]
+            ],
+            "public_state": [
+              [
+                "audit",
+                0
+              ]
+            ],
+            "returned": null,
+            "steps": 5,
+            "trace": [
+              "0:guard",
+              "1:divide",
+              "2:emit",
+              "3:emit",
+              "4:emit"
+            ],
+            "violation": null
+          },
+          "vulnerable": {
+            "aborted": false,
+            "events": [
+              [
+                "local:denominator",
+                1
+              ],
+              [
+                "local:numerator",
+                0
+              ],
+              [
+                "local:quotient",
+                0
+              ]
+            ],
+            "public_state": [
+              [
+                "audit",
+                0
+              ]
+            ],
+            "returned": null,
+            "steps": 4,
+            "trace": [
+              "0:divide",
+              "1:emit",
+              "2:emit",
+              "3:emit"
+            ],
+            "violation": null
+          }
+        },
+        {
+          "input": {
+            "denominator": 1,
+            "numerator": 3
+          },
+          "patched": {
+            "aborted": false,
+            "events": [
+              [
+                "local:denominator",
+                1
+              ],
+              [
+                "local:numerator",
+                3
+              ],
+              [
+                "local:quotient",
+                3
+              ]
+            ],
+            "public_state": [
+              [
+                "audit",
+                0
+              ]
+            ],
+            "returned": null,
+            "steps": 5,
+            "trace": [
+              "0:guard",
+              "1:divide",
+              "2:emit",
+              "3:emit",
+              "4:emit"
+            ],
+            "violation": null
+          },
+          "vulnerable": {
+            "aborted": false,
+            "events": [
+              [
+                "local:denominator",
+                1
+              ],
+              [
+                "local:numerator",
+                3
+              ],
+              [
+                "local:quotient",
+                3
+              ]
+            ],
+            "public_state": [
+              [
+                "audit",
+                0
+              ]
+            ],
+            "returned": null,
+            "steps": 4,
+            "trace": [
+              "0:divide",
+              "1:emit",
+              "2:emit",
+              "3:emit"
+            ],
+            "violation": null
+          }
+        },
+        {
+          "input": {
+            "denominator": 2,
+            "numerator": -2
+          },
+          "patched": {
+            "aborted": false,
+            "events": [
+              [
+                "local:denominator",
+                2
+              ],
+              [
+                "local:numerator",
+                -2
+              ],
+              [
+                "local:quotient",
+                -1
+              ]
+            ],
+            "public_state": [
+              [
+                "audit",
+                0
+              ]
+            ],
+            "returned": null,
+            "steps": 5,
+            "trace": [
+              "0:guard",
+              "1:divide",
+              "2:emit",
+              "3:emit",
+              "4:emit"
+            ],
+            "violation": null
+          },
+          "vulnerable": {
+            "aborted": false,
+            "events": [
+              [
+                "local:denominator",
+                2
+              ],
+              [
+                "local:numerator",
+                -2
+              ],
+              [
+                "local:quotient",
+                -1
+              ]
+            ],
+            "public_state": [
+              [
+                "audit",
+                0
+              ]
+            ],
+            "returned": null,
+            "steps": 4,
+            "trace": [
+              "0:divide",
+              "1:emit",
+              "2:emit",
+              "3:emit"
+            ],
+            "violation": null
+          }
+        },
+        {
+          "input": {
+            "denominator": 2,
+            "numerator": 0
+          },
+          "patched": {
+            "aborted": false,
+            "events": [
+              [
+                "local:denominator",
+                2
+              ],
+              [
+                "local:numerator",
+                0
+              ],
+              [
+                "local:quotient",
+                0
+              ]
+            ],
+            "public_state": [
+              [
+                "audit",
+                0
+              ]
+            ],
+            "returned": null,
+            "steps": 5,
+            "trace": [
+              "0:guard",
+              "1:divide",
+              "2:emit",
+              "3:emit",
+              "4:emit"
+            ],
+            "violation": null
+          },
+          "vulnerable": {
+            "aborted": false,
+            "events": [
+              [
+                "local:denominator",
+                2
+              ],
+              [
+                "local:numerator",
+                0
+              ],
+              [
+                "local:quotient",
+                0
+              ]
+            ],
+            "public_state": [
+              [
+                "audit",
+                0
+              ]
+            ],
+            "returned": null,
+            "steps": 4,
+            "trace": [
+              "0:divide",
+              "1:emit",
+              "2:emit",
+              "3:emit"
+            ],
+            "violation": null
+          }
+        },
+        {
+          "input": {
+            "denominator": 2,
+            "numerator": 3
+          },
+          "patched": {
+            "aborted": false,
+            "events": [
+              [
+                "local:denominator",
+                2
+              ],
+              [
+                "local:numerator",
+                3
+              ],
+              [
+                "local:quotient",
+                1
+              ]
+            ],
+            "public_state": [
+              [
+                "audit",
+                0
+              ]
+            ],
+            "returned": null,
+            "steps": 5,
+            "trace": [
+              "0:guard",
+              "1:divide",
+              "2:emit",
+              "3:emit",
+              "4:emit"
+            ],
+            "violation": null
+          },
+          "vulnerable": {
+            "aborted": false,
+            "events": [
+              [
+                "local:denominator",
+                2
+              ],
+              [
+                "local:numerator",
+                3
+              ],
+              [
+                "local:quotient",
+                1
+              ]
+            ],
+            "public_state": [
+              [
+                "audit",
+                0
+              ]
+            ],
+            "returned": null,
+            "steps": 4,
+            "trace": [
+              "0:divide",
+              "1:emit",
+              "2:emit",
+              "3:emit"
+            ],
+            "violation": null
+          }
+        }
+      ],
+      "schema": "rcsc-context-transport"
+    },
+    "vulnerable": {
+      "context": {
+        "provenance": null,
+        "scenario": "bounded quotient",
+        "shape": 0
+      },
+      "family": "divide_zero",
+      "initial_public_state": {
+        "audit": 0
+      },
+      "input_domains": {
+        "denominator": [
+          -1,
+          0,
+          1,
+          2
+        ],
+        "noise_0": [
+          0
+        ],
+        "numerator": [
+          true
+        ]
+      },
+      "instructions": [
+        {
+          "dst": "context_0",
+          "expr": {
+            "var": "noise_0"
+          },
+          "op": "assign",
+          "role": "context"
+        },
+        {
+          "name": "pre-0",
+          "op": "emit",
+          "role": "context",
+          "value": {
+            "var": "context_0"
+          }
+        },
+        {
+          "dst": "aux",
+          "expr": {
+            "left": {
+              "const": 0
+            },
+            "op": "add",
+            "right": {
+              "const": 1
+            }
+          },
+          "op": "assign",
+          "role": "context"
+        },
+        {
+          "op": "nop",
+          "role": "context",
+          "tag": "shape-0"
+        },
+        {
+          "denominator": {
+            "var": "denominator"
+          },
+          "dst": "quotient",
+          "numerator": {
+            "var": "numerator"
+          },
+          "op": "divide",
+          "role": "root"
+        },
+        {
+          "name": "quotient",
+          "op": "emit",
+          "role": "context",
+          "value": {
+            "var": "quotient"
+          }
+        },
+        {
+          "op": "return",
+          "role": "context",
+          "value": {
+            "var": "quotient"
+          }
+        }
+      ],
+      "label": "vulnerable",
+      "parameters": {
+        "result_name": "quotient",
+        "rounding": "toward-zero"
+      },
+      "profile": "c",
+      "program_id": "transport-divide_zero-0-1-0-vulnerable",
+      "public_projection": [
+        "audit"
+      ],
+      "schema": "rcsc-program"
+    }
+  },
+  "natural_error_observed_calls": [
+    {
+      "inputs": {
+        "denominator": -1,
+        "noise_0": 0,
+        "numerator": true
+      },
+      "label": "vulnerable"
+    },
+    {
+      "inputs": {
+        "denominator": 0,
+        "noise_0": 0,
+        "numerator": true
+      },
+      "label": "vulnerable"
+    },
+    {
+      "inputs": {
+        "denominator": 1,
+        "noise_0": 0,
+        "numerator": true
+      },
+      "label": "vulnerable"
+    },
+    {
+      "inputs": {
+        "denominator": 2,
+        "noise_0": 0,
+        "numerator": true
+      },
+      "label": "vulnerable"
+    },
+    {
+      "inputs": {
+        "denominator": -1,
+        "noise_0": 1,
+        "numerator": true
+      },
+      "label": "vulnerable"
+    },
+    {
+      "inputs": {
+        "denominator": 0,
+        "noise_0": 1,
+        "numerator": true
+      },
+      "label": "vulnerable"
+    },
+    {
+      "inputs": {
+        "denominator": 1,
+        "noise_0": 1,
+        "numerator": true
+      },
+      "label": "vulnerable"
+    },
+    {
+      "inputs": {
+        "denominator": 2,
+        "noise_0": 1,
+        "numerator": true
+      },
+      "label": "vulnerable"
+    }
+  ],
+  "natural_error_report": {
+    "declared_monitor": "DIVIDE_BY_ZERO",
+    "defined": false,
+    "elapsed_ms": 0.658600009046495,
+    "endpoint_executions": 0,
+    "failure_counts": {
+      "declared_monitor_mismatch": 0,
+      "execution_error": 8,
+      "missing_context_productive_safe_support": 2,
+      "missing_context_vulnerable_support": 2,
+      "patched_violation": 0,
+      "safe_observation_mismatch": 0,
+      "security_profile_change": 0
+    },
+    "first_failure": {
+      "component": "defined-execution",
+      "error": "TypeError",
+      "input": {
+        "denominator": -1,
+        "noise_0": 0,
+        "numerator": true
+      }
+    },
+    "functional_variation": null,
+    "monitor_consistent": true,
+    "reference_comparisons": 0,
+    "reference_mismatches": 0,
+    "relation": false,
+    "rows": [
+      {
+        "context_input": "{\"noise_0\":0}",
+        "declared_monitor": "DIVIDE_BY_ZERO",
+        "defined": false,
+        "monitor_consistent": true,
+        "p_violation": "",
+        "patched_closed": true,
+        "reference_comparisons": 0,
+        "reference_mismatches": 0,
+        "root_input": "{\"denominator\":-1,\"numerator\":true}",
+        "root_invariant": true,
+        "safe_observations_equal": true,
+        "v_violation": ""
+      },
+      {
+        "context_input": "{\"noise_0\":0}",
+        "declared_monitor": "DIVIDE_BY_ZERO",
+        "defined": false,
+        "monitor_consistent": true,
+        "p_violation": "",
+        "patched_closed": true,
+        "reference_comparisons": 0,
+        "reference_mismatches": 0,
+        "root_input": "{\"denominator\":0,\"numerator\":true}",
+        "root_invariant": true,
+        "safe_observations_equal": true,
+        "v_violation": ""
+      },
+      {
+        "context_input": "{\"noise_0\":0}",
+        "declared_monitor": "DIVIDE_BY_ZERO",
+        "defined": false,
+        "monitor_consistent": true,
+        "p_violation": "",
+        "patched_closed": true,
+        "reference_comparisons": 0,
+        "reference_mismatches": 0,
+        "root_input": "{\"denominator\":1,\"numerator\":true}",
+        "root_invariant": true,
+        "safe_observations_equal": true,
+        "v_violation": ""
+      },
+      {
+        "context_input": "{\"noise_0\":0}",
+        "declared_monitor": "DIVIDE_BY_ZERO",
+        "defined": false,
+        "monitor_consistent": true,
+        "p_violation": "",
+        "patched_closed": true,
+        "reference_comparisons": 0,
+        "reference_mismatches": 0,
+        "root_input": "{\"denominator\":2,\"numerator\":true}",
+        "root_invariant": true,
+        "safe_observations_equal": true,
+        "v_violation": ""
+      },
+      {
+        "context_input": "{\"noise_0\":1}",
+        "declared_monitor": "DIVIDE_BY_ZERO",
+        "defined": false,
+        "monitor_consistent": true,
+        "p_violation": "",
+        "patched_closed": true,
+        "reference_comparisons": 0,
+        "reference_mismatches": 0,
+        "root_input": "{\"denominator\":-1,\"numerator\":true}",
+        "root_invariant": true,
+        "safe_observations_equal": true,
+        "v_violation": ""
+      },
+      {
+        "context_input": "{\"noise_0\":1}",
+        "declared_monitor": "DIVIDE_BY_ZERO",
+        "defined": false,
+        "monitor_consistent": true,
+        "p_violation": "",
+        "patched_closed": true,
+        "reference_comparisons": 0,
+        "reference_mismatches": 0,
+        "root_input": "{\"denominator\":0,\"numerator\":true}",
+        "root_invariant": true,
+        "safe_observations_equal": true,
+        "v_violation": ""
+      },
+      {
+        "context_input": "{\"noise_0\":1}",
+        "declared_monitor": "DIVIDE_BY_ZERO",
+        "defined": false,
+        "monitor_consistent": true,
+        "p_violation": "",
+        "patched_closed": true,
+        "reference_comparisons": 0,
+        "reference_mismatches": 0,
+        "root_input": "{\"denominator\":1,\"numerator\":true}",
+        "root_invariant": true,
+        "safe_observations_equal": true,
+        "v_violation": ""
+      },
+      {
+        "context_input": "{\"noise_0\":1}",
+        "declared_monitor": "DIVIDE_BY_ZERO",
+        "defined": false,
+        "monitor_consistent": true,
+        "p_violation": "",
+        "patched_closed": true,
+        "reference_comparisons": 0,
+        "reference_mismatches": 0,
+        "root_input": "{\"denominator\":2,\"numerator\":true}",
+        "root_invariant": true,
+        "safe_observations_equal": true,
+        "v_violation": ""
+      }
+    ],
+    "scope": {
+      "checks_certificate_claims": false,
+      "checks_declared_monitor_consistency": true,
+      "checks_exact_repair_membership": false,
+      "full_cartesian_semantic_replay": true,
+      "uses_context_abstract_interpreter": false,
+      "uses_root_table": false,
+      "uses_transport_footprint": false
+    },
+    "security_invariant": true,
+    "semantic_contract_holds": false,
+    "semantic_relation": false
+  },
+  "test_only_second_call_injection_observed_calls": [
+    "vulnerable",
+    "patched"
+  ],
+  "test_only_second_call_injection_report": {
+    "accepted": false,
+    "allocation_upper_bound": 0,
+    "certificate_bytes": 0,
+    "context_valuations": 2,
+    "core_executions": 0,
+    "core_valuations": 12,
+    "detail": "test-only second-call failure",
+    "elapsed_ms": 0.7513000164180994,
+    "productive_safe_roots": 0,
+    "reason": "transport-admission-or-execution-error",
+    "represented_endpoint_executions": 48,
+    "vulnerable_roots": 0
+  }
+}

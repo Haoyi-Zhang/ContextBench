@@ -275,7 +275,9 @@ def prepare(v: dict, p: dict, context_domains: dict) -> dict:
                 'read_variables': sorted(rread), 'write_variables': sorted(rwrite)}}
 
 
-def replay_row(plan: dict, inputs: dict, executor=execute) -> dict:
+def replay_row(plan: dict, inputs: dict, executor=None) -> dict:
+    if executor is None:
+        executor = execute
     return {'input': copy.deepcopy(inputs),
             'vulnerable': json_value(executor(plan['v_core'], inputs).to_json()),
             'patched': json_value(executor(plan['p_core'], inputs).to_json())}
@@ -288,6 +290,8 @@ class TransportReport:
     core_valuations: int = 0
     context_valuations: int = 0
     core_executions: int = 0
+    core_execution_attempts: int = 0
+    completed_core_rows: int = 0
     represented_endpoint_executions: int = 0
     productive_safe_roots: int = 0
     vulnerable_roots: int = 0
@@ -337,9 +341,14 @@ def _check_transport(packet: Any, *, claim_check: bool) -> TransportReport:
         # and its hash/equality includes kinds, interval endpoints and node count.
         # At most two normal outcomes per admitted root row can be retained.
         suffix_costs: dict[tuple, int] = {}
+        def counted_execute(program, inputs):
+            report.core_execution_attempts += 1
+            result = execute(program, inputs)
+            report.core_executions += 1
+            return result
         for index, inputs in enumerate(expected_inputs):
-            row = replay_row(plan, inputs)
-            report.core_executions += 2
+            row = replay_row(plan, inputs, counted_execute)
+            report.completed_core_rows += 1
             if claim_check:
                 require(value_key(cert['rows'][index]) == value_key(row),
                         'transport-row-mismatch', {'input': inputs})

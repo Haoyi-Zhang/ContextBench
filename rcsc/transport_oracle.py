@@ -75,6 +75,10 @@ def direct_oracle(packet: Mapping[str, Any], *, reference: bool = False, retain:
     reference_comparisons = 0
     reference_mismatches = 0
     endpoint_executions = 0
+    endpoint_execution_attempts = 0
+    completed_pair_rows = 0
+    reference_execution_attempts = 0
+    reference_executions = 0
     rows: list[dict[str, Any]] = []
     first_failure: dict[str, Any] | None = None
     functional_variation: dict[str, Any] | None = None
@@ -110,20 +114,38 @@ def direct_oracle(packet: Mapping[str, Any], *, reference: bool = False, retain:
                 "root_invariant": True,
                 "reference_comparisons": 0,
                 "reference_mismatches": 0,
+                "endpoint_execution_attempts": 0,
+                "endpoint_executions": 0,
+                "reference_execution_attempts": 0,
+                "reference_executions": 0,
+                "completed_pair": False,
             }
             try:
+                endpoint_execution_attempts += 1
+                row['endpoint_execution_attempts'] += 1
                 vulnerable_result = execute(vulnerable_point, inputs, _validated=True)
+                endpoint_executions += 1
+                row['endpoint_executions'] += 1
+                endpoint_execution_attempts += 1
+                row['endpoint_execution_attempts'] += 1
                 patched_result = execute(patched_point, inputs, _validated=True)
-                endpoint_executions += 2
+                endpoint_executions += 1
+                row['endpoint_executions'] += 1
+                completed_pair_rows += 1
+                row['completed_pair'] = True
                 if reference:
                     for program, result in (
                         (vulnerable_point, vulnerable_result),
                         (patched_point, patched_result),
                     ):
+                        reference_execution_attempts += 1
+                        row['reference_execution_attempts'] += 1
                         reference_result = reference_execute(program, inputs)
+                        reference_executions += 1
+                        row['reference_executions'] += 1
+                        match = value_key(_json_value(result.to_json())) == value_key(reference_result.to_json())
                         reference_comparisons += 1
                         row["reference_comparisons"] += 1
-                        match = value_key(_json_value(result.to_json())) == value_key(reference_result.to_json())
                         reference_mismatches += int(not match)
                         row["reference_mismatches"] += int(not match)
 
@@ -269,6 +291,10 @@ def direct_oracle(packet: Mapping[str, Any], *, reference: bool = False, retain:
         ),
         "declared_monitor": declared_monitor,
         "endpoint_executions": endpoint_executions,
+        "endpoint_execution_attempts": endpoint_execution_attempts,
+        "completed_pair_rows": completed_pair_rows,
+        "reference_execution_attempts": reference_execution_attempts,
+        "reference_executions": reference_executions,
         "reference_comparisons": reference_comparisons,
         "reference_mismatches": reference_mismatches,
         "elapsed_ms": (time.perf_counter() - started) * 1000,

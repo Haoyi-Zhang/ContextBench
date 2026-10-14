@@ -1,0 +1,1740 @@
+[
+  {
+    "baseline": "ordinary-unigram-nb",
+    "confusion": {
+      "patched->patched": 8,
+      "vulnerable->vulnerable": 8
+    },
+    "correct": 16,
+    "family": "bounds_write",
+    "representation": "raw",
+    "split": "held-out-root",
+    "test_endpoints": 16
+  },
+  {
+    "baseline": "ordinary-unigram-nb",
+    "confusion": {
+      "patched->patched": 8,
+      "vulnerable->vulnerable": 8
+    },
+    "correct": 16,
+    "family": "divide_zero",
+    "representation": "raw",
+    "split": "held-out-root",
+    "test_endpoints": 16
+  },
+  {
+    "baseline": "ordinary-unigram-nb",
+    "confusion": {
+      "patched->patched": 8,
+      "vulnerable->vulnerable": 8
+    },
+    "correct": 16,
+    "family": "fixed_overflow",
+    "representation": "raw",
+    "split": "held-out-root",
+    "test_endpoints": 16
+  },
+  {
+    "baseline": "ordinary-unigram-nb",
+    "confusion": {
+      "patched->patched": 8,
+      "vulnerable->vulnerable": 8
+    },
+    "correct": 16,
+    "family": "access_control",
+    "representation": "raw",
+    "split": "held-out-root",
+    "test_endpoints": 16
+  },
+  {
+    "baseline": "ordinary-unigram-nb",
+    "confusion": {
+      "patched->vulnerable": 8,
+      "vulnerable->vulnerable": 8
+    },
+    "correct": 8,
+    "family": "reentrancy",
+    "representation": "raw",
+    "split": "held-out-root",
+    "test_endpoints": 16
+  },
+  {
+    "baseline": "ordinary-unigram-nb",
+    "confusion": {
+      "patched->patched": 1,
+      "patched->vulnerable": 7,
+      "vulnerable->vulnerable": 8
+    },
+    "correct": 9,
+    "family": "unchecked_call",
+    "representation": "raw",
+    "split": "held-out-root",
+    "test_endpoints": 16
+  },
+  {
+    "baseline": "constant",
+    "confusion": {
+      "patched->patched": 8,
+      "vulnerable->patched": 8
+    },
+    "correct": 8,
+    "family": "bounds_write",
+    "representation": "raw",
+    "split": "held-out-root",
+    "test_endpoints": 16
+  },
+  {
+    "baseline": "constant",
+    "confusion": {
+      "patched->patched": 8,
+      "vulnerable->patched": 8
+    },
+    "correct": 8,
+    "family": "divide_zero",
+    "representation": "raw",
+    "split": "held-out-root",
+    "test_endpoints": 16
+  },
+  {
+    "baseline": "constant",
+    "confusion": {
+      "patched->patched": 8,
+      "vulnerable->patched": 8
+    },
+    "correct": 8,
+    "family": "fixed_overflow",
+    "representation": "raw",
+    "split": "held-out-root",
+    "test_endpoints": 16
+  },
+  {
+    "baseline": "constant",
+    "confusion": {
+      "patched->patched": 8,
+      "vulnerable->patched": 8
+    },
+    "correct": 8,
+    "family": "access_control",
+    "representation": "raw",
+    "split": "held-out-root",
+    "test_endpoints": 16
+  },
+  {
+    "baseline": "constant",
+    "confusion": {
+      "patched->patched": 8,
+      "vulnerable->patched": 8
+    },
+    "correct": 8,
+    "family": "reentrancy",
+    "representation": "raw",
+    "split": "held-out-root",
+    "test_endpoints": 16
+  },
+  {
+    "baseline": "constant",
+    "confusion": {
+      "patched->patched": 8,
+      "vulnerable->patched": 8
+    },
+    "correct": 8,
+    "family": "unchecked_call",
+    "representation": "raw",
+    "split": "held-out-root",
+    "test_endpoints": 16
+  },
+  {
+    "baseline": "context-only",
+    "confusion": {
+      "patched->patched": 8,
+      "vulnerable->patched": 8
+    },
+    "correct": 8,
+    "family": "bounds_write",
+    "representation": "raw",
+    "split": "held-out-root",
+    "test_endpoints": 16
+  },
+  {
+    "baseline": "context-only",
+    "confusion": {
+      "patched->patched": 8,
+      "vulnerable->patched": 8
+    },
+    "correct": 8,
+    "family": "divide_zero",
+    "representation": "raw",
+    "split": "held-out-root",
+    "test_endpoints": 16
+  },
+  {
+    "baseline": "context-only",
+    "confusion": {
+      "patched->patched": 8,
+      "vulnerable->patched": 8
+    },
+    "correct": 8,
+    "family": "fixed_overflow",
+    "representation": "raw",
+    "split": "held-out-root",
+    "test_endpoints": 16
+  },
+  {
+    "baseline": "context-only",
+    "confusion": {
+      "patched->patched": 8,
+      "vulnerable->patched": 8
+    },
+    "correct": 8,
+    "family": "access_control",
+    "representation": "raw",
+    "split": "held-out-root",
+    "test_endpoints": 16
+  },
+  {
+    "baseline": "context-only",
+    "confusion": {
+      "patched->patched": 8,
+      "vulnerable->patched": 8
+    },
+    "correct": 8,
+    "family": "reentrancy",
+    "representation": "raw",
+    "split": "held-out-root",
+    "test_endpoints": 16
+  },
+  {
+    "baseline": "context-only",
+    "confusion": {
+      "patched->patched": 8,
+      "vulnerable->patched": 8
+    },
+    "correct": 8,
+    "family": "unchecked_call",
+    "representation": "raw",
+    "split": "held-out-root",
+    "test_endpoints": 16
+  },
+  {
+    "baseline": "repair-syntax",
+    "confusion": {
+      "patched->patched": 8,
+      "vulnerable->vulnerable": 8
+    },
+    "correct": 16,
+    "family": "bounds_write",
+    "representation": "raw",
+    "split": "held-out-root",
+    "test_endpoints": 16
+  },
+  {
+    "baseline": "repair-syntax",
+    "confusion": {
+      "patched->patched": 8,
+      "vulnerable->vulnerable": 8
+    },
+    "correct": 16,
+    "family": "divide_zero",
+    "representation": "raw",
+    "split": "held-out-root",
+    "test_endpoints": 16
+  },
+  {
+    "baseline": "repair-syntax",
+    "confusion": {
+      "patched->patched": 8,
+      "vulnerable->vulnerable": 8
+    },
+    "correct": 16,
+    "family": "fixed_overflow",
+    "representation": "raw",
+    "split": "held-out-root",
+    "test_endpoints": 16
+  },
+  {
+    "baseline": "repair-syntax",
+    "confusion": {
+      "patched->patched": 8,
+      "vulnerable->vulnerable": 8
+    },
+    "correct": 16,
+    "family": "access_control",
+    "representation": "raw",
+    "split": "held-out-root",
+    "test_endpoints": 16
+  },
+  {
+    "baseline": "repair-syntax",
+    "confusion": {
+      "patched->patched": 8,
+      "vulnerable->vulnerable": 8
+    },
+    "correct": 16,
+    "family": "reentrancy",
+    "representation": "raw",
+    "split": "held-out-root",
+    "test_endpoints": 16
+  },
+  {
+    "baseline": "repair-syntax",
+    "confusion": {
+      "patched->patched": 8,
+      "vulnerable->vulnerable": 8
+    },
+    "correct": 16,
+    "family": "unchecked_call",
+    "representation": "raw",
+    "split": "held-out-root",
+    "test_endpoints": 16
+  },
+  {
+    "baseline": "ordinary-unigram-nb",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->vulnerable": 4
+    },
+    "correct": 8,
+    "family": "bounds_write",
+    "representation": "raw",
+    "split": "held-out-context",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "ordinary-unigram-nb",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->vulnerable": 4
+    },
+    "correct": 8,
+    "family": "divide_zero",
+    "representation": "raw",
+    "split": "held-out-context",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "ordinary-unigram-nb",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->patched": 1,
+      "vulnerable->vulnerable": 3
+    },
+    "correct": 7,
+    "family": "fixed_overflow",
+    "representation": "raw",
+    "split": "held-out-context",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "ordinary-unigram-nb",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->vulnerable": 4
+    },
+    "correct": 8,
+    "family": "access_control",
+    "representation": "raw",
+    "split": "held-out-context",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "ordinary-unigram-nb",
+    "confusion": {
+      "patched->vulnerable": 4,
+      "vulnerable->vulnerable": 4
+    },
+    "correct": 4,
+    "family": "reentrancy",
+    "representation": "raw",
+    "split": "held-out-context",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "ordinary-unigram-nb",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->vulnerable": 4
+    },
+    "correct": 8,
+    "family": "unchecked_call",
+    "representation": "raw",
+    "split": "held-out-context",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "constant",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->patched": 4
+    },
+    "correct": 4,
+    "family": "bounds_write",
+    "representation": "raw",
+    "split": "held-out-context",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "constant",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->patched": 4
+    },
+    "correct": 4,
+    "family": "divide_zero",
+    "representation": "raw",
+    "split": "held-out-context",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "constant",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->patched": 4
+    },
+    "correct": 4,
+    "family": "fixed_overflow",
+    "representation": "raw",
+    "split": "held-out-context",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "constant",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->patched": 4
+    },
+    "correct": 4,
+    "family": "access_control",
+    "representation": "raw",
+    "split": "held-out-context",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "constant",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->patched": 4
+    },
+    "correct": 4,
+    "family": "reentrancy",
+    "representation": "raw",
+    "split": "held-out-context",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "constant",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->patched": 4
+    },
+    "correct": 4,
+    "family": "unchecked_call",
+    "representation": "raw",
+    "split": "held-out-context",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "context-only",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->patched": 4
+    },
+    "correct": 4,
+    "family": "bounds_write",
+    "representation": "raw",
+    "split": "held-out-context",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "context-only",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->patched": 4
+    },
+    "correct": 4,
+    "family": "divide_zero",
+    "representation": "raw",
+    "split": "held-out-context",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "context-only",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->patched": 4
+    },
+    "correct": 4,
+    "family": "fixed_overflow",
+    "representation": "raw",
+    "split": "held-out-context",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "context-only",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->patched": 4
+    },
+    "correct": 4,
+    "family": "access_control",
+    "representation": "raw",
+    "split": "held-out-context",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "context-only",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->patched": 4
+    },
+    "correct": 4,
+    "family": "reentrancy",
+    "representation": "raw",
+    "split": "held-out-context",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "context-only",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->patched": 4
+    },
+    "correct": 4,
+    "family": "unchecked_call",
+    "representation": "raw",
+    "split": "held-out-context",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "repair-syntax",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->vulnerable": 4
+    },
+    "correct": 8,
+    "family": "bounds_write",
+    "representation": "raw",
+    "split": "held-out-context",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "repair-syntax",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->vulnerable": 4
+    },
+    "correct": 8,
+    "family": "divide_zero",
+    "representation": "raw",
+    "split": "held-out-context",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "repair-syntax",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->vulnerable": 4
+    },
+    "correct": 8,
+    "family": "fixed_overflow",
+    "representation": "raw",
+    "split": "held-out-context",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "repair-syntax",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->vulnerable": 4
+    },
+    "correct": 8,
+    "family": "access_control",
+    "representation": "raw",
+    "split": "held-out-context",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "repair-syntax",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->vulnerable": 4
+    },
+    "correct": 8,
+    "family": "reentrancy",
+    "representation": "raw",
+    "split": "held-out-context",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "repair-syntax",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->vulnerable": 4
+    },
+    "correct": 8,
+    "family": "unchecked_call",
+    "representation": "raw",
+    "split": "held-out-context",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "ordinary-unigram-nb",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->patched": 1,
+      "vulnerable->vulnerable": 3
+    },
+    "correct": 7,
+    "family": "bounds_write",
+    "representation": "raw",
+    "split": "held-out-both",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "ordinary-unigram-nb",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->vulnerable": 4
+    },
+    "correct": 8,
+    "family": "divide_zero",
+    "representation": "raw",
+    "split": "held-out-both",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "ordinary-unigram-nb",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->vulnerable": 4
+    },
+    "correct": 8,
+    "family": "fixed_overflow",
+    "representation": "raw",
+    "split": "held-out-both",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "ordinary-unigram-nb",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->vulnerable": 4
+    },
+    "correct": 8,
+    "family": "access_control",
+    "representation": "raw",
+    "split": "held-out-both",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "ordinary-unigram-nb",
+    "confusion": {
+      "patched->patched": 2,
+      "patched->vulnerable": 2,
+      "vulnerable->patched": 2,
+      "vulnerable->vulnerable": 2
+    },
+    "correct": 4,
+    "family": "reentrancy",
+    "representation": "raw",
+    "split": "held-out-both",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "ordinary-unigram-nb",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->vulnerable": 4
+    },
+    "correct": 8,
+    "family": "unchecked_call",
+    "representation": "raw",
+    "split": "held-out-both",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "constant",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->patched": 4
+    },
+    "correct": 4,
+    "family": "bounds_write",
+    "representation": "raw",
+    "split": "held-out-both",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "constant",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->patched": 4
+    },
+    "correct": 4,
+    "family": "divide_zero",
+    "representation": "raw",
+    "split": "held-out-both",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "constant",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->patched": 4
+    },
+    "correct": 4,
+    "family": "fixed_overflow",
+    "representation": "raw",
+    "split": "held-out-both",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "constant",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->patched": 4
+    },
+    "correct": 4,
+    "family": "access_control",
+    "representation": "raw",
+    "split": "held-out-both",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "constant",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->patched": 4
+    },
+    "correct": 4,
+    "family": "reentrancy",
+    "representation": "raw",
+    "split": "held-out-both",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "constant",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->patched": 4
+    },
+    "correct": 4,
+    "family": "unchecked_call",
+    "representation": "raw",
+    "split": "held-out-both",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "context-only",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->patched": 4
+    },
+    "correct": 4,
+    "family": "bounds_write",
+    "representation": "raw",
+    "split": "held-out-both",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "context-only",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->patched": 4
+    },
+    "correct": 4,
+    "family": "divide_zero",
+    "representation": "raw",
+    "split": "held-out-both",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "context-only",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->patched": 4
+    },
+    "correct": 4,
+    "family": "fixed_overflow",
+    "representation": "raw",
+    "split": "held-out-both",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "context-only",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->patched": 4
+    },
+    "correct": 4,
+    "family": "access_control",
+    "representation": "raw",
+    "split": "held-out-both",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "context-only",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->patched": 4
+    },
+    "correct": 4,
+    "family": "reentrancy",
+    "representation": "raw",
+    "split": "held-out-both",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "context-only",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->patched": 4
+    },
+    "correct": 4,
+    "family": "unchecked_call",
+    "representation": "raw",
+    "split": "held-out-both",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "repair-syntax",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->vulnerable": 4
+    },
+    "correct": 8,
+    "family": "bounds_write",
+    "representation": "raw",
+    "split": "held-out-both",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "repair-syntax",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->vulnerable": 4
+    },
+    "correct": 8,
+    "family": "divide_zero",
+    "representation": "raw",
+    "split": "held-out-both",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "repair-syntax",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->vulnerable": 4
+    },
+    "correct": 8,
+    "family": "fixed_overflow",
+    "representation": "raw",
+    "split": "held-out-both",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "repair-syntax",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->vulnerable": 4
+    },
+    "correct": 8,
+    "family": "access_control",
+    "representation": "raw",
+    "split": "held-out-both",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "repair-syntax",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->vulnerable": 4
+    },
+    "correct": 8,
+    "family": "reentrancy",
+    "representation": "raw",
+    "split": "held-out-both",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "repair-syntax",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->vulnerable": 4
+    },
+    "correct": 8,
+    "family": "unchecked_call",
+    "representation": "raw",
+    "split": "held-out-both",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "ordinary-unigram-nb",
+    "confusion": {
+      "patched->patched": 8,
+      "vulnerable->vulnerable": 8
+    },
+    "correct": 16,
+    "family": "bounds_write",
+    "representation": "normalized",
+    "split": "held-out-root",
+    "test_endpoints": 16
+  },
+  {
+    "baseline": "ordinary-unigram-nb",
+    "confusion": {
+      "patched->patched": 8,
+      "vulnerable->vulnerable": 8
+    },
+    "correct": 16,
+    "family": "divide_zero",
+    "representation": "normalized",
+    "split": "held-out-root",
+    "test_endpoints": 16
+  },
+  {
+    "baseline": "ordinary-unigram-nb",
+    "confusion": {
+      "patched->patched": 8,
+      "vulnerable->vulnerable": 8
+    },
+    "correct": 16,
+    "family": "fixed_overflow",
+    "representation": "normalized",
+    "split": "held-out-root",
+    "test_endpoints": 16
+  },
+  {
+    "baseline": "ordinary-unigram-nb",
+    "confusion": {
+      "patched->patched": 8,
+      "vulnerable->vulnerable": 8
+    },
+    "correct": 16,
+    "family": "access_control",
+    "representation": "normalized",
+    "split": "held-out-root",
+    "test_endpoints": 16
+  },
+  {
+    "baseline": "ordinary-unigram-nb",
+    "confusion": {
+      "patched->vulnerable": 8,
+      "vulnerable->vulnerable": 8
+    },
+    "correct": 8,
+    "family": "reentrancy",
+    "representation": "normalized",
+    "split": "held-out-root",
+    "test_endpoints": 16
+  },
+  {
+    "baseline": "ordinary-unigram-nb",
+    "confusion": {
+      "patched->patched": 1,
+      "patched->vulnerable": 7,
+      "vulnerable->vulnerable": 8
+    },
+    "correct": 9,
+    "family": "unchecked_call",
+    "representation": "normalized",
+    "split": "held-out-root",
+    "test_endpoints": 16
+  },
+  {
+    "baseline": "constant",
+    "confusion": {
+      "patched->patched": 8,
+      "vulnerable->patched": 8
+    },
+    "correct": 8,
+    "family": "bounds_write",
+    "representation": "normalized",
+    "split": "held-out-root",
+    "test_endpoints": 16
+  },
+  {
+    "baseline": "constant",
+    "confusion": {
+      "patched->patched": 8,
+      "vulnerable->patched": 8
+    },
+    "correct": 8,
+    "family": "divide_zero",
+    "representation": "normalized",
+    "split": "held-out-root",
+    "test_endpoints": 16
+  },
+  {
+    "baseline": "constant",
+    "confusion": {
+      "patched->patched": 8,
+      "vulnerable->patched": 8
+    },
+    "correct": 8,
+    "family": "fixed_overflow",
+    "representation": "normalized",
+    "split": "held-out-root",
+    "test_endpoints": 16
+  },
+  {
+    "baseline": "constant",
+    "confusion": {
+      "patched->patched": 8,
+      "vulnerable->patched": 8
+    },
+    "correct": 8,
+    "family": "access_control",
+    "representation": "normalized",
+    "split": "held-out-root",
+    "test_endpoints": 16
+  },
+  {
+    "baseline": "constant",
+    "confusion": {
+      "patched->patched": 8,
+      "vulnerable->patched": 8
+    },
+    "correct": 8,
+    "family": "reentrancy",
+    "representation": "normalized",
+    "split": "held-out-root",
+    "test_endpoints": 16
+  },
+  {
+    "baseline": "constant",
+    "confusion": {
+      "patched->patched": 8,
+      "vulnerable->patched": 8
+    },
+    "correct": 8,
+    "family": "unchecked_call",
+    "representation": "normalized",
+    "split": "held-out-root",
+    "test_endpoints": 16
+  },
+  {
+    "baseline": "context-only",
+    "confusion": {
+      "patched->patched": 8,
+      "vulnerable->patched": 8
+    },
+    "correct": 8,
+    "family": "bounds_write",
+    "representation": "normalized",
+    "split": "held-out-root",
+    "test_endpoints": 16
+  },
+  {
+    "baseline": "context-only",
+    "confusion": {
+      "patched->patched": 8,
+      "vulnerable->patched": 8
+    },
+    "correct": 8,
+    "family": "divide_zero",
+    "representation": "normalized",
+    "split": "held-out-root",
+    "test_endpoints": 16
+  },
+  {
+    "baseline": "context-only",
+    "confusion": {
+      "patched->patched": 8,
+      "vulnerable->patched": 8
+    },
+    "correct": 8,
+    "family": "fixed_overflow",
+    "representation": "normalized",
+    "split": "held-out-root",
+    "test_endpoints": 16
+  },
+  {
+    "baseline": "context-only",
+    "confusion": {
+      "patched->patched": 8,
+      "vulnerable->patched": 8
+    },
+    "correct": 8,
+    "family": "access_control",
+    "representation": "normalized",
+    "split": "held-out-root",
+    "test_endpoints": 16
+  },
+  {
+    "baseline": "context-only",
+    "confusion": {
+      "patched->patched": 8,
+      "vulnerable->patched": 8
+    },
+    "correct": 8,
+    "family": "reentrancy",
+    "representation": "normalized",
+    "split": "held-out-root",
+    "test_endpoints": 16
+  },
+  {
+    "baseline": "context-only",
+    "confusion": {
+      "patched->patched": 8,
+      "vulnerable->patched": 8
+    },
+    "correct": 8,
+    "family": "unchecked_call",
+    "representation": "normalized",
+    "split": "held-out-root",
+    "test_endpoints": 16
+  },
+  {
+    "baseline": "repair-syntax",
+    "confusion": {
+      "patched->patched": 8,
+      "vulnerable->vulnerable": 8
+    },
+    "correct": 16,
+    "family": "bounds_write",
+    "representation": "normalized",
+    "split": "held-out-root",
+    "test_endpoints": 16
+  },
+  {
+    "baseline": "repair-syntax",
+    "confusion": {
+      "patched->patched": 8,
+      "vulnerable->vulnerable": 8
+    },
+    "correct": 16,
+    "family": "divide_zero",
+    "representation": "normalized",
+    "split": "held-out-root",
+    "test_endpoints": 16
+  },
+  {
+    "baseline": "repair-syntax",
+    "confusion": {
+      "patched->patched": 8,
+      "vulnerable->vulnerable": 8
+    },
+    "correct": 16,
+    "family": "fixed_overflow",
+    "representation": "normalized",
+    "split": "held-out-root",
+    "test_endpoints": 16
+  },
+  {
+    "baseline": "repair-syntax",
+    "confusion": {
+      "patched->patched": 8,
+      "vulnerable->vulnerable": 8
+    },
+    "correct": 16,
+    "family": "access_control",
+    "representation": "normalized",
+    "split": "held-out-root",
+    "test_endpoints": 16
+  },
+  {
+    "baseline": "repair-syntax",
+    "confusion": {
+      "patched->patched": 8,
+      "vulnerable->vulnerable": 8
+    },
+    "correct": 16,
+    "family": "reentrancy",
+    "representation": "normalized",
+    "split": "held-out-root",
+    "test_endpoints": 16
+  },
+  {
+    "baseline": "repair-syntax",
+    "confusion": {
+      "patched->patched": 8,
+      "vulnerable->vulnerable": 8
+    },
+    "correct": 16,
+    "family": "unchecked_call",
+    "representation": "normalized",
+    "split": "held-out-root",
+    "test_endpoints": 16
+  },
+  {
+    "baseline": "ordinary-unigram-nb",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->vulnerable": 4
+    },
+    "correct": 8,
+    "family": "bounds_write",
+    "representation": "normalized",
+    "split": "held-out-context",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "ordinary-unigram-nb",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->vulnerable": 4
+    },
+    "correct": 8,
+    "family": "divide_zero",
+    "representation": "normalized",
+    "split": "held-out-context",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "ordinary-unigram-nb",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->patched": 1,
+      "vulnerable->vulnerable": 3
+    },
+    "correct": 7,
+    "family": "fixed_overflow",
+    "representation": "normalized",
+    "split": "held-out-context",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "ordinary-unigram-nb",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->vulnerable": 4
+    },
+    "correct": 8,
+    "family": "access_control",
+    "representation": "normalized",
+    "split": "held-out-context",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "ordinary-unigram-nb",
+    "confusion": {
+      "patched->vulnerable": 4,
+      "vulnerable->vulnerable": 4
+    },
+    "correct": 4,
+    "family": "reentrancy",
+    "representation": "normalized",
+    "split": "held-out-context",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "ordinary-unigram-nb",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->vulnerable": 4
+    },
+    "correct": 8,
+    "family": "unchecked_call",
+    "representation": "normalized",
+    "split": "held-out-context",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "constant",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->patched": 4
+    },
+    "correct": 4,
+    "family": "bounds_write",
+    "representation": "normalized",
+    "split": "held-out-context",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "constant",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->patched": 4
+    },
+    "correct": 4,
+    "family": "divide_zero",
+    "representation": "normalized",
+    "split": "held-out-context",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "constant",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->patched": 4
+    },
+    "correct": 4,
+    "family": "fixed_overflow",
+    "representation": "normalized",
+    "split": "held-out-context",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "constant",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->patched": 4
+    },
+    "correct": 4,
+    "family": "access_control",
+    "representation": "normalized",
+    "split": "held-out-context",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "constant",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->patched": 4
+    },
+    "correct": 4,
+    "family": "reentrancy",
+    "representation": "normalized",
+    "split": "held-out-context",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "constant",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->patched": 4
+    },
+    "correct": 4,
+    "family": "unchecked_call",
+    "representation": "normalized",
+    "split": "held-out-context",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "context-only",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->patched": 4
+    },
+    "correct": 4,
+    "family": "bounds_write",
+    "representation": "normalized",
+    "split": "held-out-context",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "context-only",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->patched": 4
+    },
+    "correct": 4,
+    "family": "divide_zero",
+    "representation": "normalized",
+    "split": "held-out-context",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "context-only",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->patched": 4
+    },
+    "correct": 4,
+    "family": "fixed_overflow",
+    "representation": "normalized",
+    "split": "held-out-context",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "context-only",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->patched": 4
+    },
+    "correct": 4,
+    "family": "access_control",
+    "representation": "normalized",
+    "split": "held-out-context",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "context-only",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->patched": 4
+    },
+    "correct": 4,
+    "family": "reentrancy",
+    "representation": "normalized",
+    "split": "held-out-context",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "context-only",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->patched": 4
+    },
+    "correct": 4,
+    "family": "unchecked_call",
+    "representation": "normalized",
+    "split": "held-out-context",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "repair-syntax",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->vulnerable": 4
+    },
+    "correct": 8,
+    "family": "bounds_write",
+    "representation": "normalized",
+    "split": "held-out-context",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "repair-syntax",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->vulnerable": 4
+    },
+    "correct": 8,
+    "family": "divide_zero",
+    "representation": "normalized",
+    "split": "held-out-context",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "repair-syntax",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->vulnerable": 4
+    },
+    "correct": 8,
+    "family": "fixed_overflow",
+    "representation": "normalized",
+    "split": "held-out-context",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "repair-syntax",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->vulnerable": 4
+    },
+    "correct": 8,
+    "family": "access_control",
+    "representation": "normalized",
+    "split": "held-out-context",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "repair-syntax",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->vulnerable": 4
+    },
+    "correct": 8,
+    "family": "reentrancy",
+    "representation": "normalized",
+    "split": "held-out-context",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "repair-syntax",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->vulnerable": 4
+    },
+    "correct": 8,
+    "family": "unchecked_call",
+    "representation": "normalized",
+    "split": "held-out-context",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "ordinary-unigram-nb",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->patched": 1,
+      "vulnerable->vulnerable": 3
+    },
+    "correct": 7,
+    "family": "bounds_write",
+    "representation": "normalized",
+    "split": "held-out-both",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "ordinary-unigram-nb",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->vulnerable": 4
+    },
+    "correct": 8,
+    "family": "divide_zero",
+    "representation": "normalized",
+    "split": "held-out-both",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "ordinary-unigram-nb",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->vulnerable": 4
+    },
+    "correct": 8,
+    "family": "fixed_overflow",
+    "representation": "normalized",
+    "split": "held-out-both",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "ordinary-unigram-nb",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->vulnerable": 4
+    },
+    "correct": 8,
+    "family": "access_control",
+    "representation": "normalized",
+    "split": "held-out-both",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "ordinary-unigram-nb",
+    "confusion": {
+      "patched->patched": 2,
+      "patched->vulnerable": 2,
+      "vulnerable->patched": 2,
+      "vulnerable->vulnerable": 2
+    },
+    "correct": 4,
+    "family": "reentrancy",
+    "representation": "normalized",
+    "split": "held-out-both",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "ordinary-unigram-nb",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->vulnerable": 4
+    },
+    "correct": 8,
+    "family": "unchecked_call",
+    "representation": "normalized",
+    "split": "held-out-both",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "constant",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->patched": 4
+    },
+    "correct": 4,
+    "family": "bounds_write",
+    "representation": "normalized",
+    "split": "held-out-both",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "constant",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->patched": 4
+    },
+    "correct": 4,
+    "family": "divide_zero",
+    "representation": "normalized",
+    "split": "held-out-both",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "constant",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->patched": 4
+    },
+    "correct": 4,
+    "family": "fixed_overflow",
+    "representation": "normalized",
+    "split": "held-out-both",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "constant",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->patched": 4
+    },
+    "correct": 4,
+    "family": "access_control",
+    "representation": "normalized",
+    "split": "held-out-both",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "constant",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->patched": 4
+    },
+    "correct": 4,
+    "family": "reentrancy",
+    "representation": "normalized",
+    "split": "held-out-both",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "constant",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->patched": 4
+    },
+    "correct": 4,
+    "family": "unchecked_call",
+    "representation": "normalized",
+    "split": "held-out-both",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "context-only",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->patched": 4
+    },
+    "correct": 4,
+    "family": "bounds_write",
+    "representation": "normalized",
+    "split": "held-out-both",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "context-only",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->patched": 4
+    },
+    "correct": 4,
+    "family": "divide_zero",
+    "representation": "normalized",
+    "split": "held-out-both",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "context-only",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->patched": 4
+    },
+    "correct": 4,
+    "family": "fixed_overflow",
+    "representation": "normalized",
+    "split": "held-out-both",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "context-only",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->patched": 4
+    },
+    "correct": 4,
+    "family": "access_control",
+    "representation": "normalized",
+    "split": "held-out-both",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "context-only",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->patched": 4
+    },
+    "correct": 4,
+    "family": "reentrancy",
+    "representation": "normalized",
+    "split": "held-out-both",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "context-only",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->patched": 4
+    },
+    "correct": 4,
+    "family": "unchecked_call",
+    "representation": "normalized",
+    "split": "held-out-both",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "repair-syntax",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->vulnerable": 4
+    },
+    "correct": 8,
+    "family": "bounds_write",
+    "representation": "normalized",
+    "split": "held-out-both",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "repair-syntax",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->vulnerable": 4
+    },
+    "correct": 8,
+    "family": "divide_zero",
+    "representation": "normalized",
+    "split": "held-out-both",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "repair-syntax",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->vulnerable": 4
+    },
+    "correct": 8,
+    "family": "fixed_overflow",
+    "representation": "normalized",
+    "split": "held-out-both",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "repair-syntax",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->vulnerable": 4
+    },
+    "correct": 8,
+    "family": "access_control",
+    "representation": "normalized",
+    "split": "held-out-both",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "repair-syntax",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->vulnerable": 4
+    },
+    "correct": 8,
+    "family": "reentrancy",
+    "representation": "normalized",
+    "split": "held-out-both",
+    "test_endpoints": 8
+  },
+  {
+    "baseline": "repair-syntax",
+    "confusion": {
+      "patched->patched": 4,
+      "vulnerable->vulnerable": 4
+    },
+    "correct": 8,
+    "family": "unchecked_call",
+    "representation": "normalized",
+    "split": "held-out-both",
+    "test_endpoints": 8
+  }
+]

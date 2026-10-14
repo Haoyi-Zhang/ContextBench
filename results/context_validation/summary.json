@@ -1,0 +1,203 @@
+{
+  "context_valuations_per_pair": 54,
+  "distinct_observations_max": 54,
+  "distinct_observations_min": 54,
+  "effective_coordinates_per_pair": 4,
+  "fit_protocol": "prespecified feature maps; lookup cells, majority fallback and tie break fitted only to training labels; no test tuning",
+  "historical_distinct_observations_min": 16,
+  "historical_domain_cases": 36,
+  "historical_effective_coordinates_min": 4,
+  "historical_fixed_rule_correct": {
+    "normalized": 72,
+    "raw": 72
+  },
+  "normalization_mismatches": 0,
+  "normalization_scope": "endpoint-local nop removal and equivalent comparison spellings; no repair erasure; labels unchanged",
+  "normalization_semantic_comparisons": 111456,
+  "normalized_context_overlap": 0,
+  "pairs": 144,
+  "predictor_information": "endpoint instruction syntax only; ids, labels, pair sides, certificates, runtime results and split metadata excluded",
+  "raw_and_normalized_full_endpoint_executions": 222912,
+  "reference_comparisons": 222912,
+  "reference_mismatches": 0,
+  "represented_but_unexecuted_cases": 0,
+  "root_binding_overlap": 0,
+  "root_configurations": 24,
+  "scope": "owned finite configurations within six existing monitors; not unseen monitor families or native faults",
+  "scores": [
+    {
+      "accuracy": 0.5,
+      "baseline": "constant",
+      "correct": 48,
+      "representation": "raw",
+      "split": "held-out-root",
+      "test_endpoints": 96,
+      "training_endpoints": 96
+    },
+    {
+      "accuracy": 0.5,
+      "baseline": "constant",
+      "correct": 24,
+      "representation": "raw",
+      "split": "held-out-context",
+      "test_endpoints": 48,
+      "training_endpoints": 96
+    },
+    {
+      "accuracy": 0.5,
+      "baseline": "constant",
+      "correct": 24,
+      "representation": "raw",
+      "split": "held-out-both",
+      "test_endpoints": 48,
+      "training_endpoints": 96
+    },
+    {
+      "accuracy": 0.5,
+      "baseline": "context-only",
+      "correct": 48,
+      "representation": "raw",
+      "split": "held-out-root",
+      "test_endpoints": 96,
+      "training_endpoints": 96
+    },
+    {
+      "accuracy": 0.5,
+      "baseline": "context-only",
+      "correct": 24,
+      "representation": "raw",
+      "split": "held-out-context",
+      "test_endpoints": 48,
+      "training_endpoints": 96
+    },
+    {
+      "accuracy": 0.5,
+      "baseline": "context-only",
+      "correct": 24,
+      "representation": "raw",
+      "split": "held-out-both",
+      "test_endpoints": 48,
+      "training_endpoints": 96
+    },
+    {
+      "accuracy": 1.0,
+      "baseline": "repair-syntax",
+      "correct": 96,
+      "representation": "raw",
+      "split": "held-out-root",
+      "test_endpoints": 96,
+      "training_endpoints": 96
+    },
+    {
+      "accuracy": 1.0,
+      "baseline": "repair-syntax",
+      "correct": 48,
+      "representation": "raw",
+      "split": "held-out-context",
+      "test_endpoints": 48,
+      "training_endpoints": 96
+    },
+    {
+      "accuracy": 1.0,
+      "baseline": "repair-syntax",
+      "correct": 48,
+      "representation": "raw",
+      "split": "held-out-both",
+      "test_endpoints": 48,
+      "training_endpoints": 96
+    },
+    {
+      "accuracy": 0.5,
+      "baseline": "constant",
+      "correct": 48,
+      "representation": "normalized",
+      "split": "held-out-root",
+      "test_endpoints": 96,
+      "training_endpoints": 96
+    },
+    {
+      "accuracy": 0.5,
+      "baseline": "constant",
+      "correct": 24,
+      "representation": "normalized",
+      "split": "held-out-context",
+      "test_endpoints": 48,
+      "training_endpoints": 96
+    },
+    {
+      "accuracy": 0.5,
+      "baseline": "constant",
+      "correct": 24,
+      "representation": "normalized",
+      "split": "held-out-both",
+      "test_endpoints": 48,
+      "training_endpoints": 96
+    },
+    {
+      "accuracy": 0.5,
+      "baseline": "context-only",
+      "correct": 48,
+      "representation": "normalized",
+      "split": "held-out-root",
+      "test_endpoints": 96,
+      "training_endpoints": 96
+    },
+    {
+      "accuracy": 0.5,
+      "baseline": "context-only",
+      "correct": 24,
+      "representation": "normalized",
+      "split": "held-out-context",
+      "test_endpoints": 48,
+      "training_endpoints": 96
+    },
+    {
+      "accuracy": 0.5,
+      "baseline": "context-only",
+      "correct": 24,
+      "representation": "normalized",
+      "split": "held-out-both",
+      "test_endpoints": 48,
+      "training_endpoints": 96
+    },
+    {
+      "accuracy": 1.0,
+      "baseline": "repair-syntax",
+      "correct": 96,
+      "representation": "normalized",
+      "split": "held-out-root",
+      "test_endpoints": 96,
+      "training_endpoints": 96
+    },
+    {
+      "accuracy": 1.0,
+      "baseline": "repair-syntax",
+      "correct": 48,
+      "representation": "normalized",
+      "split": "held-out-context",
+      "test_endpoints": 48,
+      "training_endpoints": 96
+    },
+    {
+      "accuracy": 1.0,
+      "baseline": "repair-syntax",
+      "correct": 48,
+      "representation": "normalized",
+      "split": "held-out-both",
+      "test_endpoints": 48,
+      "training_endpoints": 96
+    }
+  ],
+  "separate_relevance_control_endpoint_executions": 192,
+  "separate_relevance_control_rows": 4,
+  "split_pairs": {
+    "held-out-both": 24,
+    "held-out-context": 24,
+    "held-out-root": 48,
+    "train": 48
+  },
+  "split_protocol": "roots 0/1 and contexts 0..3 train; roots 2/3 and contexts 4/5 held out; both labels and representations remain in their pair split",
+  "test_root_configurations": 12,
+  "train_root_configurations": 12,
+  "transport_audit_agreements": 288
+}

@@ -217,6 +217,54 @@ training-only models, predictions, replay counts and functional witnesses. It
 does not treat the feature probes as learned vulnerability detectors or as an
 independent proof of transport. No native or third-party code is executed.
 
+## Ordinary syntax comparison and admission regressions
+
+The ordinary comparison keeps the preceding 144-pair split unchanged. It fits
+multinomial naive Bayes on generic typed JSON instruction unigrams, with alpha=1,
+empirical training priors, training vocabulary only, ignored unknown tokens and
+lexical label ties. This is an order-blind bag of the full instruction syntax,
+not three manually selected repair bits. Only 96 training endpoints per
+representation are fitted; no test tuning is performed. Root/context/both test
+counts are 81/96, 43/48 and 43/48 in both representations. The reentry family
+remains at half accuracy, and all other errors/confusions are retained. The
+constant/context-only probes remain at half and the repair lookup remains perfect.
+
+Reproduce into **fresh** directories; these runners refuse an existing output:
+
+```sh
+PYTHONDONTWRITEBYTECODE=1 python -B reproduce_ordinary_syntax.py --output /tmp/ordinary-syntax
+PYTHONDONTWRITEBYTECODE=1 python -B reproduce_ordinary_syntax.py --output /tmp/ordinary-syntax --check
+PYTHONDONTWRITEBYTECODE=1 python -B reproduce_context_admission.py --output /tmp/context-admission
+```
+
+`results/ordinary_syntax/` retains exact source-byte bindings, normalized
+root/context objects, tokens, training counts, log scores, every prediction,
+family confusion rows and environment. Input packets remain in the unchanged
+`results/context_assessment/`; its gzip-byte hashes bind the comparison source.
+Feature extraction and prediction are not counted as program executions.
+`results/context_validation/` is a separate fresh replay of that fixed grid on
+CPython 3.12.14/Windows. Its raw oracle rows retain per-call attempts/completions;
+222,912 Cartesian production runs and reference comparisons agree, separately
+from the 111,456 raw/normalized comparisons (two production calls each).
+The existing checker can check this directory as well:
+
+```sh
+PYTHONDONTWRITEBYTECODE=1 python -B check_context_assessment.py results/context_validation
+```
+
+Expanded-domain admission now uses the existing bounded source-JSON preflight.
+Integer/text values at 256 bits/4,096 characters pass; the next larger values
+reject structurally. Boolean/integer membership remains type-exact.
+`results/context_admission/` includes exact finite inputs, gate/consumer outputs,
+and observed evaluator calls for natural arithmetic errors. Its 56 production
+attempts include only 24 successful returns; undefined relations remain false.
+The separately labeled second-core-call injection tests accounting only and
+must not be presented as a natural semantic workload. Attempted calls, returned
+results, completed pair rows and symbolic represented obligations are distinct.
+Current regression identifiers/outcomes are retained separately under
+`results/context_validation/test_summary.json` (170 passing tests). The historical
+campaign, its 136-test summary and supplementary histories are unchanged.
+
 ## Supporting finite execution evidence
 
 The retained substrate has 556 pairs: 258 constructors, ten public-description

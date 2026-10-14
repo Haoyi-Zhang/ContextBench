@@ -1,0 +1,6 @@
+{
+  "python": "3.12.14",
+  "implementation": "CPython",
+  "os": "Windows-11-10.0.28000-SP0",
+  "scope": "syntax extraction/fitting/prediction; no semantic replay"
+}

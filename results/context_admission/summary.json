@@ -1,0 +1,9 @@
+{
+  "domain_cases": 4,
+  "native_executions": 0,
+  "natural_endpoint_attempts": 56,
+  "natural_endpoint_completions": 24,
+  "natural_error_cases": 2,
+  "scope": "owned finite scalar admission and undefined-arithmetic accounting; no valid-pair gain",
+  "unit_injection_cases": 1
+}

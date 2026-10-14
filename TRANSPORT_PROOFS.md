@@ -447,3 +447,47 @@ all root support at that context. Thus correct syntax predictions can coincide
 with a false expanded relation. `relevance_controls.csv` replays both cases in
 both representations, preserving their anchored labels. These four rows and
 their 192 endpoint executions are separate from the primary 144-pair campaign.
+
+## 11. Ordinary syntax comparison and finite admission accounting
+
+The ordinary comparator uses the unchanged Section 10 split and the same
+endpoint instruction syntax source as the lookup probes. Its generic token
+walk records all JSON keys, container delimiters and typed scalar values in
+`instructions` only. It discards order, retains whole literals, and does not
+read endpoint metadata, certificates, peers, domains or runtime outcomes.
+Training-only vocabulary and label/token counts define multinomial naive
+Bayes with alpha=1 and empirical priors. Test-only tokens have no likelihood
+term; equal log scores use the lexicographically first label. There is no
+test-tuned split, feature selection or parameter search.
+
+The fixed tests give 81/96, 43/48 and 43/48 correct labels in each representation,
+versus the repair lookup's 96/96, 48/48 and 48/48. A unigram bag is invariant under
+instruction permutation, so it cannot distinguish a pair differing only in
+effect/call order. It obtains half the labels within the reentry monitor; other
+errors remain in the per-family records. This is an observed shortcut diagnostic,
+not a theorem about accuracy on independent native faults. Actual normalized
+root and context bindings are rechecked against the retained manifest before fit.
+
+`relation_preconditions` preflights expanded domains with `validate_json_tree`
+before sorting or serialization. This enforces existing source-value, key, depth,
+node and text limits; it is not a new frame or totality rule. Base program
+admission and repair membership remain separately required. Cartesian replay
+still validates each point-instantiated program. The gate alone is not a
+universal semantic decision procedure or an independent repair proof.
+
+For each evaluator call, the attempt counter increments immediately before
+invocation; the completion counter increments only after a successful return.
+Rows with two returned production results increment the completed-pair counter.
+Reference attempts and returned results are separate from completed result
+comparisons. Hence a first-endpoint return followed by a peer error records two
+attempts, one completion and no completed pair; an error before the first return
+records one attempt and zero completions. Core replay uses the same accounting.
+Accepted runs keep the prior counts of 2m and 2mk; rejected/error paths no longer
+drop partial work. Symbolic represented obligations remain a separate field.
+
+The four source-literal boundary cases, two natural owned arithmetic-error cases,
+and explicitly labeled unit-only second-core-call fault injection are retained
+in `results/context_admission/`. These are schema/accounting regressions, not
+new valid benchmark mechanisms or native tests. Fresh Cartesian-reference and
+normalization replay remains separate from the syntax comparison, which invokes
+no endpoint evaluator. Historical result files are retained without rewriting.

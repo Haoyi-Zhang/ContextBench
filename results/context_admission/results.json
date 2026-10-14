@@ -1,0 +1,1541 @@
+[
+  {
+    "case": "int-at-bound",
+    "expected_admitted": true,
+    "gate": {
+      "admission_ok": true,
+      "context_domains_ok": true,
+      "declarations_ok": true,
+      "diagnostics": [],
+      "preconditions_ok": true,
+      "repair_check_independent": false,
+      "repair_detail": {
+        "guard_binding": {
+          "canonical_relation": "denominator != 0",
+          "denominator": [
+            [
+              "var",
+              "denominator"
+            ]
+          ],
+          "extra_conjuncts": 0,
+          "family": "divide_zero"
+        },
+        "protected_operation": "divide",
+        "repair": "insert-root-guard",
+        "site": 4
+      },
+      "repair_membership_ok": true,
+      "repair_reason": "accepted",
+      "shared_repair_checker": "rcsc.repair.check_repair_membership",
+      "uses_context_abstract_interpreter": false,
+      "uses_root_table": false,
+      "uses_transport_footprint": false
+    },
+    "production": {
+      "accepted": true,
+      "allocation_upper_bound": 49170,
+      "certificate_bytes": 6187,
+      "completed_core_rows": 12,
+      "context_valuations": 2,
+      "core_execution_attempts": 24,
+      "core_executions": 24,
+      "core_valuations": 12,
+      "detail": null,
+      "elapsed_ms": 4.456399998161942,
+      "productive_safe_roots": 9,
+      "reason": "accepted",
+      "represented_endpoint_executions": 48,
+      "vulnerable_roots": 3
+    }
+  },
+  {
+    "case": "int-over-bound",
+    "expected_admitted": false,
+    "gate": {
+      "admission_ok": true,
+      "context_domains_ok": false,
+      "declarations_ok": true,
+      "diagnostics": [
+        {
+          "component": "context-domains",
+          "detail": [
+            {
+              "detail": "integer exceeds the finite value bound",
+              "error": "SchemaError",
+              "reason": "expanded-domain-json-admission"
+            }
+          ],
+          "reason": "invalid-expanded-domain"
+        }
+      ],
+      "preconditions_ok": false,
+      "repair_check_independent": false,
+      "repair_detail": {
+        "guard_binding": {
+          "canonical_relation": "denominator != 0",
+          "denominator": [
+            [
+              "var",
+              "denominator"
+            ]
+          ],
+          "extra_conjuncts": 0,
+          "family": "divide_zero"
+        },
+        "protected_operation": "divide",
+        "repair": "insert-root-guard",
+        "site": 4
+      },
+      "repair_membership_ok": true,
+      "repair_reason": "accepted",
+      "shared_repair_checker": "rcsc.repair.check_repair_membership",
+      "uses_context_abstract_interpreter": false,
+      "uses_root_table": false,
+      "uses_transport_footprint": false
+    },
+    "production": {
+      "accepted": false,
+      "allocation_upper_bound": 0,
+      "certificate_bytes": 0,
+      "completed_core_rows": 0,
+      "context_valuations": 0,
+      "core_execution_attempts": 0,
+      "core_executions": 0,
+      "core_valuations": 0,
+      "detail": "integer exceeds the finite value bound",
+      "elapsed_ms": 0.10969999129883945,
+      "productive_safe_roots": 0,
+      "reason": "transport-admission-or-execution-error",
+      "represented_endpoint_executions": 0,
+      "vulnerable_roots": 0
+    }
+  },
+  {
+    "case": "text-at-bound",
+    "expected_admitted": true,
+    "gate": {
+      "admission_ok": true,
+      "context_domains_ok": true,
+      "declarations_ok": true,
+      "diagnostics": [],
+      "preconditions_ok": true,
+      "repair_check_independent": false,
+      "repair_detail": {
+        "guard_binding": {
+          "canonical_relation": "denominator != 0",
+          "denominator": [
+            [
+              "var",
+              "denominator"
+            ]
+          ],
+          "extra_conjuncts": 0,
+          "family": "divide_zero"
+        },
+        "protected_operation": "divide",
+        "repair": "insert-root-guard",
+        "site": 4
+      },
+      "repair_membership_ok": true,
+      "repair_reason": "accepted",
+      "shared_repair_checker": "rcsc.repair.check_repair_membership",
+      "uses_context_abstract_interpreter": false,
+      "uses_root_table": false,
+      "uses_transport_footprint": false
+    },
+    "production": {
+      "accepted": true,
+      "allocation_upper_bound": 49170,
+      "certificate_bytes": 6187,
+      "completed_core_rows": 12,
+      "context_valuations": 2,
+      "core_execution_attempts": 24,
+      "core_executions": 24,
+      "core_valuations": 12,
+      "detail": null,
+      "elapsed_ms": 4.549699980998412,
+      "productive_safe_roots": 9,
+      "reason": "accepted",
+      "represented_endpoint_executions": 48,
+      "vulnerable_roots": 3
+    }
+  },
+  {
+    "case": "text-over-bound",
+    "expected_admitted": false,
+    "gate": {
+      "admission_ok": true,
+      "context_domains_ok": false,
+      "declarations_ok": true,
+      "diagnostics": [
+        {
+          "component": "context-domains",
+          "detail": [
+            {
+              "detail": "string exceeds the finite value bound",
+              "error": "SchemaError",
+              "reason": "expanded-domain-json-admission"
+            }
+          ],
+          "reason": "invalid-expanded-domain"
+        }
+      ],
+      "preconditions_ok": false,
+      "repair_check_independent": false,
+      "repair_detail": {
+        "guard_binding": {
+          "canonical_relation": "denominator != 0",
+          "denominator": [
+            [
+              "var",
+              "denominator"
+            ]
+          ],
+          "extra_conjuncts": 0,
+          "family": "divide_zero"
+        },
+        "protected_operation": "divide",
+        "repair": "insert-root-guard",
+        "site": 4
+      },
+      "repair_membership_ok": true,
+      "repair_reason": "accepted",
+      "shared_repair_checker": "rcsc.repair.check_repair_membership",
+      "uses_context_abstract_interpreter": false,
+      "uses_root_table": false,
+      "uses_transport_footprint": false
+    },
+    "production": {
+      "accepted": false,
+      "allocation_upper_bound": 0,
+      "certificate_bytes": 0,
+      "completed_core_rows": 0,
+      "context_valuations": 0,
+      "core_execution_attempts": 0,
+      "core_executions": 0,
+      "core_valuations": 0,
+      "detail": "string exceeds the finite value bound",
+      "elapsed_ms": 0.1058999914675951,
+      "productive_safe_roots": 0,
+      "reason": "transport-admission-or-execution-error",
+      "represented_endpoint_executions": 0,
+      "vulnerable_roots": 0
+    }
+  },
+  {
+    "case": "natural-first-error",
+    "gate": {
+      "admission_ok": true,
+      "context_domains_ok": true,
+      "declarations_ok": true,
+      "diagnostics": [],
+      "preconditions_ok": true,
+      "repair_check_independent": false,
+      "repair_detail": {
+        "guard_binding": {
+          "canonical_relation": "denominator != 0",
+          "denominator": [
+            [
+              "var",
+              "denominator"
+            ]
+          ],
+          "extra_conjuncts": 0,
+          "family": "divide_zero"
+        },
+        "protected_operation": "divide",
+        "repair": "insert-root-guard",
+        "site": 4
+      },
+      "repair_membership_ok": true,
+      "repair_reason": "accepted",
+      "shared_repair_checker": "rcsc.repair.check_repair_membership",
+      "uses_context_abstract_interpreter": false,
+      "uses_root_table": false,
+      "uses_transport_footprint": false
+    },
+    "observed_calls": [
+      {
+        "completed": false,
+        "inputs": {
+          "denominator": -1,
+          "noise_0": 0,
+          "numerator": true
+        },
+        "label": "vulnerable"
+      },
+      {
+        "completed": false,
+        "inputs": {
+          "denominator": 0,
+          "noise_0": 0,
+          "numerator": true
+        },
+        "label": "vulnerable"
+      },
+      {
+        "completed": false,
+        "inputs": {
+          "denominator": 1,
+          "noise_0": 0,
+          "numerator": true
+        },
+        "label": "vulnerable"
+      },
+      {
+        "completed": false,
+        "inputs": {
+          "denominator": 2,
+          "noise_0": 0,
+          "numerator": true
+        },
+        "label": "vulnerable"
+      },
+      {
+        "completed": false,
+        "inputs": {
+          "denominator": -1,
+          "noise_0": 1,
+          "numerator": true
+        },
+        "label": "vulnerable"
+      },
+      {
+        "completed": false,
+        "inputs": {
+          "denominator": 0,
+          "noise_0": 1,
+          "numerator": true
+        },
+        "label": "vulnerable"
+      },
+      {
+        "completed": false,
+        "inputs": {
+          "denominator": 1,
+          "noise_0": 1,
+          "numerator": true
+        },
+        "label": "vulnerable"
+      },
+      {
+        "completed": false,
+        "inputs": {
+          "denominator": 2,
+          "noise_0": 1,
+          "numerator": true
+        },
+        "label": "vulnerable"
+      }
+    ],
+    "oracle": {
+      "completed_pair_rows": 0,
+      "declared_monitor": "DIVIDE_BY_ZERO",
+      "defined": false,
+      "elapsed_ms": 0.8252999978139997,
+      "endpoint_execution_attempts": 8,
+      "endpoint_executions": 0,
+      "failure_counts": {
+        "declared_monitor_mismatch": 0,
+        "execution_error": 8,
+        "missing_context_productive_safe_support": 2,
+        "missing_context_vulnerable_support": 2,
+        "patched_violation": 0,
+        "safe_observation_mismatch": 0,
+        "security_profile_change": 0
+      },
+      "first_failure": {
+        "component": "defined-execution",
+        "error": "TypeError",
+        "input": {
+          "denominator": -1,
+          "noise_0": 0,
+          "numerator": true
+        }
+      },
+      "functional_variation": null,
+      "monitor_consistent": true,
+      "reference_comparisons": 0,
+      "reference_execution_attempts": 0,
+      "reference_executions": 0,
+      "reference_mismatches": 0,
+      "relation": false,
+      "rows": [
+        {
+          "completed_pair": false,
+          "context_input": "{\"noise_0\":0}",
+          "declared_monitor": "DIVIDE_BY_ZERO",
+          "defined": false,
+          "endpoint_execution_attempts": 1,
+          "endpoint_executions": 0,
+          "monitor_consistent": true,
+          "p_violation": "",
+          "patched_closed": true,
+          "reference_comparisons": 0,
+          "reference_execution_attempts": 0,
+          "reference_executions": 0,
+          "reference_mismatches": 0,
+          "root_input": "{\"denominator\":-1,\"numerator\":true}",
+          "root_invariant": true,
+          "safe_observations_equal": true,
+          "v_violation": ""
+        },
+        {
+          "completed_pair": false,
+          "context_input": "{\"noise_0\":0}",
+          "declared_monitor": "DIVIDE_BY_ZERO",
+          "defined": false,
+          "endpoint_execution_attempts": 1,
+          "endpoint_executions": 0,
+          "monitor_consistent": true,
+          "p_violation": "",
+          "patched_closed": true,
+          "reference_comparisons": 0,
+          "reference_execution_attempts": 0,
+          "reference_executions": 0,
+          "reference_mismatches": 0,
+          "root_input": "{\"denominator\":0,\"numerator\":true}",
+          "root_invariant": true,
+          "safe_observations_equal": true,
+          "v_violation": ""
+        },
+        {
+          "completed_pair": false,
+          "context_input": "{\"noise_0\":0}",
+          "declared_monitor": "DIVIDE_BY_ZERO",
+          "defined": false,
+          "endpoint_execution_attempts": 1,
+          "endpoint_executions": 0,
+          "monitor_consistent": true,
+          "p_violation": "",
+          "patched_closed": true,
+          "reference_comparisons": 0,
+          "reference_execution_attempts": 0,
+          "reference_executions": 0,
+          "reference_mismatches": 0,
+          "root_input": "{\"denominator\":1,\"numerator\":true}",
+          "root_invariant": true,
+          "safe_observations_equal": true,
+          "v_violation": ""
+        },
+        {
+          "completed_pair": false,
+          "context_input": "{\"noise_0\":0}",
+          "declared_monitor": "DIVIDE_BY_ZERO",
+          "defined": false,
+          "endpoint_execution_attempts": 1,
+          "endpoint_executions": 0,
+          "monitor_consistent": true,
+          "p_violation": "",
+          "patched_closed": true,
+          "reference_comparisons": 0,
+          "reference_execution_attempts": 0,
+          "reference_executions": 0,
+          "reference_mismatches": 0,
+          "root_input": "{\"denominator\":2,\"numerator\":true}",
+          "root_invariant": true,
+          "safe_observations_equal": true,
+          "v_violation": ""
+        },
+        {
+          "completed_pair": false,
+          "context_input": "{\"noise_0\":1}",
+          "declared_monitor": "DIVIDE_BY_ZERO",
+          "defined": false,
+          "endpoint_execution_attempts": 1,
+          "endpoint_executions": 0,
+          "monitor_consistent": true,
+          "p_violation": "",
+          "patched_closed": true,
+          "reference_comparisons": 0,
+          "reference_execution_attempts": 0,
+          "reference_executions": 0,
+          "reference_mismatches": 0,
+          "root_input": "{\"denominator\":-1,\"numerator\":true}",
+          "root_invariant": true,
+          "safe_observations_equal": true,
+          "v_violation": ""
+        },
+        {
+          "completed_pair": false,
+          "context_input": "{\"noise_0\":1}",
+          "declared_monitor": "DIVIDE_BY_ZERO",
+          "defined": false,
+          "endpoint_execution_attempts": 1,
+          "endpoint_executions": 0,
+          "monitor_consistent": true,
+          "p_violation": "",
+          "patched_closed": true,
+          "reference_comparisons": 0,
+          "reference_execution_attempts": 0,
+          "reference_executions": 0,
+          "reference_mismatches": 0,
+          "root_input": "{\"denominator\":0,\"numerator\":true}",
+          "root_invariant": true,
+          "safe_observations_equal": true,
+          "v_violation": ""
+        },
+        {
+          "completed_pair": false,
+          "context_input": "{\"noise_0\":1}",
+          "declared_monitor": "DIVIDE_BY_ZERO",
+          "defined": false,
+          "endpoint_execution_attempts": 1,
+          "endpoint_executions": 0,
+          "monitor_consistent": true,
+          "p_violation": "",
+          "patched_closed": true,
+          "reference_comparisons": 0,
+          "reference_execution_attempts": 0,
+          "reference_executions": 0,
+          "reference_mismatches": 0,
+          "root_input": "{\"denominator\":1,\"numerator\":true}",
+          "root_invariant": true,
+          "safe_observations_equal": true,
+          "v_violation": ""
+        },
+        {
+          "completed_pair": false,
+          "context_input": "{\"noise_0\":1}",
+          "declared_monitor": "DIVIDE_BY_ZERO",
+          "defined": false,
+          "endpoint_execution_attempts": 1,
+          "endpoint_executions": 0,
+          "monitor_consistent": true,
+          "p_violation": "",
+          "patched_closed": true,
+          "reference_comparisons": 0,
+          "reference_execution_attempts": 0,
+          "reference_executions": 0,
+          "reference_mismatches": 0,
+          "root_input": "{\"denominator\":2,\"numerator\":true}",
+          "root_invariant": true,
+          "safe_observations_equal": true,
+          "v_violation": ""
+        }
+      ],
+      "scope": {
+        "checks_certificate_claims": false,
+        "checks_declared_monitor_consistency": true,
+        "checks_exact_repair_membership": false,
+        "full_cartesian_semantic_replay": true,
+        "uses_context_abstract_interpreter": false,
+        "uses_root_table": false,
+        "uses_transport_footprint": false
+      },
+      "security_invariant": true,
+      "semantic_contract_holds": false,
+      "semantic_relation": false
+    }
+  },
+  {
+    "case": "natural-second-error",
+    "gate": {
+      "admission_ok": true,
+      "context_domains_ok": true,
+      "declarations_ok": true,
+      "diagnostics": [
+        {
+          "component": "exact-repair-membership",
+          "detail": {
+            "expected": "one inserted root guard",
+            "kind": "edit-cardinality",
+            "patched_length": 9,
+            "vulnerable_length": 7
+          },
+          "reason": "root-repair-mismatch"
+        }
+      ],
+      "preconditions_ok": false,
+      "repair_check_independent": false,
+      "repair_detail": {
+        "expected": "one inserted root guard",
+        "kind": "edit-cardinality",
+        "patched_length": 9,
+        "vulnerable_length": 7
+      },
+      "repair_membership_ok": false,
+      "repair_reason": "root-repair-mismatch",
+      "shared_repair_checker": "rcsc.repair.check_repair_membership",
+      "uses_context_abstract_interpreter": false,
+      "uses_root_table": false,
+      "uses_transport_footprint": false
+    },
+    "observed_calls": [
+      {
+        "completed": true,
+        "inputs": {
+          "denominator": -1,
+          "noise_0": 0,
+          "numerator": -2
+        },
+        "label": "vulnerable"
+      },
+      {
+        "completed": false,
+        "inputs": {
+          "denominator": -1,
+          "noise_0": 0,
+          "numerator": -2
+        },
+        "label": "patched"
+      },
+      {
+        "completed": true,
+        "inputs": {
+          "denominator": -1,
+          "noise_0": 0,
+          "numerator": 0
+        },
+        "label": "vulnerable"
+      },
+      {
+        "completed": false,
+        "inputs": {
+          "denominator": -1,
+          "noise_0": 0,
+          "numerator": 0
+        },
+        "label": "patched"
+      },
+      {
+        "completed": true,
+        "inputs": {
+          "denominator": -1,
+          "noise_0": 0,
+          "numerator": 3
+        },
+        "label": "vulnerable"
+      },
+      {
+        "completed": false,
+        "inputs": {
+          "denominator": -1,
+          "noise_0": 0,
+          "numerator": 3
+        },
+        "label": "patched"
+      },
+      {
+        "completed": true,
+        "inputs": {
+          "denominator": 0,
+          "noise_0": 0,
+          "numerator": -2
+        },
+        "label": "vulnerable"
+      },
+      {
+        "completed": false,
+        "inputs": {
+          "denominator": 0,
+          "noise_0": 0,
+          "numerator": -2
+        },
+        "label": "patched"
+      },
+      {
+        "completed": true,
+        "inputs": {
+          "denominator": 0,
+          "noise_0": 0,
+          "numerator": 0
+        },
+        "label": "vulnerable"
+      },
+      {
+        "completed": false,
+        "inputs": {
+          "denominator": 0,
+          "noise_0": 0,
+          "numerator": 0
+        },
+        "label": "patched"
+      },
+      {
+        "completed": true,
+        "inputs": {
+          "denominator": 0,
+          "noise_0": 0,
+          "numerator": 3
+        },
+        "label": "vulnerable"
+      },
+      {
+        "completed": false,
+        "inputs": {
+          "denominator": 0,
+          "noise_0": 0,
+          "numerator": 3
+        },
+        "label": "patched"
+      },
+      {
+        "completed": true,
+        "inputs": {
+          "denominator": 1,
+          "noise_0": 0,
+          "numerator": -2
+        },
+        "label": "vulnerable"
+      },
+      {
+        "completed": false,
+        "inputs": {
+          "denominator": 1,
+          "noise_0": 0,
+          "numerator": -2
+        },
+        "label": "patched"
+      },
+      {
+        "completed": true,
+        "inputs": {
+          "denominator": 1,
+          "noise_0": 0,
+          "numerator": 0
+        },
+        "label": "vulnerable"
+      },
+      {
+        "completed": false,
+        "inputs": {
+          "denominator": 1,
+          "noise_0": 0,
+          "numerator": 0
+        },
+        "label": "patched"
+      },
+      {
+        "completed": true,
+        "inputs": {
+          "denominator": 1,
+          "noise_0": 0,
+          "numerator": 3
+        },
+        "label": "vulnerable"
+      },
+      {
+        "completed": false,
+        "inputs": {
+          "denominator": 1,
+          "noise_0": 0,
+          "numerator": 3
+        },
+        "label": "patched"
+      },
+      {
+        "completed": true,
+        "inputs": {
+          "denominator": 2,
+          "noise_0": 0,
+          "numerator": -2
+        },
+        "label": "vulnerable"
+      },
+      {
+        "completed": false,
+        "inputs": {
+          "denominator": 2,
+          "noise_0": 0,
+          "numerator": -2
+        },
+        "label": "patched"
+      },
+      {
+        "completed": true,
+        "inputs": {
+          "denominator": 2,
+          "noise_0": 0,
+          "numerator": 0
+        },
+        "label": "vulnerable"
+      },
+      {
+        "completed": false,
+        "inputs": {
+          "denominator": 2,
+          "noise_0": 0,
+          "numerator": 0
+        },
+        "label": "patched"
+      },
+      {
+        "completed": true,
+        "inputs": {
+          "denominator": 2,
+          "noise_0": 0,
+          "numerator": 3
+        },
+        "label": "vulnerable"
+      },
+      {
+        "completed": false,
+        "inputs": {
+          "denominator": 2,
+          "noise_0": 0,
+          "numerator": 3
+        },
+        "label": "patched"
+      },
+      {
+        "completed": true,
+        "inputs": {
+          "denominator": -1,
+          "noise_0": 1,
+          "numerator": -2
+        },
+        "label": "vulnerable"
+      },
+      {
+        "completed": false,
+        "inputs": {
+          "denominator": -1,
+          "noise_0": 1,
+          "numerator": -2
+        },
+        "label": "patched"
+      },
+      {
+        "completed": true,
+        "inputs": {
+          "denominator": -1,
+          "noise_0": 1,
+          "numerator": 0
+        },
+        "label": "vulnerable"
+      },
+      {
+        "completed": false,
+        "inputs": {
+          "denominator": -1,
+          "noise_0": 1,
+          "numerator": 0
+        },
+        "label": "patched"
+      },
+      {
+        "completed": true,
+        "inputs": {
+          "denominator": -1,
+          "noise_0": 1,
+          "numerator": 3
+        },
+        "label": "vulnerable"
+      },
+      {
+        "completed": false,
+        "inputs": {
+          "denominator": -1,
+          "noise_0": 1,
+          "numerator": 3
+        },
+        "label": "patched"
+      },
+      {
+        "completed": true,
+        "inputs": {
+          "denominator": 0,
+          "noise_0": 1,
+          "numerator": -2
+        },
+        "label": "vulnerable"
+      },
+      {
+        "completed": false,
+        "inputs": {
+          "denominator": 0,
+          "noise_0": 1,
+          "numerator": -2
+        },
+        "label": "patched"
+      },
+      {
+        "completed": true,
+        "inputs": {
+          "denominator": 0,
+          "noise_0": 1,
+          "numerator": 0
+        },
+        "label": "vulnerable"
+      },
+      {
+        "completed": false,
+        "inputs": {
+          "denominator": 0,
+          "noise_0": 1,
+          "numerator": 0
+        },
+        "label": "patched"
+      },
+      {
+        "completed": true,
+        "inputs": {
+          "denominator": 0,
+          "noise_0": 1,
+          "numerator": 3
+        },
+        "label": "vulnerable"
+      },
+      {
+        "completed": false,
+        "inputs": {
+          "denominator": 0,
+          "noise_0": 1,
+          "numerator": 3
+        },
+        "label": "patched"
+      },
+      {
+        "completed": true,
+        "inputs": {
+          "denominator": 1,
+          "noise_0": 1,
+          "numerator": -2
+        },
+        "label": "vulnerable"
+      },
+      {
+        "completed": false,
+        "inputs": {
+          "denominator": 1,
+          "noise_0": 1,
+          "numerator": -2
+        },
+        "label": "patched"
+      },
+      {
+        "completed": true,
+        "inputs": {
+          "denominator": 1,
+          "noise_0": 1,
+          "numerator": 0
+        },
+        "label": "vulnerable"
+      },
+      {
+        "completed": false,
+        "inputs": {
+          "denominator": 1,
+          "noise_0": 1,
+          "numerator": 0
+        },
+        "label": "patched"
+      },
+      {
+        "completed": true,
+        "inputs": {
+          "denominator": 1,
+          "noise_0": 1,
+          "numerator": 3
+        },
+        "label": "vulnerable"
+      },
+      {
+        "completed": false,
+        "inputs": {
+          "denominator": 1,
+          "noise_0": 1,
+          "numerator": 3
+        },
+        "label": "patched"
+      },
+      {
+        "completed": true,
+        "inputs": {
+          "denominator": 2,
+          "noise_0": 1,
+          "numerator": -2
+        },
+        "label": "vulnerable"
+      },
+      {
+        "completed": false,
+        "inputs": {
+          "denominator": 2,
+          "noise_0": 1,
+          "numerator": -2
+        },
+        "label": "patched"
+      },
+      {
+        "completed": true,
+        "inputs": {
+          "denominator": 2,
+          "noise_0": 1,
+          "numerator": 0
+        },
+        "label": "vulnerable"
+      },
+      {
+        "completed": false,
+        "inputs": {
+          "denominator": 2,
+          "noise_0": 1,
+          "numerator": 0
+        },
+        "label": "patched"
+      },
+      {
+        "completed": true,
+        "inputs": {
+          "denominator": 2,
+          "noise_0": 1,
+          "numerator": 3
+        },
+        "label": "vulnerable"
+      },
+      {
+        "completed": false,
+        "inputs": {
+          "denominator": 2,
+          "noise_0": 1,
+          "numerator": 3
+        },
+        "label": "patched"
+      }
+    ],
+    "oracle": {
+      "completed_pair_rows": 0,
+      "declared_monitor": "DIVIDE_BY_ZERO",
+      "defined": false,
+      "elapsed_ms": 1.5814999933354557,
+      "endpoint_execution_attempts": 48,
+      "endpoint_executions": 24,
+      "failure_counts": {
+        "declared_monitor_mismatch": 0,
+        "execution_error": 24,
+        "missing_context_productive_safe_support": 2,
+        "missing_context_vulnerable_support": 2,
+        "patched_violation": 0,
+        "safe_observation_mismatch": 0,
+        "security_profile_change": 0
+      },
+      "first_failure": {
+        "component": "defined-execution",
+        "error": "TypeError",
+        "input": {
+          "denominator": -1,
+          "noise_0": 0,
+          "numerator": -2
+        }
+      },
+      "functional_variation": null,
+      "monitor_consistent": true,
+      "reference_comparisons": 0,
+      "reference_execution_attempts": 0,
+      "reference_executions": 0,
+      "reference_mismatches": 0,
+      "relation": false,
+      "rows": [
+        {
+          "completed_pair": false,
+          "context_input": "{\"noise_0\":0}",
+          "declared_monitor": "DIVIDE_BY_ZERO",
+          "defined": false,
+          "endpoint_execution_attempts": 2,
+          "endpoint_executions": 1,
+          "monitor_consistent": true,
+          "p_violation": "",
+          "patched_closed": true,
+          "reference_comparisons": 0,
+          "reference_execution_attempts": 0,
+          "reference_executions": 0,
+          "reference_mismatches": 0,
+          "root_input": "{\"denominator\":-1,\"numerator\":-2}",
+          "root_invariant": true,
+          "safe_observations_equal": true,
+          "v_violation": ""
+        },
+        {
+          "completed_pair": false,
+          "context_input": "{\"noise_0\":0}",
+          "declared_monitor": "DIVIDE_BY_ZERO",
+          "defined": false,
+          "endpoint_execution_attempts": 2,
+          "endpoint_executions": 1,
+          "monitor_consistent": true,
+          "p_violation": "",
+          "patched_closed": true,
+          "reference_comparisons": 0,
+          "reference_execution_attempts": 0,
+          "reference_executions": 0,
+          "reference_mismatches": 0,
+          "root_input": "{\"denominator\":-1,\"numerator\":0}",
+          "root_invariant": true,
+          "safe_observations_equal": true,
+          "v_violation": ""
+        },
+        {
+          "completed_pair": false,
+          "context_input": "{\"noise_0\":0}",
+          "declared_monitor": "DIVIDE_BY_ZERO",
+          "defined": false,
+          "endpoint_execution_attempts": 2,
+          "endpoint_executions": 1,
+          "monitor_consistent": true,
+          "p_violation": "",
+          "patched_closed": true,
+          "reference_comparisons": 0,
+          "reference_execution_attempts": 0,
+          "reference_executions": 0,
+          "reference_mismatches": 0,
+          "root_input": "{\"denominator\":-1,\"numerator\":3}",
+          "root_invariant": true,
+          "safe_observations_equal": true,
+          "v_violation": ""
+        },
+        {
+          "completed_pair": false,
+          "context_input": "{\"noise_0\":0}",
+          "declared_monitor": "DIVIDE_BY_ZERO",
+          "defined": false,
+          "endpoint_execution_attempts": 2,
+          "endpoint_executions": 1,
+          "monitor_consistent": true,
+          "p_violation": "",
+          "patched_closed": true,
+          "reference_comparisons": 0,
+          "reference_execution_attempts": 0,
+          "reference_executions": 0,
+          "reference_mismatches": 0,
+          "root_input": "{\"denominator\":0,\"numerator\":-2}",
+          "root_invariant": true,
+          "safe_observations_equal": true,
+          "v_violation": ""
+        },
+        {
+          "completed_pair": false,
+          "context_input": "{\"noise_0\":0}",
+          "declared_monitor": "DIVIDE_BY_ZERO",
+          "defined": false,
+          "endpoint_execution_attempts": 2,
+          "endpoint_executions": 1,
+          "monitor_consistent": true,
+          "p_violation": "",
+          "patched_closed": true,
+          "reference_comparisons": 0,
+          "reference_execution_attempts": 0,
+          "reference_executions": 0,
+          "reference_mismatches": 0,
+          "root_input": "{\"denominator\":0,\"numerator\":0}",
+          "root_invariant": true,
+          "safe_observations_equal": true,
+          "v_violation": ""
+        },
+        {
+          "completed_pair": false,
+          "context_input": "{\"noise_0\":0}",
+          "declared_monitor": "DIVIDE_BY_ZERO",
+          "defined": false,
+          "endpoint_execution_attempts": 2,
+          "endpoint_executions": 1,
+          "monitor_consistent": true,
+          "p_violation": "",
+          "patched_closed": true,
+          "reference_comparisons": 0,
+          "reference_execution_attempts": 0,
+          "reference_executions": 0,
+          "reference_mismatches": 0,
+          "root_input": "{\"denominator\":0,\"numerator\":3}",
+          "root_invariant": true,
+          "safe_observations_equal": true,
+          "v_violation": ""
+        },
+        {
+          "completed_pair": false,
+          "context_input": "{\"noise_0\":0}",
+          "declared_monitor": "DIVIDE_BY_ZERO",
+          "defined": false,
+          "endpoint_execution_attempts": 2,
+          "endpoint_executions": 1,
+          "monitor_consistent": true,
+          "p_violation": "",
+          "patched_closed": true,
+          "reference_comparisons": 0,
+          "reference_execution_attempts": 0,
+          "reference_executions": 0,
+          "reference_mismatches": 0,
+          "root_input": "{\"denominator\":1,\"numerator\":-2}",
+          "root_invariant": true,
+          "safe_observations_equal": true,
+          "v_violation": ""
+        },
+        {
+          "completed_pair": false,
+          "context_input": "{\"noise_0\":0}",
+          "declared_monitor": "DIVIDE_BY_ZERO",
+          "defined": false,
+          "endpoint_execution_attempts": 2,
+          "endpoint_executions": 1,
+          "monitor_consistent": true,
+          "p_violation": "",
+          "patched_closed": true,
+          "reference_comparisons": 0,
+          "reference_execution_attempts": 0,
+          "reference_executions": 0,
+          "reference_mismatches": 0,
+          "root_input": "{\"denominator\":1,\"numerator\":0}",
+          "root_invariant": true,
+          "safe_observations_equal": true,
+          "v_violation": ""
+        },
+        {
+          "completed_pair": false,
+          "context_input": "{\"noise_0\":0}",
+          "declared_monitor": "DIVIDE_BY_ZERO",
+          "defined": false,
+          "endpoint_execution_attempts": 2,
+          "endpoint_executions": 1,
+          "monitor_consistent": true,
+          "p_violation": "",
+          "patched_closed": true,
+          "reference_comparisons": 0,
+          "reference_execution_attempts": 0,
+          "reference_executions": 0,
+          "reference_mismatches": 0,
+          "root_input": "{\"denominator\":1,\"numerator\":3}",
+          "root_invariant": true,
+          "safe_observations_equal": true,
+          "v_violation": ""
+        },
+        {
+          "completed_pair": false,
+          "context_input": "{\"noise_0\":0}",
+          "declared_monitor": "DIVIDE_BY_ZERO",
+          "defined": false,
+          "endpoint_execution_attempts": 2,
+          "endpoint_executions": 1,
+          "monitor_consistent": true,
+          "p_violation": "",
+          "patched_closed": true,
+          "reference_comparisons": 0,
+          "reference_execution_attempts": 0,
+          "reference_executions": 0,
+          "reference_mismatches": 0,
+          "root_input": "{\"denominator\":2,\"numerator\":-2}",
+          "root_invariant": true,
+          "safe_observations_equal": true,
+          "v_violation": ""
+        },
+        {
+          "completed_pair": false,
+          "context_input": "{\"noise_0\":0}",
+          "declared_monitor": "DIVIDE_BY_ZERO",
+          "defined": false,
+          "endpoint_execution_attempts": 2,
+          "endpoint_executions": 1,
+          "monitor_consistent": true,
+          "p_violation": "",
+          "patched_closed": true,
+          "reference_comparisons": 0,
+          "reference_execution_attempts": 0,
+          "reference_executions": 0,
+          "reference_mismatches": 0,
+          "root_input": "{\"denominator\":2,\"numerator\":0}",
+          "root_invariant": true,
+          "safe_observations_equal": true,
+          "v_violation": ""
+        },
+        {
+          "completed_pair": false,
+          "context_input": "{\"noise_0\":0}",
+          "declared_monitor": "DIVIDE_BY_ZERO",
+          "defined": false,
+          "endpoint_execution_attempts": 2,
+          "endpoint_executions": 1,
+          "monitor_consistent": true,
+          "p_violation": "",
+          "patched_closed": true,
+          "reference_comparisons": 0,
+          "reference_execution_attempts": 0,
+          "reference_executions": 0,
+          "reference_mismatches": 0,
+          "root_input": "{\"denominator\":2,\"numerator\":3}",
+          "root_invariant": true,
+          "safe_observations_equal": true,
+          "v_violation": ""
+        },
+        {
+          "completed_pair": false,
+          "context_input": "{\"noise_0\":1}",
+          "declared_monitor": "DIVIDE_BY_ZERO",
+          "defined": false,
+          "endpoint_execution_attempts": 2,
+          "endpoint_executions": 1,
+          "monitor_consistent": true,
+          "p_violation": "",
+          "patched_closed": true,
+          "reference_comparisons": 0,
+          "reference_execution_attempts": 0,
+          "reference_executions": 0,
+          "reference_mismatches": 0,
+          "root_input": "{\"denominator\":-1,\"numerator\":-2}",
+          "root_invariant": true,
+          "safe_observations_equal": true,
+          "v_violation": ""
+        },
+        {
+          "completed_pair": false,
+          "context_input": "{\"noise_0\":1}",
+          "declared_monitor": "DIVIDE_BY_ZERO",
+          "defined": false,
+          "endpoint_execution_attempts": 2,
+          "endpoint_executions": 1,
+          "monitor_consistent": true,
+          "p_violation": "",
+          "patched_closed": true,
+          "reference_comparisons": 0,
+          "reference_execution_attempts": 0,
+          "reference_executions": 0,
+          "reference_mismatches": 0,
+          "root_input": "{\"denominator\":-1,\"numerator\":0}",
+          "root_invariant": true,
+          "safe_observations_equal": true,
+          "v_violation": ""
+        },
+        {
+          "completed_pair": false,
+          "context_input": "{\"noise_0\":1}",
+          "declared_monitor": "DIVIDE_BY_ZERO",
+          "defined": false,
+          "endpoint_execution_attempts": 2,
+          "endpoint_executions": 1,
+          "monitor_consistent": true,
+          "p_violation": "",
+          "patched_closed": true,
+          "reference_comparisons": 0,
+          "reference_execution_attempts": 0,
+          "reference_executions": 0,
+          "reference_mismatches": 0,
+          "root_input": "{\"denominator\":-1,\"numerator\":3}",
+          "root_invariant": true,
+          "safe_observations_equal": true,
+          "v_violation": ""
+        },
+        {
+          "completed_pair": false,
+          "context_input": "{\"noise_0\":1}",
+          "declared_monitor": "DIVIDE_BY_ZERO",
+          "defined": false,
+          "endpoint_execution_attempts": 2,
+          "endpoint_executions": 1,
+          "monitor_consistent": true,
+          "p_violation": "",
+          "patched_closed": true,
+          "reference_comparisons": 0,
+          "reference_execution_attempts": 0,
+          "reference_executions": 0,
+          "reference_mismatches": 0,
+          "root_input": "{\"denominator\":0,\"numerator\":-2}",
+          "root_invariant": true,
+          "safe_observations_equal": true,
+          "v_violation": ""
+        },
+        {
+          "completed_pair": false,
+          "context_input": "{\"noise_0\":1}",
+          "declared_monitor": "DIVIDE_BY_ZERO",
+          "defined": false,
+          "endpoint_execution_attempts": 2,
+          "endpoint_executions": 1,
+          "monitor_consistent": true,
+          "p_violation": "",
+          "patched_closed": true,
+          "reference_comparisons": 0,
+          "reference_execution_attempts": 0,
+          "reference_executions": 0,
+          "reference_mismatches": 0,
+          "root_input": "{\"denominator\":0,\"numerator\":0}",
+          "root_invariant": true,
+          "safe_observations_equal": true,
+          "v_violation": ""
+        },
+        {
+          "completed_pair": false,
+          "context_input": "{\"noise_0\":1}",
+          "declared_monitor": "DIVIDE_BY_ZERO",
+          "defined": false,
+          "endpoint_execution_attempts": 2,
+          "endpoint_executions": 1,
+          "monitor_consistent": true,
+          "p_violation": "",
+          "patched_closed": true,
+          "reference_comparisons": 0,
+          "reference_execution_attempts": 0,
+          "reference_executions": 0,
+          "reference_mismatches": 0,
+          "root_input": "{\"denominator\":0,\"numerator\":3}",
+          "root_invariant": true,
+          "safe_observations_equal": true,
+          "v_violation": ""
+        },
+        {
+          "completed_pair": false,
+          "context_input": "{\"noise_0\":1}",
+          "declared_monitor": "DIVIDE_BY_ZERO",
+          "defined": false,
+          "endpoint_execution_attempts": 2,
+          "endpoint_executions": 1,
+          "monitor_consistent": true,
+          "p_violation": "",
+          "patched_closed": true,
+          "reference_comparisons": 0,
+          "reference_execution_attempts": 0,
+          "reference_executions": 0,
+          "reference_mismatches": 0,
+          "root_input": "{\"denominator\":1,\"numerator\":-2}",
+          "root_invariant": true,
+          "safe_observations_equal": true,
+          "v_violation": ""
+        },
+        {
+          "completed_pair": false,
+          "context_input": "{\"noise_0\":1}",
+          "declared_monitor": "DIVIDE_BY_ZERO",
+          "defined": false,
+          "endpoint_execution_attempts": 2,
+          "endpoint_executions": 1,
+          "monitor_consistent": true,
+          "p_violation": "",
+          "patched_closed": true,
+          "reference_comparisons": 0,
+          "reference_execution_attempts": 0,
+          "reference_executions": 0,
+          "reference_mismatches": 0,
+          "root_input": "{\"denominator\":1,\"numerator\":0}",
+          "root_invariant": true,
+          "safe_observations_equal": true,
+          "v_violation": ""
+        },
+        {
+          "completed_pair": false,
+          "context_input": "{\"noise_0\":1}",
+          "declared_monitor": "DIVIDE_BY_ZERO",
+          "defined": false,
+          "endpoint_execution_attempts": 2,
+          "endpoint_executions": 1,
+          "monitor_consistent": true,
+          "p_violation": "",
+          "patched_closed": true,
+          "reference_comparisons": 0,
+          "reference_execution_attempts": 0,
+          "reference_executions": 0,
+          "reference_mismatches": 0,
+          "root_input": "{\"denominator\":1,\"numerator\":3}",
+          "root_invariant": true,
+          "safe_observations_equal": true,
+          "v_violation": ""
+        },
+        {
+          "completed_pair": false,
+          "context_input": "{\"noise_0\":1}",
+          "declared_monitor": "DIVIDE_BY_ZERO",
+          "defined": false,
+          "endpoint_execution_attempts": 2,
+          "endpoint_executions": 1,
+          "monitor_consistent": true,
+          "p_violation": "",
+          "patched_closed": true,
+          "reference_comparisons": 0,
+          "reference_execution_attempts": 0,
+          "reference_executions": 0,
+          "reference_mismatches": 0,
+          "root_input": "{\"denominator\":2,\"numerator\":-2}",
+          "root_invariant": true,
+          "safe_observations_equal": true,
+          "v_violation": ""
+        },
+        {
+          "completed_pair": false,
+          "context_input": "{\"noise_0\":1}",
+          "declared_monitor": "DIVIDE_BY_ZERO",
+          "defined": false,
+          "endpoint_execution_attempts": 2,
+          "endpoint_executions": 1,
+          "monitor_consistent": true,
+          "p_violation": "",
+          "patched_closed": true,
+          "reference_comparisons": 0,
+          "reference_execution_attempts": 0,
+          "reference_executions": 0,
+          "reference_mismatches": 0,
+          "root_input": "{\"denominator\":2,\"numerator\":0}",
+          "root_invariant": true,
+          "safe_observations_equal": true,
+          "v_violation": ""
+        },
+        {
+          "completed_pair": false,
+          "context_input": "{\"noise_0\":1}",
+          "declared_monitor": "DIVIDE_BY_ZERO",
+          "defined": false,
+          "endpoint_execution_attempts": 2,
+          "endpoint_executions": 1,
+          "monitor_consistent": true,
+          "p_violation": "",
+          "patched_closed": true,
+          "reference_comparisons": 0,
+          "reference_execution_attempts": 0,
+          "reference_executions": 0,
+          "reference_mismatches": 0,
+          "root_input": "{\"denominator\":2,\"numerator\":3}",
+          "root_invariant": true,
+          "safe_observations_equal": true,
+          "v_violation": ""
+        }
+      ],
+      "scope": {
+        "checks_certificate_claims": false,
+        "checks_declared_monitor_consistency": true,
+        "checks_exact_repair_membership": false,
+        "full_cartesian_semantic_replay": true,
+        "uses_context_abstract_interpreter": false,
+        "uses_root_table": false,
+        "uses_transport_footprint": false
+      },
+      "security_invariant": true,
+      "semantic_contract_holds": false,
+      "semantic_relation": false
+    }
+  },
+  {
+    "case": "test-only-core-second-call-injection",
+    "observed_calls": [
+      {
+        "completed": true,
+        "inputs": {
+          "denominator": -1,
+          "numerator": -2
+        },
+        "label": "vulnerable"
+      },
+      {
+        "completed": false,
+        "inputs": {
+          "denominator": -1,
+          "numerator": -2
+        },
+        "label": "patched"
+      }
+    ],
+    "production": {
+      "accepted": false,
+      "allocation_upper_bound": 0,
+      "certificate_bytes": 0,
+      "completed_core_rows": 0,
+      "context_valuations": 2,
+      "core_execution_attempts": 2,
+      "core_executions": 1,
+      "core_valuations": 12,
+      "detail": "test-only second-call failure",
+      "elapsed_ms": 0.7952000014483929,
+      "productive_safe_roots": 0,
+      "reason": "transport-admission-or-execution-error",
+      "represented_endpoint_executions": 48,
+      "vulnerable_roots": 0
+    },
+    "scope": "unit fault injection, not scientific workload"
+  }
+]

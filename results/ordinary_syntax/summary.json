@@ -1,0 +1,248 @@
+{
+  "classifier_endpoint_executions": 0,
+  "context_syntax_overlap": 0,
+  "feature_rows": 576,
+  "native_executions": 0,
+  "pairs": 144,
+  "prediction_rows": 1536,
+  "protocol": {
+    "decision": "ignore unknown tokens; sum log scores; lexical label tie break",
+    "input": "endpoint instructions only; all keys, typed scalar values and container delimiters",
+    "model": "multinomial naive Bayes, alpha=1, empirical training priors, training vocabulary only",
+    "scope": "within-six-monitor configuration holdouts; not independent fault populations or native execution",
+    "split": "roots 0/1 and contexts 0..3 train; roots 2/3 and contexts 4/5 held out",
+    "tokenization": "unordered unigram bag; whole strings; no repair feature engineering",
+    "tuning": "none; no split, feature, alpha or threshold search"
+  },
+  "root_binding_overlap": 0,
+  "scores": [
+    {
+      "accuracy": 0.84375,
+      "baseline": "ordinary-unigram-nb",
+      "correct": 81,
+      "representation": "raw",
+      "split": "held-out-root",
+      "test_endpoints": 96,
+      "training_endpoints": 96
+    },
+    {
+      "accuracy": 0.5,
+      "baseline": "constant",
+      "correct": 48,
+      "representation": "raw",
+      "split": "held-out-root",
+      "test_endpoints": 96,
+      "training_endpoints": 96
+    },
+    {
+      "accuracy": 0.5,
+      "baseline": "context-only",
+      "correct": 48,
+      "representation": "raw",
+      "split": "held-out-root",
+      "test_endpoints": 96,
+      "training_endpoints": 96
+    },
+    {
+      "accuracy": 1.0,
+      "baseline": "repair-syntax",
+      "correct": 96,
+      "representation": "raw",
+      "split": "held-out-root",
+      "test_endpoints": 96,
+      "training_endpoints": 96
+    },
+    {
+      "accuracy": 0.8958333333333334,
+      "baseline": "ordinary-unigram-nb",
+      "correct": 43,
+      "representation": "raw",
+      "split": "held-out-context",
+      "test_endpoints": 48,
+      "training_endpoints": 96
+    },
+    {
+      "accuracy": 0.5,
+      "baseline": "constant",
+      "correct": 24,
+      "representation": "raw",
+      "split": "held-out-context",
+      "test_endpoints": 48,
+      "training_endpoints": 96
+    },
+    {
+      "accuracy": 0.5,
+      "baseline": "context-only",
+      "correct": 24,
+      "representation": "raw",
+      "split": "held-out-context",
+      "test_endpoints": 48,
+      "training_endpoints": 96
+    },
+    {
+      "accuracy": 1.0,
+      "baseline": "repair-syntax",
+      "correct": 48,
+      "representation": "raw",
+      "split": "held-out-context",
+      "test_endpoints": 48,
+      "training_endpoints": 96
+    },
+    {
+      "accuracy": 0.8958333333333334,
+      "baseline": "ordinary-unigram-nb",
+      "correct": 43,
+      "representation": "raw",
+      "split": "held-out-both",
+      "test_endpoints": 48,
+      "training_endpoints": 96
+    },
+    {
+      "accuracy": 0.5,
+      "baseline": "constant",
+      "correct": 24,
+      "representation": "raw",
+      "split": "held-out-both",
+      "test_endpoints": 48,
+      "training_endpoints": 96
+    },
+    {
+      "accuracy": 0.5,
+      "baseline": "context-only",
+      "correct": 24,
+      "representation": "raw",
+      "split": "held-out-both",
+      "test_endpoints": 48,
+      "training_endpoints": 96
+    },
+    {
+      "accuracy": 1.0,
+      "baseline": "repair-syntax",
+      "correct": 48,
+      "representation": "raw",
+      "split": "held-out-both",
+      "test_endpoints": 48,
+      "training_endpoints": 96
+    },
+    {
+      "accuracy": 0.84375,
+      "baseline": "ordinary-unigram-nb",
+      "correct": 81,
+      "representation": "normalized",
+      "split": "held-out-root",
+      "test_endpoints": 96,
+      "training_endpoints": 96
+    },
+    {
+      "accuracy": 0.5,
+      "baseline": "constant",
+      "correct": 48,
+      "representation": "normalized",
+      "split": "held-out-root",
+      "test_endpoints": 96,
+      "training_endpoints": 96
+    },
+    {
+      "accuracy": 0.5,
+      "baseline": "context-only",
+      "correct": 48,
+      "representation": "normalized",
+      "split": "held-out-root",
+      "test_endpoints": 96,
+      "training_endpoints": 96
+    },
+    {
+      "accuracy": 1.0,
+      "baseline": "repair-syntax",
+      "correct": 96,
+      "representation": "normalized",
+      "split": "held-out-root",
+      "test_endpoints": 96,
+      "training_endpoints": 96
+    },
+    {
+      "accuracy": 0.8958333333333334,
+      "baseline": "ordinary-unigram-nb",
+      "correct": 43,
+      "representation": "normalized",
+      "split": "held-out-context",
+      "test_endpoints": 48,
+      "training_endpoints": 96
+    },
+    {
+      "accuracy": 0.5,
+      "baseline": "constant",
+      "correct": 24,
+      "representation": "normalized",
+      "split": "held-out-context",
+      "test_endpoints": 48,
+      "training_endpoints": 96
+    },
+    {
+      "accuracy": 0.5,
+      "baseline": "context-only",
+      "correct": 24,
+      "representation": "normalized",
+      "split": "held-out-context",
+      "test_endpoints": 48,
+      "training_endpoints": 96
+    },
+    {
+      "accuracy": 1.0,
+      "baseline": "repair-syntax",
+      "correct": 48,
+      "representation": "normalized",
+      "split": "held-out-context",
+      "test_endpoints": 48,
+      "training_endpoints": 96
+    },
+    {
+      "accuracy": 0.8958333333333334,
+      "baseline": "ordinary-unigram-nb",
+      "correct": 43,
+      "representation": "normalized",
+      "split": "held-out-both",
+      "test_endpoints": 48,
+      "training_endpoints": 96
+    },
+    {
+      "accuracy": 0.5,
+      "baseline": "constant",
+      "correct": 24,
+      "representation": "normalized",
+      "split": "held-out-both",
+      "test_endpoints": 48,
+      "training_endpoints": 96
+    },
+    {
+      "accuracy": 0.5,
+      "baseline": "context-only",
+      "correct": 24,
+      "representation": "normalized",
+      "split": "held-out-both",
+      "test_endpoints": 48,
+      "training_endpoints": 96
+    },
+    {
+      "accuracy": 1.0,
+      "baseline": "repair-syntax",
+      "correct": 48,
+      "representation": "normalized",
+      "split": "held-out-both",
+      "test_endpoints": 48,
+      "training_endpoints": 96
+    }
+  ],
+  "source_sha256": {
+    "packets.json.gz": "f3c55ee4b7a2ec337e8d6e852e84b50b171549ad35204d82bb8450bdd7768bf4",
+    "split_manifest.csv.gz": "de097e2040f55cfa6b920a14869ee891cfec54a896500606d740f63d34617d65"
+  },
+  "split_pairs": {
+    "held-out-both": 24,
+    "held-out-context": 24,
+    "held-out-root": 48,
+    "train": 48
+  },
+  "test_root_bindings": 12,
+  "train_root_bindings": 12
+}
