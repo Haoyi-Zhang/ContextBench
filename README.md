@@ -16,9 +16,14 @@ sufficient fragment, proof arguments, reuse rule, counterexamples, and limits.
 
 ## Reproduce from this repository alone
 
-Use a POSIX host, Python, and its standard library. No network, model, compiler,
+Use a POSIX host, Python 3.10 or later and its standard library, plus the
+GNU coreutils `timeout` command used in the shell instructions. No network, model, compiler,
 solver, downloaded dependency, or external account is needed for these commands.
 Run from this directory, in the displayed order:
+
+The campaign and export commands regenerate their selected output files. Use a
+fresh copy of the artifact to preserve the delivered results and `paper-data/`.
+The result checkers and single-packet verifier only read their supplied evidence.
 
 ```sh
 PYTHONDONTWRITEBYTECODE=1 python run_tests.py --output results/context_assessment/test_summary.json
