@@ -335,3 +335,13 @@ front end, representative real-vulnerability sample, model experiment, deploymen
 study, whole-implementation mechanization, or universal shortcut-removal result.
 All executions use owned benign finite models. No exploit reproduction or
 third-party interaction is part of the artifact.
+
+## Manuscript diagrams
+
+The model and protocol schematics are drawn directly in Python as vector PDFs
+with embedded STIX fonts. They encode the stated relationships, not measured
+performance. To regenerate them with Python 3.9+ and Matplotlib:
+
+```sh
+python -B figures/draw_schematics.py --output figures
+```
