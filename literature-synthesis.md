@@ -81,13 +81,9 @@ invented program perturbations. Delta debugging and reduction work likewise
 preclude calling a fixed fourteen-feature search a general minimal causal
 explanation.
 
-## Contribution assessment
+## Finite transport result
 
-The current positive result is a specified, implemented, falsifiable finite
+The retained result is a specified, implemented, falsifiable finite
 transport protocol with a soundness argument, a separating counterexample,
 reusable checked interfaces, and measured incompleteness. Its practical reach is
-not established by the owned corpus, and combining known verification principles
-is not by itself evidence of a field-level methodological advance. A venue-level
-significance judgment therefore cannot be inferred from passed tests, reference
-count, or internal audit. The manuscript states the finite result and its limits
-without claiming priority, production readiness, or an award-level outcome.
+not established by the owned corpus.
